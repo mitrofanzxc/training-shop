@@ -23,7 +23,9 @@ const header = () => {
       </header>
       <div class="header__second outer__container">
         <div class="inner__container">
-          <h1 class="h1">C</h1>
+          <h1 class="h1">
+            <a href="/"></a>
+          </h1>
           <nav class="nav">
             <ul class="header__second__wrapper">
               <li class="header__second__wrapper__item">
