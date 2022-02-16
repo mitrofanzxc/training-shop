@@ -1,5 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+
+import { Main } from "./pages/Main";
+import { Men } from "./pages/Men";
+import { Productpage } from "./pages/Productpage";
+import { Women } from "./pages/Women";
 
 function App() {
   return (

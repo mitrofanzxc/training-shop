@@ -1,4 +1,4 @@
-const subscribe = () => {
+const Subscribe = () => {
   return (
     <div>
       <section className="subscribe">
@@ -25,4 +25,4 @@ const subscribe = () => {
   );
 };
 
-export { subscribe };
+export { Subscribe };

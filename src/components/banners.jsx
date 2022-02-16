@@ -1,4 +1,4 @@
-const banners = () => {
+const Banners = () => {
   return (
     <div>
       <section className="banners__section">
@@ -23,4 +23,4 @@ const banners = () => {
   );
 };
 
-export { banners };
+export { Banners };

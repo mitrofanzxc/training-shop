@@ -1,14 +1,14 @@
-import product__card__women1 from "../assets/img/product__card__women1.jpg";
-import product__card__women2 from "../assets/img/product__card__women2.jpg";
-import product__card__women3 from "../assets/img/product__card__women3.jpg";
-import product__card__women4 from "../assets/img/product__card__women4.jpg";
-import product__card__women5 from "../assets/img/product__card__women5.jpg";
-import product__card__women6 from "../assets/img/product__card__women6.jpg";
-import product__card__women7 from "../assets/img/product__card__women7.jpg";
-import product__card__women8 from "../assets/img/product__card__women8.jpg";
+import product__card__men1 from "../assets/img/product__card__men1.jpg";
+import product__card__men2 from "../assets/img/product__card__men2.jpg";
+import product__card__men3 from "../assets/img/product__card__men3.jpg";
+import product__card__men4 from "../assets/img/product__card__men4.jpg";
+import product__card__men5 from "../assets/img/product__card__men5.jpg";
+import product__card__men6 from "../assets/img/product__card__men6.jpg";
+import product__card__men7 from "../assets/img/product__card__men7.jpg";
+import product__card__men8 from "../assets/img/product__card__men8.jpg";
 import loading from "../assets/img/loading.gif";
 
-const women__catalog = () => {
+const MenCatalog = () => {
   return (
     <div>
       <section className="catalog">
@@ -17,9 +17,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women1}
+                  src={product__card__men1}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -37,9 +37,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women2}
+                  src={product__card__men2}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -57,9 +57,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women3}
+                  src={product__card__men3}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -77,9 +77,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women4}
+                  src={product__card__men4}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -97,9 +97,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women5}
+                  src={product__card__men5}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -117,9 +117,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women6}
+                  src={product__card__men6}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -137,9 +137,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women7}
+                  src={product__card__men7}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -157,9 +157,9 @@ const women__catalog = () => {
             <ul className="product__card">
               <li>
                 <img
-                  src={product__card__women8}
+                  src={product__card__men8}
                   className="product__card__image"
-                  alt="product__card__women"
+                  alt="product__card__men"
                 />
               </li>
               <li className="product__card__title">Women's tracksuit Q109</li>
@@ -184,4 +184,4 @@ const women__catalog = () => {
   );
 };
 
-export { women__catalog };
+export { MenCatalog };

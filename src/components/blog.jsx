@@ -1,4 +1,4 @@
-const blog = () => {
+const Blog = () => {
   return (
     <div>
       <section className="blog">
@@ -42,4 +42,4 @@ const blog = () => {
   );
 };
 
-export { blog };
+export { Blog };

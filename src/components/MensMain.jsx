@@ -6,13 +6,22 @@ import product__card__men5 from "../assets/img/product__card__men5.jpg";
 import product__card__men6 from "../assets/img/product__card__men6.jpg";
 import product__card__men7 from "../assets/img/product__card__men7.jpg";
 import product__card__men8 from "../assets/img/product__card__men8.jpg";
-import loading from "../assets/img/loading.gif";
 
-const men__catalog = () => {
+const MensMain = () => {
   return (
     <div>
       <section className="catalog">
         <div className="inner__container">
+          <div className="catalog__header">
+            <h2 className="h2">Men's</h2>
+            <ul className="catalog__filter">
+              <li className="catalog__filter__item">New Arrivals</li>
+              <li className="catalog__filter__item">Specials</li>
+              <li className="catalog__filter__item">Bestsellers</li>
+              <li className="catalog__filter__item">Most Viewed</li>
+              <li className="catalog__filter__item">Feautured Products</li>
+            </ul>
+          </div>
           <div className="products__container">
             <ul className="product__card">
               <li>
@@ -175,13 +184,11 @@ const men__catalog = () => {
               </ul>
             </ul>
           </div>
-          <button className="button__loading">
-            <img src={loading} alt="loading" />
-          </button>
+          <button className="button__all">See All</button>
         </div>
       </section>
     </div>
   );
 };
 
-export { men__catalog };
+export { MensMain };

@@ -1,4 +1,4 @@
-const men__catalog__header = () => {
+const WomenCatalogHeader = () => {
   return (
     <div>
       <section className="catalog__header">
@@ -33,4 +33,4 @@ const men__catalog__header = () => {
   );
 };
 
-export { men__catalog__header };
+export { WomenCatalogHeader };

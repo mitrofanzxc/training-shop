@@ -1,4 +1,4 @@
-const header = () => {
+const Header = () => {
   return (
     <div>
       <header className="header__first outer__container">
@@ -77,4 +77,4 @@ const header = () => {
   );
 };
 
-export { header };
+export { Header };

@@ -1,4 +1,4 @@
-const women__catalog__filter = () => {
+const WomenCatalogFilter = () => {
   return (
     <div>
       <section className="filter">
@@ -39,4 +39,4 @@ const women__catalog__filter = () => {
   );
 };
 
-export { women__catalog__filter };
+export { WomenCatalogFilter };

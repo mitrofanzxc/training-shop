@@ -1,4 +1,4 @@
-const footer = () => {
+const Footer = () => {
   return (
     <div>
       <section className="footer__links">
@@ -102,4 +102,4 @@ const footer = () => {
   );
 };
 
-export { footer };
+export { Footer };

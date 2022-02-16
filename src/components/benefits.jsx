@@ -1,4 +1,4 @@
-const benefits = () => {
+const Benefits = () => {
   return (
     <div>
       <section className="benefits">
@@ -32,4 +32,4 @@ const benefits = () => {
   );
 };
 
-export { benefits };
+export { Benefits };
