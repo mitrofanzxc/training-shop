@@ -1,4 +1,4 @@
-const Sliderbanners = () => {
+const SliderBanners = () => {
   return (
     <div>
       <section className="banners">
@@ -34,4 +34,4 @@ const Sliderbanners = () => {
   );
 };
 
-export { Sliderbanners };
+export { SliderBanners };

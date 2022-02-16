@@ -1,17 +1,21 @@
-import { Header } from "../components/Header";
 import { Sliderbanners } from "../components/Sliderbanners";
 import { Benefits } from "../components/Benefits";
-import { WomensMain } from "../components/Women's__main";
-import { MensMain } from "../components/Men's__main";
+import { WomensMain } from "../components/WomensMain";
+import { MensMain } from "../components/MensMain";
+import { Banners } from "../components/Banners";
+import { Subscribe } from "../components/Subscribe";
+import { Blog } from "../components/Blog";
 
 const Main = () => {
   return (
     <div>
-      <Header></Header>
-      <Sliderbanners></Sliderbanners>
-      <Benefits></Benefits>
-      <WomensMain></WomensMain>
-      <MensMain></MensMain>
+      <Sliderbanners />
+      <Benefits />
+      <WomensMain />
+      <MensMain />
+      <Banners />
+      <Subscribe />
+      <Blog />
     </div>
   );
 };
