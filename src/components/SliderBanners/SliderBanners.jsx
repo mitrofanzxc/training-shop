@@ -1,3 +1,5 @@
+import "./SliderBanners.css";
+
 const SliderBanners = () => {
   return (
     <div>

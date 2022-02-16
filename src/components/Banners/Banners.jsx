@@ -1,3 +1,5 @@
+import "./Banners.css";
+
 const Banners = () => {
   return (
     <div>

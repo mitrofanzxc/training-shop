@@ -1,0 +1,85 @@
+.blog .blog__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5.625rem;
+}
+
+.blog .blog__header .h2 {
+  font-size: 23px;
+}
+
+.blog .blog__header .button__all {
+  width: 4.0625rem;
+  margin: 0;
+  margin-top: 0.625rem;
+  padding: 0;
+  font-size: 0.75rem;
+  background-color: transparent;
+}
+
+.blog .blog__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  margin-top: 3.125rem;
+  padding: 0;
+  list-style: none;
+}
+
+.blog .blog__slider .blog__slider__item {
+  position: relative;
+  width: 21.875rem;
+  height: 21.875rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blog .blog__slider .blog__slider__item:nth-child(1) {
+  background-image: url("../assets/img/section__blog1.jpg");
+}
+
+.blog .blog__slider .blog__slider__item:nth-child(2) {
+  background-image: url("../assets/img/section__blog2.jpg");
+}
+
+.blog .blog__slider .blog__slider__item:nth-child(3) {
+  background-image: url("../assets/img/section__blog3.jpg");
+}
+
+.blog .blog__slider .blog__slider__item .blog__slider__item__title {
+  position: absolute;
+  top: 13.75rem;
+  margin: 0 1.25rem 0 1.25rem;
+  padding: 1.5625rem 0 0 0.9375rem;
+  background-color: #FFFFFF;
+}
+
+.blog .blog__slider .blog__slider__item .blog__slider__item__title .h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #121212;
+}
+
+.blog .blog__slider .blog__slider__item .blog__slider__item__title .blog__slider__item__text {
+  margin-top: 0.9375rem;
+  font-size: 0.9375rem;
+  line-height: 23px;
+  color: rgba(18, 18, 18, 0.8);
+}

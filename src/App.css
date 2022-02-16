@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Spartan";
+  font-display: swap;
+  src: url("./assets/fonts/Spartan-Regular.woff") format("woff"), url("./assets/fonts/Spartan-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Spartan";
+  font-display: swap;
+  src: url("./assets/fonts/Spartan-Medium.woff") format("woff"), url("./assets/fonts/Spartan-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Spartan";
+  font-display: swap;
+  src: url("./assets/fonts/Spartan-SemiBold.woff") format("woff"), url("./assets/fonts/Spartan-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Spartan";
+  font-display: swap;
+  src: url("./assets/fonts/Spartan-Bold.woff") format("woff"), url("./assets/fonts/Spartan-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: "Spartan", sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+}
+
+.body::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+.body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: #121212;
+}
+
+.outer__container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.inner__container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+  padding: 0 5.3125rem;
+}
+
+.button__dark {
+  font-family: "Spartan", sans-serif;
+  display: block;
+  width: 21.25rem;
+  height: 4.0625rem;
+  margin: 1.5625rem auto 0 auto;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #121212;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button__loading {
+  display: block;
+  margin: 2.8125rem auto 0 auto;
+  padding: 0;
+  padding-right: 0.625rem;
+  border: none;
+  background-color: transparent;
+}
+
+.button__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../assets/img/filter.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.button__grid__list {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../assets/img/list.svg");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button__grid__square {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../assets/img/square.svg");
+}
+
+.button__sorting {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-image: url("../assets/img/arrowdown.svg");
+}
+
+.button__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(18, 18, 18, 0.8);
+  margin-top: 48px;
+  background-color: #F8F8F8;
+  border: none;
+}
+
+.h1 {
+  width: 9.375rem;
+  height: 1.25rem;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/img/clevershop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.h2 {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #121212;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(18, 18, 18, 0.4);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__wrapper .socials__wrapper__item {
+  margin: 0;
+  padding: 0;
+}
+
+.socials__wrapper .socials__wrapper__item:nth-child(1) {
+  background-image: url("../assets/img/facebook.svg");
+}
+
+.socials__wrapper .socials__wrapper__item:nth-child(2) {
+  background-image: url("../assets/img/twitter.svg");
+}
+
+.socials__wrapper .socials__wrapper__item:nth-child(3) {
+  background-image: url("../assets/img/instagram.svg");
+}
+
+.socials__wrapper .socials__wrapper__item:nth-child(4) {
+  background-image: url("../assets/img/pinterest.svg");
 }

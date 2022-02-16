@@ -1,3 +1,5 @@
+import "./WomenCatalogFilter";
+
 const WomenCatalogFilter = () => {
   return (
     <div>

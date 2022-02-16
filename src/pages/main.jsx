@@ -1,10 +1,10 @@
-import { Sliderbanners } from "../components/Sliderbanners";
-import { Benefits } from "../components/Benefits";
-import { WomensMain } from "../components/WomensMain";
-import { MensMain } from "../components/MensMain";
-import { Banners } from "../components/Banners";
-import { Subscribe } from "../components/Subscribe";
-import { Blog } from "../components/Blog";
+import { Sliderbanners } from "../components/SliderBanners/SliderBanners";
+import { Benefits } from "../components/Benefits/Benefits";
+import { WomensMain } from "../components/WomensMain/WomensMain";
+import { MensMain } from "../components/MensMain/MensMain";
+import { Banners } from "../components/Banners/Banners";
+import { Subscribe } from "../components/Subscribe/Subscribe";
+import { Blog } from "../components/Blog/Blog";
 
 const Main = () => {
   return (

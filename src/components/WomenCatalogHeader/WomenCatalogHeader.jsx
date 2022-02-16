@@ -1,3 +1,5 @@
+import "./WomenCatalogHeader";
+
 const WomenCatalogHeader = () => {
   return (
     <div>

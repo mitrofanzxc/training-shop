@@ -1,3 +1,5 @@
+import "./MenCatalogFilter";
+
 const MenCatalogFilter = () => {
   return (
     <div>

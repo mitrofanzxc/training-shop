@@ -1,3 +1,5 @@
+import "./Blog.css";
+
 const Blog = () => {
   return (
     <div>

@@ -1,3 +1,5 @@
+import "./Subscribe.css";
+
 const Subscribe = () => {
   return (
     <div>

@@ -6,6 +6,7 @@ import product__card__men5 from "../assets/img/product__card__men5.jpg";
 import product__card__men6 from "../assets/img/product__card__men6.jpg";
 import product__card__men7 from "../assets/img/product__card__men7.jpg";
 import product__card__men8 from "../assets/img/product__card__men8.jpg";
+import "./MensMain.css";
 
 const MensMain = () => {
   return (
