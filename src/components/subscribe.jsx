@@ -1,22 +1,22 @@
 const subscribe = () => {
   return (
     <div>
-      <section class="subscribe">
-        <div class="inner__container">
-          <form class="form__subscribe">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Special offer</legend>
-              <h2 class="h2">
+      <section className="subscribe">
+        <div className="inner__container">
+          <form className="form__subscribe">
+            <fieldset className="form__fieldset">
+              <legend className="form__legend">Special offer</legend>
+              <h2 className="h2">
                 Subscribe
                 <br />
-                and <span class="sale">Get 10% Off</span>
+                and <span className="sale">Get 10% Off</span>
               </h2>
               <input
                 type="email"
-                class="input__email"
+                className="input__email"
                 placeholder="Enter your email"
               />
-              <button class="button__dark">Subscribe</button>
+              <button className="button__dark">Subscribe</button>
             </fieldset>
           </form>
         </div>

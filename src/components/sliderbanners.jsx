@@ -1,30 +1,30 @@
 const sliderbanners = () => {
   return (
     <div>
-      <section class="banners">
-        <div class="inner__container">
-          <div class="banners__container">
-            <div class="slider">
-              <div class="slider__arrow"></div>
-              <div class="slider__title">
-                <h3 class="h3">Banner</h3>
-                <h2 class="h2">Your title text</h2>
+      <section className="banners">
+        <div className="inner__container">
+          <div className="banners__container">
+            <div className="slider">
+              <div className="slider__arrow"></div>
+              <div className="slider__title">
+                <h3 className="h3">Banner</h3>
+                <h2 className="h2">Your title text</h2>
               </div>
-              <div class="slider__arrow"></div>
+              <div className="slider__arrow"></div>
             </div>
-            <div class="accessories">
-              <div class="slider__title">
-                <h2 class="h2">Accessories</h2>
-              </div>
-            </div>
-            <div class="women">
-              <div class="slider__title">
-                <h2 class="h2">Women</h2>
+            <div className="accessories">
+              <div className="slider__title">
+                <h2 className="h2">Accessories</h2>
               </div>
             </div>
-            <div class="men">
-              <div class="slider__title">
-                <h2 class="h2">Men</h2>
+            <div className="women">
+              <div className="slider__title">
+                <h2 className="h2">Women</h2>
+              </div>
+            </div>
+            <div className="men">
+              <div className="slider__title">
+                <h2 className="h2">Men</h2>
               </div>
             </div>
           </div>

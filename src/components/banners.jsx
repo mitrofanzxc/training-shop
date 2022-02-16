@@ -1,19 +1,19 @@
 const banners = () => {
   return (
     <div>
-      <section class="banners__section">
-        <div class="inner__container">
-          <ul class="banners__section__container">
-            <li class="banners__section__container__item">
-              <div class="banners__section__container__item__title">
-                <h3 class="h3">New Season</h3>
-                <h2 class="h2">Lookbook Collection</h2>
+      <section className="banners__section">
+        <div className="inner__container">
+          <ul className="banners__section__container">
+            <li className="banners__section__container__item">
+              <div className="banners__section__container__item__title">
+                <h3 className="h3">New Season</h3>
+                <h2 className="h2">Lookbook Collection</h2>
               </div>
             </li>
-            <li class="banners__section__container__item">
-              <div class="banners__section__container__item__title">
-                <h3 class="h3">Sale</h3>
-                <h2 class="h2">Get Up To 50% Off</h2>
+            <li className="banners__section__container__item">
+              <div className="banners__section__container__item__title">
+                <h3 className="h3">Sale</h3>
+                <h2 className="h2">Get Up To 50% Off</h2>
               </div>
             </li>
           </ul>
