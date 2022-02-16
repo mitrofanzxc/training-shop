@@ -30,13 +30,13 @@ const footer = () => {
                   Useful links
                 </li>
                 <li class="footer__links__container__list__item">
-                  Terms & Conditions
+                  Terms &amp; Conditions
                 </li>
                 <li class="footer__links__container__list__item">
-                  Returns & Exchanges
+                  Returns &amp; Exchanges
                 </li>
                 <li class="footer__links__container__list__item">
-                  Shipping & Delivery
+                  Shipping &amp; Delivery
                 </li>
                 <li class="footer__links__container__list__item">
                   Privacy Policy

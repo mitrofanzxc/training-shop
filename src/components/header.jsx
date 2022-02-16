@@ -21,7 +21,6 @@ const header = () => {
           </ul>
         </div>
       </header>
-
       <div class="header__second outer__container">
         <div class="inner__container">
           <h1 class="h1">C</h1>
