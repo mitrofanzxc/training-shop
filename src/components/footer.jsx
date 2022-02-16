@@ -77,7 +77,7 @@ const footer = () => {
             <li class="footer__wrapper__item"></li>
           </ul>
           <h3 class="h3">
-            <a href="https://clevertec.ru/training" target="_blank">
+            <a href="https://clevertec.ru/training" target="_blank" rel="noreferrer">
               Clevertec.ru/training
             </a>
           </h3>
