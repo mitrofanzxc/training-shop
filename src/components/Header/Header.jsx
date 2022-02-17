@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header" data-test-id="header">
+    <div data-test-id="header">
       <header className="header__first outer__container">
         <div className="inner__container">
           <ul className="header__first__wrapper">
@@ -33,45 +33,80 @@ const Header = () => {
               data-test-id="header-logo-link"
             />
           </h1>
-          <div className="menu" data-test-id="menu">
+          <nav className="nav" data-test-id="menu">
             <ul className="header__second__wrapper">
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/about">
+                <Link
+                  key="about-us"
+                  to="/about"
+                  className="nav__link"
+                  data-test-id="menu-link-about"
+                >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/women">
+                <Link
+                  key="women"
+                  to="/women"
+                  className="nav__link"
+                  data-test-id="menu-link-women"
+                >
                   Women
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/men">
+                <Link
+                  key="men"
+                  to="/men"
+                  className="nav__link"
+                  data-test-id="menu-link-men"
+                >
                   Men
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/beauty">
+                <Link
+                  key="beauty"
+                  to="/beauty"
+                  className="nav__link"
+                  data-test-id="menu-link-beauty"
+                >
                   Beauty
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/accessories">
+                <Link
+                  key="accessories"
+                  to="/accessories"
+                  className="nav__link"
+                  data-test-id="menu-link-accessories"
+                >
                   Accessories
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/blog">
+                <Link
+                  key="blog"
+                  to="/blog"
+                  className="nav__link"
+                  data-test-id="menu-link-blog"
+                >
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="header__second__wrapper__item">
-                <a className="nav__link" href="/contacts">
+                <Link
+                  key="contacts"
+                  to="/contacts"
+                  className="nav__link"
+                  data-test-id="menu-link-contacts"
+                >
                   Contacts
-                </a>
+                </Link>
               </li>
             </ul>
-          </div>
+          </nav>
           <ul className="socials__wrapper">
             <li className="socials__wrapper__item icon"></li>
             <li className="socials__wrapper__item icon"></li>

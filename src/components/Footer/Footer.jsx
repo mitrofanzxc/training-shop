@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer" data-test-id="footer">
+    <div data-test-id="footer">
       <section className="footer__links">
         <div className="inner__container">
           <ul className="footer__links__container">

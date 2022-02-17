@@ -121,7 +121,7 @@
   height: 63px;
 }
 
-.header__second .inner__container .menu {
+.header__second .inner__container .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +138,7 @@
   padding: 0;
 }
 
-.header__second .inner__container .menu .header__second__wrapper {
+.header__second .inner__container .nav .header__second__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,7 +155,7 @@
   padding: 0;
 }
 
-.header__second .inner__container .menu .header__second__wrapper .header__second__wrapper__item .nav__link {
+.header__second .inner__container .nav .header__second__wrapper .header__second__wrapper__item .nav__link {
   font-size: 0.875rem;
   font-weight: 400;
   color: #121212;
