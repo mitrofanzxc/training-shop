@@ -160,7 +160,8 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
 }
 
-a .h1 {
+.h1 .header-nav-logo {
+  display: block;
   width: 9.375rem;
   height: 1.25rem;
   margin: 0;

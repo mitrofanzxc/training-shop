@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
+    <div className="header" data-test-id="header">
       <header className="header__first outer__container">
         <div className="inner__container">
           <ul className="header__first__wrapper">
@@ -25,10 +26,14 @@ const Header = () => {
       </header>
       <div className="header__second outer__container">
         <div className="inner__container">
-          <a href="/">
-            <h1 className="h1">Clevertec</h1>
-          </a>
-          <nav className="nav">
+          <h1 className="h1">
+            <Link
+              to="/"
+              className="header-nav-logo"
+              data-test-id="header-logo-link"
+            />
+          </h1>
+          <div className="menu" data-test-id="menu">
             <ul className="header__second__wrapper">
               <li className="header__second__wrapper__item">
                 <a className="nav__link" href="/about">
@@ -66,7 +71,7 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-          </nav>
+          </div>
           <ul className="socials__wrapper">
             <li className="socials__wrapper__item icon"></li>
             <li className="socials__wrapper__item icon"></li>
