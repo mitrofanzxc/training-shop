@@ -1,3 +1,5 @@
+import "./ProductPageHeader.css";
+
 const ProductPageHeader = () => {
   return (
     <div>

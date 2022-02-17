@@ -1,0 +1,82 @@
+.catalog__header {
+  background-color: #F8F8F8;
+}
+
+.catalog__header .catalog__header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  list-style: none;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.3125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper .catalog__header__wrapper__item__subwrapper__item {
+  font-size: 0.75rem;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper .catalog__header__wrapper__item__subwrapper__item .arrow {
+  font-size: 8px;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper .bold {
+  font-weight: 700;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper .reviews {
+  padding-top: 0.625rem;
+  font-weight: 400;
+}
+
+.catalog__header .catalog__header__wrapper .catalog__header__wrapper__item .catalog__header__wrapper__item__subwrapper .share {
+  width: 18px;
+  height: 18px;
+  background-image: url("./assets/img/share.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.catalog__header .availability {
+  padding: 0;
+}
+
+.catalog__header .catalog__heading {
+  font-size: 28px;
+  margin: 0;
+  padding: 12px 0 24px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.catalog__header .catalog__heading__item {
+  font-size: 28px;
+  margin: 0;
+  padding: 17px 0 0 0;
+  text-align: center;
+  text-transform: none;
+}
