@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/training-shop/static/css/main.d4b495d4.css",
-    "main.js": "/training-shop/static/js/main.43193a4f.js",
+    "main.js": "/training-shop/static/js/main.6104fbbb.js",
     "static/js/787.47ca6e30.chunk.js": "/training-shop/static/js/787.47ca6e30.chunk.js",
     "static/media/Spartan-Regular.woff": "/training-shop/static/media/Spartan-Regular.7fc8d9df67665a77ce49.woff",
     "static/media/Spartan-SemiBold.woff": "/training-shop/static/media/Spartan-SemiBold.0239670b2be177f0397f.woff",
@@ -47,11 +47,11 @@
     "static/media/list.svg": "/training-shop/static/media/list.ab5605f2981ce6372c3d.svg",
     "static/media/arrowdown.svg": "/training-shop/static/media/arrowdown.483512a42e5658a9927e.svg",
     "main.d4b495d4.css.map": "/training-shop/static/css/main.d4b495d4.css.map",
-    "main.43193a4f.js.map": "/training-shop/static/js/main.43193a4f.js.map",
+    "main.6104fbbb.js.map": "/training-shop/static/js/main.6104fbbb.js.map",
     "787.47ca6e30.chunk.js.map": "/training-shop/static/js/787.47ca6e30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d4b495d4.css",
-    "static/js/main.43193a4f.js"
+    "static/js/main.6104fbbb.js"
   ]
 }
