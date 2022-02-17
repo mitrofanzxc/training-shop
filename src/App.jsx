@@ -1,12 +1,10 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import { Header } from "./components/Header/Header";
-import { SliderBanners } from "./components/SliderBanners/SliderBanners";
-import { Benefits } from "./components/Benefits/Benefits";
-import { WomensMain } from "./components/WomensMain/WomensMain";
-import { MensMain } from "./components/MensMain/MensMain";
-import { Banners } from "./components/Banners/Banners";
-import { Subscribe } from "./components/Subscribe/Subscribe";
-import { Blog } from "./components/Blog/Blog";
+import { Main } from "./pages/Main";
+import { Men } from "./pages/Men";
+import { Women } from "./pages/Women";
+// import { Productpage } from "./pages/Productpage";
 import { Footer } from "./components/Footer/Footer";
 import "./App.css";
 
@@ -14,13 +12,12 @@ function App() {
   return (
     <div className="app" data-test-id="app">
       <Header />
-      <SliderBanners />
-      <Benefits />
-      <WomensMain />
-      <MensMain />
-      <Banners />
-      <Subscribe />
-      <Blog />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/men" element={<Men />} />
+        <Route path="/women" element={<Women />} />
+        <Route path="*" element={<Main />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Sliderbanners } from "../components/SliderBanners/SliderBanners";
+import { SliderBanners } from "../components/SliderBanners/SliderBanners";
 import { Benefits } from "../components/Benefits/Benefits";
 import { WomensMain } from "../components/WomensMain/WomensMain";
 import { MensMain } from "../components/MensMain/MensMain";
@@ -9,7 +9,7 @@ import { Blog } from "../components/Blog/Blog";
 const Main = () => {
   return (
     <div>
-      <Sliderbanners />
+      <SliderBanners />
       <Benefits />
       <WomensMain />
       <MensMain />
