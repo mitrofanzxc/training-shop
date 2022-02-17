@@ -34,22 +34,22 @@ html {
   scroll-behavior: smooth;
 }
 
-.body {
+body {
   font-family: "Spartan", sans-serif;
   background-color: #FFFFFF;
   margin: 0;
 }
 
-.body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0.3125rem;
 }
 
-.body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
-.body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: #121212;
 }
 
@@ -106,7 +106,7 @@ html {
   margin: 0;
   padding: 0;
   background-color: transparent;
-  background-image: url("../assets/img/filter.svg");
+  background-image: url("./assets/img/filter.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -116,19 +116,19 @@ html {
 .button__grid__list {
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url("../assets/img/list.svg");
+  background-image: url("./assets/img/list.svg");
 }
 
 .button__grid__square {
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url("../assets/img/square.svg");
+  background-image: url("./assets/img/square.svg");
 }
 
 .button__sorting {
   width: 0.9375rem;
   height: 0.9375rem;
-  background-image: url("../assets/img/arrowdown.svg");
+  background-image: url("./assets/img/arrowdown.svg");
 }
 
 .button__all {
@@ -160,7 +160,7 @@ html {
   height: 1.25rem;
   margin: 0;
   padding: 0;
-  background-image: url("../assets/img/clevershop.svg");
+  background-image: url("./assets/img/clevershop.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -227,17 +227,17 @@ a {
 }
 
 .socials__wrapper .socials__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/facebook.svg");
+  background-image: url("./assets/img/facebook.svg");
 }
 
 .socials__wrapper .socials__wrapper__item:nth-child(2) {
-  background-image: url("../assets/img/twitter.svg");
+  background-image: url("./assets/img/twitter.svg");
 }
 
 .socials__wrapper .socials__wrapper__item:nth-child(3) {
-  background-image: url("../assets/img/instagram.svg");
+  background-image: url("./assets/img/instagram.svg");
 }
 
 .socials__wrapper .socials__wrapper__item:nth-child(4) {
-  background-image: url("../assets/img/pinterest.svg");
+  background-image: url("./assets/img/pinterest.svg");
 }

@@ -30,11 +30,11 @@
 }
 
 .banners__section .banners__section__container__item:nth-child(1) {
-  background-image: url("../assets/img/section__newseason.jpg");
+  background-image: url("./assets/img/section__newseason.jpg");
 }
 
 .banners__section .banners__section__container__item:nth-child(2) {
-  background-image: url("../assets/img/section__sale.jpg");
+  background-image: url("./assets/img/section__sale.jpg");
 }
 
 .banners__section .banners__section__container__item__title {

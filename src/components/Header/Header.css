@@ -49,17 +49,17 @@
 }
 
 .header__first .header__first__wrapper .header__first__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/phone__header.svg");
+  background-image: url("./assets/img/phone__header.svg");
 }
 
 .header__first .header__first__wrapper .header__first__wrapper__item:nth-child(3) {
   margin-left: 1.25rem;
-  background-image: url("../assets/img/location__header.svg");
+  background-image: url("./assets/img/location__header.svg");
 }
 
 .header__first .header__first__wrapper .header__first__wrapper__item:nth-child(5) {
   margin-left: 2.1875rem;
-  background-image: url("../assets/img/clock__header.svg");
+  background-image: url("./assets/img/clock__header.svg");
 }
 
 .header__socials__wrapper {
@@ -84,19 +84,19 @@
 }
 
 .header__socials__wrapper .header__socials__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/facebook.svg");
+  background-image: url("./assets/img/facebook.svg");
 }
 
 .header__socials__wrapper .header__socials__wrapper__item:nth-child(2) {
-  background-image: url("../assets/img/twitter.svg");
+  background-image: url("./assets/img/twitter.svg");
 }
 
 .header__socials__wrapper .header__socials__wrapper__item:nth-child(3) {
-  background-image: url("../assets/img/instagram.svg");
+  background-image: url("./assets/img/instagram.svg");
 }
 
 .header__socials__wrapper .header__socials__wrapper__item:nth-child(4) {
-  background-image: url("../assets/img/pinterest.svg");
+  background-image: url("./assets/img/pinterest.svg");
 }
 
 .header__socials__wrapper .icon {
@@ -166,17 +166,17 @@
 }
 
 .header__second .inner__container .socials__wrapper .socials__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/search.svg");
+  background-image: url("./assets/img/search.svg");
 }
 
 .header__second .inner__container .socials__wrapper .socials__wrapper__item:nth-child(2) {
-  background-image: url("../assets/img/globe.svg");
+  background-image: url("./assets/img/globe.svg");
 }
 
 .header__second .inner__container .socials__wrapper .socials__wrapper__item:nth-child(3) {
-  background-image: url("../assets/img/user.svg");
+  background-image: url("./assets/img/user.svg");
 }
 
 .header__second .inner__container .socials__wrapper .socials__wrapper__item:nth-child(4) {
-  background-image: url("../assets/img/cart.svg");
+  background-image: url("./assets/img/cart.svg");
 }

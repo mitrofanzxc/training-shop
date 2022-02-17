@@ -35,15 +35,15 @@
 }
 
 .benefits .benefits__wrapper .benefits__item:nth-child(1) {
-  background-image: url("../assets/img/delivery.svg");
+  background-image: url("./assets/img/delivery.svg");
 }
 
 .benefits .benefits__wrapper .benefits__item:nth-child(3) {
-  background-image: url("../assets/img/refresh.svg");
+  background-image: url("./assets/img/refresh.svg");
 }
 
 .benefits .benefits__wrapper .benefits__item:nth-child(5) {
-  background-image: url("../assets/img/support.svg");
+  background-image: url("./assets/img/support.svg");
 }
 
 .benefits .benefits__wrapper .benefits__text {

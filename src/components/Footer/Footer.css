@@ -121,19 +121,19 @@
 }
 
 .footer__links__container .footer__links__container__item .footer__links__container__list .footer__links__container__list__item .location {
-  background-image: url("../assets/img/location.svg");
+  background-image: url("./assets/img/location.svg");
 }
 
 .footer__links__container .footer__links__container__item .footer__links__container__list .footer__links__container__list__item .phone {
-  background-image: url("../assets/img/phone.svg");
+  background-image: url("./assets/img/phone.svg");
 }
 
 .footer__links__container .footer__links__container__item .footer__links__container__list .footer__links__container__list__item .clock {
-  background-image: url("../assets/img/clock.svg");
+  background-image: url("./assets/img/clock.svg");
 }
 
 .footer__links__container .footer__links__container__item .footer__links__container__list .footer__links__container__list__item .mail {
-  background-image: url("../assets/img/mail.svg");
+  background-image: url("./assets/img/mail.svg");
 }
 
 .footer {
@@ -181,31 +181,31 @@
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/stripe.svg");
+  background-image: url("./assets/img/stripe.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(2) {
-  background-image: url("../assets/img/aes256.svg");
+  background-image: url("./assets/img/aes256.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(3) {
-  background-image: url("../assets/img/paypal.svg");
+  background-image: url("./assets/img/paypal.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(4) {
-  background-image: url("../assets/img/visa.svg");
+  background-image: url("./assets/img/visa.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(5) {
-  background-image: url("../assets/img/mastercard.svg");
+  background-image: url("./assets/img/mastercard.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(6) {
-  background-image: url("../assets/img/discover.svg");
+  background-image: url("./assets/img/discover.svg");
 }
 
 .footer .inner__container .footer__wrapper .footer__wrapper__item:nth-child(7) {
-  background-image: url("../assets/img/american__express.svg");
+  background-image: url("./assets/img/american__express.svg");
 }
 
 .footer .inner__container .h3 {
@@ -253,29 +253,29 @@
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(1) {
-  background-image: url("../assets/img/stripe__color.svg");
+  background-image: url("./assets/img/stripe__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(2) {
-  background-image: url("../assets/img/aes256__color.svg");
+  background-image: url("./assets/img/aes256__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(3) {
-  background-image: url("../assets/img/paypal__color.svg");
+  background-image: url("./assets/img/paypal__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(4) {
-  background-image: url("../assets/img/visa__color.svg");
+  background-image: url("./assets/img/visa__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(5) {
-  background-image: url("../assets/img/mastercard__color.svg");
+  background-image: url("./assets/img/mastercard__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(6) {
-  background-image: url("../assets/img/discover__color.svg");
+  background-image: url("./assets/img/discover__color.svg");
 }
 
 .footer__wrapper .footer__wrapper__item:nth-child(7) {
-  background-image: url("../assets/img/american__express__color.svg");
+  background-image: url("./assets/img/american__express__color.svg");
 }

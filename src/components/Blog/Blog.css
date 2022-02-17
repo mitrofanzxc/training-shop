@@ -51,15 +51,15 @@
 }
 
 .blog .blog__slider .blog__slider__item:nth-child(1) {
-  background-image: url("../assets/img/section__blog1.jpg");
+  background-image: url("./assets/img/section__blog1.jpg");
 }
 
 .blog .blog__slider .blog__slider__item:nth-child(2) {
-  background-image: url("../assets/img/section__blog2.jpg");
+  background-image: url("./assets/img/section__blog2.jpg");
 }
 
 .blog .blog__slider .blog__slider__item:nth-child(3) {
-  background-image: url("../assets/img/section__blog3.jpg");
+  background-image: url("./assets/img/section__blog3.jpg");
 }
 
 .blog .blog__slider .blog__slider__item .blog__slider__item__title {
