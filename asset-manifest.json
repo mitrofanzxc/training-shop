@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/training-shop/static/css/main.9ab27d45.css",
-    "main.js": "/training-shop/static/js/main.22a4bc1f.js",
+    "main.css": "/training-shop/static/css/main.ed943e15.css",
+    "main.js": "/training-shop/static/js/main.659a94f8.js",
     "static/js/787.47ca6e30.chunk.js": "/training-shop/static/js/787.47ca6e30.chunk.js",
     "static/media/Spartan-Regular.woff": "/training-shop/static/media/Spartan-Regular.7fc8d9df67665a77ce49.woff",
     "static/media/Spartan-SemiBold.woff": "/training-shop/static/media/Spartan-SemiBold.0239670b2be177f0397f.woff",
@@ -46,12 +46,12 @@
     "static/media/clock.svg": "/training-shop/static/media/clock.c8de4b8f4df838f2c72d.svg",
     "static/media/list.svg": "/training-shop/static/media/list.ab5605f2981ce6372c3d.svg",
     "static/media/arrowdown.svg": "/training-shop/static/media/arrowdown.483512a42e5658a9927e.svg",
-    "main.9ab27d45.css.map": "/training-shop/static/css/main.9ab27d45.css.map",
-    "main.22a4bc1f.js.map": "/training-shop/static/js/main.22a4bc1f.js.map",
+    "main.ed943e15.css.map": "/training-shop/static/css/main.ed943e15.css.map",
+    "main.659a94f8.js.map": "/training-shop/static/js/main.659a94f8.js.map",
     "787.47ca6e30.chunk.js.map": "/training-shop/static/js/787.47ca6e30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ab27d45.css",
-    "static/js/main.22a4bc1f.js"
+    "static/css/main.ed943e15.css",
+    "static/js/main.659a94f8.js"
   ]
 }
