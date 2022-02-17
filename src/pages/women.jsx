@@ -1,3 +1,5 @@
+import React from "react";
+
 import { WomenCatalogHeader } from "../components/WomenCatalogHeader/WomenCatalogHeader";
 import { WomenCatalogFilter } from "../components/WomenCatalogFilter/WomenCatalogFilter";
 import { WomenCatalog } from "../components/WomenCatalog/WomenCatalog";

@@ -1,3 +1,4 @@
+import React from "react";
 import "./WomenCatalogFilter.css";
 
 const WomenCatalogFilter = () => {

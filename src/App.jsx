@@ -13,7 +13,7 @@ function App() {
     <div className="app" data-test-id="app">
       <Header />
       <Routes>
-        <Route index path="/" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/men" element={<Men />} />
         <Route path="/men/1" element={<Productpage />} />
         <Route path="/men/2" element={<Productpage />} />

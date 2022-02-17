@@ -1,3 +1,4 @@
+import React from "react";
 import { SliderBanners } from "../components/SliderBanners/SliderBanners";
 import { Benefits } from "../components/Benefits/Benefits";
 import { WomensMain } from "../components/WomensMain/WomensMain";
@@ -20,4 +21,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export { Main };

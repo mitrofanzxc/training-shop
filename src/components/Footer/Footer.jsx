@@ -1,3 +1,4 @@
+import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
@@ -93,7 +94,7 @@ const Footer = () => {
             <a
               href="https://clevertec.ru/training"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Clevertec.ru/training
             </a>

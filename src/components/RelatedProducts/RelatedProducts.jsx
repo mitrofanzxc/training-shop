@@ -1,3 +1,5 @@
+import React from "react";
+
 import RelatedProducts1 from "./assets/img/related__products__1.jpg";
 import RelatedProducts2 from "./assets/img/related__products__2.jpg";
 import RelatedProducts3 from "./assets/img/related__products__3.jpg";

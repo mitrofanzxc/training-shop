@@ -1,3 +1,4 @@
+import React from "react";
 import "./MenCatalogHeader.css";
 
 const MenCatalogHeader = () => {
