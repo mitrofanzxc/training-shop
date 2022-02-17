@@ -25,9 +25,9 @@ const Header = () => {
       </header>
       <div className="header__second outer__container">
         <div className="inner__container">
-          <h1 className="h1">
-            <a href="/"></a>
-          </h1>
+          <a href="/">
+            <h1 className="h1">Clevertec</h1>
+          </a>
           <nav className="nav">
             <ul className="header__second__wrapper">
               <li className="header__second__wrapper__item">
