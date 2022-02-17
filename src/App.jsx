@@ -6,7 +6,7 @@ import { Men } from "./pages/Men";
 import { Women } from "./pages/Women";
 import { Productpage } from "./pages/Productpage";
 import { Footer } from "./components/Footer/Footer";
-import "./App.css";
+import "./App.css"
 
 function App() {
   return (
