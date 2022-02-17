@@ -34,22 +34,22 @@ html {
   scroll-behavior: smooth;
 }
 
-.body {
+body {
   font-family: "Spartan", sans-serif;
   background-color: #FFFFFF;
   margin: 0;
 }
 
-.body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0.3125rem;
 }
 
-.body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
-.body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: #121212;
 }
 
