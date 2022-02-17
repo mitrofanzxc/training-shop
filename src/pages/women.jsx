@@ -4,7 +4,7 @@ import { WomenCatalog } from "../components/WomenCatalog/WomenCatalog";
 
 const Women = () => {
   return (
-    <div data-test-id={`products-page-women`}>
+    <div data-test-id="products-page-women">
       <WomenCatalogHeader />
       <WomenCatalogFilter />
       <WomenCatalog />
