@@ -32,6 +32,7 @@ function App() {
         <Route path="/women/6" element={<Productpage />} />
         <Route path="/women/7" element={<Productpage />} />
         <Route path="/women/8" element={<Productpage />} />
+        <Route path="*" element={<Main />} />
       </Routes>
       <Footer />
     </div>
