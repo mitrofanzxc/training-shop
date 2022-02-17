@@ -1,4 +1,4 @@
-import "./WomenCatalogHeader";
+import "./WomenCatalogHeader.css";
 
 const WomenCatalogHeader = () => {
   return (
@@ -15,7 +15,7 @@ const WomenCatalogHeader = () => {
                   ►
                 </li>
                 <li className="catalog__header__wrapper__item__subwrapper__item">
-                  Men
+                  Women
                 </li>
               </ul>
             </li>
@@ -28,7 +28,7 @@ const WomenCatalogHeader = () => {
               </ul>
             </li>
           </ul>
-          <h2 className="catalog__heading">Men</h2>
+          <h2 className="catalog__heading">Women</h2>
         </div>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import "./MenCatalogFilter";
+import "./MenCatalogFilter.css";
 
 const MenCatalogFilter = () => {
   return (

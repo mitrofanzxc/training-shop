@@ -1,4 +1,4 @@
-import "./MenCatalogHeader";
+import "./MenCatalogHeader.css";
 
 const MenCatalogHeader = () => {
   return (
