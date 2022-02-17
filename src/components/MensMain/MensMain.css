@@ -145,9 +145,9 @@
 }
 
 .catalog .product__card .product__card__rating .product__card__rating__item:nth-child(-n+4) {
-  background-image: url("../assets/img/star__filled.svg");
+  background-image: url("./assets/img/star__filled.svg");
 }
 
 .catalog .product__card .product__card__rating .product__card__rating__item:nth-child(5) {
-  background-image: url("../assets/img/star.svg");
+  background-image: url("./assets/img/star.svg");
 }

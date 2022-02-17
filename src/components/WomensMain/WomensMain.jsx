@@ -1,11 +1,11 @@
-import product__card__women1 from "../assets/img/product__card__women1.jpg";
-import product__card__women2 from "../assets/img/product__card__women2.jpg";
-import product__card__women3 from "../assets/img/product__card__women3.jpg";
-import product__card__women4 from "../assets/img/product__card__women4.jpg";
-import product__card__women5 from "../assets/img/product__card__women5.jpg";
-import product__card__women6 from "../assets/img/product__card__women6.jpg";
-import product__card__women7 from "../assets/img/product__card__women7.jpg";
-import product__card__women8 from "../assets/img/product__card__women8.jpg";
+import product__card__women1 from "./assets/img/product__card__women1.jpg";
+import product__card__women2 from "./assets/img/product__card__women2.jpg";
+import product__card__women3 from "./assets/img/product__card__women3.jpg";
+import product__card__women4 from "./assets/img/product__card__women4.jpg";
+import product__card__women5 from "./assets/img/product__card__women5.jpg";
+import product__card__women6 from "./assets/img/product__card__women6.jpg";
+import product__card__women7 from "./assets/img/product__card__women7.jpg";
+import product__card__women8 from "./assets/img/product__card__women8.jpg";
 
 const WomensMain = () => {
   return (

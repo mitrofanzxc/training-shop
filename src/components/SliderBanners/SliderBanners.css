@@ -22,7 +22,7 @@
   gap: 3.75rem;
   width: 33.75rem;
   height: 30.625rem;
-  background-image: url("../assets/img/slider.jpg");
+  background-image: url("./assets/img/slider.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -41,17 +41,17 @@
   height: 2.5rem;
   border-radius: 50%;
   background-color: #FFFFFF;
-  background-image: url("../assets/img/ellipse.svg");
+  background-image: url("./assets/img/ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .banners__container .slider .slider__arrow:nth-child(1) {
-  background-image: url("../assets/img/ellipse__arrow__left.svg");
+  background-image: url("./assets/img/ellipse__arrow__left.svg");
 }
 
 .banners__container .slider .slider__arrow:nth-child(3) {
-  background-image: url("../assets/img/ellipse__arrow__right.svg");
+  background-image: url("./assets/img/ellipse__arrow__right.svg");
 }
 
 .banners__container .slider .slider__title {
@@ -82,7 +82,7 @@
           justify-content: center;
   width: 33.75rem;
   height: 16.25rem;
-  background-image: url("../assets/img/accessories.jpg");
+  background-image: url("./assets/img/accessories.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -110,7 +110,7 @@
           justify-content: center;
   width: 15.9375rem;
   height: 12.5rem;
-  background-image: url("../assets/img/women.jpg");
+  background-image: url("./assets/img/women.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -139,7 +139,7 @@
           justify-content: center;
   width: 15.9375rem;
   height: 12.5rem;
-  background-image: url("../assets/img/men.jpg");
+  background-image: url("./assets/img/men.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }

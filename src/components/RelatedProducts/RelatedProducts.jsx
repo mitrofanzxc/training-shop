@@ -1,3 +1,8 @@
+import RelatedProducts1 from "./assets/img/related__products__1.jpg";
+import RelatedProducts2 from "./assets/img/related__products__2.jpg";
+import RelatedProducts3 from "./assets/img/related__products__3.jpg";
+import RelatedProducts4 from "./assets/img/related__products__4.jpg";
+
 const RelatedProducts = () => {
   return (
     <div>
@@ -14,7 +19,7 @@ const RelatedProducts = () => {
             <ul class="product__card">
               <li>
                 <img
-                  src="./assets/img/related__products__1.jpg"
+                  src={RelatedProducts1}
                   class="product__card__image"
                   alt="product__card__women"
                 />
@@ -34,7 +39,7 @@ const RelatedProducts = () => {
             <ul class="product__card">
               <li>
                 <img
-                  src="./assets/img/related__products__2.jpg"
+                  src={RelatedProducts2}
                   class="product__card__image"
                   alt="product__card__women"
                 />
@@ -54,7 +59,7 @@ const RelatedProducts = () => {
             <ul class="product__card">
               <li>
                 <img
-                  src="./assets/img/related__products__3.jpg"
+                  src={RelatedProducts3}
                   class="product__card__image"
                   alt="product__card__women"
                 />
@@ -74,7 +79,7 @@ const RelatedProducts = () => {
             <ul class="product__card">
               <li>
                 <img
-                  src="./assets/img/related__products__4.jpg"
+                  src={RelatedProducts4}
                   class="product__card__image"
                   alt="product__card__women"
                 />

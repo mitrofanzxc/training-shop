@@ -24,7 +24,7 @@
   left: -43%;
   width: 311px;
   height: 584px;
-  background-image: url("../assets/img/form__woman.png");
+  background-image: url("./assets/img/form__woman.png");
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
@@ -37,7 +37,7 @@
   right: -36%;
   width: 219px;
   height: 524px;
-  background-image: url("../assets/img/form__man.png");
+  background-image: url("./assets/img/form__man.png");
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
