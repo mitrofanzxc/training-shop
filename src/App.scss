@@ -127,13 +127,17 @@ body {
 }
 
 .h1 {
-  width: $base*30;
-  height: $base*4;
   margin: 0;
   padding: 0;
-  background-image: url('./assets/img/clevershop.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  
+  .header-nav-logo {
+    display: block;
+    width: $base*30;
+    height: $base*4;
+    background-image: url('./assets/img/clevershop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .h2 {
