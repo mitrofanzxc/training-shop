@@ -1,0 +1,114 @@
+@import "../../scss/Variables.scss";
+
+// === CATALOG ===
+
+.catalog {
+
+  .catalog__header {
+    @include flexSpaceBetween;
+    margin-top: $base*19;
+    background-color: transparent;
+
+    .h2 {
+      font-size: 22px;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .catalog__filter {
+      @include flexSpaceBetween;
+      gap: 17px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-transform: uppercase;
+      font-size: $fs-xs;
+      font-weight: $fw-regular;
+      color: rgba(18,18,18,0.6);
+      cursor: pointer;
+
+      .catalog__filter__item {
+        transition: $transition;
+
+        &:hover {
+          font-weight: $fw-regular;
+          color: $color-dark;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  
+  .products__container {
+    @include flexSpaceBetween;
+    flex-wrap: wrap;
+    gap: $base*6 $base*3;
+    margin-top: 41px;
+  }
+
+  .related__products {
+    padding-bottom: 17px;
+  }
+
+  .product__card {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .product__card__image {
+      display: block;
+      width: $base*51;
+      height: $base*64;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product__card__title {
+      margin-top: $base*3;
+      font-size: $fs-m;
+      font-weight: $fw-regular;
+      color: rgba(18,18,18,0.6);
+    }
+
+    .product__card__price__list {
+      @include flexSpaceBetween;
+      list-style: none;
+      margin: 0;
+      margin-top: 12px;
+      padding: 0;
+
+      .product__card__price__item {
+        font-size: $fs-m;
+        font-weight: $fw-bold;
+        color: $color-dark;
+      }
+    }
+
+    .product__card__rating {
+      @include flexSpaceBetween;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .product__card__rating__item {
+        @include flexCenter;
+        list-style: none;
+        width: 14px;
+        height: $base*3;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        &:nth-child(-n+4) {
+          background-image: url('./assets/img/star__filled.svg');
+        }
+  
+        &:nth-child(5) {
+          background-image: url('./assets/img/star.svg');
+        }
+      }
+    }
+  }
+}
+
+// === / CATALOG ===
