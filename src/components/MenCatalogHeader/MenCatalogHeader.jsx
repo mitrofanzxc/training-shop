@@ -1,5 +1,5 @@
 import React from "react";
-import "./MenCatalogHeader.css";
+import "./MenCatalogHeader.scss";
 
 const MenCatalogHeader = () => {
   return (

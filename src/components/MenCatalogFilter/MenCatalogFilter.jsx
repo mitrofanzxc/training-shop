@@ -1,5 +1,6 @@
 import React from "react";
-import "./MenCatalogFilter.css";
+
+import "./MenCatalogFilter.scss";
 
 const MenCatalogFilter = () => {
   return (

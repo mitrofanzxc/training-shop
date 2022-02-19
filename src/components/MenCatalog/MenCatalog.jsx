@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+import "./MenCatalog.scss";
 
 import product__card__men1 from "./assets/img/product__card__men1.jpg";
 import product__card__men2 from "./assets/img/product__card__men2.jpg";
