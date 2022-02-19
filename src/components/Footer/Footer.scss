@@ -75,6 +75,13 @@
       padding: 0;
       list-style: none;
 
+      .footer__links__container__list__header {
+        font-size: 14px;
+        font-weight: $fw-semi-bold;
+        color: $color-dark;
+        text-transform: uppercase;
+      }
+
       .footer__links__container__list__item {
         display: flex;
         align-items: center;
@@ -83,13 +90,6 @@
         font-weight: $fw-regular;
         color: rgba(18,18,18,0.8);
         line-height: 34px;
-        
-        &:nth-child(1) {
-          font-size: 14px;
-          font-weight: $fw-semi-bold;
-          color: $color-dark;
-          text-transform: uppercase;
-        }
 
         .icon {
           display: inline-block;

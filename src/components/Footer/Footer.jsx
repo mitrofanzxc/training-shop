@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+import { FooterNav } from "../../shared/FooterNav";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -7,9 +10,29 @@ const Footer = () => {
       <section className="footer__links">
         <div className="inner__container">
           <ul className="footer__links__container">
+            {FooterNav.map((FooterNavItem) => {
+              return (
+                <li className="footer__links__container__item">
+                  <ul className="footer__links__container__list">
+                    <li className="footer__links__container__list__header">
+                      {FooterNavItem.header}
+                    </li>
+                    <li className="footer__links__container__list__item">
+                      <Link
+                        key={FooterNavItem.headerInfo.id}
+                        to={`/${FooterNavItem.headerInfo.path}`}
+                        data-test-id={`footer-nav-link-${FooterNavItem.headerInfo.path}`}
+                      >
+                        {FooterNavItem.headerInfo.description}
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              );
+            })}
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__item">
+                <li className="footer__links__container__list__header">
                   Categories
                 </li>
                 <li className="footer__links__container__list__item">Men</li>
@@ -22,7 +45,7 @@ const Footer = () => {
             </li>
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__item">
+                <li className="footer__links__container__list__header">
                   Infomation
                 </li>
                 <li className="footer__links__container__list__item">
@@ -37,7 +60,7 @@ const Footer = () => {
             </li>
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__item">
+                <li className="footer__links__container__list__header">
                   Useful links
                 </li>
                 <li className="footer__links__container__list__item">
@@ -56,7 +79,7 @@ const Footer = () => {
             </li>
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__item">
+                <li className="footer__links__container__list__header">
                   Contact Us
                 </li>
                 <li className="footer__links__container__list__item">
