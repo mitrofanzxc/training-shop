@@ -1,6 +1,6 @@
 @import "./scss/Variables.scss";
 
-// === MIXIN ===
+// === FONTS ===
 
 @mixin font ($font_name, $file_name, $weight, $style) {
   @font-face {
@@ -14,11 +14,7 @@
 
 @import "fonts";
 
-@mixin spartan {
-  font-family: 'Spartan', sans-serif;
-}
-
-// === / MIXIN ===
+// === / FONTS ===
 
 // === COMMON ===
 

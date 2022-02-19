@@ -1,5 +1,6 @@
 import React from "react";
-import "./ProductPageHeader.css";
+
+import "./ProductPageHeader.scss";
 
 const ProductPageHeader = () => {
   return (
