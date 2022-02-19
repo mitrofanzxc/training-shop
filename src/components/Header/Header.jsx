@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+import { HeaderNav } from "../../shared/HeaderNav";
 import "./Header.scss";
 
 const Header = () => {
@@ -36,76 +38,20 @@ const Header = () => {
           </h1>
           <nav className="nav" data-test-id="menu">
             <ul className="header__second__wrapper">
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="about-us"
-                  to="/about"
-                  className="nav__link"
-                  data-test-id="menu-link-about"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="women"
-                  to="/women"
-                  className="nav__link"
-                  data-test-id="menu-link-women"
-                >
-                  Women
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="men"
-                  to="/men"
-                  className="nav__link"
-                  data-test-id="menu-link-men"
-                >
-                  Men
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="beauty"
-                  to="/beauty"
-                  className="nav__link"
-                  data-test-id="menu-link-beauty"
-                >
-                  Beauty
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="accessories"
-                  to="/accessories"
-                  className="nav__link"
-                  data-test-id="menu-link-accessories"
-                >
-                  Accessories
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="blog"
-                  to="/blog"
-                  className="nav__link"
-                  data-test-id="menu-link-blog"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="header__second__wrapper__item">
-                <Link
-                  key="contacts"
-                  to="/contacts"
-                  className="nav__link"
-                  data-test-id="menu-link-contacts"
-                >
-                  Contacts
-                </Link>
-              </li>
+              {HeaderNav.map((HeaderNavItem) => {
+                return (
+                  <li className="header__second__wrapper__item">
+                    <Link
+                      key={HeaderNavItem.id}
+                      to={`/${HeaderNavItem.path}`}
+                      className="nav__link"
+                      data-test-id={`menu-link-${HeaderNavItem.path}`}
+                    >
+                      {HeaderNavItem.header}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <ul className="socials__wrapper">

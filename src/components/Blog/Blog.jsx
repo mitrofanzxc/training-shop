@@ -16,12 +16,11 @@ const Blog = () => {
             {BlogInfo.map((BlogInfoItem) => {
               return (
                 <li className="blog__slider__item">
+                  <img src={BlogInfoItem.img} alt={BlogInfoItem.alt} />
                   <div className="blog__slider__item__title">
-                    <h3 className="h3">
-                      {BlogInfoItem.blog__slider__item__header}
-                    </h3>
+                    <h3 className="h3">{BlogInfoItem.header}</h3>
                     <div className="blog__slider__item__text">
-                      {BlogInfoItem.blog__slider__item__text}
+                      {BlogInfoItem.description}
                     </div>
                   </div>
                 </li>
