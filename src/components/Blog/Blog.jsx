@@ -1,5 +1,6 @@
 import React from "react";
 
+import { BlogInfo } from "../../shared/BlogInfo";
 import "./Blog.scss";
 
 const Blog = () => {
@@ -12,33 +13,20 @@ const Blog = () => {
             <button className="button__all">See All</button>
           </div>
           <ul className="blog__slider">
-            <li className="blog__slider__item">
-              <div className="blog__slider__item__title">
-                <h3 className="h3">The Easiest Way to Break</h3>
-                <div className="blog__slider__item__text">
-                  But I must explain to you how all this mistaken idea of
-                  denouncing pleas and praising pain was bor
-                </div>
-              </div>
-            </li>
-            <li className="blog__slider__item">
-              <div className="blog__slider__item__title">
-                <h3 className="h3">Wedding Season</h3>
-                <div className="blog__slider__item__text">
-                  But I must explain to you how all this mistaken idea of
-                  denouncing pleas and praising pain was bor
-                </div>
-              </div>
-            </li>
-            <li className="blog__slider__item">
-              <div className="blog__slider__item__title">
-                <h3 className="h3">Recent Favorites On Repeat</h3>
-                <div className="blog__slider__item__text">
-                  But I must explain to you how all this mistaken idea of
-                  denouncing pleas and praising pain was bor
-                </div>
-              </div>
-            </li>
+            {BlogInfo.map((BlogInfoCard) => {
+              return (
+                <li className="blog__slider__item">
+                  <div className="blog__slider__item__title">
+                    <h3 className="h3">
+                      {BlogInfoCard.blog__slider__item__header}
+                    </h3>
+                    <div className="blog__slider__item__text">
+                      {BlogInfoCard.blog__slider__item__text}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
