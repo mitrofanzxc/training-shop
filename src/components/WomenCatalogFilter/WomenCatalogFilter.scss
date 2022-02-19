@@ -1,0 +1,42 @@
+@import "../../scss/Variables.scss";
+
+// === FILTER ===
+
+.filter {
+
+  .filter__list {
+    @include flexSpaceBetween;
+    height: 32px;
+    margin: $base*7 0 $base*6 0;
+    padding: 0;
+    list-style: none;
+
+    .filter__list__item {
+      @include flexCenter;
+
+      .filter__list__item__sublist {
+        @include flexCenter;
+        margin: 0;
+        padding: 0;
+        gap: $base*2;
+        list-style: none;
+
+        .filter__list__item__sublist__item {
+          font-size: $base*3;
+          text-transform: uppercase;
+        }
+      }
+
+      .buttons__grid {
+        margin-left: $base*7;
+        gap: $base*5;
+      }
+
+      .buttons__sorting {
+        gap: $base;
+      }
+    }
+  }
+}
+
+// === / FILTER ===

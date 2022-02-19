@@ -1,5 +1,5 @@
 import React from "react";
-import "./WomenCatalogFilter.css";
+import "./WomenCatalogFilter.scss";
 
 const WomenCatalogFilter = () => {
   return (
