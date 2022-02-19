@@ -1,0 +1,55 @@
+@import "../../scss/Variables.scss";
+
+// === BENEFITS ===
+
+.benefits {
+  border-bottom: 2px solid $color-gr-white;
+
+  .benefits__wrapper {
+    @include flexSpaceBetween;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .benefits__item {
+      @include flexCenter;
+      width: $base*8;
+      height: $base*8;
+      margin: $base*6 $base*2 $base*6 0;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:nth-child(1) {
+        background-image: url('./assets/img/delivery.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('./assets/img/refresh.svg');
+      }
+
+      &:nth-child(5) {
+        background-image: url('./assets/img/support.svg');
+      }
+    }
+
+    .benefits__text {
+      margin: 0;
+      padding: 0;
+    }
+
+    .h3 {
+      font-size: $fs-xs;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      color: $color-dark;
+    }
+
+    .h4 {
+      font-size: $fs-xs;
+      font-weight: $fw-medium;
+      color: $color-dark;
+    }
+  }
+}
+
+// === / BENEFITS ===

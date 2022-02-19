@@ -1,0 +1,51 @@
+@import "../../scss/Variables.scss";
+
+// === BANNERS SECTION ===
+
+.banners__section {
+  
+  .banners__section__container {
+    @include flexSpaceBetween();
+    margin: $base*19 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .banners__section__container__item {
+    @include flexCenter;
+    width: $base*108;
+    height: $base*52;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+      background-image: url('./assets/img/section__newseason.jpg');
+    }
+
+    &:nth-child(2) {
+      background-image: url('./assets/img/section__sale.jpg');
+    }
+  }
+  
+  .banners__section__container__item__title {
+    text-align: center;
+    background-color: $color-white;
+    border: $base;
+
+    .h3 {
+      font-size: $fs-xs;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      color: rgba(18,18,18,0.6);
+    }
+
+    .h2 {
+      font-size: $fs-l;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      color: $color-dark;
+    }
+  }
+}
+
+// === BANNERS SECTION ===

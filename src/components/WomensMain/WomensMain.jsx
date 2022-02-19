@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 import product__card__women1 from "./assets/img/product__card__women1.jpg";
@@ -9,6 +10,8 @@ import product__card__women5 from "./assets/img/product__card__women5.jpg";
 import product__card__women6 from "./assets/img/product__card__women6.jpg";
 import product__card__women7 from "./assets/img/product__card__women7.jpg";
 import product__card__women8 from "./assets/img/product__card__women8.jpg";
+
+import "./WomensMain.scss";
 
 const WomensMain = () => {
   return (

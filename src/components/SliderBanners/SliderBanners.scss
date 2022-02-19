@@ -1,0 +1,123 @@
+@import "../../scss/Variables.scss";
+
+// === SLIDER BANNERS ===
+
+.banners__container {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: $base*108 $base*51 $base*51; 
+  grid-template-rows: 1fr;
+  margin-top: $base*6;
+  gap: 0 $base*6;
+  grid-template-areas: 
+    "slider women men"
+    "slider accessories accessories";
+  
+  .slider {
+    grid-area: slider;
+    @include flexCenter;
+    gap: $base*12;
+    width: $base*108;
+    height: $base*98;
+    background-image: url('./assets/img/slider.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .slider__arrow {
+      @include flexCenter;
+      width: $base*8;
+      height: $base*8;
+      border-radius: 50%;
+      background-color: $color-white;
+      background-image: url('./assets/img/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      
+      &:nth-child(1) {
+        background-image: url('./assets/img/ellipse__arrow__left.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('./assets/img/ellipse__arrow__right.svg');
+      }
+    }
+
+    .slider__title {
+      border-radius: $base;
+      background-color: $color-white;
+      text-align: center;
+
+      .h3 {
+        margin-top: $base*5;
+        letter-spacing: 1px;
+      }
+
+      .h2 {
+        margin: $base*3 $base*6 $base*5 $base*6;
+      }
+    }
+  }
+  
+  .accessories {
+    grid-area: accessories;
+    @include flexCenter;
+    width: $base*108;
+    height: $base*52;
+    background-image: url('./assets/img/accessories.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .slider__title {
+      border-radius: $base;
+      background-color: $color-white;
+      text-align: center;
+
+      .h2 {
+        margin: $base*3 $base*5 $base*3 $base*5;
+      }
+    }
+  }
+  
+  .women {
+    grid-area: women;
+    @include flexCenter;
+    width: $base*51;
+    height: $base*40;
+    background-image: url('./assets/img/women.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .slider__title {
+      border-radius: $base;
+      background-color: $color-white;
+      text-align: center;
+
+      .h2 {
+        margin: $base*3 $base*4 $base*3 $base*4;
+        font-size: $fs-m;
+      }
+    }
+  }
+  
+  .men {
+    grid-area: men;
+    @include flexCenter;
+    width: $base*51;
+    height: $base*40;
+    background-image: url('./assets/img/men.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .slider__title {
+      border-radius: $base;
+      background-color: $color-white;
+      text-align: center;
+
+      .h2 {
+        margin: $base*3 $base*8 $base*3 $base*8;
+      }
+    }
+  }
+}
+
+// === / SLIDER BANNERS ===

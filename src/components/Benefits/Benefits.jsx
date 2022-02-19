@@ -1,5 +1,6 @@
 import React from "react";
-import "./Benefits.css";
+
+import "./Benefits.scss";
 
 const Benefits = () => {
   return (

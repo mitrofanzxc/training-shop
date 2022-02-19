@@ -1,0 +1,77 @@
+@import "../../scss/Variables.scss";
+
+// === BLOG ===
+
+.blog {
+
+  .blog__header {
+    @include flexSpaceBetween;
+    margin-top: $base*18;
+
+    .h2 {
+      font-size: 23px;
+    }
+
+    .button__all {
+      width: $base*13;
+      margin: 0;
+      margin-top: $base*2;
+      padding: 0;
+      font-size: $fs-xs;
+      background-color: transparent;
+    }
+  }
+
+  .blog__slider {
+    @include flexSpaceBetween;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: $base*10;
+    padding: 0;
+    list-style: none;
+
+    .blog__slider__item {
+      position: relative;
+      width: $base*70;
+      height: $base*70;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &:nth-child(1) {
+        background-image: url('./assets/img/section__blog1.jpg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('./assets/img/section__blog2.jpg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('./assets/img/section__blog3.jpg');
+      }
+
+      .blog__slider__item__title {
+        position: absolute;
+        top: $base*44;
+        margin: 0 $base*4 0 $base*4;
+        padding: $base*5 0 0 $base*3;
+        background-color: $color-white;
+
+        .h3 {
+          font-size: $fs-m;
+          font-weight: $fw-semi-bold;
+          letter-spacing: 2px;
+          color: $color-dark;
+        }
+
+        .blog__slider__item__text {
+          margin-top: $base*3;
+          font-size: $base*3;
+          line-height: 23px;
+          color: rgba(18,18,18,0.8);
+        }
+      }
+    }
+  }
+}
+
+// === / BLOG ===

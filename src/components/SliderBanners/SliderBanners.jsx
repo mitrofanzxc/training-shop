@@ -1,5 +1,6 @@
 import React from "react";
-import "./SliderBanners.css";
+
+import "./SliderBanners.scss";
 
 const SliderBanners = () => {
   return (
