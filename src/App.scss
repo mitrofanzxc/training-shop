@@ -50,6 +50,14 @@ body {
   max-width: $base*222;
   margin: 0 auto;
   padding: 0 $base*17;
+
+  @media (max-width: $breakpoint-lg-min) {
+    padding: 0 $base*8;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    padding: 0 $base*4;
+  }
 }
 
 .button__dark {

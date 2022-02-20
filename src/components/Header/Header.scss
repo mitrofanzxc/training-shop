@@ -3,7 +3,6 @@
 // === HEADER ===
 
 .header__first {
-  height: $base*5;
   background-color: $color-dark;
   color: $color-white-08;
 
@@ -87,6 +86,15 @@
     @include flexSpaceBetween;
     height: $base*13;
 
+    @media (max-width: $breakpoint-md-min) {
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: $base*2;
+      height: auto;
+      margin: $base*2 0;
+    }
+
     .nav {
       @include flexSpaceBetween;
       list-style: none;
@@ -101,6 +109,12 @@
         color: $color-dark;
         margin: 0;
         padding: 0;
+
+        @media (max-width: $breakpoint-xl-min) {
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: $base*2;
+        }
 
         .header__second__wrapper__item {
 

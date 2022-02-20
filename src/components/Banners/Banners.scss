@@ -28,22 +28,26 @@
   }
   
   .banners__section__container__item__title {
-    text-align: center;
+    margin: 0;
+    padding: 0;
     background-color: $color-white;
-    border: $base;
+    text-align: center;
+    border: none;
+    border-radius: $base;
 
     .h3 {
+      padding-top: $base*5;
       font-size: $fs-xs;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
-      color: rgba(18,18,18,0.6);
+      color: $color-dark-06;
     }
 
     .h2 {
+      padding: $base*3 $base*4;
       font-size: $fs-l;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
-      color: $color-dark;
     }
   }
 }

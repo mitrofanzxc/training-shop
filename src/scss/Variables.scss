@@ -4,6 +4,12 @@
   font-family: 'Spartan', sans-serif;
 }
 
+@mixin flexSpaceAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 @mixin flexSpaceBetween {
   display: flex;
   align-items: center;

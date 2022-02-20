@@ -15,9 +15,7 @@
   
   .slider {
     grid-area: slider;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flexSpaceAround;
     width: $base*108;
     height: $base*98;
     background-image: url('./assets/img/slider.jpg');
