@@ -299,20 +299,21 @@
     height: $base*8;
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
-    
-    &:nth-child(1) {
-      background-image: url('./assets/img/delivery.svg');
-    }
-    
-    &:nth-child(3) {
-      background-image: url('./assets/img/refresh.svg');
-    }
-    
-    &:nth-child(5) {
-      background-image: url('./assets/img/mail.svg');
-    }
+    background-repeat: no-repeat;
+  }
+  
+  .delivery {
+    background-image: url('./assets/img/delivery.svg');
+  }
+  
+  .refresh {
+    background-image: url('./assets/img/refresh.svg');
+  }
+  
+  .mail {
+    background-image: url('./assets/img/mail.svg');
   }
   
   .benefits__text {
