@@ -206,7 +206,11 @@ const MensMain = () => {
               </ul>
             </ul>
           </div>
-          <button className="button__all">See All</button>
+          <button className="button__all">
+            <Link to="/men" className="button__all__link">
+              See All
+            </Link>
+          </button>
         </div>
       </section>
     </div>
