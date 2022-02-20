@@ -28,25 +28,31 @@
       @include flexCenter;
       width: $base*8;
       height: $base*8;
+      margin: 0;
+      padding: 0;
+      border: none;
       border-radius: 50%;
       background-color: $color-white;
-      background-image: url('./assets/img/ellipse.svg');
       background-repeat: no-repeat;
       background-position: center;
-      
-      &:nth-child(1) {
-        background-image: url('./assets/img/ellipse__arrow__left.svg');
-      }
+      cursor: pointer;
+    }
+    
+    .arrow__left {
+      background-image: url('./assets/img/ellipse__arrow__left.svg');
+    }
 
-      &:nth-child(3) {
-        background-image: url('./assets/img/ellipse__arrow__right.svg');
-      }
+    .arrow__right {
+      background-image: url('./assets/img/ellipse__arrow__right.svg');
     }
 
     .slider__title {
-      border-radius: $base;
+      margin: 0;
+      padding: 0;
       background-color: $color-white;
       text-align: center;
+      border: none;
+      border-radius: $base;
 
       .h3 {
         padding-top: $base*5;
@@ -77,9 +83,12 @@
     background-repeat: no-repeat;
 
     .slider__title {
-      border-radius: $base;
+      margin: 0;
+      padding: 0;
       background-color: $color-white;
       text-align: center;
+      border: none;
+      border-radius: $base;
 
       .h2 {
         padding: $base*3 $base*4;
@@ -101,9 +110,12 @@
     background-repeat: no-repeat;
 
     .slider__title {
-      border-radius: $base;
+      margin: 0;
+      padding: 0;
       background-color: $color-white;
       text-align: center;
+      border: none;
+      border-radius: $base;
 
       .h2 {
         padding: $base*3 $base*4;
@@ -125,9 +137,12 @@
     background-repeat: no-repeat;
 
     .slider__title {
-      border-radius: $base;
+      margin: 0;
+      padding: 0;
       background-color: $color-white;
       text-align: center;
+      border: none;
+      border-radius: $base;
 
       .h2 {
         padding: $base*3 $base*4;

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import "./SliderBanners.scss";
 
 const SliderBanners = () => {
@@ -9,27 +10,35 @@ const SliderBanners = () => {
         <div className="inner__container">
           <div className="banners__container">
             <div className="slider">
-              <div className="slider__arrow"></div>
-              <div className="slider__title">
-                <h3 className="h3">Banner</h3>
-                <h2 className="h2">Your title text</h2>
-              </div>
-              <div className="slider__arrow"></div>
+              <button className="slider__arrow arrow__left"></button>
+              <button className="slider__title">
+                <Link to="/">
+                  <h3 className="h3">Banner</h3>
+                  <h2 className="h2">Your title text</h2>
+                </Link>
+              </button>
+              <button className="slider__arrow arrow__right"></button>
             </div>
             <div className="accessories">
-              <div className="slider__title">
-                <h2 className="h2">Accessories</h2>
-              </div>
+              <button className="slider__title">
+                <Link to="/accessories">
+                  <h2 className="h2">Accessories</h2>
+                </Link>
+              </button>
             </div>
             <div className="women">
-              <div className="slider__title">
-                <h2 className="h2">Women</h2>
-              </div>
+              <button className="slider__title">
+                <Link to="/women">
+                  <h2 className="h2">Women</h2>
+                </Link>
+              </button>
             </div>
             <div className="men">
-              <div className="slider__title">
-                <h2 className="h2">Men</h2>
-              </div>
+              <button className="slider__title">
+                <Link to="/men">
+                  <h2 className="h2">Men</h2>
+                </Link>
+              </button>
             </div>
           </div>
         </div>
