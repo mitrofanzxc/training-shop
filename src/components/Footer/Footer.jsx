@@ -4,32 +4,55 @@ import { Link } from "react-router-dom";
 import { FooterNav } from "../../shared/FooterNav";
 import "./Footer.scss";
 
+const FooterNavHeaders = (obj) => {
+  let headers = [];
+  for (let i = 0; i < obj.length; i++) {
+    console.log(obj[i].headerInfo); 
+    headers.push(
+      <li className="footer__links__container__list__header">
+        {obj[i].headerInfo}
+      </li>
+    );
+  }
+  console.log(headers[0].props.children[0].description);
+  return headers;
+};
+
+FooterNavHeaders(FooterNav);
+
+const FooterNavLinks = (obj) => {
+  let links = [];
+  for (let i = 0; i < obj.length; i++) {
+    for (let j = 0; j < obj[i].headerInfo.length; j++) {
+      links.push(
+        <li className="footer__links__container__list__item">
+          <Link
+            key={obj[i].headerInfo[j].id}
+            to={`/${obj[i].headerInfo[j].path}`}
+            data-test-id={`footer-nav-link-${obj[i].headerInfo[j].path}`}
+          >
+            {obj[i].headerInfo[j].description}
+          </Link>
+        </li>
+      );
+    }
+  }
+  return links;
+};
+
 const Footer = () => {
   return (
     <div data-test-id="footer">
       <section className="footer__links">
         <div className="inner__container">
           <ul className="footer__links__container">
-            {FooterNav.map((FooterNavItem) => {
-              return (
-                <li className="footer__links__container__item">
-                  <ul className="footer__links__container__list">
-                    <li className="footer__links__container__list__header">
-                      {FooterNavItem.header}
-                    </li>
-                    <li className="footer__links__container__list__item">
-                      <Link
-                        key={FooterNavItem.headerInfo.id}
-                        to={`/${FooterNavItem.headerInfo.path}`}
-                        data-test-id={`footer-nav-link-${FooterNavItem.headerInfo.path}`}
-                      >
-                        {FooterNavItem.headerInfo.description}
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-              );
-            })}
+            <li className="footer__links__container__item">
+              <ul className="footer__links__container__list">
+                {/* {FooterNavHeaders(FooterNav).map((FooterNavHeadersItem) => {
+                  return FooterNavHeadersItem;
+                })} */}
+              </ul>
+            </li>
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
                 <li className="footer__links__container__list__header">
@@ -100,7 +123,6 @@ const Footer = () => {
           </ul>
         </div>
       </section>
-
       <footer className="footer outer__container">
         <div className="inner__container">
           <h3 className="h3">Copyright © 2022 all rights reserved</h3>

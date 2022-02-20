@@ -5,7 +5,7 @@
 .header__first {
   height: $base*5;
   background-color: $color-dark;
-  color: $color-white-transparency;
+  color: $color-white-08;
 
   .inner__container {
     @include flexSpaceBetween;
@@ -39,7 +39,7 @@
       }
 
       &:nth-child(5) {
-        margin-left: $base*7;
+        margin-left: $base*4;
         background-image: url('./assets/img/clock__header.svg');
       }
     }
@@ -48,7 +48,7 @@
 
 .header__socials__wrapper {
   @include flexCenter;
-  gap: 3px;
+  gap: $base;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -75,7 +75,7 @@
   }
 
   .icon {
-    height: 13px;
+    height: $base*3;
   }
 }
 
@@ -85,14 +85,13 @@
 
   .inner__container {
     @include flexSpaceBetween;
-    height: 63px;
+    height: $base*13;
 
     .nav {
       @include flexSpaceBetween;
       list-style: none;
       color: $color-dark;
       margin: 0;
-      margin-right: $base*10;
       padding: 0;
 
       .header__second__wrapper {
