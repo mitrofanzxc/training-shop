@@ -6,10 +6,10 @@
 
   .catalog__header {
     @include flexSpaceBetween;
-    margin-top: $base*19;
+    margin-top: $base*20;
 
     .h2 {
-      font-size: $fs-xxl;
+      font-size: $fs-xl;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -42,8 +42,8 @@
   .products__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    gap: $base*6 $base*3;
-    margin-top: 0;
+    gap: $base*5 $base*3;
+    margin-top: $base*10;
   }
 
   .product__card {

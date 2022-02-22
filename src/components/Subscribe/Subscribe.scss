@@ -59,7 +59,7 @@
 
       .h2 {
         margin-top: $base*3;
-        font-size: $base*6;
+        font-size: $fs-xxl;
 
         .sale {
           color: $color-sale;
@@ -77,7 +77,7 @@
         font-weight: $fw-medium;
         letter-spacing: 1px;
         color: $color-dark-04;
-        background-color: rgba(255,255,255,0.2);
+        background-color: $color-gr-white;
         border: none;
         text-align: center;
         text-transform: none;

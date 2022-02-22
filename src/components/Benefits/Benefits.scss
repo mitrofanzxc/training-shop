@@ -7,7 +7,7 @@
 
   .benefits__wrapper {
     @include flexSpaceBetween;
-    margin: $base*7 0;
+    margin: $base*5 0;
     padding: 0;
     list-style: none;
 
@@ -19,8 +19,8 @@
 
     .benefits__item {
       @include flexCenter;
-      width: $base*6;
-      height: $base*6;
+      min-width: $base*6;
+      min-height: $base*6;
       margin: 0;
       background-size: contain;
       background-position: center;

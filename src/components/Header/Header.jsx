@@ -10,14 +10,22 @@ const Header = () => {
       <header className="header__first outer__container">
         <div className="inner__container">
           <ul className="header__first__wrapper">
-            <li className="header__first__wrapper__item icon"></li>
-            <li className="header__first__wrapper__item">+375 29 100 20 30</li>
-            <li className="header__first__wrapper__item icon"></li>
-            <li className="header__first__wrapper__item">
-              Belarus, Gomel, Lange 17
-            </li>
-            <li className="header__first__wrapper__item icon"></li>
-            <li className="header__first__wrapper__item">All week 24/7</li>
+            <div className="header__first__wrapper__div">
+              <li className="header__first__wrapper__item icon phone"></li>
+              <li className="header__first__wrapper__item">
+                +375 29 100 20 30
+              </li>
+            </div>
+            <div className="header__first__wrapper__div">
+              <li className="header__first__wrapper__item icon location"></li>
+              <li className="header__first__wrapper__item">
+                Belarus, Gomel, Lange 17
+              </li>
+            </div>
+            <div className="header__first__wrapper__div">
+              <li className="header__first__wrapper__item icon clock"></li>
+              <li className="header__first__wrapper__item">All week 24/7</li>
+            </div>
           </ul>
           <ul className="header__socials__wrapper">
             <li className="header__socials__wrapper__item icon"></li>

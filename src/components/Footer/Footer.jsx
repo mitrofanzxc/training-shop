@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { FooterNav } from "../../shared/FooterNav";
+
 import "./Footer.scss";
 
 const FooterNavHeaders = (obj) => {
@@ -46,13 +47,6 @@ const Footer = () => {
       <section className="footer__links">
         <div className="inner__container">
           <ul className="footer__links__container">
-            <li className="footer__links__container__item">
-              <ul className="footer__links__container__list">
-                {/* {FooterNavHeaders(FooterNav).map((FooterNavHeadersItem) => {
-                  return FooterNavHeadersItem;
-                })} */}
-              </ul>
-            </li>
             <li className="footer__links__container__item">
               <ul className="footer__links__container__list">
                 <li className="footer__links__container__list__header">

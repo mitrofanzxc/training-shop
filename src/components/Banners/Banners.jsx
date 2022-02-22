@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+
 import "./Banners.scss";
 
 const Banners = () => {
@@ -21,7 +22,7 @@ const Banners = () => {
               <button className="banners__section__container__item__title">
                 <Link to="/sale">
                   <h3 className="h3">Sale</h3>
-                  <h2 className="h2">Get Up To 50% Off</h2>
+                  <h2 className="h2">Get Up To <span className="sale">50% Off</span></h2>
                 </Link>
               </button>
             </li>

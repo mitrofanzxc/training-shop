@@ -48,6 +48,10 @@
       font-size: $fs-l;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
+
+      .sale {
+        color: $color-sale;
+      }
     }
   }
 }

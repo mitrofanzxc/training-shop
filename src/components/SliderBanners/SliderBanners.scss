@@ -3,24 +3,27 @@
 // === SLIDER BANNERS ===
 
 .banners__container {
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: $base*108 $base*51 $base*51; 
-  grid-template-rows: 1fr;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: $base*6;
-  gap: 0 $base*6;
-  grid-template-areas: 
-    "slider women men"
-    "slider accessories accessories";
   
   .slider {
-    grid-area: slider;
-    @include flexSpaceAround;
-    width: $base*108;
-    height: $base*98;
-    background-image: url('./assets/img/slider.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    @include flexCenter;
+    width: 49%;
+
+    .slider__img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .buttons__container {
+      position: absolute;
+      @include flexSpaceBetween;
+      width: 46%;
+    }
 
     .slider__arrow {
       @include flexCenter;
@@ -29,7 +32,7 @@
       margin: 0;
       padding: 0;
       border: none;
-      border-radius: 50%;
+      border-radius: 100%;
       background-color: $color-white;
       background-repeat: no-repeat;
       background-position: center;
@@ -71,16 +74,29 @@
     }
   }
   
+  .banners__container__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 49%;
+  
+    .banners__container__right__gender {
+      @include flexSpaceBetween;
+    }
+  }
+
   .accessories {
-    grid-area: accessories;
     @include flexCenter;
-    width: $base*108;
-    height: $base*52;
-    background-image: url('./assets/img/accessories.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 100%;
+
+    .banner__img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
 
     .slider__title {
+      position: absolute;
       margin: 0;
       padding: 0;
       background-color: $color-white;
@@ -99,15 +115,17 @@
   }
   
   .women {
-    grid-area: women;
     @include flexCenter;
-    width: $base*51;
-    height: $base*40;
-    background-image: url('./assets/img/women.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 48%;
+
+    .banner__img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
 
     .slider__title {
+      position: absolute;
       margin: 0;
       padding: 0;
       background-color: $color-white;
@@ -126,15 +144,17 @@
   }
   
   .men {
-    grid-area: men;
     @include flexCenter;
-    width: $base*51;
-    height: $base*40;
-    background-image: url('./assets/img/men.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 48%;
+
+    .banner__img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
 
     .slider__title {
+      position: absolute;
       margin: 0;
       padding: 0;
       background-color: $color-white;
