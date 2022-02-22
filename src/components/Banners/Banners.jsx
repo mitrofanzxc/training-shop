@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import NewSeasonImg from "./assets/img/section__newseason.jpg";
+import SaleImg from "./assets/img/section__sale.jpg";
 import "./Banners.scss";
 
 const Banners = () => {
@@ -11,6 +13,7 @@ const Banners = () => {
         <div className="inner__container">
           <ul className="banners__section__container">
             <li className="banners__section__container__item">
+              <img src={NewSeasonImg} alt="New Season Img" />
               <button className="banners__section__container__item__title">
                 <Link to="/women">
                   <h3 className="h3">New Season</h3>
@@ -19,6 +22,7 @@ const Banners = () => {
               </button>
             </li>
             <li className="banners__section__container__item">
+              <img src={SaleImg} alt="Sale Img" />
               <button className="banners__section__container__item__title">
                 <Link to="/sale">
                   <h3 className="h3">Sale</h3>

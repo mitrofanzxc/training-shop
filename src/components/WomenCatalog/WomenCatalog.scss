@@ -6,13 +6,23 @@
 
   .catalog__header {
     @include flexSpaceBetween;
+    flex-wrap: wrap;
     margin-top: $base*20;
+
+    @media (max-width: $breakpoint-md-min) {
+      @include flexCenter;
+      margin-top: $base*8;
+    }
 
     .h2 {
       font-size: $fs-xl;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      @media (max-width: $breakpoint-md-min) {
+        padding: $base*2 0;
+      }
     }
 
     .catalog__filter {
@@ -26,6 +36,12 @@
       font-weight: $fw-regular;
       color: rgba(18,18,18,0.6);
       cursor: pointer;
+
+      @media (max-width: $breakpoint-md-min) {
+        @include flexCenter;
+        flex-wrap: wrap;
+        gap: $base*2;
+      }
 
       .catalog__filter__item {
         transition: $transition;
@@ -44,17 +60,30 @@
     flex-wrap: wrap;
     gap: $base*5 $base*3;
     margin-top: $base*10;
+
+    @media (max-width: $breakpoint-md-min) {
+      margin-top: $base*5;
+    }
   }
 
   .product__card {
+    height: auto;
     margin: 0;
     padding: 0;
     list-style: none;
 
+    @media (max-width: $breakpoint-lg-min) {
+      width: 30%;
+    }
+
+    @media (max-width: $breakpoint-md-min) {
+      width: 48%;
+    }
+
     .product__card__image {
       display: block;
-      width: $base*51;
-      height: $base*64;
+      width: 100%;
+      height: auto;
       margin: 0;
       padding: 0;
     }

@@ -5,7 +5,7 @@
 .banners__section {
   
   .banners__section__container {
-    @include flexSpaceBetween();
+    @include flexSpaceBetween;
     margin: $base*18 0 0 0;
     padding: 0;
     list-style: none;
@@ -13,18 +13,8 @@
 
   .banners__section__container__item {
     @include flexCenter;
-    width: $base*108;
-    height: $base*52;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    &:nth-child(1) {
-      background-image: url('./assets/img/section__newseason.jpg');
-    }
-
-    &:nth-child(2) {
-      background-image: url('./assets/img/section__sale.jpg');
-    }
+    width: 45%;
+    height: auto;
   }
   
   .banners__section__container__item__title {

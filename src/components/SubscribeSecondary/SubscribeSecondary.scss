@@ -8,9 +8,15 @@
 
   .subscribe__secondary__container {
     @include flexSpaceBetween;
+    flex-wrap: wrap;
     margin: 0;
     padding: $base*2 0;
     list-style: none;
+
+    @media (max-width: $breakpoint-lg-min) {
+      @include flexCenter;
+      gap: 10px;
+    }
 
     .subscribe__secondary__container__item {
 
