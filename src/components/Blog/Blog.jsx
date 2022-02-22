@@ -1,6 +1,8 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import { BlogInfo } from "../../shared/BlogInfo";
+
 import "./Blog.scss";
 
 const Blog = () => {
@@ -10,7 +12,11 @@ const Blog = () => {
         <div className="inner__container">
           <div className="blog__header">
             <h2 className="h2">Latest From Blog</h2>
-            <button className="button__all">See All</button>
+            <button className="button__all">
+              <Link className="button__all__text" to="/blog">
+                See All
+              </Link>
+            </button>
           </div>
           <ul className="blog__slider">
             {BlogInfo.map((BlogInfoItem) => {

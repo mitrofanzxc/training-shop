@@ -1,49 +1,51 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-import { FooterNav } from "../../shared/FooterNav";
+// import { Link } from "react-router-dom";
+import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
+// import { FooterNav } from "../../shared/FooterNav";
 
 import "./Footer.scss";
 
-const FooterNavHeaders = (obj) => {
-  let headers = [];
-  for (let i = 0; i < obj.length; i++) {
-    console.log(obj[i].headerInfo); 
-    headers.push(
-      <li className="footer__links__container__list__header">
-        {obj[i].headerInfo}
-      </li>
-    );
-  }
-  console.log(headers[0].props.children[0].description);
-  return headers;
-};
+// const FooterNavHeaders = (obj) => {
+//   let headers = [];
+//   for (let i = 0; i < obj.length; i++) {
+//     console.log(obj[i].headerInfo);
+//     headers.push(
+//       <li className="footer__links__container__list__header">
+//         {obj[i].headerInfo}
+//       </li>
+//     );
+//   }
+//   console.log(headers[0].props.children[0].description);
+//   return headers;
+// };
 
-FooterNavHeaders(FooterNav);
+// FooterNavHeaders(FooterNav);
 
-const FooterNavLinks = (obj) => {
-  let links = [];
-  for (let i = 0; i < obj.length; i++) {
-    for (let j = 0; j < obj[i].headerInfo.length; j++) {
-      links.push(
-        <li className="footer__links__container__list__item">
-          <Link
-            key={obj[i].headerInfo[j].id}
-            to={`/${obj[i].headerInfo[j].path}`}
-            data-test-id={`footer-nav-link-${obj[i].headerInfo[j].path}`}
-          >
-            {obj[i].headerInfo[j].description}
-          </Link>
-        </li>
-      );
-    }
-  }
-  return links;
-};
+// const FooterNavLinks = (obj) => {
+//   let links = [];
+//   for (let i = 0; i < obj.length; i++) {
+//     for (let j = 0; j < obj[i].headerInfo.length; j++) {
+//       links.push(
+//         <li className="footer__links__container__list__item">
+//           <Link
+//             key={obj[i].headerInfo[j].id}
+//             to={`/${obj[i].headerInfo[j].path}`}
+//             data-test-id={`footer-nav-link-${obj[i].headerInfo[j].path}`}
+//           >
+//             {obj[i].headerInfo[j].description}
+//           </Link>
+//         </li>
+//       );
+//     }
+//   }
+//   return links;
+// };
 
 const Footer = () => {
   return (
     <div data-test-id="footer">
+      <SubscribeSecondary />
       <section className="footer__links">
         <div className="inner__container">
           <ul className="footer__links__container">

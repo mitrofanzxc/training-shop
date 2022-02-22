@@ -1,0 +1,52 @@
+@import "../../scss/Variables.scss";
+
+// === SUBSCRIBE SECONDARY ===
+
+.subscribe__secondary {
+  margin-top: $base*17;
+  background-color: $color-dark;
+
+  .subscribe__secondary__container {
+    @include flexSpaceBetween;
+    margin: 0;
+    padding: $base*2 0;
+    list-style: none;
+
+    .subscribe__secondary__container__item {
+
+      .h2 {
+        font-size: $fs-xs;
+        font-weight: $fw-semi-bold;
+        color: $color-white;
+        letter-spacing: 1px;
+      }
+
+      .input__email {
+        @include spartan;
+        width: $base*77;
+        height: $base*6;
+        margin: 0;
+        padding: 0 0 0 $base*3;
+        font-size: $fs-s;
+        font-weight: $fw-medium;
+        letter-spacing: 1px;
+        color: $color-dark-04;
+        background-color: $color-white-02;
+        border: none;
+        text-align: left;
+      }
+
+      .button__dark {
+        @include flexCenter;
+        display: inline;
+        width: $base*22;
+        height: $base*6;
+        margin: 0 0 0 $base;
+        font-size: $fs-xs;
+        border: 1px solid $color-white;
+      }
+    }
+  }
+}
+
+// === / SUBSCRIBE SECONDARY ===

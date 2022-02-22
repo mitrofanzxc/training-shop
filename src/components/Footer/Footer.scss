@@ -1,68 +1,10 @@
 @import "../../scss/Variables.scss";
 
-// === SUBSCRIBE SECONDARY ===
-
-.subscribe__secondary {
-  margin-top: 78px;
-  background-color: $color-dark;
-
-  .subscribe__secondary__container {
-    @include flexSpaceBetween;
-    margin: 0;
-    padding: 0;
-    height: $base*11;
-    list-style: none;
-
-    .subscribe__secondary__container__item {
-
-      &:nth-child(2) {
-        margin-right: $base*10;
-      }
-
-      .h2 {
-        font-size: 11px;
-        color: $color-gr-white;
-      }
-
-      .input__email {
-        @include spartan;
-        width: $base*77;
-        height: $base*6;
-        margin: 0;
-        padding: 0;
-        padding-left: $base*3;
-        font-size: $fs-m;
-        font-weight: $fw-medium;
-        letter-spacing: 1px;
-        color: $color-dark-04;
-        background-color: rgba(255,255,255,0.2);
-        border: none;
-        text-align: left;
-        text-transform: none;
-        cursor: pointer;
-      }
-
-      .button__dark {
-        @include flexCenter;
-        display: inline;
-        width: $base*22;
-        height: $base*6;
-        margin: 0 0 0 $base;
-        font-size: 12px;
-        border: 1px solid $color-white;
-      }
-    }
-  }
-}
-
-// === / SUBSCRIBE SECONDARY ===
-
 // === FOOTER LINKS ===
 
 .footer__links__container {
   @include flexSpaceBetween;
-  margin: 0;
-  margin-top: $base*6;
+  margin: $base*8 0 0 0;
   padding: 0;
   list-style: none;
 
@@ -71,12 +13,15 @@
     padding: 0;
 
     .footer__links__container__list {
+      display: flex;
+      flex-direction: column;
+      gap: $base*4;
       margin: 0;
       padding: 0;
       list-style: none;
 
       .footer__links__container__list__header {
-        font-size: 14px;
+        font-size: $fs-m;
         font-weight: $fw-semi-bold;
         color: $color-dark;
         text-transform: uppercase;
@@ -89,7 +34,6 @@
         font-size: $fs-xs;
         font-weight: $fw-regular;
         color: rgba(18,18,18,0.8);
-        line-height: 34px;
 
         .icon {
           display: inline-block;
@@ -125,24 +69,22 @@
 
 .footer {
   margin-top: $base*7;
-  padding: 12px 0;
   background-color: $color-gr-white;
 
   .inner__container {
     @include flexSpaceBetween;
+    margin-top: $base*8;
+    padding: $base*2 0;
     
     .footer__wrapper {
       @include flexCenter;
-      gap: 12px;
+      gap: $base*3;
       width: $base*76;
-      height: 16px;
-      margin: 0 $base*19 0 0;
+      margin: 0;
       padding: 0;
       list-style: none;
   
       .footer__wrapper__item {
-        width: 100%;
-        height: 16px;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -178,7 +120,7 @@
     }
 
     .h3 {
-      font-size: 11px;
+      font-size: $fs-xxs;
       font-weight: $fw-medium;
       text-transform: none;
       color: rgba(18,18,18,0.8);

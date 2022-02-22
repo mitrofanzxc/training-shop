@@ -6,19 +6,29 @@
 
   .blog__header {
     @include flexSpaceBetween;
-    margin-top: $base*18;
+    margin-top: $base*20;
 
     .h2 {
-      font-size: 23px;
+      font-size: $fs-xl;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      color: $color-dark;
     }
 
     .button__all {
-      width: $base*13;
-      margin: 0;
-      margin-top: $base*2;
+      width: $base*12;
+      margin: $base 0 0 0;
       padding: 0;
-      font-size: $fs-xs;
       background-color: transparent;
+      border: none;
+
+      .button__all__text {
+        font-size: $fs-xs;
+        font-weight: $fw-medium;
+        letter-spacing: 1px;
+        color: $color-dark-06;
+        text-transform: uppercase;
+      }
     }
   }
 

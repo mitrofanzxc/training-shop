@@ -6,7 +6,7 @@
   
   .banners__section__container {
     @include flexSpaceBetween();
-    margin: $base*19 0 0 0;
+    margin: $base*18 0 0 0;
     padding: 0;
     list-style: none;
   }
