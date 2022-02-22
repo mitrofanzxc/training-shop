@@ -29,6 +29,14 @@
       background-repeat: no-repeat;
       content: '';
       z-index: 2;
+
+      @media (max-width: $breakpoint-lg-min) {
+        left: -60%;
+      }
+
+      @media (max-width: $breakpoint-md-min) {
+        display: none;
+      }
     }
 
     &::after {
@@ -42,6 +50,14 @@
       background-repeat: no-repeat;
       content: '';
       z-index: 2;
+
+      @media (max-width: $breakpoint-lg-min) {
+        right: -50%;
+      }
+
+      @media (max-width: $breakpoint-md-min) {
+        display: none;
+      }
     }
 
     .form__fieldset {

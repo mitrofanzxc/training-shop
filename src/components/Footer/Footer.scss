@@ -8,9 +8,18 @@
   padding: 0;
   list-style: none;
 
+  @media (max-width: $breakpoint-md-min) {
+    flex-wrap: wrap;
+    gap: $base*5 0;
+  }
+
   .footer__links__container__item {
     margin: 0;
     padding: 0;
+
+    @media (max-width: $breakpoint-md-min) {
+      width: 50%;
+    }
 
     .footer__links__container__list {
       display: flex;
@@ -73,16 +82,32 @@
 
   .inner__container {
     @include flexSpaceBetween;
+    flex-wrap: wrap;
     margin-top: $base*8;
     padding: $base*2 0;
+
+    @media (max-width: $breakpoint-md-min) {
+      flex-direction: column;
+      gap: $base*4;
+    }
     
     .footer__wrapper {
       @include flexCenter;
       gap: $base*3;
-      width: $base*76;
+      width: 40%;
       margin: 0;
       padding: 0;
       list-style: none;
+
+      @media (max-width: $breakpoint-md-min) {
+        width: 60%;
+        gap: $base*2;
+      }
+
+      @media (max-width: $breakpoint-sm-min) {
+        width: 100%;
+        gap: $base;
+      }
   
       .footer__wrapper__item {
         background-size: contain;

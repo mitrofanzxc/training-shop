@@ -18,6 +18,11 @@
       gap: 10px;
     }
 
+    @media (max-width: $breakpoint-sm-min) {
+      @include flexCenter;
+      gap: 10px;
+    }
+
     .subscribe__secondary__container__item {
 
       .h2 {
@@ -42,6 +47,10 @@
         &::placeholder {
           padding-left: $base*2;
         }
+
+        @media (max-width: $breakpoint-sm-min) {
+          width: 80%;
+        }
       }
 
       .button__dark {
@@ -54,6 +63,10 @@
         color: $color-white-09;
         border: 1px solid $color-white;
         text-align: center;
+
+        @media (max-width: $breakpoint-sm-min) {
+          width: 35%;
+        }
       }
     }
 
@@ -61,6 +74,12 @@
       display: flex;
       align-items: center;
       gap: $base*2;
+
+      @media (max-width: $breakpoint-sm-min) {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+      }
     }
   }
 }

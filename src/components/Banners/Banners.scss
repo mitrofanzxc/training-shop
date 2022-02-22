@@ -9,15 +9,30 @@
     margin: $base*18 0 0 0;
     padding: 0;
     list-style: none;
+
+    @media (max-width: $breakpoint-md-min) {
+      flex-direction: column;
+      gap: $base*4;
+    }
   }
 
   .banners__section__container__item {
     @include flexCenter;
-    width: 45%;
-    height: auto;
+    width: 50%;
+
+    @media (max-width: $breakpoint-md-min) {
+      width: 100%;
+    }
+
+    .banner__img {
+      position: relative;
+      width: 95%;
+      height: auto;
+    }
   }
   
   .banners__section__container__item__title {
+    position: absolute;
     margin: 0;
     padding: 0;
     background-color: $color-white;

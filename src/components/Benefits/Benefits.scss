@@ -14,6 +14,7 @@
     @media (max-width: $breakpoint-sm-min) {
       align-items: flex-start;
       flex-direction: column;
+      gap: $base*2;
     }
 
     .benefits__wrapper__item {
