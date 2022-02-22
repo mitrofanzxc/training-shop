@@ -40,12 +40,20 @@
     border: none;
     border-radius: $base;
 
+    @media (max-width: $breakpoint-xxs-min) {
+      width: 60%;
+    }
+
     .h3 {
       padding-top: $base*5;
       font-size: $fs-xs;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
       color: $color-dark-06;
+
+      @media (max-width: $breakpoint-xxs-min) {
+        padding: $base*2 0 0 0;
+      }
     }
 
     .h2 {
@@ -53,6 +61,10 @@
       font-size: $fs-l;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
+
+      @media (max-width: $breakpoint-xxs-min) {
+        padding: $base*2 0;
+      }
 
       .sale {
         color: $color-sale;

@@ -8,10 +8,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: $base*6;
+
+  @media (max-width: $breakpoint-xxs-min) {
+    flex-direction: column;
+  }
   
   .slider {
     @include flexCenter;
     width: 49%;
+
+    @media (max-width: $breakpoint-xxs-min) {
+      width: 100%;
+    }
 
     .slider__img {
       position: relative;
@@ -23,6 +31,11 @@
       position: absolute;
       @include flexSpaceBetween;
       width: 45%;
+
+      @media (max-width: $breakpoint-xxs-min) {
+        width: 90%;
+        gap: $base*3;
+      }
     }
 
     .slider__arrow {
@@ -95,12 +108,23 @@
   
     .banners__container__right__gender {
       @include flexSpaceBetween;
+
+      @media (max-width: $breakpoint-xxs-min) {
+        width: 204%;
+        gap: $base*2;
+        margin-top: $base*3;
+      }
     }
   }
 
   .accessories {
     @include flexCenter;
     width: 100%;
+
+    @media (max-width: $breakpoint-xxs-min) {
+      width: 204%;
+      margin-top: $base*3;
+    }
 
     .banner__img {
       position: relative;

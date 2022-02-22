@@ -64,6 +64,10 @@
     @media (max-width: $breakpoint-md-min) {
       margin-top: $base*5;
     }
+
+    @media (max-width: $breakpoint-xs-min) {
+      gap: $base*5 0;
+    }
   }
 
   .product__card {
@@ -106,6 +110,10 @@
         font-size: $fs-m;
         font-weight: $fw-bold;
         color: $color-dark;
+
+        @media (max-width: $breakpoint-xxs-min) {
+          font-size: $fs-xs;
+        }
       }
     }
 
@@ -114,6 +122,26 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
+      @media (max-width: $breakpoint-md-min) {
+        width: 25%;
+      }
+
+      @media (max-width: $breakpoint-sm-min) {
+        width: 30%;
+      }
+
+      @media (max-width: $breakpoint-sm-min) {
+        width: 35%;
+      }
+
+      @media (max-width: $breakpoint-xs-min) {
+        width: 40%;
+      }
+
+      @media (max-width: $breakpoint-xxs-min) {
+        width: 45%;
+      }
 
       .product__card__rating__item {
         @include flexCenter;

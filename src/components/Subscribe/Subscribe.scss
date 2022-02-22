@@ -9,6 +9,17 @@
   background: rgb(243,242,242);
   background: linear-gradient(180deg, rgba(243,242,242,1) 0%, rgba(220,219,219,1) 100%);
 
+  @media (max-width: $breakpoint-xxs-min) {
+    padding: $base*4 0 $base*4 0;
+  }
+
+  .inner__container {
+
+    @media (max-width: $breakpoint-xxs-min) {
+      padding: 0;
+    }
+  }
+
   .form__subscribe {
     position: relative;
     width: 50%;
@@ -60,6 +71,14 @@
       }
     }
 
+    @media (max-width: $breakpoint-md-min) {
+      width: 80%;
+    }
+
+    @media (max-width: $breakpoint-xxs-min) {
+      padding: $base*4 0 $base*4 0;
+    }
+
     .form__fieldset {
       margin: 0;
       padding: 0;
@@ -98,6 +117,25 @@
         text-align: center;
         text-transform: none;
         cursor: pointer;
+
+        @media (max-width: $breakpoint-md-min) {
+          width: 63%;
+        }
+
+        @media (max-width: $breakpoint-xs-min) {
+          width: 80%;
+        }
+      }
+
+      .button__dark {
+
+        @media (max-width: $breakpoint-md-min) {
+          width: 63%;
+        }
+
+        @media (max-width: $breakpoint-xs-min) {
+          width: 80%;
+        }
       }
     }
   }
