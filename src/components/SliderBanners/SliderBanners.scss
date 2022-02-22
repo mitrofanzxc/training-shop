@@ -27,8 +27,8 @@
 
     .slider__arrow {
       @include flexCenter;
-      width: $base*8;
-      height: $base*8;
+      min-width: $base*8;
+      min-height: $base*8;
       margin: 0;
       padding: 0;
       border: none;
@@ -37,6 +37,11 @@
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
+
+      @media (max-width: $breakpoint-md-min) {
+        min-width: $base*6;
+        min-height: $base*6;
+      }
     }
     
     .arrow__left {
@@ -62,6 +67,10 @@
         letter-spacing: 1px;
         line-height: $base*3;
         color: $color-dark-04;
+
+        @media (max-width: $breakpoint-md-min) {
+          padding-top: $base;
+        }
       }
 
       .h2 {
@@ -70,6 +79,10 @@
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
         line-height: $base*5;
+
+        @media (max-width: $breakpoint-md-min) {
+          padding: $base $base;
+        }
       }
     }
   }
@@ -110,6 +123,10 @@
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
         line-height: $base*4;
+
+        @media (max-width: $breakpoint-md-min) {
+          padding: $base $base;
+        }
       }
     }
   }
@@ -139,6 +156,10 @@
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
         line-height: $base*4;
+
+        @media (max-width: $breakpoint-md-min) {
+          padding: $base $base;
+        }
       }
     }
   }
@@ -168,6 +189,10 @@
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
         line-height: $base*4;
+
+        @media (max-width: $breakpoint-md-min) {
+          padding: $base $base;
+        }
       }
     }
   }

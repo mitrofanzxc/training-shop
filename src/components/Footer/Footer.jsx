@@ -133,7 +133,7 @@ const Footer = () => {
           </ul>
           <h3 className="h3">
             <a
-              href="https://clevertec.ru/training"
+              href="https://clevertec.ru/study/study.html"
               target="_blank"
               rel="noopener noreferrer"
             >

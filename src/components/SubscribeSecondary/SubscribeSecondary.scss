@@ -23,28 +23,38 @@
 
       .input__email {
         @include spartan;
-        width: $base*77;
-        height: $base*6;
+        width: $base*70;
         margin: 0;
-        padding: 0 0 0 $base*3;
+        padding: $base*2 $base*2;
         font-size: $fs-s;
         font-weight: $fw-medium;
         letter-spacing: 1px;
         color: $color-dark-04;
         background-color: $color-white-02;
         border: none;
-        text-align: left;
+
+        &::placeholder {
+          padding-left: $base*2;
+        }
       }
 
       .button__dark {
-        @include flexCenter;
         display: inline;
-        width: $base*22;
-        height: $base*6;
-        margin: 0 0 0 $base;
+        width: 25%;
+        height: auto;
+        margin: 0;
+        padding: $base*2 0;
         font-size: $fs-xs;
+        color: $color-white-09;
         border: 1px solid $color-white;
+        text-align: center;
       }
+    }
+
+    .email__container {
+      display: flex;
+      align-items: center;
+      gap: $base*2;
     }
   }
 }

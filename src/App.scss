@@ -129,6 +129,7 @@ body {
   border: none;
 
   .button__all__link {
+    @include spartan;
     width: 100%;
     padding: $base*3 0;
     font-size: $fs-s;

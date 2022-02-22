@@ -11,6 +11,11 @@
     padding: 0;
     list-style: none;
 
+    @media (max-width: $breakpoint-sm-min) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
     .benefits__wrapper__item {
       display: flex;
       align-items: center;

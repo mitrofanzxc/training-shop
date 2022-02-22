@@ -11,7 +11,7 @@ const SubscribeSecondary = () => {
             <li class="subscribe__secondary__container__item">
               <h2 class="h2">Be In Touch With Us:</h2>
             </li>
-            <li class="subscribe__secondary__container__item">
+            <li class="subscribe__secondary__container__item email__container">
               <input
                 type="email"
                 placeholder="Enter your email"

@@ -23,6 +23,7 @@
       border: none;
 
       .button__all__text {
+        @include spartan;
         font-size: $fs-xs;
         font-weight: $fw-medium;
         letter-spacing: 1px;
