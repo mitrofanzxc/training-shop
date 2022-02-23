@@ -25,7 +25,7 @@
       text-transform: uppercase;
       font-size: $fs-xs;
       font-weight: $fw-regular;
-      color: rgba(18,18,18,0.6);
+      color: $color-dark-06;
       cursor: pointer;
 
       .catalog__filter__item {
@@ -68,7 +68,7 @@
       margin-top: $base*3;
       font-size: $fs-m;
       font-weight: $fw-regular;
-      color: rgba(18,18,18,0.6);
+      color: $color-dark-06;
     }
 
     .product__card__price__list {

@@ -134,11 +134,9 @@
 
           .color__img__item__img {
             height: $base*13;
-            transition: $transition;
 
             &:hover, &:focus, &:active {
               border: 2px solid $color-dark;
-              transition: $transition;
             }
           }
         }
@@ -189,13 +187,11 @@
           background-repeat: no-repeat;
           border: none;
           cursor: pointer;
-          transition: $transition;
 
           &:hover, &:focus, &:active {
             background-color: $color-white;
             color: $color-dark;
             border: 2px solid $color-dark;
-            transition: $transition;
           }
         }
       }
@@ -258,9 +254,10 @@
     margin: 0;
     padding: 0;
     background-color: $color-dark;
-    color: $color-white;
+    color: $color-white-09;
     font-size: $fs-s;
     font-weight: $fw-medium;
+    letter-spacing: 1px;
     text-transform: uppercase;
     border: none;
     cursor: pointer;
@@ -307,6 +304,12 @@
   margin: $base*5 0 0 0;
   padding: 0;
   list-style: none;
+
+  .benefits__subwrapper {
+    display: flex;
+    align-items: center;
+    gap: $base*2;
+  }
   
   .benefits__item {
     @include flexCenter;
@@ -339,9 +342,8 @@
   
   .h3 {
     font-size: $fs-xs;
-    font-weight: $fw-semi-bold;
-    letter-spacing: 1px;
-    color: $color-dark;
+    font-weight: $fw-medium;
+    color: $color-dark-06;
     text-transform: none;
   }
 }
@@ -424,12 +426,13 @@
 
 .product__description {
   width: 100%;
-  font-size: $fs-xs;
-  font-weight: $fw-semi-bold;
   margin: $base*6 0 0 0;
   padding: $base*6 0;
+  letter-spacing: 1px;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;
+  font-size: $fs-xs;
+  font-weight: $fw-semi-bold;
   color: $color-dark-06;
   text-transform: uppercase;
 }

@@ -98,18 +98,28 @@ const ProductCard = () => {
                 </li>
               </ul>
               <ul className="benefits__wrapper">
-                <li className="benefits__item delivery"></li>
-                <ul className="benefits__text">
-                  <h3 className="h3 benefits__text">Shipping &amp; Delivery</h3>
-                </ul>
-                <li className="benefits__item refresh"></li>
-                <ul className="benefits__text">
-                  <h3 className="h3 benefits__text">Returns &amp; Exchanges</h3>
-                </ul>
-                <li className="benefits__item mail"></li>
-                <ul className="benefits__text">
-                  <h3 className="h3 benefits__text">Ask a question</h3>
-                </ul>
+                <div className="benefits__subwrapper">
+                  <li className="benefits__item delivery"></li>
+                  <li className="benefits__text">
+                    <h3 className="h3 benefits__text">
+                      Shipping &amp; Delivery
+                    </h3>
+                  </li>
+                </div>
+                <div className="benefits__subwrapper">
+                  <li className="benefits__item refresh"></li>
+                  <li className="benefits__text">
+                    <h3 className="h3 benefits__text">
+                      Returns &amp; Exchanges
+                    </h3>
+                  </li>
+                </div>
+                <div className="benefits__subwrapper">
+                  <li className="benefits__item mail"></li>
+                  <li className="benefits__text">
+                    <h3 className="h3 benefits__text">Ask a question</h3>
+                  </li>
+                </div>
               </ul>
               <ul className="guaranteed">
                 <li className="guaranteed__text">Guaranteed Safe Checkout</li>

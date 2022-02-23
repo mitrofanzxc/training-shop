@@ -125,7 +125,7 @@
           margin-top: $base*3;
           font-size: $fs-m;
           line-height: 23px;
-          color: rgba(18,18,18,0.8);
+          color: $color-dark-08;
 
           @media (max-width: $breakpoint-xxs-min) {
             font-size: $fs-xs;

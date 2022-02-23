@@ -7,8 +7,8 @@
 
   .catalog__header__wrapper {
     @include flexSpaceBetween;
-    gap: 6px;
-    height: 32px;
+    gap: $base;
+    height: $base*6;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -26,13 +26,13 @@
           font-size: $fs-xs;
 
           .arrow {
-            font-size: 8px;
+            font-size: $fs-xxs;
           }
         }
 
         .share {
-          width: 18px;
-          height: 18px;
+          width: $base*4;
+          height: $base*4;
           background-image: url('./assets/img/share.svg');
           background-position: center;
           background-size: contain;
@@ -43,9 +43,9 @@
   }
 
   .catalog__heading {
-    font-size: 28px;
+    font-size: $fs-xxl;
     margin: 0;
-    padding: 12px 0 24px 0;
+    padding: $base*2 0 $base*5 0;
     text-align: center;
     text-transform: uppercase;
   }

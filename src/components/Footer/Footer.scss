@@ -42,7 +42,7 @@
         gap: $base*2;
         font-size: $fs-xs;
         font-weight: $fw-regular;
-        color: rgba(18,18,18,0.8);
+        color: $color-dark-08;
 
         .icon {
           display: inline-block;
@@ -148,17 +148,17 @@
       font-size: $fs-xxs;
       font-weight: $fw-medium;
       text-transform: none;
-      color: rgba(18,18,18,0.8);
+      color: $color-dark-08;
     }
   }
 
   .h3 {
     font-weight: $fw-medium;
     text-transform: none;
-    color: rgba(18,18,18,0.8);
+    color: $color-dark-08;
 
     a {
-      color: rgba(18,18,18,0.8);
+      color: $color-dark-08;
     }
   }
 }
