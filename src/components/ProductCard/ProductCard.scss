@@ -3,10 +3,13 @@
 // === PRODUCT CARD ===
 
 .product__card {
-  margin-top: 32px;
+  margin-top: $base*6;
   
   .side__container {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $base*6;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -15,9 +18,11 @@
       display: flex;
       align-items: flex-start;
       flex-direction: row;
+      width: 48%;
 
       .side__left__columns {
         @include flexSpaceBetween;
+        gap: $base*3;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -29,26 +34,23 @@
           flex-direction: column;
           list-style: none;
 
-          &:nth-child(2) {
-            margin-left: 15px;
-          }
-
           .product__card__slider__vertical {
             @include flexCenter;
             flex-direction: column;
-            gap: 16px;
-            margin: 0;
-            margin-top: 15px;
+            gap: $base*3;
+            margin: $base*3 0 0 0;
             padding: 0;
             list-style: none;
             
             .product__card__slider__vertical__item {
-              width: 94px;
-              height: 114px;
+              width: $base*19;
+              height: $base*23;
               background-size: contain;
               background-position: center;
               background-repeat: no-repeat;
+              opacity: 0.4;
               cursor: pointer;
+              transition: $transition;
 
               &:nth-child(1) {
                 background-image: url('./assets/img/product__card__1.jpg');
@@ -65,6 +67,11 @@
               &:nth-child(4) {
                 background-image: url('./assets/img/product__card__4.jpg');
               }
+
+              &:hover, &:focus, &:active {
+                opacity: 1;
+                transition: $transition;
+              }
             }
           }
         }
@@ -75,27 +82,27 @@
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-      margin-left: 31px;
+      width: 48%;
 
       .color__text {
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin-top: 10px;
+        gap: $base*2;
+        margin-top: $base*2;
 
         .h4 {
           margin: 0;
           padding: 0;
-          font-size: 12px;
+          font-size: $fs-xs;
           font-weight: $fw-semi-bold;
-          color: rgba(18,18,18,0.6);
+          color: $color-dark-06;
           text-transform: uppercase;
         }
 
         .paragraph {
           margin: 0;
           padding: 0;
-          font-size: 12px;
+          font-size: $fs-xs;
           font-weight: $fw-semi-bold;
           color: $color-dark;
         }
@@ -103,16 +110,17 @@
 
       .color__img {
         @include flexCenter;
-        gap: 15px;
+        gap: $base*3;
         margin: 0;
-        margin-top: 16px;
+        margin-top: $base*3;
         padding: 0;
         list-style: none;
 
         .color__img__item {
           @include flexCenter;
-          width: 64px;
-          height: 64px;
+          box-sizing: border-box;
+          width: $base*13;
+          height: $base*13;
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
@@ -133,6 +141,10 @@
           &:nth-child(4) {
             background-image: url('./assets/img/product__card__color__4.jpg');
           }
+
+          &:hover, &:focus, &:active {
+            border: 2px solid $color-dark;
+          }
         }
       }
 
@@ -140,22 +152,22 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        gap: 10px;
-        margin-top: 35px;
+        gap: $base*2;
+        margin-top: $base*7;
 
         .h4 {
           margin: 0;
           padding: 0;
-          font-size: 12px;
+          font-size: $fs-xs;
           font-weight: $fw-semi-bold;
-          color: rgba(18,18,18,0.6);
+          color: $color-dark-06;
           text-transform: uppercase;
         }
 
         .paragraph {
           margin: 0;
           padding: 0;
-          font-size: 12px;
+          font-size: $fs-xs;
           font-weight: $fw-semi-bold;
           color: $color-dark;
         }
@@ -163,40 +175,49 @@
 
       .size__img {
         @include flexCenter;
-        gap: 15px;
+        gap: $base*3;
         margin: 0;
-        margin-top: 17px;
+        margin-top: $base*3;
         padding: 0;
         list-style: none;
 
         .size__img__item {
           @include flexCenter;
-          width: 40px;
-          height: 40px;
-          font-size: 12px;
+          box-sizing: border-box;
+          width: $base*8;
+          height: $base*8;
+          font-size: $fs-xs;
           font-weight: $fw-semi-bold;
-          color: rgba(18,18,18,0.7);
+          color: $color-dark-07;
           background-color: $color-gr-white;
           background-repeat: no-repeat;
+          border: none;
           cursor: pointer;
+          transition: $transition;
+
+          &:hover, &:focus, &:active {
+            background-color: $color-white;
+            color: $color-dark;
+            border: 2px solid $color-dark;
+            transition: $transition;
+          }
         }
       }
 
       .size__guide {
         @include flexCenter;
-        margin: 0;
-        margin-top: 12px;
+        margin: $base*2 0 0 0;
         padding: 0;
         list-style: none;
 
         .size__guide__item {
-          font-size: 12px;
+          font-size: $fs-xs;
           font-weight: $fw-medium;
-          color: rgba(18,18,18,0.6);
+          color: $color-dark-06;
           
           &:nth-child(1) {
-            width: 24px;
-            height: 24px;
+            width: $base*5;
+            height: $base*5;
             background-image: url('./assets/img/hanger.svg');
             background-position: center;
             background-repeat: no-repeat;
@@ -214,11 +235,11 @@
 .product__price__and__buttons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: $base*4;
   width: 100%;
-  height: 112px;
+  height: $base*22;
   margin: 0;
-  margin-top: 32px;
+  margin-top: $base*6;
   padding: 0;
   border-top: 2px solid $color-gr-white;
   border-bottom: 2px solid $color-gr-white;
@@ -227,21 +248,22 @@
   .price {
     margin: 0;
     padding: 0;
-    font-size: 22px;
+    font-size: $fs-xl;
     font-weight: $fw-bold;
     letter-spacing: 0;
     line-height: 0;
   }
 
   .button__cart {
+    @include spartan;
     @include flexCenter;
-    width: 156px;
-    height: 48px;
+    width: $base*31;
+    height: $base*10;
     margin: 0;
     padding: 0;
     background-color: $color-dark;
     color: $color-white;
-    font-size: 13px;
+    font-size: $fs-s;
     font-weight: $fw-medium;
     text-transform: uppercase;
     border: none;
@@ -250,11 +272,10 @@
   
   .button__wishlist {
     @include flexCenter;
-    width: 24px;
-    height: 24px;
+    width: $base*5;
+    height: $base*5;
     line-height: 0;
-    margin: 0;
-    margin-left: 10px;
+    margin: 0 0 0 $base*2;
     padding: 0;
     background-color: transparent;
     background-image: url('./assets/img/heart.svg');
@@ -266,11 +287,10 @@
   
   .button__scale {
     @include flexCenter;
-    width: 24px;
-    height: 24px;
+    width: $base*5;
+    height: $base*5;
     line-height: 0;
-    margin: 0;
-    margin-left: 20px;
+    margin: 0 0 0 $base*4;
     padding: 0;
     background-color: transparent;
     background-image: url('./assets/img/scale.svg');
@@ -288,8 +308,7 @@
 .benefits__wrapper {
   @include flexSpaceBetween;
   width: 100%;
-  margin: 0;
-  margin-top: 25px;
+  margin: $base*5 0 0 0;
   padding: 0;
   list-style: none;
   
@@ -338,13 +357,12 @@
 .guaranteed {
   @include flexSpaceBetween;
   width: 100%;
-  margin: 0;
-  margin-top: 25px;
+  margin: $base*5 0 0 0;
   padding: 0;
   list-style: none;
   
   .guaranteed__text {
-    font-size: 12px;
+    font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
     color: $color-dark;
@@ -360,17 +378,16 @@
 
 .footer__wrapper {
   @include flexCenter;
-  gap: 12px;
+  gap: $base*2;
   width: 100%;
-  height: 25px;
-  margin: 0;
-  margin-top: 25px;
+  height: $base*5;
+  margin: $base*5 0 0 0;
   padding: 0;
   list-style: none;
 
   .footer__wrapper__item {
     width: 100%;
-    height: 25px;
+    height: $base*5;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -411,14 +428,13 @@
 
 .product__description {
   width: 100%;
-  font-size: 12px;
+  font-size: $fs-xs;
   font-weight: $fw-semi-bold;
-  margin: 0;
-  margin-top: 30px;
-  padding: 32px 0;
+  margin: $base*6 0 0 0;
+  padding: $base*6 0;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;
-  color: rgba(18,18,18,0.6);
+  color: $color-dark-06;
   text-transform: uppercase;
 }
 
@@ -428,8 +444,8 @@
 
 .product__card__main {
   position: relative;
-  width: 448px;
-  height: 560px;
+  width: $base*90;
+  height: $base*112;
   background-image: url('./assets/img/product__card__main.jpg');
   background-position: center;
   background-size: contain;
@@ -441,14 +457,14 @@
     top: 50%;
     width: 95%;
     @include flexSpaceBetween;
-    margin: 0 10px;
+    margin: 0 $base*2;
     padding: 0;
   }
 }
 
 .buttons__arrow__container {
   @include flexCenter;
-  gap: 10px;
+  gap: $base*2;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -456,8 +472,8 @@
 
 .button__arrow {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: $base*8;
+  height: $base*8;
   line-height: 0;
   margin: 0;
   padding: 0;
@@ -473,7 +489,7 @@
 }
 
 .arrow__down {
-  background-position: center 16px;
+  background-position: center $base*3;
   background-image: url('./assets/img/arrowdown.svg');
 }
 
@@ -502,25 +518,23 @@
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  margin: 0;
-  margin-top: 35px;
-  padding: 0;
-  padding-bottom: 35px;
+  margin: $base*7 0 0 0;
+  padding: 0 0 $base*7 0;
   list-style: none;
   border-bottom: 2px solid $color-grey;
 
   .additional__information__list__header {
-    padding-bottom: 20px;
-    font-size: 12px;
+    padding-bottom: $base*4;
+    font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
 
   .additional__information__list__property {
-    font-size: 14px;
+    font-size: $fs-m;
     font-weight: $fw-medium;
-    margin-top: 18px;
+    margin-top: $base*4;
 
     .additional__information__list__value {
       font-weight: $fw-regular;
@@ -533,22 +547,21 @@
 // === REVIEWS LIST ===
 
 .reviews__list {
-  margin: 0;
-  margin-top: 35px;
+  margin: $base*7 0 0 0;
   padding: 0;
   list-style: none;
   border-bottom: 2px solid $color-grey;
 
   .reviews__list__header {
-    font-size: 12px;
+    font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
-    padding-bottom: 10px;
+    padding-bottom: $base*2;
     text-transform: uppercase;
   }
 
   .reviews__list__item {
-    margin-top: 25px;
+    margin-top: $base*5;
 
     .reviews__list__item__sublist {
       @include flexSpaceBetween;
@@ -557,8 +570,8 @@
       list-style: none;
       
       .message {
-        width: 17px;
-        height: 17px;
+        width: $base*3;
+        height: $base*3;
         background-image: url('./assets/img/message.svg');
         background-position: center;
         background-size: contain;
@@ -566,12 +579,12 @@
       }
 
       .reviews__list__item__sublist__item {
-        font-size: 12px;
+        font-size: $fs-xs;
         font-weight: $fw-medium;
         
         .reviews__list__item__sublist__item__sublist {
           @include flexSpaceBetween;
-          gap: 10px;
+          gap: $base*2;
           margin: 0;
           padding: 0;
           list-style: none;
@@ -582,8 +595,8 @@
 
               .product__card__rating__item__main {
                 @include flexCenter;
-                width: 22px;
-                height: 22px;
+                width: $base*4;
+                height: $base*4;
                 list-style: none;
                 background-size: contain;
                 background-position: center;
@@ -596,18 +609,18 @@
       }
 
       .name {
-        font-size: 14px;
+        font-size: $fs-m;
         font-weight: $fw-medium;
       }
     }
   }
 
   .review {
-    font-size: 14px;
+    font-size: $fs-m;
     font-weight: $fw-regular;
-    line-height: 22px;
-    margin-top: 15px;
-    padding-bottom: 30px;
+    line-height: $base*4;
+    margin-top: $base*3;
+    padding-bottom: $base*6;
   }
 }
 
