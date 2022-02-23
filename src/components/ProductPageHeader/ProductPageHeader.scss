@@ -24,6 +24,11 @@
 
         .catalog__header__wrapper__item__subwrapper__item {
           font-size: $fs-xs;
+          color: $color-dark;
+
+          .catalog__header__wrapper__item__subwrapper__item__link {
+            color: $color-dark-06;
+          }
 
           .arrow {
             font-size: $fs-xxs;
@@ -90,6 +95,7 @@
     height: $base*3;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
     
     &:nth-child(-n+5) {
       background-image: url('./assets/img/star__filled.svg');

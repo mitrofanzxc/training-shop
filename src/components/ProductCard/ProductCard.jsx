@@ -1,212 +1,229 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+import { ProductCardSliderImg } from "../../shared/ProductCardSliderImg";
+import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
+
 import "./ProductCard.scss";
 
 const ProductCard = () => {
   return (
     <div>
-      <section class="product__card">
-        <div class="inner__container">
-          <ul class="side__container">
-            <li class="side__left">
-              <ul class="side__left__columns">
-                <li class="side__left__columns__item">
-                  <ul class="buttons__arrow__container">
+      <section className="product__card">
+        <div className="inner__container">
+          <ul className="side__container">
+            <li className="side__left">
+              <ul className="side__left__columns">
+                <li className="side__left__columns__item">
+                  <ul className="buttons__arrow__container">
                     <li>
-                      <button class="button__arrow arrow__up"></button>
+                      <button className="button__arrow arrow__up"></button>
                     </li>
                     <li>
-                      <button class="button__arrow arrow__down"></button>
+                      <button className="button__arrow arrow__down"></button>
                     </li>
                   </ul>
-                  <ul class="product__card__slider__vertical">
-                    <li class="product__card__slider__vertical__item"></li>
-                    <li class="product__card__slider__vertical__item"></li>
-                    <li class="product__card__slider__vertical__item"></li>
-                    <li class="product__card__slider__vertical__item"></li>
+                  <ul className="product__card__slider__vertical">
+                    {ProductCardSliderImg.map((ProductCardSliderImgItem) => {
+                      return (
+                        <li className="product__card__slider__vertical__item">
+                          <img
+                            className={ProductCardSliderImgItem.className}
+                            src={ProductCardSliderImgItem.img}
+                            alt={ProductCardSliderImgItem.alt}
+                          />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
-                <li class="side__left__columns__item">
-                  <div class="product__card__main">
-                    <div class="product__card__main__slider">
-                      <button class="button__arrow arrow__left"></button>
-                      <button class="button__arrow arrow__right"></button>
+                <li className="side__left__columns__item">
+                  <div className="product__card__main">
+                    <div className="product__card__main__slider">
+                      <button className="button__arrow arrow__left"></button>
+                      <button className="button__arrow arrow__right"></button>
                     </div>
                   </div>
                 </li>
               </ul>
             </li>
-            <li class="side__right">
-              <div class="color__text">
-                <h4 class="h4">Color:</h4>
-                <p class="paragraph">Blue</p>
+            <li className="side__right">
+              <div className="color__text">
+                <h4 className="h4">Color:</h4>
+                <p className="paragraph">Blue</p>
               </div>
-              <ul class="color__img">
-                <li class="color__img__item"></li>
-                <li class="color__img__item"></li>
-                <li class="color__img__item"></li>
-                <li class="color__img__item"></li>
+              <ul className="color__img">
+                {ProductCardColorImg.map((ProductCardColorImgItem) => {
+                  return (
+                    <li className="color__img__item">
+                      <Link
+                        to={ProductCardColorImgItem.path}
+                        className={ProductCardColorImgItem.className}
+                      >
+                        <img
+                          src={ProductCardColorImgItem.img}
+                          alt={ProductCardColorImgItem.alt}
+                        />
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
-              <div class="size__text">
-                <h4 class="h4">Size:</h4>
-                <p class="paragraph">S</p>
+              <div className="size__text">
+                <h4 className="h4">Size:</h4>
+                <p className="paragraph">S</p>
               </div>
-              <ul class="size__img">
-                <li class="size__img__item">XS</li>
-                <li class="size__img__item">S</li>
-                <li class="size__img__item">M</li>
-                <li class="size__img__item">L</li>
+              <ul className="size__img">
+                <li className="size__img__item">XS</li>
+                <li className="size__img__item">S</li>
+                <li className="size__img__item">M</li>
+                <li className="size__img__item">L</li>
               </ul>
-              <ul class="size__guide">
-                <li class="size__guide__item"></li>
-                <li class="size__guide__item">Size guide</li>
+              <ul className="size__guide">
+                <li className="size__guide__item"></li>
+                <li className="size__guide__item">Size guide</li>
               </ul>
-              <ul class="product__price__and__buttons">
-                <li class="product__price__and__buttons__item">
-                  <h2 class="h2 price">$ 379.99</h2>
+              <ul className="product__price__and__buttons">
+                <li className="product__price__and__buttons__item">
+                  <h2 className="h2 price">$ 379.99</h2>
                 </li>
-                <li class="product__price__and__buttons__item">
-                  <button class="button__cart">Add To Cart</button>
+                <li className="product__price__and__buttons__item">
+                  <button className="button__cart">Add To Cart</button>
                 </li>
-                <li class="product__price__and__buttons__item">
-                  <button class="button__wishlist"></button>
+                <li className="product__price__and__buttons__item">
+                  <button className="button__wishlist"></button>
                 </li>
-                <li class="product__price__and__buttons__item">
-                  <button class="button__scale"></button>
+                <li className="product__price__and__buttons__item">
+                  <button className="button__scale"></button>
                 </li>
               </ul>
-              <ul class="benefits__wrapper">
-                <li class="benefits__item delivery"></li>
-                <ul class="benefits__text">
-                  <h3 class="h3 benefits__text">Shipping &amp; Delivery</h3>
+              <ul className="benefits__wrapper">
+                <li className="benefits__item delivery"></li>
+                <ul className="benefits__text">
+                  <h3 className="h3 benefits__text">Shipping &amp; Delivery</h3>
                 </ul>
-                <li class="benefits__item refresh"></li>
-                <ul class="benefits__text">
-                  <h3 class="h3 benefits__text">Returns &amp; Exchanges</h3>
+                <li className="benefits__item refresh"></li>
+                <ul className="benefits__text">
+                  <h3 className="h3 benefits__text">Returns &amp; Exchanges</h3>
                 </ul>
-                <li class="benefits__item mail"></li>
-                <ul class="benefits__text">
-                  <h3 class="h3 benefits__text">Ask a question</h3>
+                <li className="benefits__item mail"></li>
+                <ul className="benefits__text">
+                  <h3 className="h3 benefits__text">Ask a question</h3>
                 </ul>
               </ul>
-              <ul class="guaranteed">
-                <li class="guaranteed__text">Guaranteed Safe Checkout</li>
-                <li class="guaranteed__line"></li>
+              <ul className="guaranteed">
+                <li className="guaranteed__text">Guaranteed Safe Checkout</li>
+                <li className="guaranteed__line"></li>
               </ul>
-              <ul class="footer__wrapper">
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
-                <li class="footer__wrapper__item"></li>
+              <ul className="footer__wrapper">
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
+                <li className="footer__wrapper__item"></li>
               </ul>
-              <div class="product__description">Description</div>
-              <ul class="additional__information__list">
-                <li class="additional__information__list__header">
+              <div className="product__description">Description</div>
+              <ul className="additional__information__list">
+                <li className="additional__information__list__header">
                   Additional Information
                 </li>
-                <li class="additional__information__list__property">
-                  Color:
-                  <span class="additional__information__list__value">
-                    Blue, White, Black, Grey
-                  </span>
+                <li className="additional__information__list__property additional__text">
+                  <h4 className="h4">Color:</h4>
+                  <p className="paragraph">Blue, White, Black, Grey</p>
                 </li>
-                <li class="additional__information__list__property">
-                  Size:
-                  <span class="additional__information__list__value">
-                    XS, S, M, L
-                  </span>
+                <li className="additional__information__list__property additional__text">
+                  <h4 className="h4">Size:</h4>
+                  <p className="paragraph">XS, S, M, L</p>
                 </li>
-                <li class="additional__information__list__property">
-                  Material:
-                  <span class="additional__information__list__value">
-                    100% Polyester
-                  </span>
+                <li className="additional__information__list__property additional__text">
+                  <h4 className="h4">Material:</h4>
+                  <p className="paragraph">100% Polyester</p>
                 </li>
               </ul>
-              <ul class="reviews__list">
-                <li class="reviews__list__header">Reviews</li>
-                <li class="reviews__list__item">
-                  <ul class="reviews__list__item__sublist">
-                    <li class="reviews__list__item__sublist__item">
-                      <ul class="reviews__list__item__sublist__item__sublist">
-                        <li class="reviews__list__item__sublist__item__sublist__item">
-                          <ul class="product__card__rating">
-                            <li class="product__card__rating__item__main"></li>
-                            <li class="product__card__rating__item__main"></li>
-                            <li class="product__card__rating__item__main"></li>
-                            <li class="product__card__rating__item__main"></li>
-                            <li class="product__card__rating__item__main"></li>
+              <ul className="reviews__list">
+                <li className="reviews__list__header">Reviews</li>
+                <li className="reviews__list__item">
+                  <ul className="reviews__list__item__sublist">
+                    <li className="reviews__list__item__sublist__item">
+                      <ul className="reviews__list__item__sublist__item__sublist">
+                        <li className="reviews__list__item__sublist__item__sublist__item">
+                          <ul className="product__card__rating">
+                            <li className="product__card__rating__item__main"></li>
+                            <li className="product__card__rating__item__main"></li>
+                            <li className="product__card__rating__item__main"></li>
+                            <li className="product__card__rating__item__main"></li>
+                            <li className="product__card__rating__item__main"></li>
                           </ul>
                         </li>
-                        <li class="reviews__list__item__sublist__item__sublist__item">
+                        <li className="reviews__list__item__sublist__item__sublist__item">
                           2 Reviews
                         </li>
                       </ul>
                     </li>
-                    <li class="reviews__list__item__sublist__item">
-                      <ul class="reviews__list__item__sublist__item__sublist">
-                        <li class="reviews__list__item__sublist__item__sublist__item message"></li>
-                        <li class="reviews__list__item__sublist__item__sublist__item">
+                    <li className="reviews__list__item__sublist__item">
+                      <ul className="reviews__list__item__sublist__item__sublist">
+                        <li className="reviews__list__item__sublist__item__sublist__item message"></li>
+                        <li className="reviews__list__item__sublist__item__sublist__item">
                           Write a review
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="reviews__list__item">
-                  <ul class="reviews__list__item__sublist">
-                    <li class="reviews__list__item__sublist__item name">
+                <li className="reviews__list__item">
+                  <ul className="reviews__list__item__sublist">
+                    <li className="reviews__list__item__sublist__item name">
                       Oleh Chabanov
                     </li>
-                    <li class="reviews__list__item__sublist__item">
-                      <ul class="reviews__list__item__sublist__item__sublist">
-                        <li class="reviews__list__item__sublist__item__sublist__item">
+                    <li className="reviews__list__item__sublist__item">
+                      <ul className="reviews__list__item__sublist__item__sublist">
+                        <li className="reviews__list__item__sublist__item__sublist__item">
                           3 month ago
                         </li>
-                        <li class="reviews__list__item__sublist__item__sublist__item">
-                          <ul class="product__card__rating">
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
+                        <li className="reviews__list__item__sublist__item__sublist__item">
+                          <ul className="product__card__rating">
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
                           </ul>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="reviews__list__item review">
+                <li className="reviews__list__item review">
                   On the other hand, we denounce with righteous indignation and
                   like men who are so beguiled and demoralized by the charms of
                   pleasure of the moment
                 </li>
-                <li class="reviews__list__item">
-                  <ul class="reviews__list__item__sublist">
-                    <li class="reviews__list__item__sublist__item name">
+                <li className="reviews__list__item">
+                  <ul className="reviews__list__item__sublist">
+                    <li className="reviews__list__item__sublist__item name">
                       ShAmAn design
                     </li>
-                    <li class="reviews__list__item__sublist__item">
-                      <ul class="reviews__list__item__sublist__item__sublist">
-                        <li class="reviews__list__item__sublist__item__sublist__item">
+                    <li className="reviews__list__item__sublist__item">
+                      <ul className="reviews__list__item__sublist__item__sublist">
+                        <li className="reviews__list__item__sublist__item__sublist__item">
                           3 month ago
                         </li>
-                        <li class="reviews__list__item__sublist__item__sublist__item">
-                          <ul class="product__card__rating">
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
-                            <li class="product__card__rating__item"></li>
+                        <li className="reviews__list__item__sublist__item__sublist__item">
+                          <ul className="product__card__rating">
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
+                            <li className="product__card__rating__item"></li>
                           </ul>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="reviews__list__item review">
+                <li className="reviews__list__item review">
                   At vero eos et accusamus et iusto odio dignissimos ducimus qui
                   blanditiis praesentium voluptatum deleniti
                 </li>

@@ -1,5 +1,33 @@
 @import "../../scss/Variables.scss";
 
+// === COMMON ===
+
+.additional__text {
+  display: flex;
+  align-items: center;
+  gap: $base*2;
+  margin-top: $base*2;
+
+  .h4 {
+    margin: 0;
+    padding: 0;
+    font-size: $fs-xs;
+    font-weight: $fw-semi-bold;
+    color: $color-dark-06;
+    text-transform: uppercase;
+  }
+
+  .paragraph {
+    margin: 0;
+    padding: 0;
+    font-size: $fs-xs;
+    font-weight: $fw-semi-bold;
+    color: $color-dark;
+  }
+}
+
+// === / COMMON ===
+
 // === PRODUCT CARD ===
 
 .product__card {
@@ -45,28 +73,9 @@
             .product__card__slider__vertical__item {
               width: $base*19;
               height: $base*23;
-              background-size: contain;
-              background-position: center;
-              background-repeat: no-repeat;
               opacity: 0.4;
               cursor: pointer;
               transition: $transition;
-
-              &:nth-child(1) {
-                background-image: url('./assets/img/product__card__1.jpg');
-              }
-
-              &:nth-child(2) {
-                background-image: url('./assets/img/product__card__2.jpg');
-              }
-
-              &:nth-child(3) {
-                background-image: url('./assets/img/product__card__3.jpg');
-              }
-
-              &:nth-child(4) {
-                background-image: url('./assets/img/product__card__4.jpg');
-              }
 
               &:hover, &:focus, &:active {
                 opacity: 1;
@@ -109,41 +118,28 @@
       }
 
       .color__img {
-        @include flexCenter;
-        gap: $base*3;
-        margin: 0;
-        margin-top: $base*3;
+        @include flexSpaceBetween;
+        width: 60%;
+        height: auto;
+        margin: $base*3 0 0 0;
         padding: 0;
         list-style: none;
 
         .color__img__item {
           @include flexCenter;
-          box-sizing: border-box;
           width: $base*13;
           height: $base*13;
-          background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
+          box-sizing: border-box;
           cursor: pointer;
 
-          &:nth-child(1) {
-            background-image: url('./assets/img/product__card__color__1.jpg');
-          }
+          .color__img__item__img {
+            height: $base*13;
+            transition: $transition;
 
-          &:nth-child(2) {
-            background-image: url('./assets/img/product__card__color__2.jpg');
-          }
-
-          &:nth-child(3) {
-            background-image: url('./assets/img/product__card__color__3.jpg');
-          }
-
-          &:nth-child(4) {
-            background-image: url('./assets/img/product__card__color__4.jpg');
-          }
-
-          &:hover, &:focus, &:active {
-            border: 2px solid $color-dark;
+            &:hover, &:focus, &:active {
+              border: 2px solid $color-dark;
+              transition: $transition;
+            }
           }
         }
       }
@@ -602,6 +598,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-image: url('./assets/img/star__filled.svg');
+                cursor: pointer;
               }
             }
           }

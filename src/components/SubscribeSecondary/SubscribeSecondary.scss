@@ -44,16 +44,21 @@
         @include spartan;
         width: $base*70;
         margin: 0;
-        padding: $base*2 $base*2;
+        padding: $base*2 0 $base*2 $base*4;
         font-size: $fs-s;
         font-weight: $fw-medium;
         letter-spacing: 1px;
-        color: $color-dark-04;
+        color: $color-white-09;
         background-color: $color-white-02;
         border: none;
+        cursor: pointer;
 
         &::placeholder {
-          padding-left: $base*2;
+          padding-left: 0;
+        }
+
+        &:hover, &:focus, &:active {
+          outline: none;
         }
 
         @media (max-width: $breakpoint-sm-min) {

@@ -5,26 +5,26 @@ import "./SubscribeSecondary.scss";
 const SubscribeSecondary = () => {
   return (
     <div>
-      <section class="subscribe__secondary">
-        <div class="inner__container">
-          <ul class="subscribe__secondary__container">
-            <li class="subscribe__secondary__container__item">
-              <h2 class="h2">Be In Touch With Us:</h2>
+      <section className="subscribe__secondary">
+        <div className="inner__container">
+          <ul className="subscribe__secondary__container">
+            <li className="subscribe__secondary__container__item">
+              <h2 className="h2">Be In Touch With Us:</h2>
             </li>
-            <li class="subscribe__secondary__container__item email__container">
+            <li className="subscribe__secondary__container__item email__container">
               <input
                 type="email"
                 placeholder="Enter your email"
-                class="input__email"
+                className="input__email"
               />
-              <button class="button__dark">Join Us</button>
+              <button className="button__dark">Join Us</button>
             </li>
-            <li class="subscribe__secondary__container__item">
-              <ul class="socials__wrapper">
-                <li class="socials__wrapper__item icon"></li>
-                <li class="socials__wrapper__item icon"></li>
-                <li class="socials__wrapper__item icon"></li>
-                <li class="socials__wrapper__item icon"></li>
+            <li className="subscribe__secondary__container__item">
+              <ul className="socials__wrapper">
+                <li className="socials__wrapper__item icon"></li>
+                <li className="socials__wrapper__item icon"></li>
+                <li className="socials__wrapper__item icon"></li>
+                <li className="socials__wrapper__item icon"></li>
               </ul>
             </li>
           </ul>

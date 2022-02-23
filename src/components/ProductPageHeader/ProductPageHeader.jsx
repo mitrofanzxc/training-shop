@@ -1,71 +1,83 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import "./ProductPageHeader.scss";
 
 const ProductPageHeader = () => {
   return (
     <div>
-      <section class="catalog__header">
-        <div class="inner__container">
-          <ul class="catalog__header__wrapper">
-            <li class="catalog__header__wrapper__item">
-              <ul class="catalog__header__wrapper__item__subwrapper">
-                <li class="catalog__header__wrapper__item__subwrapper__item">
-                  Home
+      <section className="catalog__header">
+        <div className="inner__container">
+          <ul className="catalog__header__wrapper">
+            <li className="catalog__header__wrapper__item">
+              <ul className="catalog__header__wrapper__item__subwrapper">
+                <li className="catalog__header__wrapper__item__subwrapper__item">
+                  <Link
+                    className="catalog__header__wrapper__item__subwrapper__item__link"
+                    to="/"
+                  >
+                    Home
+                  </Link>
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item arrow">
+                <li className="catalog__header__wrapper__item__subwrapper__item arrow">
                   ►
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item">
-                  Women
+                <li className="catalog__header__wrapper__item__subwrapper__item">
+                  <Link
+                    className="catalog__header__wrapper__item__subwrapper__item__link"
+                    to="/women"
+                  >
+                    Women
+                  </Link>
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item arrow">
+                <li className="catalog__header__wrapper__item__subwrapper__item arrow">
                   ►
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item">
+                <li className="catalog__header__wrapper__item__subwrapper__item">
                   Women's tracksuit Q109
                 </li>
               </ul>
             </li>
-            <li class="catalog__header__wrapper__item">
-              <ul class="catalog__header__wrapper__item__subwrapper">
-                <li class="catalog__header__wrapper__item__subwrapper__item share"></li>
-                <li class="catalog__header__wrapper__item__subwrapper__item">
+            <li className="catalog__header__wrapper__item">
+              <ul className="catalog__header__wrapper__item__subwrapper">
+                <li className="catalog__header__wrapper__item__subwrapper__item share"></li>
+                <li className="catalog__header__wrapper__item__subwrapper__item">
                   Share
                 </li>
               </ul>
             </li>
           </ul>
-          <h2 class="catalog__heading__item">Women's tracksuit Q109</h2>
-          <ul class="catalog__header__wrapper availability">
-            <li class="catalog__header__wrapper__item">
-              <ul class="catalog__header__wrapper__item__subwrapper">
-                <li class="catalog__header__wrapper__item__subwrapper__item">
-                  <ul class="product__card__rating">
-                    <li class="product__card__rating__item"></li>
-                    <li class="product__card__rating__item"></li>
-                    <li class="product__card__rating__item"></li>
-                    <li class="product__card__rating__item"></li>
-                    <li class="product__card__rating__item"></li>
+          <h2 className="catalog__heading__item">Women's tracksuit Q109</h2>
+          <ul className="catalog__header__wrapper availability">
+            <li className="catalog__header__wrapper__item">
+              <ul className="catalog__header__wrapper__item__subwrapper">
+                <li className="catalog__header__wrapper__item__subwrapper__item">
+                  <ul className="product__card__rating">
+                    <li className="product__card__rating__item"></li>
+                    <li className="product__card__rating__item"></li>
+                    <li className="product__card__rating__item"></li>
+                    <li className="product__card__rating__item"></li>
+                    <li className="product__card__rating__item"></li>
                   </ul>
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item reviews">
+                <li className="catalog__header__wrapper__item__subwrapper__item reviews">
                   2 reviews
                 </li>
               </ul>
             </li>
-            <li class="catalog__header__wrapper__item">
-              <ul class="catalog__header__wrapper__item__subwrapper">
-                <li class="catalog__header__wrapper__item__subwrapper__item">
+            <li className="catalog__header__wrapper__item">
+              <ul className="catalog__header__wrapper__item__subwrapper">
+                <li className="catalog__header__wrapper__item__subwrapper__item">
                   SKU:
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item bold">
+                <li className="catalog__header__wrapper__item__subwrapper__item bold">
                   777
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item">
+                <li className="catalog__header__wrapper__item__subwrapper__item">
                   Availability:
                 </li>
-                <li class="catalog__header__wrapper__item__subwrapper__item bold">
+                <li className="catalog__header__wrapper__item__subwrapper__item bold">
                   In Stock
                 </li>
               </ul>

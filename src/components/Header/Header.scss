@@ -89,6 +89,7 @@
   .header__socials__wrapper__item {
     margin: 0;
     padding: 0;
+    cursor: pointer;
     
     &:nth-child(1) {
       background-image: url('./assets/img/facebook.svg');
