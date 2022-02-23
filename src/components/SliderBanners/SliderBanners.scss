@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   margin-top: $base*6;
 
-  @media (max-width: $breakpoint-xxs-min) {
+  @media (max-width: $breakpoint-xs-min) {
     flex-direction: column;
   }
   
@@ -17,7 +17,7 @@
     @include flexCenter;
     width: 49%;
 
-    @media (max-width: $breakpoint-xxs-min) {
+    @media (max-width: $breakpoint-xs-min) {
       width: 100%;
     }
 
@@ -32,7 +32,7 @@
       @include flexSpaceBetween;
       width: 45%;
 
-      @media (max-width: $breakpoint-xxs-min) {
+      @media (max-width: $breakpoint-xs-min) {
         width: 90%;
         gap: $base*3;
       }
@@ -109,7 +109,7 @@
     .banners__container__right__gender {
       @include flexSpaceBetween;
 
-      @media (max-width: $breakpoint-xxs-min) {
+      @media (max-width: $breakpoint-xs-min) {
         width: 204%;
         gap: $base*2;
         margin-top: $base*3;
@@ -121,7 +121,7 @@
     @include flexCenter;
     width: 100%;
 
-    @media (max-width: $breakpoint-xxs-min) {
+    @media (max-width: $breakpoint-xs-min) {
       width: 204%;
       margin-top: $base*3;
     }
