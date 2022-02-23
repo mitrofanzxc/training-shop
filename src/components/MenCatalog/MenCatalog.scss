@@ -6,13 +6,23 @@
 
   .catalog__header {
     @include flexSpaceBetween;
-    margin-top: $base*19;
+    flex-wrap: wrap;
+    margin-top: $base*20;
+
+    @media (max-width: $breakpoint-md-min) {
+      @include flexCenter;
+      margin-top: $base*8;
+    }
 
     .h2 {
-      font-size: $fs-xxl;
+      font-size: $fs-xl;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      @media (max-width: $breakpoint-md-min) {
+        padding: $base*2 0;
+      }
     }
 
     .catalog__filter {
@@ -26,6 +36,12 @@
       font-weight: $fw-regular;
       color: rgba(18,18,18,0.6);
       cursor: pointer;
+
+      @media (max-width: $breakpoint-md-min) {
+        @include flexCenter;
+        flex-wrap: wrap;
+        gap: $base*2;
+      }
 
       .catalog__filter__item {
         transition: $transition;
@@ -42,19 +58,36 @@
   .products__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    gap: $base*6 $base*3;
-    margin-top: 0;
+    gap: $base*5 $base*3;
+    margin-top: $base*10;
+
+    @media (max-width: $breakpoint-md-min) {
+      margin-top: $base*5;
+    }
+
+    @media (max-width: $breakpoint-xs-min) {
+      gap: $base*5 0;
+    }
   }
 
   .product__card {
+    height: auto;
     margin: 0;
     padding: 0;
     list-style: none;
 
+    @media (max-width: $breakpoint-lg-min) {
+      width: 30%;
+    }
+
+    @media (max-width: $breakpoint-md-min) {
+      width: 48%;
+    }
+
     .product__card__image {
       display: block;
-      width: $base*51;
-      height: $base*64;
+      width: 100%;
+      height: auto;
       margin: 0;
       padding: 0;
     }
@@ -77,6 +110,10 @@
         font-size: $fs-m;
         font-weight: $fw-bold;
         color: $color-dark;
+
+        @media (max-width: $breakpoint-xxs-min) {
+          font-size: $fs-xs;
+        }
       }
     }
 
@@ -85,6 +122,26 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
+      @media (max-width: $breakpoint-md-min) {
+        width: 25%;
+      }
+
+      @media (max-width: $breakpoint-sm-min) {
+        width: 30%;
+      }
+
+      @media (max-width: $breakpoint-sm-min) {
+        width: 35%;
+      }
+
+      @media (max-width: $breakpoint-xs-min) {
+        width: 40%;
+      }
+
+      @media (max-width: $breakpoint-xxs-min) {
+        width: 45%;
+      }
 
       .product__card__rating__item {
         @include flexCenter;

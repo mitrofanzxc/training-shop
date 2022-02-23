@@ -7,10 +7,10 @@
 
   .catalog__header__wrapper {
     @include flexSpaceBetween;
-    gap: 6px;
+    gap: $base;
     margin: 0;
     padding: 0;
-    padding-top: 8px;
+    padding-top: $base*2;
     list-style: none;
 
     .catalog__header__wrapper__item {
@@ -26,7 +26,7 @@
           font-size: $fs-xs;
 
           .arrow {
-            font-size: 8px;
+            font-size: $fs-xxs;
           }
         }
 
@@ -40,8 +40,8 @@
         }
 
         .share {
-          width: 18px;
-          height: 18px;
+          width: $base*4;
+          height: $base*4;
           background-image: url('./assets/img/share.svg');
           background-position: center;
           background-size: contain;
@@ -53,20 +53,25 @@
 
   .availability {
     padding: 0;
+
+    @media (max-width: $breakpoint-xs-min) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   .catalog__heading {
-    font-size: 28px;
+    font-size: $fs-xxl;
     margin: 0;
-    padding: 12px 0 24px 0;
+    padding: $base*2 0 $base*5 0;
     text-align: center;
     text-transform: uppercase;
   }
 
   .catalog__heading__item {
-    font-size: 28px;
+    font-size: $fs-xxl;
     margin: 0;
-    padding: 17px 0 0 0;
+    padding: $base*3 0 0 0;
     text-align: center;
     text-transform: none;
   }
@@ -81,7 +86,7 @@
   .product__card__rating__item {
     @include flexCenter;
     list-style: none;
-    width: 14px;
+    width: $base*3;
     height: $base*3;
     background-position: center;
     background-repeat: no-repeat;
