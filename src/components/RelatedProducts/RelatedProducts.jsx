@@ -8,7 +8,7 @@ import RelatedProducts4 from "./assets/img/related__products__4.jpg";
 const RelatedProducts = () => {
   return (
     <div>
-      <section className="catalog">
+      <section className="catalog" data-test-id="related-slider">
         <div className="inner__container">
           <div className="catalog__header">
             <h2 className="h2">Related Products</h2>

@@ -14,7 +14,7 @@ const SliderBanners = () => {
       <section className="banners">
         <div className="inner__container">
           <div className="banners__container">
-            <div className="slider">
+            <div className="slider" data-test-id="main-slider">
               <img className="slider__img" src={SliderImg} alt="Slider Img" />
               <div className="buttons__container">
                 <button className="slider__arrow arrow__left"></button>

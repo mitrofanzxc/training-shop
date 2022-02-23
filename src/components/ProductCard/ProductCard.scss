@@ -13,8 +13,8 @@
     padding: 0;
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
-    color: $color-dark-06;
-    text-transform: uppercase;
+    color: $color-dark;
+    text-transform: none;
   }
 
   .paragraph {
@@ -22,7 +22,7 @@
     padding: 0;
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
-    color: $color-dark;
+    color: $color-dark-06;
   }
 }
 
@@ -233,8 +233,8 @@
   margin: 0;
   margin-top: $base*6;
   padding: 0;
-  border-top: 2px solid $color-gr-white;
-  border-bottom: 2px solid $color-gr-white;
+  border-top: 2px solid $color-grey;
+  border-bottom: 2px solid $color-grey;
   list-style: none;
 
   .price {
@@ -556,6 +556,7 @@
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
     padding-bottom: $base*2;
+    color: $color-dark;
     text-transform: uppercase;
   }
 
@@ -582,13 +583,18 @@
         font-weight: $fw-medium;
         
         .reviews__list__item__sublist__item__sublist {
-          @include flexSpaceBetween;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
           gap: $base*2;
           margin: 0;
           padding: 0;
           list-style: none;
 
           .reviews__list__item__sublist__item__sublist__item {
+            font-size: $fs-xxs;
+            font-weight: $fw-medium;
+            color: $color-dark-06;
 
             .product__card__rating {
 

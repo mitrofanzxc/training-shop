@@ -13,7 +13,7 @@ const ProductCard = () => {
         <div className="inner__container">
           <ul className="side__container">
             <li className="side__left">
-              <ul className="side__left__columns">
+              <ul className="side__left__columns" data-test-id="main-slider">
                 <li className="side__left__columns__item">
                   <ul className="buttons__arrow__container">
                     <li>

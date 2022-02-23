@@ -67,6 +67,13 @@ const Header = () => {
             <li className="socials__wrapper__item icon"></li>
             <li className="socials__wrapper__item icon"></li>
             <li className="socials__wrapper__item icon"></li>
+            <li className="socials__wrapper__item">
+              <button className="hamburger" data-test-id="burger-menu">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
