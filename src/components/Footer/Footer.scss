@@ -44,6 +44,10 @@
         font-weight: $fw-regular;
         color: $color-dark-08;
 
+        .footer__links__container__list__item__link {
+          color: $color-dark-08;
+        }
+
         .icon {
           display: inline-block;
           width: $base*3;

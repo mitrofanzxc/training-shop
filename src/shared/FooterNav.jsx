@@ -1,79 +1,86 @@
-const FooterNav = [
+const FooterNav1 = [
   {
-    header: "Categories",
-    headerInfo: [
-      {
-        description: "Men",
-        id: "8",
-        path: "men",
-      },
-      {
-        description: "Women",
-        id: "9",
-        path: "women",
-      },
-      {
-        description: "Accessories",
-        id: "10",
-        path: "accessories",
-      },
-      {
-        description: "Beauty",
-        id: "11",
-        path: "beauty",
-      },
-    ],
+    description: "Men",
+    id: "8",
+    path: "men",
+    className: "footer__links__container__list__item__link",
   },
   {
-    header: "Infomation",
-    headerInfo: [
-      {
-        description: "About Us",
-        id: "12",
-        path: "about",
-      },
-      {
-        description: "Contact Us",
-        id: "13",
-        path: "contact",
-      },
-      {
-        description: "Blog",
-        id: "14",
-        path: "blog",
-      },
-      {
-        description: "FAQs",
-        id: "15",
-        path: "faqs",
-      },
-    ],
+    description: "Women",
+    id: "9",
+    path: "women",
+    className: "footer__links__container__list__item__link",
   },
   {
-    header: "Useful links",
-    headerInfo: [
-      {
-        description: "Terms &amp; Conditions",
-        id: "16",
-        path: "terms",
-      },
-      {
-        description: "Returns &amp; Exchanges",
-        id: "17",
-        path: "return",
-      },
-      {
-        description: "Shipping &amp; Delivery",
-        id: "18",
-        path: "shipping",
-      },
-      {
-        description: "Privacy Policy",
-        id: "19",
-        path: "privacy",
-      },
-    ],
+    description: "Accessories",
+    id: "10",
+    path: "accessories",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Beauty",
+    id: "11",
+    path: "beauty",
+    className: "footer__links__container__list__item__link",
   },
 ];
 
-export { FooterNav };
+export { FooterNav1 };
+
+const FooterNav2 = [
+  {
+    description: "About Us",
+    id: "12",
+    path: "about",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Contact Us",
+    id: "13",
+    path: "contact",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Blog",
+    id: "14",
+    path: "blog",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "FAQs",
+    id: "15",
+    path: "faqs",
+    className: "footer__links__container__list__item__link",
+  },
+];
+
+export { FooterNav2 };
+
+const FooterNav3 = [
+  {
+    description: "Terms & Conditions",
+    id: "12",
+    path: "terms",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Returns & Exchanges",
+    id: "13",
+    path: "returns",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Shipping & Delivery",
+    id: "14",
+    path: "shipping",
+    className: "footer__links__container__list__item__link",
+  },
+  {
+    description: "Privacy Policy",
+    id: "15",
+    path: "privacy",
+    className: "footer__links__container__list__item__link",
+  },
+];
+
+export { FooterNav3 };

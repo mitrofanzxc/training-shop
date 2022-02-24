@@ -1,46 +1,12 @@
 import React from "react";
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
-// import { FooterNav } from "../../shared/FooterNav";
+import { FooterNav1 } from "../../shared/FooterNav";
+import { FooterNav2 } from "../../shared/FooterNav";
+import { FooterNav3 } from "../../shared/FooterNav";
 
 import "./Footer.scss";
-
-// const FooterNavHeaders = (obj) => {
-//   let headers = [];
-//   for (let i = 0; i < obj.length; i++) {
-//     console.log(obj[i].headerInfo);
-//     headers.push(
-//       <li className="footer__links__container__list__header">
-//         {obj[i].headerInfo}
-//       </li>
-//     );
-//   }
-//   console.log(headers[0].props.children[0].description);
-//   return headers;
-// };
-
-// FooterNavHeaders(FooterNav);
-
-// const FooterNavLinks = (obj) => {
-//   let links = [];
-//   for (let i = 0; i < obj.length; i++) {
-//     for (let j = 0; j < obj[i].headerInfo.length; j++) {
-//       links.push(
-//         <li className="footer__links__container__list__item">
-//           <Link
-//             key={obj[i].headerInfo[j].id}
-//             to={`/${obj[i].headerInfo[j].path}`}
-//             data-test-id={`footer-nav-link-${obj[i].headerInfo[j].path}`}
-//           >
-//             {obj[i].headerInfo[j].description}
-//           </Link>
-//         </li>
-//       );
-//     }
-//   }
-//   return links;
-// };
 
 const Footer = () => {
   return (
@@ -54,12 +20,20 @@ const Footer = () => {
                 <li className="footer__links__container__list__header">
                   Categories
                 </li>
-                <li className="footer__links__container__list__item">Men</li>
-                <li className="footer__links__container__list__item">Women</li>
-                <li className="footer__links__container__list__item">
-                  Accessories
-                </li>
-                <li className="footer__links__container__list__item">Beauty</li>
+                {FooterNav1.map((FooterNav1Link) => {
+                  return (
+                    <li className="footer__links__container__list__item">
+                      <Link
+                        key={FooterNav1Link.id}
+                        className={FooterNav1Link.className}
+                        to={`/${FooterNav1Link.path}`}
+                        data-test-id={`footer-nav-link-${FooterNav1Link.path}`}
+                      >
+                        {FooterNav1Link.description}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </li>
             <li className="footer__links__container__item">
@@ -67,14 +41,20 @@ const Footer = () => {
                 <li className="footer__links__container__list__header">
                   Infomation
                 </li>
-                <li className="footer__links__container__list__item">
-                  About Us
-                </li>
-                <li className="footer__links__container__list__item">
-                  Contact Us
-                </li>
-                <li className="footer__links__container__list__item">Blog</li>
-                <li className="footer__links__container__list__item">FAQs</li>
+                {FooterNav2.map((FooterNav2Link) => {
+                  return (
+                    <li className="footer__links__container__list__item">
+                      <Link
+                        key={FooterNav2Link.id}
+                        className={FooterNav2Link.className}
+                        to={`/${FooterNav2Link.path}`}
+                        data-test-id={`footer-nav-link-${FooterNav2Link.path}`}
+                      >
+                        {FooterNav2Link.description}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </li>
             <li className="footer__links__container__item">
@@ -82,18 +62,20 @@ const Footer = () => {
                 <li className="footer__links__container__list__header">
                   Useful links
                 </li>
-                <li className="footer__links__container__list__item">
-                  Terms &amp; Conditions
-                </li>
-                <li className="footer__links__container__list__item">
-                  Returns &amp; Exchanges
-                </li>
-                <li className="footer__links__container__list__item">
-                  Shipping &amp; Delivery
-                </li>
-                <li className="footer__links__container__list__item">
-                  Privacy Policy
-                </li>
+                {FooterNav3.map((FooterNav3Link) => {
+                  return (
+                    <li className="footer__links__container__list__item">
+                      <Link
+                        key={FooterNav3Link.id}
+                        className={FooterNav3Link.className}
+                        to={`/${FooterNav3Link.path}`}
+                        data-test-id={`footer-nav-link-${FooterNav3Link.path}`}
+                      >
+                        {FooterNav3Link.description}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </li>
             <li className="footer__links__container__item">

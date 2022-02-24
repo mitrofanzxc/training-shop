@@ -48,6 +48,12 @@
       flex-direction: row;
       width: 48%;
 
+      @media (max-width: $breakpoint-lg-min) {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
       .side__left__columns {
         @include flexSpaceBetween;
         gap: $base*3;
@@ -71,8 +77,9 @@
             list-style: none;
             
             .product__card__slider__vertical__item {
-              width: $base*19;
-              height: $base*23;
+              max-width: $base*19;
+              height: auto;
+              // height: $base*23;
               opacity: 0.4;
               cursor: pointer;
               transition: $transition;
@@ -81,8 +88,21 @@
                 opacity: 1;
                 transition: $transition;
               }
+
+              .product__card__slider__vertical__item__img {
+                width: 100%;
+                height: auto;
+              }
             }
           }
+        }
+
+        .vertical__left {
+          width: 20%;
+        }
+
+        .vertical__right {
+          width: 80%;
         }
       }
     }
@@ -92,6 +112,13 @@
       align-items: flex-start;
       flex-direction: column;
       width: 48%;
+
+      @media (max-width: $breakpoint-lg-min) {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+      }
 
       .color__text {
         display: flex;
@@ -119,11 +146,16 @@
 
       .color__img {
         @include flexSpaceBetween;
+        gap: $base*2;
         width: 60%;
         height: auto;
         margin: $base*3 0 0 0;
         padding: 0;
         list-style: none;
+
+        @media (max-width: $breakpoint-lg-min) {
+          width: 50%;
+        }
 
         .color__img__item {
           @include flexCenter;
@@ -237,6 +269,10 @@
   border-bottom: 2px solid $color-grey;
   list-style: none;
 
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: center;
+  }
+
   .price {
     margin: 0;
     padding: 0;
@@ -304,6 +340,11 @@
   margin: $base*5 0 0 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: center;
+    gap: $base*2;
+  }
 
   .benefits__subwrapper {
     display: flex;
@@ -443,17 +484,18 @@
 
 .product__card__main {
   position: relative;
-  width: $base*90;
-  height: $base*112;
-  background-image: url('./assets/img/product__card__main.jpg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  max-width: $base*90;
+  height: auto;
   cursor: pointer;
+
+  .product__card__main__img {
+    width: 100%;
+    height: auto;
+  }
 
   .product__card__main__slider {
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: 95%;
     @include flexSpaceBetween;
     margin: 0 $base*2;
