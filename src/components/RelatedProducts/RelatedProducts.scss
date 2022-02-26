@@ -6,7 +6,7 @@
 
   .catalog__header {
     @include flexSpaceBetween;
-    margin-top: $base*19;
+    margin: $base*20 0 $base*9 0;
     background-color: transparent;
 
     .h2 {

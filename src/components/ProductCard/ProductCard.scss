@@ -46,7 +46,7 @@
       display: flex;
       align-items: flex-start;
       flex-direction: row;
-      width: 48%;
+      width: 50%;
 
       @media (max-width: $breakpoint-lg-min) {
         align-items: center;
@@ -56,7 +56,7 @@
 
       .side__left__columns {
         @include flexSpaceBetween;
-        gap: $base*3;
+        gap: $base*4;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -102,7 +102,7 @@
         }
 
         .vertical__right {
-          width: 80%;
+          width: 100%;
         }
       }
     }
@@ -111,7 +111,7 @@
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-      width: 48%;
+      width: 47%;
 
       @media (max-width: $breakpoint-lg-min) {
         align-items: center;
@@ -149,7 +149,7 @@
         gap: $base*2;
         width: 60%;
         height: auto;
-        margin: $base*3 0 0 0;
+        margin: $base*4 0 0 0;
         padding: 0;
         list-style: none;
 
@@ -263,7 +263,7 @@
   width: 100%;
   height: $base*22;
   margin: 0;
-  margin-top: $base*6;
+  margin-top: $base*7;
   padding: 0;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;
@@ -468,7 +468,7 @@
 .product__description {
   width: 100%;
   margin: $base*6 0 0 0;
-  padding: $base*6 0;
+  padding: $base*6 0 $base*7 0;
   letter-spacing: 1px;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;

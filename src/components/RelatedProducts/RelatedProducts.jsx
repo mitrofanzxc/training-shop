@@ -1,9 +1,14 @@
 import React from "react";
 
-import RelatedProducts1 from "./assets/img/related__products__1.jpg";
-import RelatedProducts2 from "./assets/img/related__products__2.jpg";
-import RelatedProducts3 from "./assets/img/related__products__3.jpg";
-import RelatedProducts4 from "./assets/img/related__products__4.jpg";
+import { Link } from "react-router-dom";
+import { RelatedProductsDataBase } from "../../shared/RelatedProductsDataBase";
+
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "./RelatedProducts.scss";
 
 const RelatedProducts = () => {
   return (
@@ -17,88 +22,53 @@ const RelatedProducts = () => {
               <button className="button__arrow arrow__right"></button>
             </div>
           </div>
-          <div className="products__container related__products">
-            <ul className="product__card">
-              <li>
-                <img
-                  src={RelatedProducts1}
-                  className="product__card__image"
-                  alt="product__card__women"
-                />
-              </li>
-              <li className="product__card__title">Women's tracksuit Q109</li>
-              <ul className="product__card__price__list">
-                <li className="product__card__price__item">$ 30.00</li>
-                <ul className="product__card__rating">
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                </ul>
-              </ul>
-            </ul>
-            <ul className="product__card">
-              <li>
-                <img
-                  src={RelatedProducts2}
-                  className="product__card__image"
-                  alt="product__card__women"
-                />
-              </li>
-              <li className="product__card__title">Women's tracksuit Q109</li>
-              <ul className="product__card__price__list">
-                <li className="product__card__price__item">$ 30.00</li>
-                <ul className="product__card__rating">
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                </ul>
-              </ul>
-            </ul>
-            <ul className="product__card">
-              <li>
-                <img
-                  src={RelatedProducts3}
-                  className="product__card__image"
-                  alt="product__card__women"
-                />
-              </li>
-              <li className="product__card__title">Women's tracksuit Q109</li>
-              <ul className="product__card__price__list">
-                <li className="product__card__price__item">$ 30.00</li>
-                <ul className="product__card__rating">
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                </ul>
-              </ul>
-            </ul>
-            <ul className="product__card">
-              <li>
-                <img
-                  src={RelatedProducts4}
-                  className="product__card__image"
-                  alt="product__card__women"
-                />
-              </li>
-              <li className="product__card__title">Women's tracksuit Q109</li>
-              <ul className="product__card__price__list">
-                <li className="product__card__price__item">$ 30.00</li>
-                <ul className="product__card__rating">
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                  <li className="product__card__rating__item"></li>
-                </ul>
-              </ul>
-            </ul>
-          </div>
+          <Swiper
+            data-test-id="related-slider"
+            modules={[Navigation]}
+            spaceBetween={30}
+            slidesPerView={4}
+            navigation
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="products__container related__products">
+              {RelatedProductsDataBase.map((RelatedProductsDataBaseItem) => {
+                return (
+                  <SwiperSlide>
+                    <ul className="product__card">
+                      <li>
+                        <Link
+                          to={`/${RelatedProductsDataBaseItem.productType}/${RelatedProductsDataBaseItem.id}`}
+                          data-test-id={`clothes-card-${RelatedProductsDataBaseItem.productType}`}
+                        >
+                          <img
+                            src={RelatedProductsDataBaseItem.img}
+                            className={RelatedProductsDataBaseItem.className}
+                            alt={RelatedProductsDataBaseItem.alt}
+                          />
+                        </Link>
+                      </li>
+                      <li className="product__card__title">
+                        {RelatedProductsDataBaseItem.header}
+                      </li>
+                      <ul className="product__card__price__list">
+                        <li className="product__card__price__item">
+                          {RelatedProductsDataBaseItem.price}
+                        </li>
+                        <ul className="product__card__rating">
+                          <li className="product__card__rating__item"></li>
+                          <li className="product__card__rating__item"></li>
+                          <li className="product__card__rating__item"></li>
+                          <li className="product__card__rating__item"></li>
+                          <li className="product__card__rating__item"></li>
+                        </ul>
+                      </ul>
+                    </ul>
+                  </SwiperSlide>
+                );
+              })}
+            </div>
+          </Swiper>
         </div>
       </section>
     </div>
