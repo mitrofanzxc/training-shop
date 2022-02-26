@@ -622,15 +622,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      
-      .message {
-        width: $base*3;
-        height: $base*3;
-        background-image: url('./assets/img/message.svg');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
 
       .reviews__list__item__sublist__item {
         font-size: $fs-xs;
@@ -644,6 +635,15 @@
           margin: 0;
           padding: 0;
           list-style: none;
+
+          .message {
+            width: $base*3;
+            height: $base*3;
+            background-image: url('./assets/img/message.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
 
           .reviews__list__item__sublist__item__sublist__item {
             font-size: $fs-xxs;
