@@ -538,12 +538,24 @@
   border-radius: 50%;
   background-color: $color-white;
   background-image: url('./assets/img/ellipse__arrow__left.svg');
+
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
 }
 
 .arrow__right {
   border-radius: 50%;
   background-color: $color-white;
   background-image: url('./assets/img/ellipse__arrow__right.svg');
+
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
 }
 
 // === / ARROW BUTTONS ===

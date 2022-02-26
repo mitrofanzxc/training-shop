@@ -58,8 +58,8 @@
   .products__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    gap: $base*5 $base*3;
-    margin-top: $base*10;
+    gap: $base*6 $base*3;
+    margin-top: $base*9;
 
     @media (max-width: $breakpoint-md-min) {
       margin-top: $base*5;
