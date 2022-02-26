@@ -248,56 +248,56 @@
 // === SLIDER BUTTONS ===
 
 .swiper-button-prev {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: $base*8 !important;
-  height: $base*8 !important;
-  top: 44% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 100% !important;
-  background-color: $color-white !important;
-  background-image: url('./assets/img/ellipse__arrow__left.svg') !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base*8;
+  height: $base*8;
+  top: 44%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: $color-white;
+  background-image: url('./assets/img/ellipse__arrow__left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 
   &::after {
-    content: "" !important;
+    content: "";
   }
 
   @media (max-width: $breakpoint-md-min) {
-    width: $base*6 !important;
-    height: $base*6 !important;
+    width: $base*6;
+    height: $base*6;
   }
 }
 
 .swiper-button-next {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: $base*8 !important;
-  height: $base*8 !important;
-  top: 44% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 100% !important;
-  background-color: $color-white !important;
-  background-image: url('./assets/img/ellipse__arrow__right.svg') !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base*8;
+  height: $base*8;
+  top: 44%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: $color-white;
+  background-image: url('./assets/img/ellipse__arrow__right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 
   &::after {
-    content: "" !important;
+    content: "";
   }
 
   @media (max-width: $breakpoint-md-min) {
-    width: $base*6 !important;
-    height: $base*6 !important;
+    width: $base*6;
+    height: $base*6;
   }
 }
 
