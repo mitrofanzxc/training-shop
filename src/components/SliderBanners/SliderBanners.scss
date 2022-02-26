@@ -13,93 +13,6 @@
     flex-direction: column;
   }
   
-  .slider {
-    @include flexCenter;
-    width: 49%;
-
-    @media (max-width: $breakpoint-xs-min) {
-      width: 100%;
-    }
-
-    .slider__img {
-      position: relative;
-      width: 100%;
-      height: auto;
-    }
-
-    .buttons__container {
-      position: absolute;
-      @include flexSpaceBetween;
-      width: 45%;
-
-      @media (max-width: $breakpoint-xs-min) {
-        width: 90%;
-        gap: $base*3;
-      }
-    }
-
-    .slider__arrow {
-      @include flexCenter;
-      min-width: $base*8;
-      min-height: $base*8;
-      margin: 0;
-      padding: 0;
-      border: none;
-      border-radius: 100%;
-      background-color: $color-white;
-      background-repeat: no-repeat;
-      background-position: center;
-      cursor: pointer;
-
-      @media (max-width: $breakpoint-md-min) {
-        min-width: $base*6;
-        min-height: $base*6;
-      }
-    }
-    
-    .arrow__left {
-      background-image: url('./assets/img/ellipse__arrow__left.svg');
-    }
-
-    .arrow__right {
-      background-image: url('./assets/img/ellipse__arrow__right.svg');
-    }
-
-    .slider__title {
-      margin: 0;
-      padding: 0;
-      background-color: $color-white;
-      text-align: center;
-      border: none;
-      border-radius: $base;
-
-      .h3 {
-        padding-top: $base*5;
-        font-size: $fs-xs;
-        font-weight: $fw-semi-bold;
-        letter-spacing: 1px;
-        line-height: $base*3;
-        color: $color-dark-04;
-
-        @media (max-width: $breakpoint-md-min) {
-          padding-top: $base;
-        }
-      }
-
-      .h2 {
-        padding: $base*3 $base*4;
-        font-size: $fs-xl;
-        font-weight: $fw-semi-bold;
-        letter-spacing: 1px;
-        line-height: $base*5;
-
-        @media (max-width: $breakpoint-md-min) {
-          padding: $base $base;
-        }
-      }
-    }
-  }
-  
   .banners__container__right {
     display: flex;
     justify-content: space-between;
@@ -223,3 +136,158 @@
 }
 
 // === / SLIDER BANNERS ===
+
+// === SLIDER ===
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 49%;
+  margin: 0 !important;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-xs-min) {
+    width: 100%;
+  }
+}
+
+.slider__img {
+  width: 100%;
+  height: auto;
+}
+
+.buttons__container {
+  position: absolute;
+  top: 38%;
+  left: 13%;
+  @include flexCenter;
+  width: 24%;
+  z-index: 2;
+
+  @media (max-width: $breakpoint-xs-min) {
+    gap: $base*3;
+  }
+}
+
+.slider__arrow {
+  @include flexCenter;
+  min-width: $base*8;
+  min-height: $base*8;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: $color-white;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-md-min) {
+    min-width: $base*6;
+    min-height: $base*6;
+  }
+}
+
+.arrow__left {
+  background-image: url('./assets/img/ellipse__arrow__left.svg');
+}
+
+.arrow__right {
+  background-image: url('./assets/img/ellipse__arrow__right.svg');
+}
+
+.slider__title {
+  margin: 0;
+  padding: 0;
+  background-color: $color-white;
+  text-align: center;
+  border: none;
+  border-radius: $base;
+
+  .h3 {
+    padding-top: $base*5;
+    font-size: $fs-xs;
+    font-weight: $fw-semi-bold;
+    letter-spacing: 1px;
+    line-height: $base*3;
+    color: $color-dark-04;
+
+    @media (max-width: $breakpoint-md-min) {
+      padding-top: $base;
+    }
+  }
+
+  .h2 {
+    padding: $base*3 $base*4;
+    font-size: $fs-xl;
+    font-weight: $fw-semi-bold;
+    letter-spacing: 1px;
+    line-height: $base*5;
+
+    @media (max-width: $breakpoint-md-min) {
+      padding: $base $base;
+    }
+  }
+}
+
+// === / SLIDER ===
+
+// === SLIDER BUTTONS ===
+
+.swiper-button-prev {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: $base*8 !important;
+  min-height: $base*8 !important;
+  top: 44% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 100% !important;
+  background-color: $color-white !important;
+  background-image: url('./assets/img/ellipse__arrow__left.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  cursor: pointer !important;
+
+  &::after {
+    content: "" !important;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    min-width: $base*6 !important;
+    min-height: $base*6 !important;
+  }
+}
+
+.swiper-button-next {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: $base*8 !important;
+  min-height: $base*8 !important;
+  top: 44% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 100% !important;
+  background-color: $color-white !important;
+  background-image: url('./assets/img/ellipse__arrow__right.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  cursor: pointer !important;
+
+  &::after {
+    content: "" !important;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    min-width: $base*6 !important;
+    min-height: $base*6 !important;
+  }
+}
+
+// === / SLIDER BUTTONS ===

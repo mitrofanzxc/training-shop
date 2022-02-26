@@ -2,10 +2,16 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import SliderImg from "./assets/img/slider.jpg";
 import AccessoriesImg from "./assets/img/accessories.jpg";
 import WomenImg from "./assets/img/women.jpg";
 import MenImg from "./assets/img/men.jpg";
+
+import "swiper/scss";
+import "swiper/scss/navigation";
 import "./SliderBanners.scss";
 
 const SliderBanners = () => {
@@ -14,18 +20,36 @@ const SliderBanners = () => {
       <section className="banners">
         <div className="inner__container">
           <div className="banners__container">
-            <div className="slider" data-test-id="main-slider">
-              <img className="slider__img" src={SliderImg} alt="Slider Img" />
-              <div className="buttons__container">
-                <button className="slider__arrow arrow__left"></button>
-                <button className="slider__title">
-                  <Link to="/">
-                    <h3 className="h3">Banner</h3>
-                    <h2 className="h2">Your title text</h2>
-                  </Link>
-                </button>
-                <button className="slider__arrow arrow__right"></button>
-              </div>
+            <Swiper
+              className="slider"
+              data-test-id="main-slider"
+              modules={[Navigation]}
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <img className="slider__img" src={SliderImg} alt="Slider Img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className="slider__img" src={SliderImg} alt="Slider Img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className="slider__img" src={SliderImg} alt="Slider Img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className="slider__img" src={SliderImg} alt="Slider Img" />
+              </SwiperSlide>
+            </Swiper>
+            <div className="buttons__container">
+              <button className="slider__title">
+                <Link to="/">
+                  <h3 className="h3">Banner</h3>
+                  <h2 className="h2">Your title text</h2>
+                </Link>
+              </button>
             </div>
             <div className="banners__container__right">
               <div className="banners__container__right__gender">
