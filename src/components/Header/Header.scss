@@ -122,8 +122,8 @@
     height: $base*13;
 
     @media (max-width: $breakpoint-md-min) {
-      justify-content: center;
-      flex-direction: column;
+      justify-content: space-between;
+      flex-direction: row;
       flex-wrap: wrap;
       gap: $base*2;
       height: auto;
@@ -165,9 +165,12 @@
     .socials__wrapper {
       gap: $base*6;
 
-      @media (max-width: $breakpoint-xxs-min) {
-        width: 100%;
-        justify-content: space-between;
+      @media (max-width: $breakpoint-xs-min) {
+        gap: $base*3;
+      }
+
+      @media (max-width: $breakpoint-xs-min) {
+        gap: $base*2;
       }
   
       .socials__wrapper__item {

@@ -144,14 +144,23 @@ body {
 .h1 {
   margin: 0;
   padding: 0;
+
+  @media (max-width: $breakpoint-xs-min) {
+    width: 35%;
+  }
   
   .header-nav-logo {
     display: block;
     width: $base*30;
     height: $base*4;
     background-image: url('./assets/img/clevershop.svg');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: $breakpoint-xs-min) {
+      width: 100%;
+    }
   }
 }
 
