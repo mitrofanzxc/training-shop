@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { Navigation } from "swiper";
+import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SliderImg from "./assets/img/slider.jpg";
@@ -14,7 +14,11 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "./SliderBanners.scss";
 
+SwiperCore.use([Navigation]);
+
 const SliderBanners = () => {
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
   return (
     <div>
       <section className="banners">
@@ -24,11 +28,24 @@ const SliderBanners = () => {
               className="slider"
               data-test-id="main-slider"
               modules={[Navigation]}
-              spaceBetween={0}
+              spaceBetween={30}
               slidesPerView={1}
-              navigation
+              navigation={{
+                prevEl: navigationPrevRef.current,
+                nextEl: navigationNextRef.current,
+              }}
+              breakpoints={{
+                1: {
+                  spaceBetween: 30,
+                  slidesPerView: 1,
+                },
+              }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = navigationPrevRef.current;
+                swiper.params.navigation.nextEl = navigationNextRef.current;
+              }}
             >
               <SwiperSlide>
                 <img className="slider__img" src={SliderImg} alt="Slider Img" />
@@ -42,15 +59,23 @@ const SliderBanners = () => {
               <SwiperSlide>
                 <img className="slider__img" src={SliderImg} alt="Slider Img" />
               </SwiperSlide>
+              <div className="buttons__container">
+                <div
+                  className="button__arrow arrow__left"
+                  ref={navigationPrevRef}
+                />
+                <button className="slider__title header">
+                  <Link to="/">
+                    <h3 className="h3">Banner</h3>
+                    <h2 className="h2">Your title text</h2>
+                  </Link>
+                </button>
+                <div
+                  className="button__arrow arrow__right"
+                  ref={navigationNextRef}
+                />
+              </div>
             </Swiper>
-            <div className="buttons__container">
-              <button className="slider__title">
-                <Link to="/">
-                  <h3 className="h3">Banner</h3>
-                  <h2 className="h2">Your title text</h2>
-                </Link>
-              </button>
-            </div>
             <div className="banners__container__right">
               <div className="banners__container__right__gender">
                 <div className="women">

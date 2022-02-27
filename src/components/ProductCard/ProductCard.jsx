@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ProductCardSliderImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
-import ProductCardMain1 from "./assets/img/product__card__main.jpg";
 
 import "./ProductCard.scss";
 
@@ -43,11 +42,15 @@ const ProductCard = () => {
                     className="product__card__main"
                     data-test-id="main-slider"
                   >
-                    <img
-                      className="product__card__main__img"
-                      src={ProductCardMain1}
-                      alt="Product Card Main Slider 1"
-                    />
+                    {ProductCardSliderImg.map((ProductCardSliderImgItem) => {
+                      return (
+                        <img
+                          className={ProductCardSliderImgItem.className}
+                          src={ProductCardSliderImgItem.img}
+                          alt={ProductCardSliderImgItem.alt}
+                        />
+                      );
+                    })}
                     <div className="product__card__main__slider">
                       <button className="button__arrow arrow__left"></button>
                       <button className="button__arrow arrow__right"></button>

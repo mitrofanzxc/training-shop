@@ -161,10 +161,14 @@
 .buttons__container {
   position: absolute;
   top: 38%;
-  left: 13%;
-  @include flexCenter;
-  width: 24%;
+  left: 2%;
+  @include flexSpaceBetween;
+  width: 96%;
   z-index: 2;
+
+  @media (max-width: $breakpoint-md-min) {
+    top: 33%;
+  }
 
   @media (max-width: $breakpoint-sm-min) {
     top: 27%;
@@ -172,13 +176,13 @@
 
   @media (max-width: $breakpoint-xs-min) {
     gap: $base*3;
-    top: 20%;
-    left: 23%;
-    width: 53%;
+    top: 40%;
+    left: 2%;
+    width: 95%;
   }
 
   @media (max-width: $breakpoint-xxs-min) {
-    top: 15%;
+    top: 30%;
   }
 }
 
@@ -240,6 +244,17 @@
     @media (max-width: $breakpoint-md-min) {
       padding: $base $base;
     }
+  }
+}
+
+.header {
+
+  @media (max-width: $breakpoint-md-min) {
+    width: 50%;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    top: 33%;
   }
 }
 
