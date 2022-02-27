@@ -210,11 +210,6 @@
   border: none;
   cursor: pointer;
   transition: $transition;
-
-  &:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
-  }
 }
 
 .bar {
@@ -228,10 +223,6 @@
 
   &:first-child {
     margin-top: 0;
-  }
-
-  &.light {
-    background-color: $color-dark;
   }
 }
 
@@ -254,7 +245,7 @@
     transform: translate(-8px, -12px) rotate(-45deg);
   }
 
-  .nav-menu {
+  .nav {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -265,13 +256,9 @@
     height: 100vh;
     background-color: $color-dark;
     transition: $transition;
-
-    &.light {
-      background-color: $color-white;
-    }
   }
 
-  .nav-item {
+  .nav__link {
     width: $base*30;
     margin-right: 35%;
 
@@ -280,7 +267,7 @@
     }
   }
 
-  .nav-menu.active {
+  .nav.active {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -292,10 +279,6 @@
     background-color: $color-dark;
     z-index: 2;
     transition: $transition;
-
-    &.light {
-      background-color: $color-white;
-    }
   }
 }
 
