@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+
+import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 
+import "swiper/scss";
+import "swiper/scss/free-mode";
+import "swiper/scss/navigation";
+import "swiper/scss/thumbs";
 import "./ProductCard.scss";
 
+SwiperCore.use([Navigation]);
+
 const ProductCard = () => {
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <div>
       <section className="product__card">
@@ -15,34 +28,73 @@ const ProductCard = () => {
           <ul className="side__container">
             <li className="side__left">
               <ul className="side__left__columns">
-                <li className="side__left__columns__item vertical__left">
+                <Swiper
+                  className="side__left__columns__item vertical__left"
+                  onSwiper={setThumbsSwiper}
+                  spaceBetween={30}
+                  slidesPerView={4}
+                  freeMode={true}
+                  watchSlidesProgress={true}
+                  modules={[FreeMode, Navigation, Thumbs]}
+                  direction={"vertical"}
+                  navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                  }}
+                  onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                  }}
+                >
                   <ul className="buttons__arrow__container">
                     <li>
-                      <button className="button__arrow arrow__up"></button>
+                      <div
+                        className="button__arrow arrow__up"
+                        ref={navigationPrevRef}
+                      />
                     </li>
                     <li>
-                      <button className="button__arrow arrow__down"></button>
+                      <div
+                        className="button__arrow arrow__down"
+                        ref={navigationNextRef}
+                      />
                     </li>
                   </ul>
                   <ul className="product__card__slider__vertical">
-                    {ProductCardSliderVerticalImg.map(
-                      (ProductCardSliderVerticalImgItem) => {
-                        return (
-                          <li className="product__card__slider__vertical__item">
-                            <img
-                              className={
-                                ProductCardSliderVerticalImgItem.className
-                              }
-                              src={ProductCardSliderVerticalImgItem.img}
-                              alt={ProductCardSliderVerticalImgItem.alt}
-                            />
-                          </li>
-                        );
-                      }
-                    )}
+                    <SwiperSlide>
+                      {ProductCardSliderVerticalImg.map(
+                        (ProductCardSliderVerticalImgItem) => {
+                          return (
+                            <li className="product__card__slider__vertical__item">
+                              <img
+                                className={
+                                  ProductCardSliderVerticalImgItem.className
+                                }
+                                src={ProductCardSliderVerticalImgItem.img}
+                                alt={ProductCardSliderVerticalImgItem.alt}
+                              />
+                            </li>
+                          );
+                        }
+                      )}
+                    </SwiperSlide>
                   </ul>
-                </li>
-                <li className="side__left__columns__item vertical__right">
+                </Swiper>
+                <Swiper
+                  className="side__left__columns__item vertical__right"
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  thumbs={{ swiper: thumbsSwiper }}
+                  modules={[FreeMode, Navigation, Thumbs]}
+                  navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                  }}
+                  onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                  }}
+                >
                   <div
                     className="product__card__main"
                     data-test-id="main-slider"
@@ -59,11 +111,17 @@ const ProductCard = () => {
                       }
                     )}
                     <div className="product__card__main__slider">
-                      <button className="button__arrow arrow__left"></button>
-                      <button className="button__arrow arrow__right"></button>
+                      <div
+                        className="button__arrow arrow__left"
+                        ref={navigationPrevRef}
+                      />
+                      <div
+                        className="button__arrow arrow__right"
+                        ref={navigationNextRef}
+                      />
                     </div>
                   </div>
-                </li>
+                </Swiper>
               </ul>
             </li>
             <li className="side__right">
