@@ -484,8 +484,10 @@
 
 .product__card__main {
   position: relative;
+  display: flex;
   max-width: $base*90;
   height: auto;
+  overflow-x: hidden;
   cursor: pointer;
 
   .product__card__main__img {

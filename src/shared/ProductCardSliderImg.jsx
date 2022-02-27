@@ -1,29 +1,51 @@
-import ProductCardSliderVerticalItemImg1 from "../components/ProductCard/assets/img/product__card__1.jpg";
-import ProductCardSliderVerticalItemImg2 from "../components/ProductCard/assets/img/product__card__2.jpg";
-import ProductCardSliderVerticalItemImg3 from "../components/ProductCard/assets/img/product__card__3.jpg";
-import ProductCardSliderVerticalItemImg4 from "../components/ProductCard/assets/img/product__card__4.jpg";
+import ProductCardSliderItemImg from "../components/ProductCard/assets/img/product__card__main.jpg";
 
-const ProductCardSliderImg = [
+const ProductCardSliderVerticalImg = [
   {
-    img: ProductCardSliderVerticalItemImg1,
+    img: ProductCardSliderItemImg,
     alt: "Product Card Slider Img 1",
     className: "product__card__slider__vertical__item__img",
   },
   {
-    img: ProductCardSliderVerticalItemImg2,
+    img: ProductCardSliderItemImg,
     alt: "Product Card Slider Img 2",
     className: "product__card__slider__vertical__item__img",
   },
   {
-    img: ProductCardSliderVerticalItemImg3,
+    img: ProductCardSliderItemImg,
     alt: "Product Card Slider Img 3",
     className: "product__card__slider__vertical__item__img",
   },
   {
-    img: ProductCardSliderVerticalItemImg4,
+    img: ProductCardSliderItemImg,
     alt: "Product Card Slider Img 4",
     className: "product__card__slider__vertical__item__img",
   },
 ];
 
-export { ProductCardSliderImg };
+export { ProductCardSliderVerticalImg };
+
+const ProductCardSliderMainImg = [
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 1",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 2",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 3",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 4",
+    className: "product__card__main__img",
+  },
+];
+
+export { ProductCardSliderMainImg };

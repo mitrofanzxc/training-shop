@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { ProductCardSliderImg } from "../../shared/ProductCardSliderImg";
+import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
+import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 
 import "./ProductCard.scss";
@@ -24,17 +25,21 @@ const ProductCard = () => {
                     </li>
                   </ul>
                   <ul className="product__card__slider__vertical">
-                    {ProductCardSliderImg.map((ProductCardSliderImgItem) => {
-                      return (
-                        <li className="product__card__slider__vertical__item">
-                          <img
-                            className={ProductCardSliderImgItem.className}
-                            src={ProductCardSliderImgItem.img}
-                            alt={ProductCardSliderImgItem.alt}
-                          />
-                        </li>
-                      );
-                    })}
+                    {ProductCardSliderVerticalImg.map(
+                      (ProductCardSliderVerticalImgItem) => {
+                        return (
+                          <li className="product__card__slider__vertical__item">
+                            <img
+                              className={
+                                ProductCardSliderVerticalImgItem.className
+                              }
+                              src={ProductCardSliderVerticalImgItem.img}
+                              alt={ProductCardSliderVerticalImgItem.alt}
+                            />
+                          </li>
+                        );
+                      }
+                    )}
                   </ul>
                 </li>
                 <li className="side__left__columns__item vertical__right">
@@ -42,15 +47,17 @@ const ProductCard = () => {
                     className="product__card__main"
                     data-test-id="main-slider"
                   >
-                    {ProductCardSliderImg.map((ProductCardSliderImgItem) => {
-                      return (
-                        <img
-                          className={ProductCardSliderImgItem.className}
-                          src={ProductCardSliderImgItem.img}
-                          alt={ProductCardSliderImgItem.alt}
-                        />
-                      );
-                    })}
+                    {ProductCardSliderMainImg.map(
+                      (ProductCardSliderMainImgItem) => {
+                        return (
+                          <img
+                            className={ProductCardSliderMainImgItem.className}
+                            src={ProductCardSliderMainImgItem.img}
+                            alt={ProductCardSliderMainImgItem.alt}
+                          />
+                        );
+                      }
+                    )}
                     <div className="product__card__main__slider">
                       <button className="button__arrow arrow__left"></button>
                       <button className="button__arrow arrow__right"></button>
