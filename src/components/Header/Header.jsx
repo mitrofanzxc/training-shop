@@ -48,11 +48,26 @@ const Header = () => {
               data-test-id="header-logo-link"
             />
           </h1>
-          <nav className="nav" data-test-id="menu">
-            <ul className="header__second__wrapper">
+          <nav
+            className={isVisible ? "nav visible" : "nav"}
+            data-test-id="menu"
+          >
+            <ul
+              className={
+                isVisible
+                  ? "header__second__wrapper visible"
+                  : "header__second__wrapper"
+              }
+            >
               {HeaderNav.map((HeaderNavItem) => {
                 return (
-                  <li className="header__second__wrapper__item">
+                  <li
+                    className={
+                      isVisible
+                        ? "header__second__wrapper__item visible"
+                        : "header__second__wrapper__item"
+                    }
+                  >
                     <Link
                       key={HeaderNavItem.id}
                       to={`/${HeaderNavItem.path}`}
