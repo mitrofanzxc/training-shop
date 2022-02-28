@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Main } from "./pages/Main";
@@ -6,6 +7,7 @@ import { Men } from "./pages/Men";
 import { Women } from "./pages/Women";
 import { Productpage } from "./pages/Productpage";
 import { Footer } from "./components/Footer/Footer";
+
 import "./App.scss";
 
 function App() {
