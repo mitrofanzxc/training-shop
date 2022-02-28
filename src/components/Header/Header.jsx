@@ -69,6 +69,7 @@ const Header = () => {
                     }
                   >
                     <Link
+                      onClick={handleToggle}
                       key={HeaderNavItem.id}
                       to={`/${HeaderNavItem.path}`}
                       className="nav__link"
