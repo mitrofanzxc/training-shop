@@ -5,12 +5,9 @@ import { HeaderNav } from "../../shared/HeaderNav";
 import "./Header.scss";
 
 const Header = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   const handleToggle = () => {
-    setNavbarOpen(!navbarOpen);
-  };
-  const closeMenu = () => {
-    setNavbarOpen(false);
+    setVisible(!isVisible);
   };
   return (
     <div data-test-id="header">
@@ -61,7 +58,6 @@ const Header = () => {
                       to={`/${HeaderNavItem.path}`}
                       className="nav__link"
                       data-test-id={`menu-link-${HeaderNavItem.path}`}
-                      onClick={() => closeMenu()}
                     >
                       {HeaderNavItem.header}
                     </Link>
@@ -77,10 +73,9 @@ const Header = () => {
             <li className="socials__wrapper__item icon"></li>
             <button
               onClick={handleToggle}
-              className="hamburger"
+              className={isVisible ? "hamburger visible" : "hamburger"}
               data-test-id="burger-menu-btn"
             >
-              {navbarOpen ? "Close" : "Open"}
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>

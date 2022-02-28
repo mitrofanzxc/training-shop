@@ -236,16 +236,16 @@
     z-index: 2;
   }
 
-  .hamburger.active .bar:nth-child(2) {
+  .hamburger.visible .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1) {
-    width: $base*13;
-    transform: translate(-8px, 12px) rotate(45deg);
+  .hamburger.visible .bar:nth-child(1) {
+    width: $base*6;
+    transform: translate(0px, 8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3) {
-    width: $base*13;
-    transform: translate(-8px, -12px) rotate(-45deg);
+  .hamburger.visible .bar:nth-child(3) {
+    width: $base*6;
+    transform: translate(0px, -8px) rotate(-45deg);
   }
 
   .nav {
