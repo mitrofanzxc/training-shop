@@ -143,6 +143,27 @@
       margin: 0;
       padding: 0;
 
+      @media (max-width: $breakpoint-md-min) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: $base*7;
+        right: -80vw;
+        width: 80vw;
+        height: 100vh;
+        background-color: $color-white-09;
+        transition: $transition;
+      }
+      
+      @media (max-width: $breakpoint-sm-min) {
+        top: $base*10;
+      }
+      
+      @media (max-width: $breakpoint-xs-min) {
+        top: $base*20;
+      }
+
       .header__second__wrapper {
         @include flexSpaceBetween;
         gap: $base*7;
@@ -175,6 +196,31 @@
             }
           }
         }
+      }
+    }
+
+    .nav.visible {
+
+      @media (max-width: $breakpoint-md-min) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: $base*7;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        background-color: $color-white-09;
+        z-index: 2;
+        transition: $transition;
+      }
+      
+      @media (max-width: $breakpoint-sm-min) {
+        top: $base*10;
+      }
+      
+      @media (max-width: $breakpoint-xs-min) {
+        top: $base*15;
       }
     }
 
@@ -262,49 +308,6 @@
   .hamburger.visible .bar:nth-child(3) {
     width: $base*6;
     transform: translate(0px, -8px) rotate(-45deg);
-  }
-
-  .nav {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    top: $base*7;
-    right: -80vw;
-    width: 80vw;
-    height: 100vh;
-    background-color: $color-white-09;
-    transition: $transition;
-
-    @media (max-width: $breakpoint-sm-min) {
-      top: $base*10;
-    }
-
-    @media (max-width: $breakpoint-xs-min) {
-      top: $base*20;
-    }
-  }
-
-  .nav.visible {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    top: $base*7;
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background-color: $color-white-09;
-    z-index: 2;
-    transition: $transition;
-
-    @media (max-width: $breakpoint-sm-min) {
-      top: $base*10;
-    }
-
-    @media (max-width: $breakpoint-xs-min) {
-      top: $base*15;
-    }
   }
 
   .header__second__wrapper {
