@@ -31,6 +31,7 @@
   }
 
   .accessories {
+    position: relative;
     @include flexCenter;
     width: 100%;
 
@@ -49,10 +50,17 @@
       position: absolute;
       margin: 0;
       padding: 0;
+      width: 50%;
       background-color: $color-white;
       text-align: center;
       border: none;
       border-radius: $base;
+      transition: $transition;
+
+      &:hover {
+        width: 100%;
+        transition: $transition;
+      }
 
       .h2 {
         padding: $base*3 $base*4;
@@ -69,6 +77,7 @@
   }
   
   .women {
+    position: relative;
     @include flexCenter;
     width: 48%;
 
@@ -82,10 +91,17 @@
       position: absolute;
       margin: 0;
       padding: 0;
+      width: 50%;
       background-color: $color-white;
       text-align: center;
       border: none;
       border-radius: $base;
+      transition: $transition;
+
+      &:hover {
+        width: 100%;
+        transition: $transition;
+      }
 
       .h2 {
         padding: $base*3 $base*4;
@@ -102,6 +118,7 @@
   }
   
   .men {
+    position: relative;
     @include flexCenter;
     width: 48%;
 
@@ -115,10 +132,17 @@
       position: absolute;
       margin: 0;
       padding: 0;
+      width: 50%;
       background-color: $color-white;
       text-align: center;
       border: none;
       border-radius: $base;
+      transition: $transition;
+
+      &:hover {
+        width: 100%;
+        transition: $transition;
+      }
 
       .h2 {
         padding: $base*3 $base*4;
@@ -207,10 +231,22 @@
 
 .arrow__left {
   background-image: url('./assets/img/ellipse__arrow__left.svg');
+  transition: $transition;
+  
+  &:hover {
+    background-color: $color-grey;
+    transition: $transition;
+  }
 }
 
 .arrow__right {
   background-image: url('./assets/img/ellipse__arrow__right.svg');
+  transition: $transition;
+
+  &:hover {
+    background-color: $color-grey;
+    transition: $transition;
+  }
 }
 
 .slider__title {
