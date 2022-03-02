@@ -10,7 +10,6 @@ import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 
 import "swiper/scss";
-import "swiper/scss/free-mode";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
 import "./ProductCard.scss";
@@ -22,7 +21,7 @@ const ProductCard = () => {
   const navigationNextRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <div>
+    <>
       <section className="product__card">
         <div className="inner__container">
           <ul className="side__container">
@@ -33,7 +32,7 @@ const ProductCard = () => {
                   onSwiper={setThumbsSwiper}
                   spaceBetween={0}
                   slidesPerView={4}
-                  watchSlidesProgress={false}
+                  watchSlidesProgress={true}
                   direction={"vertical"}
                   modules={[Navigation, Thumbs]}
                   navigation={{
@@ -323,7 +322,7 @@ const ProductCard = () => {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

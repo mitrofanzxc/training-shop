@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 import { ProductCardDataBaseWomen } from "../../shared/ProductCardDataBaseWomen";
 
@@ -8,7 +6,7 @@ import "./WomenCatalog.scss";
 
 const WomenCatalog = () => {
   return (
-    <div>
+    <>
       <section className="catalog">
         <div className="inner__container">
           <div className="products__container">
@@ -51,7 +49,7 @@ const WomenCatalog = () => {
           </button>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

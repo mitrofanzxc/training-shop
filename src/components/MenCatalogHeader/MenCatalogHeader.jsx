@@ -1,9 +1,8 @@
-import React from "react";
 import "./MenCatalogHeader.scss";
 
 const MenCatalogHeader = () => {
   return (
-    <div>
+    <>
       <section className="catalog__header">
         <div className="inner__container">
           <ul className="catalog__header__wrapper">
@@ -32,7 +31,7 @@ const MenCatalogHeader = () => {
           <h2 className="catalog__heading">Men</h2>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

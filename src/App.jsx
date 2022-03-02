@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Main } from "./pages/Main";
@@ -12,7 +10,7 @@ import "./App.scss";
 
 function App() {
   return (
-    <div data-test-id="app">
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -37,7 +35,7 @@ function App() {
         <Route path="*" element={<Main />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

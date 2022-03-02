@@ -1,10 +1,8 @@
-import React from "react";
-
 import "./SubscribeSecondary.scss";
 
 const SubscribeSecondary = () => {
   return (
-    <div>
+    <>
       <section className="subscribe__secondary">
         <div className="inner__container">
           <ul className="subscribe__secondary__container">
@@ -30,7 +28,7 @@ const SubscribeSecondary = () => {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

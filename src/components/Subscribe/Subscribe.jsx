@@ -1,10 +1,8 @@
-import React from "react";
-
 import "./Subscribe.scss";
 
 const Subscribe = () => {
   return (
-    <div>
+    <>
       <section className="subscribe">
         <div className="inner__container">
           <form className="form__subscribe">
@@ -25,7 +23,7 @@ const Subscribe = () => {
           </form>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

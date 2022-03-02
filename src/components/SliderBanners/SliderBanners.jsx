@@ -20,7 +20,7 @@ const SliderBanners = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   return (
-    <div>
+    <>
       <section className="banners">
         <div className="inner__container">
           <div className="banners__container">
@@ -106,7 +106,7 @@ const SliderBanners = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

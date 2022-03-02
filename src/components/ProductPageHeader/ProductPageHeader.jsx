@@ -1,12 +1,10 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 
 import "./ProductPageHeader.scss";
 
 const ProductPageHeader = () => {
   return (
-    <div>
+    <>
       <section className="catalog__header">
         <div className="inner__container">
           <ul className="catalog__header__wrapper">
@@ -85,7 +83,7 @@ const ProductPageHeader = () => {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

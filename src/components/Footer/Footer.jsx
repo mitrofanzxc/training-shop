@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
 import { FooterNav1 } from "../../shared/FooterNav";
@@ -10,7 +8,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div data-test-id="footer">
+    <>
       <SubscribeSecondary />
       <section className="footer__links">
         <div className="inner__container">
@@ -124,7 +122,7 @@ const Footer = () => {
           </h3>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 

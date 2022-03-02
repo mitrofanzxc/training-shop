@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 
 import product__card__men1 from "./assets/img/product__card__men1.jpg";
@@ -15,7 +13,7 @@ import "./MensMain.scss";
 
 const MensMain = () => {
   return (
-    <div>
+    <>
       <section className="catalog">
         <div className="inner__container">
           <div className="catalog__header">
@@ -213,7 +211,7 @@ const MensMain = () => {
           </button>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

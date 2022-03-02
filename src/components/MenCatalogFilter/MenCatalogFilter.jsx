@@ -1,10 +1,8 @@
-import React from "react";
-
 import "./MenCatalogFilter.scss";
 
 const MenCatalogFilter = () => {
   return (
-    <div>
+    <>
       <section className="filter">
         <div className="inner__container">
           <ul className="filter__list">
@@ -39,7 +37,7 @@ const MenCatalogFilter = () => {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

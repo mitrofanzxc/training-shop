@@ -16,7 +16,7 @@ const RelatedProducts = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   return (
-    <div>
+    <>
       <section className="catalog" data-test-id="related-slider">
         <div className="inner__container">
           <div className="catalog__header">
@@ -101,7 +101,7 @@ const RelatedProducts = () => {
           </Swiper>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

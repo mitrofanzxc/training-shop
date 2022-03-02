@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 import { ProductCardDataBaseMen } from "../../shared/ProductCardDataBaseMen";
 
@@ -8,7 +6,7 @@ import "./MenCatalog.scss";
 
 const MenCatalog = () => {
   return (
-    <div>
+    <>
       <section className="catalog">
         <div className="inner__container">
           <div className="products__container">
@@ -51,7 +49,7 @@ const MenCatalog = () => {
           </button>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

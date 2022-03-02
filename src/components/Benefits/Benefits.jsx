@@ -1,10 +1,8 @@
-import React from "react";
-
 import "./Benefits.scss";
 
 const Benefits = () => {
   return (
-    <div>
+    <>
       <section className="benefits">
         <div className="inner__container">
           <div className="benefits__wrapper">
@@ -38,7 +36,7 @@ const Benefits = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

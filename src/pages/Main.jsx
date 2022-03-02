@@ -1,4 +1,3 @@
-import React from "react";
 import { SliderBanners } from "../components/SliderBanners/SliderBanners";
 import { Benefits } from "../components/Benefits/Benefits";
 import { WomensMain } from "../components/WomensMain/WomensMain";
@@ -9,7 +8,7 @@ import { Blog } from "../components/Blog/Blog";
 
 const Main = () => {
   return (
-    <div>
+    <>
       <SliderBanners />
       <Benefits />
       <WomensMain />
@@ -17,7 +16,7 @@ const Main = () => {
       <Banners />
       <Subscribe />
       <Blog />
-    </div>
+    </>
   );
 };
 
