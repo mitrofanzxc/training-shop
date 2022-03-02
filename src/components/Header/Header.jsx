@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { HeaderNav } from "../../shared/HeaderNav";
-import { Contacts } from "../Contacts/Contacts";
+import { ContactsUl } from "../../shared/ContactsUl";
 import { Socials } from "../Socials/Socials";
 
 import "./Header.scss";
@@ -17,7 +17,31 @@ const Header = () => {
       <header className="header__first outer__container">
         <div className="inner__container">
           <div className="header__first__wrapper">
-            <Contacts />
+            <div className="contacts__wrapper">
+              {ContactsUl.slice(0, -1).map((ContactsUlLi) => {
+                return (
+                  <>
+                    <div>
+                      <img
+                        src={ContactsUlLi.src}
+                        alt={ContactsUlLi.alt}
+                        className={ContactsUlLi.className}
+                      />
+                    </div>
+                    <div>
+                      <a
+                        href={ContactsUlLi.link}
+                        target={ContactsUlLi.target}
+                        rel={ContactsUlLi.rel}
+                        className={ContactsUlLi.className}
+                      >
+                        {ContactsUlLi.description}
+                      </a>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
           <Socials />
         </div>

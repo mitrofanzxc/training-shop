@@ -4,6 +4,7 @@ import { FooterNav1 } from "../../shared/FooterNav";
 import { FooterNav2 } from "../../shared/FooterNav";
 import { FooterNav3 } from "../../shared/FooterNav";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
+import { ContactsUl } from "../../shared/ContactsUl";
 
 import "./Footer.scss";
 
@@ -13,15 +14,15 @@ const Footer = () => {
       <SubscribeSecondary />
       <section className="footer__links">
         <div className="inner__container">
-          <ul className="footer__links__container">
-            <li className="footer__links__container__item">
-              <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__header">
+          <div className="footer__links__container">
+            <div className="footer__links__container__item">
+              <div className="footer__links__container__list">
+                <div className="footer__links__container__list__header">
                   Categories
-                </li>
+                </div>
                 {FooterNav1.map((FooterNav1Link) => {
                   return (
-                    <li className="footer__links__container__list__item">
+                    <div className="footer__links__container__list__item">
                       <Link
                         key={FooterNav1Link.id}
                         className={FooterNav1Link.className}
@@ -30,19 +31,19 @@ const Footer = () => {
                       >
                         {FooterNav1Link.description}
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
-              </ul>
-            </li>
-            <li className="footer__links__container__item">
-              <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__header">
+              </div>
+            </div>
+            <div className="footer__links__container__item">
+              <div className="footer__links__container__list">
+                <div className="footer__links__container__list__header">
                   Infomation
-                </li>
+                </div>
                 {FooterNav2.map((FooterNav2Link) => {
                   return (
-                    <li className="footer__links__container__list__item">
+                    <div className="footer__links__container__list__item">
                       <Link
                         key={FooterNav2Link.id}
                         className={FooterNav2Link.className}
@@ -51,19 +52,19 @@ const Footer = () => {
                       >
                         {FooterNav2Link.description}
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
-              </ul>
-            </li>
-            <li className="footer__links__container__item">
-              <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__header">
+              </div>
+            </div>
+            <div className="footer__links__container__item">
+              <div className="footer__links__container__list">
+                <div className="footer__links__container__list__header">
                   Useful links
-                </li>
+                </div>
                 {FooterNav3.map((FooterNav3Link) => {
                   return (
-                    <li className="footer__links__container__list__item">
+                    <div className="footer__links__container__list__item">
                       <Link
                         key={FooterNav3Link.id}
                         className={FooterNav3Link.className}
@@ -72,32 +73,37 @@ const Footer = () => {
                       >
                         {FooterNav3Link.description}
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
-              </ul>
-            </li>
-            <li className="footer__links__container__item">
-              <ul className="footer__links__container__list">
-                <li className="footer__links__container__list__header">
+              </div>
+            </div>
+            <div className="footer__links__container__item">
+              <div className="footer__links__container__list">
+                <div className="footer__links__container__list__header">
                   Contact Us
-                </li>
-                <li className="footer__links__container__list__item">
-                  <span className="icon location"></span>Belarus, Gomel, Lange
-                  17
-                </li>
-                <li className="footer__links__container__list__item">
-                  <span className="icon phone"></span>+375 29 100 20 30
-                </li>
-                <li className="footer__links__container__list__item">
-                  <span className="icon clock"></span>All week 24/7
-                </li>
-                <li className="footer__links__container__list__item">
-                  <span className="icon mail"></span>info@clevertec.ru
-                </li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+                {ContactsUl.map((ContactsUlLi) => {
+                  return (
+                    <>
+                      <div className={ContactsUlLi.className}>
+                        <img src={ContactsUlLi.src} alt={ContactsUlLi.alt} />
+                      </div>
+                      <div className={ContactsUlLi.className}>
+                        <a
+                          href={ContactsUlLi.link}
+                          target={ContactsUlLi.target}
+                          rel={ContactsUlLi.rel}
+                        >
+                          {ContactsUlLi.description}
+                        </a>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <footer className="footer outer__container">
