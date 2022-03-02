@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { HeaderNav } from "../../shared/HeaderNav";
+import { Socials } from "../Socials/Socials";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -31,12 +33,7 @@ const Header = () => {
               <li className="header__first__wrapper__item">All week 24/7</li>
             </div>
           </ul>
-          <ul className="header__socials__wrapper">
-            <li className="header__socials__wrapper__item icon"></li>
-            <li className="header__socials__wrapper__item icon"></li>
-            <li className="header__socials__wrapper__item icon"></li>
-            <li className="header__socials__wrapper__item icon"></li>
-          </ul>
+          <Socials />
         </div>
       </header>
       <div className="header__second outer__container">

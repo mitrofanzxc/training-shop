@@ -200,34 +200,34 @@ a {
   background-position: center;
 }
 
-.socials__wrapper {
-  @include flexCenter;
-  gap: $base*2;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+// .socials__wrapper {
+//   @include flexCenter;
+//   gap: $base*2;
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
 
-  .socials__wrapper__item {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+//   .socials__wrapper__item {
+//     margin: 0;
+//     padding: 0;
+//     cursor: pointer;
     
-    &:nth-child(1) {
-      background-image: url('./assets/img/facebook.svg');
-    }
+//     &:nth-child(1) {
+//       background-image: url('./assets/img/facebook.svg');
+//     }
     
-    &:nth-child(2) {
-      background-image: url('./assets/img/twitter.svg');
-    }
+//     &:nth-child(2) {
+//       background-image: url('./assets/img/twitter.svg');
+//     }
     
-    &:nth-child(3) {
-      background-image: url('./assets/img/instagram.svg');
-    }
+//     &:nth-child(3) {
+//       background-image: url('./assets/img/instagram.svg');
+//     }
     
-    &:nth-child(4) {
-      background-image: url('./assets/img/pinterest.svg');
-    }
-  }
-}
+//     &:nth-child(4) {
+//       background-image: url('./assets/img/pinterest.svg');
+//     }
+//   }
+// }
 
 // === / COMMON ===
