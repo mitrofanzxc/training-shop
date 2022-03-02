@@ -1,15 +1,14 @@
 @import "../../scss/Variables.scss";
 
 .socials__wrapper {
-  @include flexCenter;
-  gap: $base;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include flexSpaceBetween;
+  gap: 2%;
+  width: 10%;
+  height: auto;
 
   .socials__wrapper__item {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+    @include flexCenter;
+    width: 100%;
+    height: auto;
   }
 }

@@ -12,12 +12,9 @@ const Socials = () => {
               href={SocialsUlLi.link}
               target={SocialsUlLi.target}
               rel={SocialsUlLi.rel}
+              className={SocialsUlLi.className}
             >
-              <img
-                src={SocialsUlLi.src}
-                alt={SocialsUlLi.alt}
-                className={SocialsUlLi.className}
-              />
+              <img src={SocialsUlLi.src} alt={SocialsUlLi.alt} />
             </a>
           );
         })}
