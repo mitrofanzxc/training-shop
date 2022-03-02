@@ -31,13 +31,13 @@
 // === PRODUCT CARD ===
 
 .product__card {
-  margin-top: $base*6;
+  margin-top: 1%;
   
   .side__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: $base*6;
+    gap: 3%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -75,25 +75,24 @@
             margin: $base*3 0 0 0;
             padding: 0;
             list-style: none;
-            
-            .product__card__slider__vertical__item {
-              max-width: $base*19;
-              height: auto;
-              // height: $base*23;
-              opacity: 0.4;
-              cursor: pointer;
-              transition: $transition;
+          }
+        }
 
-              &:hover, &:focus, &:active {
-                opacity: 1;
-                transition: $transition;
-              }
+        .product__card__slider__vertical__item {
+          max-width: $base*19;
+          max-height: $base*23;
+          opacity: 0.4;
+          cursor: pointer;
+          transition: $transition;
 
-              .product__card__slider__vertical__item__img {
-                width: 100%;
-                height: auto;
-              }
-            }
+          &:hover, &:focus, &:active {
+            opacity: 1;
+            transition: $transition;
+          }
+
+          .product__card__slider__vertical__item__img {
+            width: 100%;
+            height: auto;
           }
         }
 
@@ -163,14 +162,15 @@
           width: $base*13;
           height: $base*13;
           box-sizing: border-box;
+          outline: 0 solid $color-dark;
           cursor: pointer;
-
+          
+          &:hover, &:focus, &:active {
+            outline-width: 2px;
+          }
+          
           .color__img__item__img {
             height: $base*13;
-
-            &:hover, &:focus, &:active {
-              border: 2px solid $color-dark;
-            }
           }
         }
       }
@@ -218,13 +218,13 @@
           color: $color-dark-07;
           background-color: $color-gr-white;
           background-repeat: no-repeat;
-          border: none;
+          outline: 0 solid $color-dark;
           cursor: pointer;
 
           &:hover, &:focus, &:active {
             background-color: $color-white;
             color: $color-dark;
-            border: 2px solid $color-dark;
+            outline-width: 2px;
           }
         }
       }
@@ -265,7 +265,8 @@
 .product__price__and__buttons {
   display: flex;
   align-items: center;
-  gap: $base*4;
+  justify-content: flex-start;
+  gap: 5%;
   width: 100%;
   height: $base*22;
   margin: 0;
@@ -285,7 +286,6 @@
     font-size: $fs-xl;
     font-weight: $fw-bold;
     letter-spacing: 0;
-    line-height: 0;
   }
 
   .button__cart {
@@ -310,11 +310,12 @@
     width: $base*5;
     height: $base*5;
     line-height: 0;
-    margin: 0 0 0 $base*2;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     background-image: url('./assets/img/heart.svg');
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
@@ -325,11 +326,12 @@
     width: $base*5;
     height: $base*5;
     line-height: 0;
-    margin: 0 0 0 $base*4;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     background-image: url('./assets/img/scale.svg');
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;

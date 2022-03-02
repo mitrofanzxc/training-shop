@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import { Link } from "react-router-dom";
 
-import SwiperCore, { Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SliderImg from "./assets/img/slider.jpg";
@@ -12,9 +12,8 @@ import MenImg from "./assets/img/men.jpg";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
-import "./SliderBanners.scss";
 
-SwiperCore.use([Navigation]);
+import "./SliderBanners.scss";
 
 const SliderBanners = () => {
   const navigationPrevRef = useRef(null);

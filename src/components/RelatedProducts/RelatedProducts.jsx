@@ -3,14 +3,13 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { RelatedProductsDataBase } from "../../shared/RelatedProductsDataBase";
 
-import SwiperCore, { Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
-import "./RelatedProducts.scss";
 
-SwiperCore.use([Navigation]);
+import "./RelatedProducts.scss";
 
 const RelatedProducts = () => {
   const navigationPrevRef = useRef(null);

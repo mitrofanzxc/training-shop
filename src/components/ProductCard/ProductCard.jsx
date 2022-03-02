@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import SwiperCore, { Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
@@ -10,11 +10,11 @@ import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 
 import "swiper/scss";
+import "swiper/scss/free-mode";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
-import "./ProductCard.scss";
 
-SwiperCore.use([Navigation]);
+import "./ProductCard.scss";
 
 const ProductCard = () => {
   const navigationPrevRef = useRef(null);
@@ -32,9 +32,10 @@ const ProductCard = () => {
                   onSwiper={setThumbsSwiper}
                   spaceBetween={0}
                   slidesPerView={4}
+                  freeMode={true}
                   watchSlidesProgress={true}
                   direction={"vertical"}
-                  modules={[Navigation, Thumbs]}
+                  modules={[FreeMode, Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
@@ -46,20 +47,16 @@ const ProductCard = () => {
                     swiper.navigation.update();
                   }}
                 >
-                  <ul className="buttons__arrow__container">
-                    <li>
-                      <div
-                        className="button__arrow arrow__up"
-                        ref={navigationPrevRef}
-                      />
-                    </li>
-                    <li>
-                      <div
-                        className="button__arrow arrow__down"
-                        ref={navigationNextRef}
-                      />
-                    </li>
-                  </ul>
+                  <div className="buttons__arrow__container">
+                    <div
+                      className="button__arrow arrow__up"
+                      ref={navigationPrevRef}
+                    />
+                    <div
+                      className="button__arrow arrow__down"
+                      ref={navigationNextRef}
+                    />
+                  </div>
                   <ul className="product__card__slider__vertical">
                     {ProductCardSliderVerticalImg.map(
                       (ProductCardSliderVerticalImgItem) => {
@@ -84,9 +81,9 @@ const ProductCard = () => {
                   className="side__left__columns__item vertical__right"
                   spaceBetween={30}
                   slidesPerView={1}
-                  sliderPerGroup={1}
+                  direction={"horizontal"}
                   thumbs={{ swiper: thumbsSwiper }}
-                  modules={[Navigation, Thumbs]}
+                  modules={[FreeMode, Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
