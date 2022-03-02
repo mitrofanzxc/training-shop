@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+import SwiperCore, { Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
@@ -18,8 +18,8 @@ import "./ProductCard.scss";
 SwiperCore.use([Navigation]);
 
 const ProductCard = () => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <div>
@@ -31,19 +31,20 @@ const ProductCard = () => {
                 <Swiper
                   className="side__left__columns__item vertical__left"
                   onSwiper={setThumbsSwiper}
-                  spaceBetween={30}
+                  spaceBetween={15}
                   slidesPerView={4}
-                  freeMode={true}
                   watchSlidesProgress={true}
-                  modules={[FreeMode, Navigation, Thumbs]}
-                  direction="vertical"
+                  modules={[Navigation, Thumbs]}
+                  direction={"vertical"}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
                   }}
-                  onBeforeInit={(swiper) => {
+                  onInit={(swiper) => {
                     swiper.params.navigation.prevEl = navigationPrevRef.current;
                     swiper.params.navigation.nextEl = navigationNextRef.current;
+                    swiper.navigation.init();
+                    swiper.navigation.update();
                   }}
                 >
                   <ul className="buttons__arrow__container">
@@ -61,10 +62,10 @@ const ProductCard = () => {
                     </li>
                   </ul>
                   <ul className="product__card__slider__vertical">
-                    <SwiperSlide>
-                      {ProductCardSliderVerticalImg.map(
-                        (ProductCardSliderVerticalImgItem) => {
-                          return (
+                    {ProductCardSliderVerticalImg.map(
+                      (ProductCardSliderVerticalImgItem) => {
+                        return (
+                          <SwiperSlide>
                             <li className="product__card__slider__vertical__item">
                               <img
                                 className={
@@ -74,25 +75,28 @@ const ProductCard = () => {
                                 alt={ProductCardSliderVerticalImgItem.alt}
                               />
                             </li>
-                          );
-                        }
-                      )}
-                    </SwiperSlide>
+                          </SwiperSlide>
+                        );
+                      }
+                    )}
                   </ul>
                 </Swiper>
                 <Swiper
                   className="side__left__columns__item vertical__right"
-                  spaceBetween={10}
+                  spaceBetween={30}
                   slidesPerView={1}
+                  sliderPerGroup={1}
                   thumbs={{ swiper: thumbsSwiper }}
-                  modules={[FreeMode, Navigation, Thumbs]}
+                  modules={[Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
                   }}
-                  onBeforeInit={(swiper) => {
+                  onInit={(swiper) => {
                     swiper.params.navigation.prevEl = navigationPrevRef.current;
                     swiper.params.navigation.nextEl = navigationNextRef.current;
+                    swiper.navigation.init();
+                    swiper.navigation.update();
                   }}
                 >
                   <div
