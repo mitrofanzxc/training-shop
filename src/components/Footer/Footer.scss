@@ -95,6 +95,11 @@
       gap: $base*4;
     }
 
+    .footer__wrapper {
+      width: 35%;
+      filter: saturate(0);
+    }
+
     .h3 {
       font-size: $fs-xxs;
       font-weight: $fw-medium;
