@@ -31,11 +31,11 @@ const ProductCard = () => {
                 <Swiper
                   className="side__left__columns__item vertical__left"
                   onSwiper={setThumbsSwiper}
-                  spaceBetween={15}
+                  spaceBetween={0}
                   slidesPerView={4}
-                  watchSlidesProgress={true}
-                  modules={[Navigation, Thumbs]}
+                  watchSlidesProgress={false}
                   direction={"vertical"}
+                  modules={[Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,

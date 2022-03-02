@@ -64,7 +64,7 @@
         .side__left__columns__item {
           display: flex;
           align-items: center;
-          justify-content: space-evenly;
+          justify-content: space-between;
           flex-direction: column;
           list-style: none;
 
@@ -99,7 +99,7 @@
 
         .vertical__left {
           width: 20%;
-          height: 60vh;
+          height: 65vh;
         }
 
         .vertical__right {
