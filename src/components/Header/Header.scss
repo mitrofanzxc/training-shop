@@ -173,15 +173,21 @@
         padding: 0;
 
         @media (max-width: $breakpoint-xl-min) {
-          gap: $base*3;
+          gap: 0 $base*3;
+        }
+
+        @media (max-width: $breakpoint-lg-min) {
+          justify-content: center;
+          flex-wrap: wrap;
         }
 
         @media (max-width: $breakpoint-md-min) {
-          width: 55vw;
+          display: flex;
           align-items: flex-start;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: $base*6;
+          flex-direction: column;
+          gap: $base*10;
+          width: 50vw;
+          margin-top: 10%;
         }
 
         .header__second__wrapper__item {
