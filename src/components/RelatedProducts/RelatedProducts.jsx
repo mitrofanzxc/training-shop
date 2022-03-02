@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Link } from "react-router-dom";
 import { RelatedProductsDataBase } from "../../shared/RelatedProductsDataBase";
@@ -13,8 +13,8 @@ import "./RelatedProducts.scss";
 SwiperCore.use([Navigation]);
 
 const RelatedProducts = () => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   return (
     <div>
       <section className="catalog" data-test-id="related-slider">
@@ -43,10 +43,6 @@ const RelatedProducts = () => {
               nextEl: navigationNextRef.current,
             }}
             breakpoints={{
-              1440: {
-                spaceBetween: 30,
-                slidesPerView: 4,
-              },
               1200: {
                 spaceBetween: 30,
                 slidesPerView: 4,
@@ -55,32 +51,16 @@ const RelatedProducts = () => {
                 spaceBetween: 15,
                 slidesPerView: 3,
               },
-              768: {
-                spaceBetween: 15,
-                slidesPerView: 2,
-              },
-              576: {
-                spaceBetween: 15,
-                slidesPerView: 2,
-              },
-              480: {
-                spaceBetween: 15,
-                slidesPerView: 2,
-              },
-              320: {
-                spaceBetween: 15,
-                slidesPerView: 2,
-              },
               1: {
                 spaceBetween: 15,
                 slidesPerView: 2,
               },
             }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            onBeforeInit={(swiper) => {
+            onInit={(swiper) => {
               swiper.params.navigation.prevEl = navigationPrevRef.current;
               swiper.params.navigation.nextEl = navigationNextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
             }}
           >
             {RelatedProductsDataBase.map((RelatedProductsDataBaseItem) => {

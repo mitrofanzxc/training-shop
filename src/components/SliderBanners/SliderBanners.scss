@@ -58,7 +58,7 @@
       transition: $transition;
 
       &:hover {
-        width: 100%;
+        min-width: 100%;
         transition: $transition;
       }
 
@@ -99,7 +99,7 @@
       transition: $transition;
 
       &:hover {
-        width: 100%;
+        min-width: 100%;
         transition: $transition;
       }
 
@@ -140,7 +140,7 @@
       transition: $transition;
 
       &:hover {
-        width: 100%;
+        min-width: 100%;
         transition: $transition;
       }
 

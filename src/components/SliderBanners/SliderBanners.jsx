@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -17,8 +17,8 @@ import "./SliderBanners.scss";
 SwiperCore.use([Navigation]);
 
 const SliderBanners = () => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   return (
     <div>
       <section className="banners">
@@ -30,21 +30,16 @@ const SliderBanners = () => {
               modules={[Navigation]}
               spaceBetween={30}
               slidesPerView={1}
+              sliderPerGroup={1}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
               }}
-              breakpoints={{
-                1: {
-                  spaceBetween: 30,
-                  slidesPerView: 1,
-                },
-              }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
-              onBeforeInit={(swiper) => {
+              onInit={(swiper) => {
                 swiper.params.navigation.prevEl = navigationPrevRef.current;
                 swiper.params.navigation.nextEl = navigationNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
               }}
             >
               <SwiperSlide>

@@ -36,7 +36,7 @@ const ProductCard = () => {
                   freeMode={true}
                   watchSlidesProgress={true}
                   modules={[FreeMode, Navigation, Thumbs]}
-                  direction={"vertical"}
+                  direction="vertical"
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
