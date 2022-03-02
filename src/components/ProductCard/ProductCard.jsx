@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
+import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
 import "swiper/scss";
 import "swiper/scss/free-mode";
@@ -24,9 +25,9 @@ const ProductCard = () => {
     <>
       <section className="product__card">
         <div className="inner__container">
-          <ul className="side__container">
-            <li className="side__left">
-              <ul className="side__left__columns">
+          <div className="side__container">
+            <div className="side__left">
+              <div className="side__left__columns">
                 <Swiper
                   className="side__left__columns__item vertical__left"
                   onSwiper={setThumbsSwiper}
@@ -57,12 +58,12 @@ const ProductCard = () => {
                       ref={navigationNextRef}
                     />
                   </div>
-                  <ul className="product__card__slider__vertical">
+                  <div className="product__card__slider__vertical">
                     {ProductCardSliderVerticalImg.map(
                       (ProductCardSliderVerticalImgItem) => {
                         return (
                           <SwiperSlide>
-                            <li className="product__card__slider__vertical__item">
+                            <div className="product__card__slider__vertical__item">
                               <img
                                 className={
                                   ProductCardSliderVerticalImgItem.className
@@ -70,12 +71,12 @@ const ProductCard = () => {
                                 src={ProductCardSliderVerticalImgItem.img}
                                 alt={ProductCardSliderVerticalImgItem.alt}
                               />
-                            </li>
+                            </div>
                           </SwiperSlide>
                         );
                       }
                     )}
-                  </ul>
+                  </div>
                 </Swiper>
                 <Swiper
                   className="side__left__columns__item vertical__right"
@@ -95,10 +96,7 @@ const ProductCard = () => {
                     swiper.navigation.update();
                   }}
                 >
-                  <div
-                    className="product__card__main"
-                    data-test-id="main-slider"
-                  >
+                  <div className="product__card__main">
                     {ProductCardSliderMainImg.map(
                       (ProductCardSliderMainImgItem) => {
                         return (
@@ -122,17 +120,17 @@ const ProductCard = () => {
                     </div>
                   </div>
                 </Swiper>
-              </ul>
-            </li>
-            <li className="side__right">
+              </div>
+            </div>
+            <div className="side__right">
               <div className="color__text">
                 <h4 className="h4">Color:</h4>
                 <p className="paragraph">Blue</p>
               </div>
-              <ul className="color__img">
+              <div className="color__img">
                 {ProductCardColorImg.map((ProductCardColorImgItem) => {
                   return (
-                    <li className="color__img__item">
+                    <div className="color__img__item">
                       <Link
                         to={ProductCardColorImgItem.path}
                         className={ProductCardColorImgItem.className}
@@ -142,10 +140,10 @@ const ProductCard = () => {
                           alt={ProductCardColorImgItem.alt}
                         />
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
-              </ul>
+              </div>
               <div className="size__text">
                 <h4 className="h4">Size:</h4>
                 <p className="paragraph">S</p>
@@ -202,15 +200,7 @@ const ProductCard = () => {
                 <li className="guaranteed__text">Guaranteed Safe Checkout</li>
                 <li className="guaranteed__line"></li>
               </ul>
-              <ul className="footer__wrapper">
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-                <li className="footer__wrapper__item"></li>
-              </ul>
+              <PaymentSystems />
               <div className="product__description">Description</div>
               <ul className="additional__information__list">
                 <li className="additional__information__list__header">
@@ -315,8 +305,8 @@ const ProductCard = () => {
                   blanditiis praesentium voluptatum deleniti
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>

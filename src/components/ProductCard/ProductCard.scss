@@ -423,52 +423,6 @@
   }
 }
 
-.footer__wrapper {
-  @include flexCenter;
-  gap: $base*2;
-  width: 100%;
-  height: $base*5;
-  margin: $base*5 0 0 0;
-  padding: 0;
-  list-style: none;
-
-  .footer__wrapper__item {
-    width: 100%;
-    height: $base*5;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &:nth-child(1) {
-      background-image: url('./assets/img/stripe__color.svg');
-    }
-    
-    &:nth-child(2) {
-      background-image: url('./assets/img/aes256__color.svg');  
-    }
-    
-    &:nth-child(3) {
-      background-image: url('./assets/img/paypal__color.svg');  
-    }
-    
-    &:nth-child(4) {
-      background-image: url('./assets/img/visa__color.svg');  
-    }
-    
-    &:nth-child(5) {
-      background-image: url('./assets/img/mastercard__color.svg');  
-    }
-    
-    &:nth-child(6) {
-      background-image: url('./assets/img/discover__color.svg');  
-    }
-    
-    &:nth-child(7) {
-      background-image: url('./assets/img/american__express__color.svg');
-    }
-  }
-}
-
 // === / GUARANTEED ===
 
 // === PRODUCT DESCRIPTION ===

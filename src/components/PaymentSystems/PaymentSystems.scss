@@ -1,0 +1,15 @@
+@import "../../scss/Variables.scss";
+
+.footer__wrapper {
+  @include flexSpaceBetween;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  .footer__wrapper__item {
+    display: inline-block;
+    width: 13%;
+    height: auto;
+  }
+}

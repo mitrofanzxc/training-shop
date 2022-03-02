@@ -94,59 +94,6 @@
       flex-direction: column;
       gap: $base*4;
     }
-    
-    .footer__wrapper {
-      @include flexCenter;
-      gap: $base*3;
-      width: 40%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      @media (max-width: $breakpoint-md-min) {
-        width: 60%;
-        gap: $base*2;
-      }
-
-      @media (max-width: $breakpoint-sm-min) {
-        width: 80%;
-        gap: $base;
-      }
-  
-      .footer__wrapper__item {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-  
-        &:nth-child(1) {
-          background-image: url('./assets/img/stripe.svg');
-        }
-        
-        &:nth-child(2) {
-          background-image: url('./assets/img/aes256.svg');  
-        }
-        
-        &:nth-child(3) {
-          background-image: url('./assets/img/paypal.svg');  
-        }
-        
-        &:nth-child(4) {
-          background-image: url('./assets/img/visa.svg');  
-        }
-        
-        &:nth-child(5) {
-          background-image: url('./assets/img/mastercard.svg');  
-        }
-        
-        &:nth-child(6) {
-          background-image: url('./assets/img/discover.svg');  
-        }
-        
-        &:nth-child(7) {
-          background-image: url('./assets/img/american__express.svg');
-        }
-      }
-    }
 
     .h3 {
       font-size: $fs-xxs;

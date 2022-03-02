@@ -3,6 +3,7 @@ import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
 import { FooterNav1 } from "../../shared/FooterNav";
 import { FooterNav2 } from "../../shared/FooterNav";
 import { FooterNav3 } from "../../shared/FooterNav";
+import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
 import "./Footer.scss";
 
@@ -102,15 +103,7 @@ const Footer = () => {
       <footer className="footer outer__container">
         <div className="inner__container">
           <h3 className="h3">Copyright © 2022 all rights reserved</h3>
-          <ul className="footer__wrapper">
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-            <li className="footer__wrapper__item"></li>
-          </ul>
+          <PaymentSystems />
           <h3 className="h3">
             <a
               href="https://clevertec.ru/study/study.html"
