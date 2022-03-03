@@ -4,7 +4,7 @@ import { FooterNav1 } from "../../shared/FooterNav";
 import { FooterNav2 } from "../../shared/FooterNav";
 import { FooterNav3 } from "../../shared/FooterNav";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
-import { ContactsUl } from "../../shared/ContactsUl";
+import { Contacts } from "../Contacts/Contacts";
 
 import "./Footer.scss";
 
@@ -83,24 +83,7 @@ const Footer = () => {
                 <div className="footer__links__container__list__header">
                   Contact Us
                 </div>
-                {ContactsUl.map((ContactsUlLi) => {
-                  return (
-                    <>
-                      <div className={ContactsUlLi.className}>
-                        <img src={ContactsUlLi.src} alt={ContactsUlLi.alt} />
-                      </div>
-                      <div className={ContactsUlLi.className}>
-                        <a
-                          href={ContactsUlLi.link}
-                          target={ContactsUlLi.target}
-                          rel={ContactsUlLi.rel}
-                        >
-                          {ContactsUlLi.description}
-                        </a>
-                      </div>
-                    </>
-                  );
-                })}
+                <Contacts />
               </div>
             </div>
           </div>

@@ -97,12 +97,13 @@
         }
 
         .vertical__left {
-          width: 20%;
+          width: 7vw;
           height: 65vh;
         }
 
         .vertical__right {
-          width: 100%;
+          width: 35vw;
+          height: 65vh;
         }
       }
     }
@@ -460,15 +461,14 @@
     width: 100%;
     height: auto;
   }
+}
 
-  .product__card__main__slider {
-    position: absolute;
-    top: 45%;
-    width: 95%;
-    @include flexSpaceBetween;
-    margin: 0 $base*2;
-    padding: 0;
-  }
+.product__card__main__slider {
+  position: absolute;
+  top: 43%;
+  @include flexSpaceBetween;
+  width: 95%;
+  z-index: 2;
 }
 
 .buttons__arrow__container {

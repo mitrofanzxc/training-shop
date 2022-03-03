@@ -6,17 +6,20 @@ const Contacts = () => {
   return (
     <>
       <div className="contacts__wrapper">
-        {ContactsUl.slice(0, -1).map((ContactsUlLi) => {
+        {ContactsUl.map((ContactsUlLi) => {
           return (
             <>
               <div className={ContactsUlLi.className}>
-                <img src={ContactsUlLi.src} alt={ContactsUlLi.alt} />
-              </div>
-              <div className={ContactsUlLi.className}>
+                <img
+                  src={ContactsUlLi.src}
+                  alt={ContactsUlLi.alt}
+                  className={ContactsUlLi.classNameImg}
+                />
                 <a
                   href={ContactsUlLi.link}
                   target={ContactsUlLi.target}
                   rel={ContactsUlLi.rel}
+                  className={ContactsUlLi.classNameLink}
                 >
                   {ContactsUlLi.description}
                 </a>

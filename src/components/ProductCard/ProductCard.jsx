@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
@@ -11,7 +11,6 @@ import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
 import "swiper/scss";
-import "swiper/scss/free-mode";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
 
@@ -33,10 +32,9 @@ const ProductCard = () => {
                   onSwiper={setThumbsSwiper}
                   spaceBetween={0}
                   slidesPerView={4}
-                  freeMode={true}
                   watchSlidesProgress={true}
                   direction={"vertical"}
-                  modules={[FreeMode, Navigation, Thumbs]}
+                  modules={[Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
@@ -63,15 +61,13 @@ const ProductCard = () => {
                       (ProductCardSliderVerticalImgItem) => {
                         return (
                           <SwiperSlide>
-                            <div className="product__card__slider__vertical__item">
-                              <img
-                                className={
-                                  ProductCardSliderVerticalImgItem.className
-                                }
-                                src={ProductCardSliderVerticalImgItem.img}
-                                alt={ProductCardSliderVerticalImgItem.alt}
-                              />
-                            </div>
+                            <img
+                              className={
+                                ProductCardSliderVerticalImgItem.className
+                              }
+                              src={ProductCardSliderVerticalImgItem.img}
+                              alt={ProductCardSliderVerticalImgItem.alt}
+                            />
                           </SwiperSlide>
                         );
                       }
@@ -84,7 +80,7 @@ const ProductCard = () => {
                   slidesPerView={1}
                   direction={"horizontal"}
                   thumbs={{ swiper: thumbsSwiper }}
-                  modules={[FreeMode, Navigation, Thumbs]}
+                  modules={[Navigation, Thumbs]}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
@@ -100,24 +96,26 @@ const ProductCard = () => {
                     {ProductCardSliderMainImg.map(
                       (ProductCardSliderMainImgItem) => {
                         return (
-                          <img
-                            className={ProductCardSliderMainImgItem.className}
-                            src={ProductCardSliderMainImgItem.img}
-                            alt={ProductCardSliderMainImgItem.alt}
-                          />
+                          <SwiperSlide>
+                            <img
+                              className={ProductCardSliderMainImgItem.className}
+                              src={ProductCardSliderMainImgItem.img}
+                              alt={ProductCardSliderMainImgItem.alt}
+                            />
+                          </SwiperSlide>
                         );
                       }
                     )}
-                    <div className="product__card__main__slider">
-                      <div
-                        className="button__arrow arrow__left"
-                        ref={navigationPrevRef}
-                      />
-                      <div
-                        className="button__arrow arrow__right"
-                        ref={navigationNextRef}
-                      />
-                    </div>
+                  </div>
+                  <div className="product__card__main__slider">
+                    <div
+                      className="button__arrow arrow__left"
+                      ref={navigationPrevRef}
+                    />
+                    <div
+                      className="button__arrow arrow__right"
+                      ref={navigationNextRef}
+                    />
                   </div>
                 </Swiper>
               </div>

@@ -66,6 +66,26 @@ const ProductCardSliderMainImg = [
     alt: "Product Card Slider Img 4",
     className: "product__card__main__img",
   },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 1",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 2",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 3",
+    className: "product__card__main__img",
+  },
+  {
+    img: ProductCardSliderItemImg,
+    alt: "Product Card Slider Img 4",
+    className: "product__card__main__img",
+  },
 ];
 
 export { ProductCardSliderMainImg };
