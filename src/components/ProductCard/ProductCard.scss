@@ -56,7 +56,7 @@
 
       .side__left__columns {
         @include flexSpaceBetween;
-        gap: $base*4;
+        gap: 0 3%;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -97,7 +97,7 @@
         }
 
         .vertical__left {
-          width: 7vw;
+          width: 20%;
           height: 65vh;
         }
 
@@ -456,11 +456,11 @@
   height: auto;
   overflow-x: hidden;
   cursor: pointer;
+}
 
-  .product__card__main__img {
-    width: 100%;
-    height: auto;
-  }
+.product__card__main__img {
+  width: 100%;
+  height: auto;
 }
 
 .product__card__main__slider {
@@ -472,11 +472,14 @@
 }
 
 .buttons__arrow__container {
+  position: absolute;
+  top: 0;
   @include flexCenter;
   gap: $base*2;
   margin: 0;
   padding: 0;
   list-style: none;
+  z-index: 2;
 }
 
 .button__arrow {

@@ -76,7 +76,7 @@ const ProductCard = () => {
                 </Swiper>
                 <Swiper
                   className="side__left__columns__item vertical__right"
-                  spaceBetween={30}
+                  spaceBetween={0}
                   slidesPerView={1}
                   direction={"horizontal"}
                   thumbs={{ swiper: thumbsSwiper }}
