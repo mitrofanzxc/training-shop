@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import { ProductCardDataBaseMen } from "../../shared/ProductCardDataBaseMen";
+import { Rating } from "../Rating/Rating";
 
 import loading from "./assets/img/loading.gif";
 import "./MenCatalog.scss";
@@ -12,8 +14,8 @@ const MenCatalog = () => {
           <div className="products__container">
             {ProductCardDataBaseMen.map((ProductCardDataBaseMenItem) => {
               return (
-                <ul className="product__card">
-                  <li>
+                <div className="product__card">
+                  <div>
                     <Link
                       to={`/${ProductCardDataBaseMenItem.productType}/${ProductCardDataBaseMenItem.id}`}
                       data-test-id={`clothes-card-${ProductCardDataBaseMenItem.productType}`}
@@ -24,23 +26,17 @@ const MenCatalog = () => {
                         alt={ProductCardDataBaseMenItem.alt}
                       />
                     </Link>
-                  </li>
-                  <li className="product__card__title">
+                  </div>
+                  <div className="product__card__title">
                     {ProductCardDataBaseMenItem.header}
-                  </li>
-                  <ul className="product__card__price__list">
-                    <li className="product__card__price__item">
+                  </div>
+                  <div className="product__card__price__list">
+                    <div className="product__card__price__item">
                       {ProductCardDataBaseMenItem.price}
-                    </li>
-                    <ul className="product__card__rating">
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                    </ul>
-                  </ul>
-                </ul>
+                    </div>
+                    <Rating />
+                  </div>
+                </div>
               );
             })}
           </div>

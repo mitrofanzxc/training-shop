@@ -9,6 +9,7 @@ import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg"
 import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
+import { Rating } from "../Rating/Rating";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -224,13 +225,7 @@ const ProductCard = () => {
                     <div className="reviews__list__item__sublist__item">
                       <div className="reviews__list__item__sublist__item__sublist">
                         <div className="reviews__list__item__sublist__item__sublist__item">
-                          <div className="product__card__rating">
-                            <div className="product__card__rating__item__main"></div>
-                            <div className="product__card__rating__item__main"></div>
-                            <div className="product__card__rating__item__main"></div>
-                            <div className="product__card__rating__item__main"></div>
-                            <div className="product__card__rating__item__main"></div>
-                          </div>
+                          <Rating />
                         </div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
                           2 Reviews
@@ -258,13 +253,7 @@ const ProductCard = () => {
                           3 month ago
                         </div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
-                          <div className="product__card__rating">
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                          </div>
+                          <Rating />
                         </div>
                       </div>
                     </div>
@@ -286,13 +275,7 @@ const ProductCard = () => {
                           3 month ago
                         </div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
-                          <div className="product__card__rating">
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                            <div className="product__card__rating__item"></div>
-                          </div>
+                          <Rating />
                         </div>
                       </div>
                     </div>

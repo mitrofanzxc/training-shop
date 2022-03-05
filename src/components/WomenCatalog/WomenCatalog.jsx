@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import { ProductCardDataBaseWomen } from "../../shared/ProductCardDataBaseWomen";
+import { Rating } from "../Rating/Rating";
 
 import loading from "./assets/img/loading.gif";
 import "./WomenCatalog.scss";
@@ -12,11 +14,10 @@ const WomenCatalog = () => {
           <div className="products__container">
             {ProductCardDataBaseWomen.map((ProductCardDataBaseWomenItem) => {
               return (
-                <ul className="product__card">
-                  <li>
+                <div className="product__card">
+                  <div>
                     <Link
                       to={`/${ProductCardDataBaseWomenItem.productType}/${ProductCardDataBaseWomenItem.id}`}
-                      data-test-id={`clothes-card-${ProductCardDataBaseWomenItem.productType}`}
                     >
                       <img
                         src={ProductCardDataBaseWomenItem.img}
@@ -24,23 +25,17 @@ const WomenCatalog = () => {
                         alt={ProductCardDataBaseWomenItem.alt}
                       />
                     </Link>
-                  </li>
-                  <li className="product__card__title">
+                  </div>
+                  <div className="product__card__title">
                     {ProductCardDataBaseWomenItem.header}
-                  </li>
-                  <ul className="product__card__price__list">
-                    <li className="product__card__price__item">
+                  </div>
+                  <div className="product__card__price__list">
+                    <div className="product__card__price__item">
                       {ProductCardDataBaseWomenItem.price}
-                    </li>
-                    <ul className="product__card__rating">
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                      <li className="product__card__rating__item"></li>
-                    </ul>
-                  </ul>
-                </ul>
+                    </div>
+                    <Rating />
+                  </div>
+                </div>
               );
             })}
           </div>
