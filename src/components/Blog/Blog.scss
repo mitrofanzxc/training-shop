@@ -36,8 +36,7 @@
   .blog__slider {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    margin: 0;
-    margin-top: $base * 10;
+    margin: $base * 10 0 0 0;
     padding: 0;
     list-style: none;
 
@@ -102,7 +101,7 @@
         position: absolute;
         top: 55%;
         margin: 0 $base * 4 0 $base * 4;
-        padding: $base * 5 0 0 $base * 3;
+        padding: $base * 5 $base 0 $base;
         background-color: $color-white;
 
         @media (max-width: $breakpoint-md-min) {

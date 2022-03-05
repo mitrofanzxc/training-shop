@@ -16,6 +16,7 @@
   }
 
   .banners__section__container__item {
+    position: relative;
     @include flexCenter;
     width: 50%;
 
@@ -24,7 +25,6 @@
     }
 
     .banner__img {
-      position: relative;
       width: 95%;
       height: auto;
     }
@@ -32,12 +32,19 @@
 
   .banners__section__container__item__title {
     position: absolute;
+    min-width: 50%;
     margin: 0;
     padding: 0;
     background-color: $color-white;
     text-align: center;
     border: none;
     border-radius: $base;
+    transition: $transition;
+
+    &:hover {
+      min-width: 100%;
+      transition: $transition;
+    }
 
     @media (max-width: $breakpoint-xxs-min) {
       width: 60%;

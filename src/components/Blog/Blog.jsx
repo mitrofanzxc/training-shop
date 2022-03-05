@@ -16,10 +16,10 @@ const Blog = () => {
               </Link>
             </button>
           </div>
-          <ul className="blog__slider">
+          <div className="blog__slider">
             {BlogInfo.map((BlogInfoItem) => {
               return (
-                <li className="blog__slider__item">
+                <div className="blog__slider__item">
                   <img
                     className="blog__img"
                     src={BlogInfoItem.img}
@@ -31,10 +31,10 @@ const Blog = () => {
                       {BlogInfoItem.description}
                     </div>
                   </div>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </div>
       </section>
     </>

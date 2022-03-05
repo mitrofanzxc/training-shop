@@ -2,8 +2,8 @@
 
 .socials__wrapper {
   @include flexSpaceBetween;
-  gap: 2%;
-  width: 10%;
+  gap: $base * 2;
+  width: 11%;
   height: auto;
 
   .socials__wrapper__item {
