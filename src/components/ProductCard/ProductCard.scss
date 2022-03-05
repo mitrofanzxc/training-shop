@@ -47,6 +47,7 @@
       align-items: flex-start;
       flex-direction: row;
       width: 50%;
+      height: 60vh;
 
       @media (max-width: $breakpoint-lg-min) {
         align-items: center;
@@ -56,12 +57,9 @@
 
       .side__left__columns {
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 0;
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        gap: 3%;
+        width: 100%;
+        height: 60vh;
 
         .side__left__columns__item {
           display: flex;
@@ -100,14 +98,12 @@
 
         .vertical__left {
           width: 17%;
-          height: 50vh;
           margin: 0;
           padding: 0;
         }
 
         .vertical__right {
           width: 35vw;
-          height: 65vh;
           margin: 0;
           padding: 0;
         }
