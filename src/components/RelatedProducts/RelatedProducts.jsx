@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import { Link } from "react-router-dom";
 import { RelatedProductsDataBase } from "../../shared/RelatedProductsDataBase";

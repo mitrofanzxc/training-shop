@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { ProductCardDataBaseMen } from "../../shared/ProductCardDataBaseMen";
+import { PRODUCTS } from "../../shared/Products";
 import { Rating } from "../Rating/Rating";
 
 import "./MensMain.scss";
@@ -12,36 +12,32 @@ const MensMain = () => {
         <div className="inner__container">
           <div className="catalog__header">
             <h2 className="h2">Men's</h2>
-            <ul className="catalog__filter">
-              <li className="catalog__filter__item">New Arrivals</li>
-              <li className="catalog__filter__item">Specials</li>
-              <li className="catalog__filter__item">Bestsellers</li>
-              <li className="catalog__filter__item">Most Viewed</li>
-              <li className="catalog__filter__item">Feautured Products</li>
-            </ul>
+            <div className="catalog__filter">
+              <div className="catalog__filter__item">New Arrivals</div>
+              <div className="catalog__filter__item">Specials</div>
+              <div className="catalog__filter__item">Bestsellers</div>
+              <div className="catalog__filter__item">Most Viewed</div>
+              <div className="catalog__filter__item">Feautured Products</div>
+            </div>
           </div>
           <div className="products__container">
-            {ProductCardDataBaseMen.map((ProductCardDataBaseMenItem) => {
+            {PRODUCTS.men.slice(0, 8).map((PRODUCTSitem) => {
               return (
                 <div className="product__card">
-                  <div>
-                    <Link
-                      to={`/${ProductCardDataBaseMenItem.productType}/${ProductCardDataBaseMenItem.id}`}
-                      data-test-id={`clothes-card-${ProductCardDataBaseMenItem.productType}`}
-                    >
-                      <img
-                        src={ProductCardDataBaseMenItem.img}
-                        className={ProductCardDataBaseMenItem.className}
-                        alt={ProductCardDataBaseMenItem.alt}
-                      />
-                    </Link>
-                  </div>
+                  <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
+                    <img
+                      src={`https://training.cleverland.by/shop${PRODUCTSitem.images[0].url}`}
+                      className="product__card__image"
+                      alt="Product Card Men Img"
+                    />
+                  </Link>
+
                   <div className="product__card__title">
-                    {ProductCardDataBaseMenItem.header}
+                    {PRODUCTSitem.name}
                   </div>
                   <div className="product__card__price__list">
                     <div className="product__card__price__item">
-                      {ProductCardDataBaseMenItem.price}
+                      {`$ ${PRODUCTSitem.price.toFixed(2)}`}
                     </div>
                     <Rating />
                   </div>
