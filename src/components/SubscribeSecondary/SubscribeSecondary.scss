@@ -13,93 +13,92 @@
   @media (max-width: $breakpoint-xxs-min) {
     margin-top: $base * 8;
   }
+}
 
-  .subscribe__secondary__container {
-    @include flexSpaceBetween;
-    flex-wrap: wrap;
+.subscribe__secondary__container {
+  @include flexSpaceBetween;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: $base * 2 0;
+  list-style: none;
+
+  @media (max-width: $breakpoint-lg-min) {
+    @include flexCenter;
+    gap: 10px;
+  }
+
+  @media (max-width: $breakpoint-sm-min) {
+    @include flexCenter;
+    gap: 10px;
+  }
+}
+
+.subscribe__secondary__container__item {
+  .h2 {
+    font-size: $fs-xs;
+    font-weight: $fw-semi-bold;
+    color: $color-white;
+    letter-spacing: 1px;
+  }
+
+  .input__email {
+    @include spartan;
+    width: $base * 70;
     margin: 0;
-    padding: $base * 2 0;
-    list-style: none;
+    padding: $base * 2 0 $base * 2 $base * 4;
+    font-size: $fs-s;
+    font-weight: $fw-medium;
+    letter-spacing: 1px;
+    color: $color-white-09;
+    background-color: $color-white-02;
+    border: none;
+    cursor: pointer;
 
-    @media (max-width: $breakpoint-lg-min) {
-      @include flexCenter;
-      gap: 10px;
+    &::placeholder {
+      padding-left: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
     }
 
     @media (max-width: $breakpoint-sm-min) {
-      @include flexCenter;
-      gap: 10px;
+      width: 80%;
     }
+  }
 
-    .subscribe__secondary__container__item {
-      .h2 {
-        font-size: $fs-xs;
-        font-weight: $fw-semi-bold;
-        color: $color-white;
-        letter-spacing: 1px;
-      }
+  .button__dark {
+    display: inline;
+    width: 25%;
+    height: auto;
+    margin: 0;
+    padding: $base * 2 0;
+    font-size: $fs-xs;
+    color: $color-white-09;
+    border: 1px solid $color-white;
+    text-align: center;
 
-      .input__email {
-        @include spartan;
-        width: $base * 70;
-        margin: 0;
-        padding: $base * 2 0 $base * 2 $base * 4;
-        font-size: $fs-s;
-        font-weight: $fw-medium;
-        letter-spacing: 1px;
-        color: $color-white-09;
-        background-color: $color-white-02;
-        border: none;
-        cursor: pointer;
-
-        &::placeholder {
-          padding-left: 0;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-          outline: none;
-        }
-
-        @media (max-width: $breakpoint-sm-min) {
-          width: 80%;
-        }
-      }
-
-      .button__dark {
-        display: inline;
-        width: 25%;
-        height: auto;
-        margin: 0;
-        padding: $base * 2 0;
-        font-size: $fs-xs;
-        color: $color-white-09;
-        border: 1px solid $color-white;
-        text-align: center;
-
-        @media (max-width: $breakpoint-sm-min) {
-          width: 35%;
-        }
-      }
-
-      .socials__wrapper {
-        justify-content: center;
-        width: 100%;
-      }
+    @media (max-width: $breakpoint-sm-min) {
+      width: 35%;
     }
+  }
 
-    .email__container {
-      display: flex;
-      align-items: center;
-      gap: $base * 2;
+  .socials__wrapper {
+    width: 100%;
+  }
+}
 
-      @media (max-width: $breakpoint-sm-min) {
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-      }
-    }
+.email__container {
+  display: flex;
+  align-items: center;
+  gap: $base * 2;
+
+  @media (max-width: $breakpoint-sm-min) {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
   }
 }
 

@@ -31,7 +31,7 @@ const ProductCard = () => {
                 <Swiper
                   className="side__left__columns__item vertical__left"
                   onSwiper={setThumbsSwiper}
-                  spaceBetween={0}
+                  spaceBetween={30}
                   slidesPerView={4}
                   watchSlidesProgress={true}
                   direction={"vertical"}
