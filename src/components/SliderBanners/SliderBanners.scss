@@ -7,25 +7,25 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: $base*6;
+  margin-top: $base * 6;
 
   @media (max-width: $breakpoint-xs-min) {
     flex-direction: column;
   }
-  
+
   .banners__container__right {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     width: 49%;
-  
+
     .banners__container__right__gender {
       @include flexSpaceBetween;
 
       @media (max-width: $breakpoint-xs-min) {
         width: 204%;
-        gap: $base*2;
-        margin-top: $base*3;
+        gap: $base * 2;
+        margin-top: $base * 3;
       }
     }
   }
@@ -37,7 +37,7 @@
 
     @media (max-width: $breakpoint-xs-min) {
       width: 204%;
-      margin-top: $base*3;
+      margin-top: $base * 3;
     }
 
     .banner__img {
@@ -63,11 +63,11 @@
       }
 
       .h2 {
-        padding: $base*3 $base*4;
+        padding: $base * 3 $base * 4;
         font-size: $fs-m;
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
-        line-height: $base*4;
+        line-height: $base * 4;
 
         @media (max-width: $breakpoint-md-min) {
           padding: $base $base;
@@ -75,7 +75,7 @@
       }
     }
   }
-  
+
   .women {
     position: relative;
     @include flexCenter;
@@ -104,11 +104,11 @@
       }
 
       .h2 {
-        padding: $base*3 $base*4;
+        padding: $base * 3 $base * 4;
         font-size: $fs-m;
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
-        line-height: $base*4;
+        line-height: $base * 4;
 
         @media (max-width: $breakpoint-md-min) {
           padding: $base $base;
@@ -116,7 +116,7 @@
       }
     }
   }
-  
+
   .men {
     position: relative;
     @include flexCenter;
@@ -145,11 +145,11 @@
       }
 
       .h2 {
-        padding: $base*3 $base*4;
+        padding: $base * 3 $base * 4;
         font-size: $fs-m;
         font-weight: $fw-semi-bold;
         letter-spacing: 1px;
-        line-height: $base*4;
+        line-height: $base * 4;
 
         @media (max-width: $breakpoint-md-min) {
           padding: $base $base;
@@ -199,7 +199,7 @@
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    gap: $base*3;
+    gap: $base * 3;
     top: 40%;
     left: 2%;
     width: 95%;
@@ -212,8 +212,8 @@
 
 .slider__arrow {
   @include flexCenter;
-  min-width: $base*8;
-  min-height: $base*8;
+  min-width: $base * 8;
+  min-height: $base * 8;
   margin: 0;
   padding: 0;
   border: none;
@@ -224,15 +224,15 @@
   cursor: pointer;
 
   @media (max-width: $breakpoint-md-min) {
-    min-width: $base*6;
-    min-height: $base*6;
+    min-width: $base * 6;
+    min-height: $base * 6;
   }
 }
 
 .arrow__left {
-  background-image: url('./assets/img/ellipse__arrow__left.svg');
+  background-image: url("./assets/img/ellipse__arrow__left.svg");
   transition: $transition;
-  
+
   &:hover {
     background-color: $color-grey;
     transition: $transition;
@@ -240,7 +240,7 @@
 }
 
 .arrow__right {
-  background-image: url('./assets/img/ellipse__arrow__right.svg');
+  background-image: url("./assets/img/ellipse__arrow__right.svg");
   transition: $transition;
 
   &:hover {
@@ -258,11 +258,11 @@
   border-radius: $base;
 
   .h3 {
-    padding-top: $base*5;
+    padding-top: $base * 5;
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
-    line-height: $base*3;
+    line-height: $base * 3;
     color: $color-dark-04;
 
     @media (max-width: $breakpoint-md-min) {
@@ -271,11 +271,11 @@
   }
 
   .h2 {
-    padding: $base*3 $base*4;
+    padding: $base * 3 $base * 4;
     font-size: $fs-xl;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
-    line-height: $base*5;
+    line-height: $base * 5;
 
     @media (max-width: $breakpoint-md-min) {
       padding: $base $base;
@@ -284,7 +284,6 @@
 }
 
 .header {
-
   @media (max-width: $breakpoint-md-min) {
     width: 50%;
   }
@@ -302,15 +301,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $base*8;
-  height: $base*8;
+  width: $base * 8;
+  height: $base * 8;
   top: 44%;
   margin: 0;
   padding: 0;
   border: none;
   border-radius: 100%;
   background-color: $color-white;
-  background-image: url('./assets/img/ellipse__arrow__left.svg');
+  background-image: url("./assets/img/ellipse__arrow__left.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -320,8 +319,8 @@
   }
 
   @media (max-width: $breakpoint-md-min) {
-    width: $base*6;
-    height: $base*6;
+    width: $base * 6;
+    height: $base * 6;
   }
 }
 
@@ -329,15 +328,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $base*8;
-  height: $base*8;
+  width: $base * 8;
+  height: $base * 8;
   top: 44%;
   margin: 0;
   padding: 0;
   border: none;
   border-radius: 100%;
   background-color: $color-white;
-  background-image: url('./assets/img/ellipse__arrow__right.svg');
+  background-image: url("./assets/img/ellipse__arrow__right.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -347,8 +346,8 @@
   }
 
   @media (max-width: $breakpoint-md-min) {
-    width: $base*6;
-    height: $base*6;
+    width: $base * 6;
+    height: $base * 6;
   }
 }
 

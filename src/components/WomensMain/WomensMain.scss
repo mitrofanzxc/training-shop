@@ -3,10 +3,9 @@
 // === CATALOG ===
 
 .catalog {
-
   .catalog__header {
     @include flexSpaceBetween;
-    margin-top: $base*20;
+    margin-top: $base * 20;
     background-color: transparent;
 
     .h2 {
@@ -18,7 +17,7 @@
 
     .catalog__filter {
       @include flexSpaceBetween;
-      gap: $base*8;
+      gap: $base * 8;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -39,12 +38,12 @@
       }
     }
   }
-  
+
   .products__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    gap: $base*6 $base*3;
-    margin-top: $base*9;
+    gap: $base * 6 $base * 3;
+    margin-top: $base * 9;
   }
 
   .product__card {
@@ -54,14 +53,14 @@
 
     .product__card__image {
       display: block;
-      width: $base*51;
-      height: $base*64;
+      width: $base * 51;
+      height: $base * 64;
       margin: 0;
       padding: 0;
     }
 
     .product__card__title {
-      margin-top: $base*3;
+      margin-top: $base * 3;
       font-size: $fs-m;
       font-weight: $fw-regular;
       color: $color-dark-06;
@@ -90,17 +89,17 @@
       .product__card__rating__item {
         @include flexCenter;
         list-style: none;
-        width: $base*3;
-        height: $base*3;
+        width: $base * 3;
+        height: $base * 3;
         background-position: center;
         background-repeat: no-repeat;
-        
-        &:nth-child(-n+4) {
-          background-image: url('./assets/img/star__filled.svg');
+
+        &:nth-child(-n + 4) {
+          background-image: url("./assets/img/star__filled.svg");
         }
-  
+
         &:nth-child(5) {
-          background-image: url('./assets/img/star.svg');
+          background-image: url("./assets/img/star.svg");
         }
       }
     }

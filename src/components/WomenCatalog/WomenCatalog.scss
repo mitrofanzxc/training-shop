@@ -3,15 +3,14 @@
 // === CATALOG ===
 
 .catalog {
-
   .catalog__header {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    margin-top: $base*20;
+    margin-top: $base * 20;
 
     @media (max-width: $breakpoint-md-min) {
       @include flexCenter;
-      margin-top: $base*8;
+      margin-top: $base * 8;
     }
 
     .h2 {
@@ -21,13 +20,13 @@
       text-transform: uppercase;
 
       @media (max-width: $breakpoint-md-min) {
-        padding: $base*2 0;
+        padding: $base * 2 0;
       }
     }
 
     .catalog__filter {
       @include flexSpaceBetween;
-      gap: $base*8;
+      gap: $base * 8;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -40,7 +39,7 @@
       @media (max-width: $breakpoint-md-min) {
         @include flexCenter;
         flex-wrap: wrap;
-        gap: $base*2;
+        gap: $base * 2;
       }
 
       .catalog__filter__item {
@@ -54,19 +53,19 @@
       }
     }
   }
-  
+
   .products__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    gap: $base*6 $base*3;
-    margin-top: $base*9;
+    gap: $base * 6 $base * 3;
+    margin-top: $base * 9;
 
     @media (max-width: $breakpoint-md-min) {
-      margin-top: $base*5;
+      margin-top: $base * 5;
     }
 
     @media (max-width: $breakpoint-xs-min) {
-      gap: $base*5 0;
+      gap: $base * 5 0;
     }
   }
 
@@ -93,7 +92,7 @@
     }
 
     .product__card__title {
-      margin-top: $base*3;
+      margin-top: $base * 3;
       font-size: $fs-m;
       font-weight: $fw-regular;
       color: $color-dark-06;
@@ -147,16 +146,16 @@
         @include flexCenter;
         list-style: none;
         width: 14px;
-        height: $base*3;
+        height: $base * 3;
         background-position: center;
         background-repeat: no-repeat;
-        
-        &:nth-child(-n+4) {
-          background-image: url('./assets/img/star__filled.svg');
+
+        &:nth-child(-n + 4) {
+          background-image: url("./assets/img/star__filled.svg");
         }
-  
+
         &:nth-child(5) {
-          background-image: url('./assets/img/star.svg');
+          background-image: url("./assets/img/star.svg");
         }
       }
     }

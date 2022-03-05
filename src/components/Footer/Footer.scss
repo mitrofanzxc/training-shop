@@ -4,13 +4,13 @@
 
 .footer__links__container {
   @include flexSpaceBetween;
-  margin: $base*8 0 0 0;
+  margin: $base * 8 0 0 0;
   padding: 0;
   list-style: none;
 
   @media (max-width: $breakpoint-md-min) {
     flex-wrap: wrap;
-    gap: $base*5 0;
+    gap: $base * 5 0;
   }
 
   .footer__links__container__item {
@@ -24,7 +24,7 @@
     .footer__links__container__list {
       display: flex;
       flex-direction: column;
-      gap: $base*4;
+      gap: $base * 4;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -49,26 +49,26 @@
 
         .icon {
           display: inline-block;
-          width: $base*3;
-          height: $base*3;
+          width: $base * 3;
+          height: $base * 3;
           background-repeat: no-repeat;
           background-size: contain;
         }
 
         .location {
-          background-image: url('./assets/img/location.svg');
+          background-image: url("./assets/img/location.svg");
         }
 
         .phone {
-          background-image: url('./assets/img/phone.svg');
+          background-image: url("./assets/img/phone.svg");
         }
 
         .clock {
-          background-image: url('./assets/img/clock.svg');
+          background-image: url("./assets/img/clock.svg");
         }
 
         .mail {
-          background-image: url('./assets/img/mail.svg');
+          background-image: url("./assets/img/mail.svg");
         }
       }
     }
@@ -80,18 +80,18 @@
 // === FOOTER ===
 
 .footer {
-  margin-top: $base*7;
+  margin-top: $base * 7;
   background-color: $color-gr-white;
 
   .inner__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
-    margin-top: $base*8;
-    padding: $base*2 0;
+    margin-top: $base * 8;
+    padding: $base * 2 0;
 
     @media (max-width: $breakpoint-md-min) {
       flex-direction: column;
-      gap: $base*4;
+      gap: $base * 4;
     }
 
     .footer__wrapper {
@@ -122,13 +122,13 @@
 
 .contacts__wrapper {
   flex-direction: column;
-  gap: $base*4;
+  gap: $base * 4;
 
   .contacts__wrapper__item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: $base*2;
+    gap: $base * 2;
     font-size: $fs-xs;
     font-weight: $fw-regular;
     color: $color-dark-08;

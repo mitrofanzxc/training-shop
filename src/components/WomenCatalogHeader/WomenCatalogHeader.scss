@@ -8,13 +8,12 @@
   .catalog__header__wrapper {
     @include flexSpaceBetween;
     gap: $base;
-    height: $base*6;
+    height: $base * 6;
     margin: 0;
     padding: 0;
     list-style: none;
 
     .catalog__header__wrapper__item {
-
       .catalog__header__wrapper__item__subwrapper {
         @include flexCenter;
         gap: $base;
@@ -31,9 +30,9 @@
         }
 
         .share {
-          width: $base*4;
-          height: $base*4;
-          background-image: url('./assets/img/share.svg');
+          width: $base * 4;
+          height: $base * 4;
+          background-image: url("./assets/img/share.svg");
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
@@ -45,7 +44,7 @@
   .catalog__heading {
     font-size: $fs-xxl;
     margin: 0;
-    padding: $base*2 0 $base*5 0;
+    padding: $base * 2 0 $base * 5 0;
     text-align: center;
     text-transform: uppercase;
   }

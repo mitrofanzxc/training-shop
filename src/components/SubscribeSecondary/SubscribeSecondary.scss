@@ -3,22 +3,22 @@
 // === SUBSCRIBE SECONDARY ===
 
 .subscribe__secondary {
-  margin-top: $base*19;
+  margin-top: $base * 19;
   background-color: $color-dark;
 
   @media (max-width: $breakpoint-xs-min) {
-    margin-top: $base*22;
+    margin-top: $base * 22;
   }
 
   @media (max-width: $breakpoint-xxs-min) {
-    margin-top: $base*8;
+    margin-top: $base * 8;
   }
 
   .subscribe__secondary__container {
     @include flexSpaceBetween;
     flex-wrap: wrap;
     margin: 0;
-    padding: $base*2 0;
+    padding: $base * 2 0;
     list-style: none;
 
     @media (max-width: $breakpoint-lg-min) {
@@ -32,7 +32,6 @@
     }
 
     .subscribe__secondary__container__item {
-
       .h2 {
         font-size: $fs-xs;
         font-weight: $fw-semi-bold;
@@ -42,9 +41,9 @@
 
       .input__email {
         @include spartan;
-        width: $base*70;
+        width: $base * 70;
         margin: 0;
-        padding: $base*2 0 $base*2 $base*4;
+        padding: $base * 2 0 $base * 2 $base * 4;
         font-size: $fs-s;
         font-weight: $fw-medium;
         letter-spacing: 1px;
@@ -57,7 +56,9 @@
           padding-left: 0;
         }
 
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
           outline: none;
         }
 
@@ -71,7 +72,7 @@
         width: 25%;
         height: auto;
         margin: 0;
-        padding: $base*2 0;
+        padding: $base * 2 0;
         font-size: $fs-xs;
         color: $color-white-09;
         border: 1px solid $color-white;
@@ -86,7 +87,7 @@
     .email__container {
       display: flex;
       align-items: center;
-      gap: $base*2;
+      gap: $base * 2;
 
       @media (max-width: $breakpoint-sm-min) {
         justify-content: center;

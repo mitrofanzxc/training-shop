@@ -5,8 +5,8 @@
 .additional__text {
   display: flex;
   align-items: center;
-  gap: $base*2;
-  margin-top: $base*2;
+  gap: $base * 2;
+  margin-top: $base * 2;
 
   .h4 {
     margin: 0;
@@ -31,8 +31,6 @@
 // === PRODUCT CARD ===
 
 .product__card {
-  margin-top: 1%;
-  
   .side__container {
     display: flex;
 
@@ -64,20 +62,22 @@
           .product__card__slider__vertical {
             @include flexCenter;
             flex-direction: column;
-            gap: $base*3;
-            margin: $base*3 0 0 0;
+            gap: $base * 3;
+            margin: $base * 3 0 0 0;
             padding: 0;
           }
         }
 
         .product__card__slider__vertical__item {
-          max-width: $base*19;
-          max-height: $base*23;
+          max-width: $base * 19;
+          max-height: $base * 23;
           opacity: 0.4;
           cursor: pointer;
           transition: $transition;
 
-          &:hover, &:focus, &:active {
+          &:hover,
+          &:focus,
+          &:active {
             opacity: 1;
             transition: $transition;
           }
@@ -118,8 +118,8 @@
       .color__text {
         display: flex;
         align-items: center;
-        gap: $base*2;
-        margin-top: $base*2;
+        gap: $base * 2;
+        margin-top: $base * 2;
 
         .h4 {
           margin: 0;
@@ -141,12 +141,11 @@
 
       .color__img {
         @include flexSpaceBetween;
-        gap: $base*2;
+        gap: $base * 2;
         width: 60%;
         height: auto;
-        margin: $base*4 0 0 0;
+        margin: $base * 4 0 0 0;
         padding: 0;
-        
 
         @media (max-width: $breakpoint-lg-min) {
           width: 50%;
@@ -154,18 +153,20 @@
 
         .color__img__item {
           @include flexCenter;
-          width: $base*13;
-          height: $base*13;
+          width: $base * 13;
+          height: $base * 13;
           box-sizing: border-box;
           outline: 0 solid $color-dark;
           cursor: pointer;
-          
-          &:hover, &:focus, &:active {
+
+          &:hover,
+          &:focus,
+          &:active {
             outline-width: 2px;
           }
-          
+
           .color__img__item__img {
-            height: $base*13;
+            height: $base * 13;
           }
         }
       }
@@ -174,8 +175,8 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        gap: $base*2;
-        margin-top: $base*7;
+        gap: $base * 2;
+        margin-top: $base * 7;
 
         .h4 {
           margin: 0;
@@ -197,17 +198,16 @@
 
       .size__img {
         @include flexCenter;
-        gap: $base*3;
+        gap: $base * 3;
         margin: 0;
-        margin-top: $base*3;
+        margin-top: $base * 3;
         padding: 0;
-        
 
         .size__img__item {
           @include flexCenter;
           box-sizing: border-box;
-          width: $base*8;
-          height: $base*8;
+          width: $base * 8;
+          height: $base * 8;
           font-size: $fs-xs;
           font-weight: $fw-semi-bold;
           color: $color-dark-07;
@@ -216,7 +216,9 @@
           outline: 0 solid $color-dark;
           cursor: pointer;
 
-          &:hover, &:focus, &:active {
+          &:hover,
+          &:focus,
+          &:active {
             background-color: $color-white;
             color: $color-dark;
             outline-width: 2px;
@@ -226,19 +228,18 @@
 
       .size__guide {
         @include flexCenter;
-        margin: $base*2 0 0 0;
+        margin: $base * 2 0 0 0;
         padding: 0;
-        
 
         .size__guide__item {
           font-size: $fs-xs;
           font-weight: $fw-medium;
           color: $color-dark-06;
-          
+
           &:nth-child(1) {
-            width: $base*5;
-            height: $base*5;
-            background-image: url('./assets/img/hanger.svg');
+            width: $base * 5;
+            height: $base * 5;
+            background-image: url("./assets/img/hanger.svg");
             background-position: center;
             background-repeat: no-repeat;
           }
@@ -246,7 +247,7 @@
       }
 
       .footer__wrapper {
-        margin-top: $base*4;
+        margin-top: $base * 4;
       }
     }
   }
@@ -267,13 +268,12 @@
   justify-content: flex-start;
   gap: 5%;
   width: 100%;
-  height: $base*22;
+  height: $base * 22;
   margin: 0;
-  margin-top: $base*7;
+  margin-top: $base * 7;
   padding: 0;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;
-  
 
   @media (max-width: $breakpoint-lg-min) {
     justify-content: center;
@@ -290,8 +290,8 @@
   .button__cart {
     @include spartan;
     @include flexCenter;
-    width: $base*31;
-    height: $base*10;
+    width: $base * 31;
+    height: $base * 10;
     margin: 0;
     padding: 0;
     background-color: $color-dark;
@@ -303,32 +303,32 @@
     border: none;
     cursor: pointer;
   }
-  
+
   .button__wishlist {
     @include flexCenter;
-    width: $base*5;
-    height: $base*5;
+    width: $base * 5;
+    height: $base * 5;
     line-height: 0;
     margin: 0;
     padding: 0;
     background-color: transparent;
-    background-image: url('./assets/img/heart.svg');
+    background-image: url("./assets/img/heart.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
   }
-  
+
   .button__scale {
     @include flexCenter;
-    width: $base*5;
-    height: $base*5;
+    width: $base * 5;
+    height: $base * 5;
     line-height: 0;
     margin: 0;
     padding: 0;
     background-color: transparent;
-    background-image: url('./assets/img/scale.svg');
+    background-image: url("./assets/img/scale.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -344,50 +344,49 @@
 .benefits__wrapper {
   @include flexSpaceBetween;
   width: 100%;
-  margin: $base*5 0 0 0;
+  margin: $base * 5 0 0 0;
   padding: 0;
-  
 
   @media (max-width: $breakpoint-lg-min) {
     justify-content: center;
-    gap: $base*2;
+    gap: $base * 2;
   }
 
   .benefits__subwrapper {
     display: flex;
     align-items: center;
-    gap: $base*2;
+    gap: $base * 2;
   }
-  
+
   .benefits__item {
     @include flexCenter;
-    width: $base*4;
-    height: $base*8;
+    width: $base * 4;
+    height: $base * 8;
     margin: 0;
     padding: 0;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
-  
+
   .delivery {
-    background-image: url('./assets/img/delivery.svg');
+    background-image: url("./assets/img/delivery.svg");
   }
-  
+
   .refresh {
-    background-image: url('./assets/img/refresh.svg');
+    background-image: url("./assets/img/refresh.svg");
   }
-  
+
   .mail {
-    background-image: url('./assets/img/mail.svg');
+    background-image: url("./assets/img/mail.svg");
   }
-  
+
   .benefits__text {
     margin: 0;
     padding: 0;
     text-transform: none;
   }
-  
+
   .h3 {
     font-size: $fs-xs;
     font-weight: $fw-medium;
@@ -403,10 +402,9 @@
 .guaranteed {
   @include flexSpaceBetween;
   width: 100%;
-  margin: $base*5 0 0 0;
+  margin: $base * 5 0 0 0;
   padding: 0;
-  
-  
+
   .guaranteed__text {
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
@@ -418,7 +416,7 @@
   .guaranteed__line {
     width: 50%;
     height: 2px;
-    background-color: $color-grey
+    background-color: $color-grey;
   }
 }
 
@@ -428,8 +426,8 @@
 
 .product__description {
   width: 100%;
-  margin: $base*6 0 0 0;
-  padding: $base*6 0 $base*7 0;
+  margin: $base * 6 0 0 0;
+  padding: $base * 6 0 $base * 7 0;
   letter-spacing: 1px;
   border-top: 2px solid $color-grey;
   border-bottom: 2px solid $color-grey;
@@ -446,7 +444,7 @@
 .product__card__main {
   position: relative;
   display: flex;
-  max-width: $base*90;
+  max-width: $base * 90;
   height: auto;
   overflow-x: hidden;
   cursor: pointer;
@@ -469,17 +467,16 @@
   position: absolute;
   top: 0;
   @include flexCenter;
-  gap: $base*2;
+  gap: $base * 2;
   margin: 0;
   padding: 0;
-  
   z-index: 2;
 }
 
 .button__arrow {
   display: inline-block;
-  width: $base*8;
-  height: $base*8;
+  width: $base * 8;
+  height: $base * 8;
   line-height: 0;
   margin: 0;
   padding: 0;
@@ -491,18 +488,18 @@
 }
 
 .arrow__up {
-  background-image: url('./assets/img/arrowup.svg');
+  background-image: url("./assets/img/arrowup.svg");
 }
 
 .arrow__down {
-  background-position: center $base*3;
-  background-image: url('./assets/img/arrowdown.svg');
+  background-position: center $base * 3;
+  background-image: url("./assets/img/arrowdown.svg");
 }
 
 .arrow__left {
   border-radius: 50%;
   background-color: $color-white;
-  background-image: url('./assets/img/ellipse__arrow__left.svg');
+  background-image: url("./assets/img/ellipse__arrow__left.svg");
 
   &.swiper-button-disabled {
     opacity: 0.35;
@@ -514,7 +511,7 @@
 .arrow__right {
   border-radius: 50%;
   background-color: $color-white;
-  background-image: url('./assets/img/ellipse__arrow__right.svg');
+  background-image: url("./assets/img/ellipse__arrow__right.svg");
 
   &.swiper-button-disabled {
     opacity: 0.35;
@@ -536,13 +533,13 @@
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  margin: $base*7 0 0 0;
-  padding: 0 0 $base*7 0;
-  
+  margin: $base * 7 0 0 0;
+  padding: 0 0 $base * 7 0;
+
   border-bottom: 2px solid $color-grey;
 
   .additional__information__list__header {
-    padding-bottom: $base*4;
+    padding-bottom: $base * 4;
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
@@ -552,7 +549,7 @@
   .additional__information__list__property {
     font-size: $fs-m;
     font-weight: $fw-medium;
-    margin-top: $base*4;
+    margin-top: $base * 4;
 
     .additional__information__list__value {
       font-weight: $fw-regular;
@@ -565,46 +562,44 @@
 // === REVIEWS LIST ===
 
 .reviews__list {
-  margin: $base*7 0 0 0;
+  margin: $base * 7 0 0 0;
   padding: 0;
-  
+
   border-bottom: 2px solid $color-grey;
 
   .reviews__list__header {
     font-size: $fs-xs;
     font-weight: $fw-semi-bold;
     letter-spacing: 1px;
-    padding-bottom: $base*2;
+    padding-bottom: $base * 2;
     color: $color-dark;
     text-transform: uppercase;
   }
 
   .reviews__list__item {
-    margin-top: $base*5;
+    margin-top: $base * 5;
 
     .reviews__list__item__sublist {
       @include flexSpaceBetween;
       margin: 0;
       padding: 0;
-      
 
       .reviews__list__item__sublist__item {
         font-size: $fs-xs;
         font-weight: $fw-medium;
-        
+
         .reviews__list__item__sublist__item__sublist {
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
-          gap: $base*2;
+          gap: $base * 2;
           margin: 0;
           padding: 0;
-          
 
           .message {
-            width: $base*3;
-            height: $base*3;
-            background-image: url('./assets/img/message.svg');
+            width: $base * 3;
+            height: $base * 3;
+            background-image: url("./assets/img/message.svg");
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -616,16 +611,15 @@
             color: $color-dark-06;
 
             .product__card__rating {
-
               .product__card__rating__item__main {
                 @include flexCenter;
-                width: $base*4;
-                height: $base*4;
-                
+                width: $base * 4;
+                height: $base * 4;
+
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-image: url('./assets/img/star__filled.svg');
+                background-image: url("./assets/img/star__filled.svg");
                 cursor: pointer;
               }
             }
@@ -643,9 +637,9 @@
   .review {
     font-size: $fs-m;
     font-weight: $fw-regular;
-    line-height: $base*4;
-    margin-top: $base*3;
-    padding-bottom: $base*6;
+    line-height: $base * 4;
+    margin-top: $base * 3;
+    padding-bottom: $base * 6;
   }
 }
 

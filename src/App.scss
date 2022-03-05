@@ -2,11 +2,12 @@
 
 // === FONTS ===
 
-@mixin font ($font_name, $file_name, $weight, $style) {
+@mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("./assets/fonts/#{$file_name}.woff") format("woff"), url("./assets/fonts/#{$file_name}.woff2") format("woff2");
+    src: url("./assets/fonts/#{$file_name}.woff") format("woff"),
+      url("./assets/fonts/#{$file_name}.woff2") format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};
   }
@@ -26,7 +27,7 @@ body {
   @include spartan;
   background-color: $color-white;
   margin: 0;
-  
+
   &::-webkit-scrollbar {
     width: $base;
   }
@@ -41,36 +42,36 @@ body {
 }
 
 .outer__container {
-  max-width: $base*256;
+  max-width: $base * 256;
   margin: 0 auto;
   padding: 0;
 }
 
 .inner__container {
-  max-width: $base*222;
+  max-width: $base * 222;
   margin: 0 auto;
-  padding: 0 $base*17;
+  padding: 0 $base * 17;
 
   @media (max-width: $breakpoint-lg-min) {
-    padding: 0 $base*8;
+    padding: 0 $base * 8;
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    padding: 0 $base*4;
+    padding: 0 $base * 4;
   }
 }
 
 .button__dark {
   @include spartan;
   display: block;
-  width: $base*68;
-  height: $base*13;
-  margin: $base*5 auto 0 auto;
+  width: $base * 68;
+  height: $base * 13;
+  margin: $base * 5 auto 0 auto;
   padding: 0;
   font-size: $fs-l;
   font-weight: $fw-medium;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   background-color: $color-dark;
   border: none;
   text-transform: uppercase;
@@ -79,9 +80,9 @@ body {
 
 .button__loading {
   display: block;
-  margin: $base*9 auto 0 auto;
+  margin: $base * 9 auto 0 auto;
   padding: 0;
-  padding-right: $base*2;
+  padding-right: $base * 2;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -89,12 +90,12 @@ body {
 
 .button__filter {
   @include flexCenter;
-  width: $base*6;
-  height: $base*6;
+  width: $base * 6;
+  height: $base * 6;
   margin: 0;
   padding: 0;
   background-color: transparent;
-  background-image: url('./assets/img/filter.svg');
+  background-image: url("./assets/img/filter.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -102,28 +103,28 @@ body {
 }
 
 .button__grid__list {
-  width: $base*4;
-  height: $base*4;
-  background-image: url('./assets/img/list.svg');
+  width: $base * 4;
+  height: $base * 4;
+  background-image: url("./assets/img/list.svg");
 }
 
 .button__grid__square {
-  width: $base*4;
-  height: $base*4;
-  background-image: url('./assets/img/square.svg');
+  width: $base * 4;
+  height: $base * 4;
+  background-image: url("./assets/img/square.svg");
 }
 
 .button__sorting {
-  width: $base*3;
-  height: $base*3;
-  background-image: url('./assets/img/arrowdown.svg');
+  width: $base * 3;
+  height: $base * 3;
+  background-image: url("./assets/img/arrowdown.svg");
 }
 
 .button__all {
   @include flexCenter;
   width: 100%;
   margin: 0;
-  margin-top: $base*10;
+  margin-top: $base * 10;
   padding: 0;
   text-align: center;
   background-color: $color-gr-white;
@@ -132,7 +133,7 @@ body {
   .button__all__link {
     @include spartan;
     width: 100%;
-    padding: $base*3 0;
+    padding: $base * 3 0;
     font-size: $fs-s;
     font-weight: $fw-medium;
     letter-spacing: 1px;
@@ -148,12 +149,12 @@ body {
   @media (max-width: $breakpoint-xs-min) {
     width: 35%;
   }
-  
+
   .header-nav-logo {
     display: block;
-    width: $base*30;
-    height: $base*4;
-    background-image: url('./assets/img/clevershop.svg');
+    width: $base * 30;
+    height: $base * 4;
+    background-image: url("./assets/img/clevershop.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -193,8 +194,8 @@ a {
 .icon {
   display: flex;
   align-items: center;
-  width: $base*4;
-  height: $base*4;
+  width: $base * 4;
+  height: $base * 4;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,19 +212,19 @@ a {
 //     margin: 0;
 //     padding: 0;
 //     cursor: pointer;
-    
+
 //     &:nth-child(1) {
 //       background-image: url('./assets/img/facebook.svg');
 //     }
-    
+
 //     &:nth-child(2) {
 //       background-image: url('./assets/img/twitter.svg');
 //     }
-    
+
 //     &:nth-child(3) {
 //       background-image: url('./assets/img/instagram.svg');
 //     }
-    
+
 //     &:nth-child(4) {
 //       background-image: url('./assets/img/pinterest.svg');
 //     }

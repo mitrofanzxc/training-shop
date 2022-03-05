@@ -3,18 +3,17 @@
 // === SUBSCRIBE ===
 
 .subscribe {
-  margin-top: $base*19;
-  padding: $base*12 0 $base*12 0;
+  margin-top: $base * 19;
+  padding: $base * 12 0 $base * 12 0;
   overflow-y: hidden;
-  background: rgb(243,242,242);
-  background: linear-gradient(180deg, rgba(243,242,242,1) 0%, rgba(220,219,219,1) 100%);
+  background: rgb(243, 242, 242);
+  background: linear-gradient(180deg, rgba(243, 242, 242, 1) 0%, rgba(220, 219, 219, 1) 100%);
 
   @media (max-width: $breakpoint-xxs-min) {
-    padding: $base*4 0 $base*4 0;
+    padding: $base * 4 0 $base * 4 0;
   }
 
   .inner__container {
-
     @media (max-width: $breakpoint-xxs-min) {
       padding: 0;
     }
@@ -24,7 +23,7 @@
     position: relative;
     width: 50%;
     margin: 0 auto;
-    padding: $base*16 0 $base*19 0;
+    padding: $base * 16 0 $base * 19 0;
     background-color: $color-white;
     text-align: center;
     border: $base;
@@ -35,10 +34,10 @@
       left: -43%;
       width: 311px;
       height: 584px;
-      background-image: url('./assets/img/form__woman.png');
+      background-image: url("./assets/img/form__woman.png");
       background-size: contain;
       background-repeat: no-repeat;
-      content: '';
+      content: "";
       z-index: 2;
 
       @media (max-width: $breakpoint-lg-min) {
@@ -56,10 +55,10 @@
       right: -36%;
       width: 219px;
       height: 524px;
-      background-image: url('./assets/img/form__man.png');
+      background-image: url("./assets/img/form__man.png");
       background-size: contain;
       background-repeat: no-repeat;
-      content: '';
+      content: "";
       z-index: 2;
 
       @media (max-width: $breakpoint-lg-min) {
@@ -76,14 +75,14 @@
     }
 
     @media (max-width: $breakpoint-xxs-min) {
-      padding: $base*4 0 $base*4 0;
+      padding: $base * 4 0 $base * 4 0;
     }
 
     .form__fieldset {
       margin: 0;
       padding: 0;
       border: none;
-      
+
       .form__legend {
         font-size: $fs-xs;
         font-weight: $fw-semi-bold;
@@ -93,7 +92,7 @@
       }
 
       .h2 {
-        margin-top: $base*3;
+        margin-top: $base * 3;
         font-size: $fs-xxl;
 
         .sale {
@@ -104,9 +103,9 @@
       .input__email {
         @include spartan;
         display: block;
-        width: $base*68;
-        height: $base*13;
-        margin: $base*7 auto 0 auto;
+        width: $base * 68;
+        height: $base * 13;
+        margin: $base * 7 auto 0 auto;
         padding: 0;
         font-size: $fs-l;
         font-weight: $fw-medium;
@@ -128,7 +127,6 @@
       }
 
       .button__dark {
-
         @media (max-width: $breakpoint-md-min) {
           width: 63%;
         }

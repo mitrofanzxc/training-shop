@@ -3,11 +3,10 @@
 // === FILTER ===
 
 .filter {
-
   .filter__list {
     @include flexSpaceBetween;
-    height: $base*6;
-    margin: $base*7 0 $base*6 0;
+    height: $base * 6;
+    margin: $base * 7 0 $base * 6 0;
     padding: 0;
     list-style: none;
 
@@ -18,7 +17,7 @@
         @include flexCenter;
         margin: 0;
         padding: 0;
-        gap: $base*2;
+        gap: $base * 2;
         list-style: none;
 
         @media (max-width: $breakpoint-xs-min) {
@@ -36,8 +35,8 @@
       }
 
       .buttons__grid {
-        margin-left: $base*7;
-        gap: $base*5;
+        margin-left: $base * 7;
+        gap: $base * 5;
 
         @media (max-width: $breakpoint-xs-min) {
           margin-left: 0;

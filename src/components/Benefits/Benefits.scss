@@ -7,26 +7,26 @@
 
   .benefits__wrapper {
     @include flexSpaceBetween;
-    margin: $base*5 0;
+    margin: $base * 5 0;
     padding: 0;
     list-style: none;
 
     @media (max-width: $breakpoint-sm-min) {
       align-items: flex-start;
       flex-direction: column;
-      gap: $base*2;
+      gap: $base * 2;
     }
 
     .benefits__wrapper__item {
       display: flex;
       align-items: center;
-      gap: $base*3;
+      gap: $base * 3;
     }
 
     .benefits__item {
       @include flexCenter;
-      min-width: $base*6;
-      min-height: $base*6;
+      min-width: $base * 6;
+      min-height: $base * 6;
       margin: 0;
       background-size: contain;
       background-position: center;
@@ -34,15 +34,15 @@
     }
 
     .delivery {
-      background-image: url('./assets/img/delivery.svg');
+      background-image: url("./assets/img/delivery.svg");
     }
 
     .refresh {
-      background-image: url('./assets/img/refresh.svg');
+      background-image: url("./assets/img/refresh.svg");
     }
 
     .support {
-      background-image: url('./assets/img/support.svg');
+      background-image: url("./assets/img/support.svg");
     }
 
     .benefits__text {
@@ -61,7 +61,7 @@
     .h4 {
       font-size: $fs-xs;
       font-weight: $fw-medium;
-      line-height: $base*4;
+      line-height: $base * 4;
       color: $color-dark-09;
     }
   }

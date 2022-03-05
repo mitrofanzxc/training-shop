@@ -3,16 +3,15 @@
 // === BANNERS SECTION ===
 
 .banners__section {
-  
   .banners__section__container {
     @include flexSpaceBetween;
-    margin: $base*18 0 0 0;
+    margin: $base * 18 0 0 0;
     padding: 0;
     list-style: none;
 
     @media (max-width: $breakpoint-md-min) {
       flex-direction: column;
-      gap: $base*4;
+      gap: $base * 4;
     }
   }
 
@@ -30,7 +29,7 @@
       height: auto;
     }
   }
-  
+
   .banners__section__container__item__title {
     position: absolute;
     margin: 0;
@@ -45,25 +44,25 @@
     }
 
     .h3 {
-      padding-top: $base*5;
+      padding-top: $base * 5;
       font-size: $fs-xs;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
       color: $color-dark-06;
 
       @media (max-width: $breakpoint-xxs-min) {
-        padding: $base*2 0 0 0;
+        padding: $base * 2 0 0 0;
       }
     }
 
     .h2 {
-      padding: $base*3 $base*4;
+      padding: $base * 3 $base * 4;
       font-size: $fs-l;
       font-weight: $fw-semi-bold;
       letter-spacing: 1px;
 
       @media (max-width: $breakpoint-xxs-min) {
-        padding: $base*2 0;
+        padding: $base * 2 0;
       }
 
       .sale {
