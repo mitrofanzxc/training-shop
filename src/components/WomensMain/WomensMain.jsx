@@ -25,7 +25,7 @@ const WomensMain = () => {
           <div className="products__container">
             {PRODUCTS.women.slice(0, 8).map((PRODUCTSitem) => {
               let RATING = PRODUCTSitem.rating;
-              let RATING_STARS_FILLED = (
+              let RATING_STARS_FILL = (
                 <img
                   src={STAR_FILL}
                   alt="star"
@@ -39,12 +39,8 @@ const WomensMain = () => {
                   className="product__card__rating__item"
                 />
               );
-              let ARR_FILLED = Array(RATING).fill(RATING_STARS_FILLED);
-              let ARR_FILLED_FULL = ARR_FILLED.fill(
-                RATING_STARS_EMPTY,
-                ARR_FILLED.length,
-                5
-              );
+              let ARR_EMPTY = Array(5).fill(RATING_STARS_EMPTY);
+              let ARR_FILL = ARR_EMPTY.fill(RATING_STARS_FILL, 0, RATING);
               return (
                 <div className="product__card">
                   <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
@@ -61,16 +57,14 @@ const WomensMain = () => {
                     <div className="product__card__price__item">
                       {`$ ${PRODUCTSitem.price.toFixed(2)}`}
                     </div>
-                    <div className="product__card__rating">
-                      {ARR_FILLED_FULL}
-                    </div>
+                    <div className="product__card__rating">{ARR_FILL}</div>
                   </div>
                 </div>
               );
             })}
           </div>
           <button className="button__all">
-            <Link to="/men" className="button__all__link">
+            <Link to="/women" className="button__all__link">
               See All
             </Link>
           </button>
