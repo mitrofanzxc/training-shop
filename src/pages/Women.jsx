@@ -1,13 +1,13 @@
-import { WomenCatalogHeader } from "../components/WomenCatalogHeader/WomenCatalogHeader";
-import { WomenCatalogFilter } from "../components/WomenCatalogFilter/WomenCatalogFilter";
-import { WomenCatalog } from "../components/WomenCatalog/WomenCatalog";
+import { CatalogHeader } from "../components/CatalogHeader/CatalogHeader";
+import { CatalogFilter } from "../components/CatalogFilter/CatalogFilter";
+import { Catalog } from "../components/Catalog/Catalog";
 
 const Women = () => {
   return (
     <>
-      <WomenCatalogHeader />
-      <WomenCatalogFilter />
-      <WomenCatalog />
+      <CatalogHeader />
+      <CatalogFilter />
+      <Catalog />
     </>
   );
 };

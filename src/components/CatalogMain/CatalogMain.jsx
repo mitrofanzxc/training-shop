@@ -5,15 +5,15 @@ import { PRODUCTS } from "../../shared/Products";
 import STAR_FILL from "./assets/img/star__filled.svg";
 import STAR_EMPTY from "./assets/img/star.svg";
 
-import "./MensMain.scss";
+import "./CatalogMain.scss";
 
-const MensMain = () => {
+const CatalogMain = (props) => {
   return (
     <>
       <section className="catalog">
         <div className="inner__container">
           <div className="catalog__header">
-            <h2 className="h2">Men's</h2>
+            <h2 className="h2">{`${props.category}'s`}</h2>
             <div className="catalog__filter">
               <div className="catalog__filter__item">New Arrivals</div>
               <div className="catalog__filter__item">Specials</div>
@@ -23,24 +23,25 @@ const MensMain = () => {
             </div>
           </div>
           <div className="products__container">
-            {PRODUCTS.men.slice(0, 8).map((PRODUCTSitem) => {
-              let RATING = PRODUCTSitem.rating;
-              let RATING_STARS_FILL = (
+            {PRODUCTS[props.category].slice(0, 8).map((PRODUCTSitem) => {
+              const RATING = PRODUCTSitem.rating;
+              const RATING_STARS_FILL = (
                 <img
                   src={STAR_FILL}
                   alt="star"
                   className="product__card__rating__item"
                 />
               );
-              let RATING_STARS_EMPTY = (
+              const RATING_STARS_EMPTY = (
                 <img
                   src={STAR_EMPTY}
                   alt="star"
                   className="product__card__rating__item"
                 />
               );
-              let ARR_EMPTY = Array(5).fill(RATING_STARS_EMPTY);
-              let ARR_FILL = ARR_EMPTY.fill(RATING_STARS_FILL, 0, RATING);
+              const ARR_FILL = Array(5)
+                .fill(RATING_STARS_EMPTY)
+                .fill(RATING_STARS_FILL, 0, RATING);
               return (
                 <div className="product__card">
                   <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
@@ -64,7 +65,7 @@ const MensMain = () => {
             })}
           </div>
           <button className="button__all">
-            <Link to="/men" className="button__all__link">
+            <Link to={`/${props.category}`} className="button__all__link">
               See All
             </Link>
           </button>
@@ -74,4 +75,4 @@ const MensMain = () => {
   );
 };
 
-export { MensMain };
+export { CatalogMain };

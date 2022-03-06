@@ -1,13 +1,13 @@
-import { MenCatalogHeader } from "../components/MenCatalogHeader/MenCatalogHeader";
-import { MenCatalogFilter } from "../components/MenCatalogFilter/MenCatalogFilter";
-import { MenCatalog } from "../components/MenCatalog/MenCatalog";
+import { CatalogHeader } from "../components/CatalogHeader/CatalogHeader";
+import { CatalogFilter } from "../components/CatalogFilter/CatalogFilter";
+import { Catalog } from "../components/Catalog/Catalog";
 
 const Men = () => {
   return (
     <>
-      <MenCatalogHeader />
-      <MenCatalogFilter />
-      <MenCatalog />
+      <CatalogHeader />
+      <CatalogFilter />
+      <Catalog />
     </>
   );
 };

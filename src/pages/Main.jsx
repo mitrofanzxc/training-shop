@@ -1,7 +1,6 @@
 import { SliderBanners } from "../components/SliderBanners/SliderBanners";
 import { Benefits } from "../components/Benefits/Benefits";
-import { WomensMain } from "../components/WomensMain/WomensMain";
-import { MensMain } from "../components/MensMain/MensMain";
+import { CatalogMain } from "../components/CatalogMain/CatalogMain";
 import { Banners } from "../components/Banners/Banners";
 import { Subscribe } from "../components/Subscribe/Subscribe";
 import { Blog } from "../components/Blog/Blog";
@@ -11,8 +10,8 @@ const Main = () => {
     <>
       <SliderBanners />
       <Benefits />
-      <WomensMain />
-      <MensMain />
+      <CatalogMain category="women" />
+      <CatalogMain category="men" />
       <Banners />
       <Subscribe />
       <Blog />

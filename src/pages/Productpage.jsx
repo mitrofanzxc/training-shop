@@ -2,7 +2,7 @@ import { ProductPageHeader } from "../components/ProductPageHeader/ProductPageHe
 import { ProductCard } from "../components/ProductCard/ProductCard";
 import { RelatedProducts } from "../components/RelatedProducts/RelatedProducts";
 
-const Productpage = () => {
+const ProductPage = () => {
   return (
     <>
       <ProductPageHeader />
@@ -12,4 +12,4 @@ const Productpage = () => {
   );
 };
 
-export { Productpage };
+export { ProductPage };
