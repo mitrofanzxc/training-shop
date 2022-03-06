@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
 import { PRODUCTS } from "../../shared/Products";
-import { Rating } from "../Rating/Rating";
+
+import STAR_FILL from "./assets/img/star__filled.svg";
+import STAR_EMPTY from "./assets/img/star.svg";
 
 import "./MensMain.scss";
 
@@ -22,6 +24,27 @@ const MensMain = () => {
           </div>
           <div className="products__container">
             {PRODUCTS.men.slice(0, 8).map((PRODUCTSitem) => {
+              let RATING = PRODUCTSitem.rating;
+              let RATING_STARS_FILLED = (
+                <img
+                  src={STAR_FILL}
+                  alt="star"
+                  className="product__card__rating__item"
+                />
+              );
+              let RATING_STARS_EMPTY = (
+                <img
+                  src={STAR_EMPTY}
+                  alt="star"
+                  className="product__card__rating__item"
+                />
+              );
+              let ARR_FILLED = Array(RATING).fill(RATING_STARS_FILLED);
+              let ARR_FILLED_FULL = ARR_FILLED.fill(
+                RATING_STARS_EMPTY,
+                ARR_FILLED.length,
+                5
+              );
               return (
                 <div className="product__card">
                   <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
@@ -38,7 +61,9 @@ const MensMain = () => {
                     <div className="product__card__price__item">
                       {`$ ${PRODUCTSitem.price.toFixed(2)}`}
                     </div>
-                    <Rating />
+                    <div className="product__card__rating">
+                      {ARR_FILLED_FULL}
+                    </div>
                   </div>
                 </div>
               );

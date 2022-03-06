@@ -82,25 +82,4 @@
   }
 }
 
-.product__card__rating {
-  @include flexSpaceBetween;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  .product__card__rating__item {
-    @include flexCenter;
-    list-style: none;
-    width: $base * 3;
-    height: $base * 3;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-    &:nth-child(-n + 5) {
-      background-image: url("./assets/img/star__filled.svg");
-    }
-  }
-}
-
 // === / CATALOG HEADER ===

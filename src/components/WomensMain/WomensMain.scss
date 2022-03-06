@@ -45,35 +45,12 @@
 // === RATING ===
 
 .product__card__rating {
-  @include flexSpaceBetween;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: $breakpoint-md-min) {
-    width: 25%;
-  }
-
-  @media (max-width: $breakpoint-sm-min) {
-    width: 30%;
-  }
-
-  @media (max-width: $breakpoint-sm-min) {
-    width: 35%;
-  }
-
-  @media (max-width: $breakpoint-xs-min) {
-    width: 40%;
-  }
-
-  @media (max-width: $breakpoint-xxs-min) {
-    width: 45%;
-  }
+  display: flex;
+  align-items: center;
 
   .product__card__rating__item {
-    @include flexCenter;
-    list-style: none;
-    width: 14px;
+    display: inline-block;
+    width: $base * 3;
     height: $base * 3;
   }
 }

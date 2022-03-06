@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 
 import { PRODUCTS } from "../../shared/Products";
 
+import STAR_FILL from "./assets/img/star__filled.svg";
+import STAR_EMPTY from "./assets/img/star.svg";
+
 import "./WomensMain.scss";
 
 const WomensMain = () => {
@@ -24,10 +27,23 @@ const WomensMain = () => {
               let RATING = PRODUCTSitem.rating;
               let RATING_STARS_FILLED = (
                 <img
-                  src="./assets/img/star__filled.svg"
+                  src={STAR_FILL}
                   alt="star"
                   className="product__card__rating__item"
                 />
+              );
+              let RATING_STARS_EMPTY = (
+                <img
+                  src={STAR_EMPTY}
+                  alt="star"
+                  className="product__card__rating__item"
+                />
+              );
+              let ARR_FILLED = Array(RATING).fill(RATING_STARS_FILLED);
+              let ARR_FILLED_FULL = ARR_FILLED.fill(
+                RATING_STARS_EMPTY,
+                ARR_FILLED.length,
+                5
               );
               return (
                 <div className="product__card">
@@ -46,7 +62,7 @@ const WomensMain = () => {
                       {`$ ${PRODUCTSitem.price.toFixed(2)}`}
                     </div>
                     <div className="product__card__rating">
-                      {Array(RATING).fill(RATING_STARS_FILLED)}
+                      {ARR_FILLED_FULL}
                     </div>
                   </div>
                 </div>
