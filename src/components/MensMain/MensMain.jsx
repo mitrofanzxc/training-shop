@@ -45,6 +45,7 @@ const MensMain = () => {
                 ARR_FILLED.length,
                 5
               );
+              console.log(ARR_FILLED_FULL);
               return (
                 <div className="product__card">
                   <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
