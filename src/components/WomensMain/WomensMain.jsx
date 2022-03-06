@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { ProductCardDataBaseWomen } from "../../shared/ProductCardDataBaseWomen";
-import { Rating } from "../Rating/Rating";
+import { PRODUCTS } from "../../shared/Products";
 
 import "./WomensMain.scss";
 
@@ -21,35 +20,41 @@ const WomensMain = () => {
             </div>
           </div>
           <div className="products__container">
-            {ProductCardDataBaseWomen.map((ProductCardDataBaseWomenItem) => {
+            {PRODUCTS.women.slice(0, 8).map((PRODUCTSitem) => {
+              let RATING = PRODUCTSitem.rating;
+              let RATING_STARS_FILLED = (
+                <img
+                  src="./assets/img/star__filled.svg"
+                  alt="star"
+                  className="product__card__rating__item"
+                />
+              );
               return (
                 <div className="product__card">
-                  <div>
-                    <Link
-                      to={`/${ProductCardDataBaseWomenItem.productType}/${ProductCardDataBaseWomenItem.id}`}
-                    >
-                      <img
-                        src={ProductCardDataBaseWomenItem.img}
-                        className={ProductCardDataBaseWomenItem.className}
-                        alt={ProductCardDataBaseWomenItem.alt}
-                      />
-                    </Link>
-                  </div>
+                  <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
+                    <img
+                      src={`https://training.cleverland.by/shop${PRODUCTSitem.images[0].url}`}
+                      className="product__card__image"
+                      alt="Product Card Women Img"
+                    />
+                  </Link>
                   <div className="product__card__title">
-                    {ProductCardDataBaseWomenItem.header}
+                    {PRODUCTSitem.name}
                   </div>
                   <div className="product__card__price__list">
                     <div className="product__card__price__item">
-                      {ProductCardDataBaseWomenItem.price}
+                      {`$ ${PRODUCTSitem.price.toFixed(2)}`}
                     </div>
-                    <Rating />
+                    <div className="product__card__rating">
+                      {Array(RATING).fill(RATING_STARS_FILLED)}
+                    </div>
                   </div>
                 </div>
               );
             })}
           </div>
           <button className="button__all">
-            <Link to="/women" className="button__all__link">
+            <Link to="/men" className="button__all__link">
               See All
             </Link>
           </button>

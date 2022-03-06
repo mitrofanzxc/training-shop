@@ -31,7 +31,6 @@ const MensMain = () => {
                       alt="Product Card Men Img"
                     />
                   </Link>
-
                   <div className="product__card__title">
                     {PRODUCTSitem.name}
                   </div>

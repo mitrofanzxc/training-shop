@@ -81,30 +81,6 @@
       color: $color-dark;
     }
   }
-
-  .product__card__rating {
-    @include flexSpaceBetween;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    .product__card__rating__item {
-      @include flexCenter;
-      list-style: none;
-      width: 14px;
-      height: $base * 3;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      &:nth-child(-n + 4) {
-        background-image: url("./assets/img/star__filled.svg");
-      }
-
-      &:nth-child(5) {
-        background-image: url("./assets/img/star.svg");
-      }
-    }
-  }
 }
 
 // === / CATALOG ===
