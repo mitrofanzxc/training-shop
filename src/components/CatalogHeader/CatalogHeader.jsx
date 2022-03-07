@@ -1,6 +1,6 @@
-import "./MenCatalogHeader.scss";
+import "./CatalogHeader.scss";
 
-const MenCatalogHeader = () => {
+const CatalogHeader = () => {
   return (
     <>
       <section className="catalog__header">
@@ -35,4 +35,4 @@ const MenCatalogHeader = () => {
   );
 };
 
-export { MenCatalogHeader };
+export { CatalogHeader };

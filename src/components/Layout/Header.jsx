@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { HeaderNav } from "../../shared/HeaderNav";
-import { ContactsUl } from "../../shared/ContactsUl";
+import { ContactsListHeader } from "../../shared/ContactsList";
 import { Socials } from "../Socials/Socials";
 
 import "./Header.scss";
@@ -17,31 +17,25 @@ const Header = () => {
       <header className="header__first outer__container">
         <div className="inner__container">
           <div className="header__first__wrapper">
-            <div className="contacts__wrapper">
-              {ContactsUl.slice(0, -1).map((ContactsUlLi) => {
-                return (
-                  <>
-                    <div>
-                      <img
-                        src={ContactsUlLi.src}
-                        alt={ContactsUlLi.alt}
-                        className={ContactsUlLi.className}
-                      />
-                    </div>
-                    <div>
-                      <a
-                        href={ContactsUlLi.link}
-                        target={ContactsUlLi.target}
-                        rel={ContactsUlLi.rel}
-                        className={ContactsUlLi.className}
-                      >
-                        {ContactsUlLi.description}
-                      </a>
-                    </div>
-                  </>
-                );
-              })}
-            </div>
+            {ContactsListHeader.map((ContactsListHeaderItem) => {
+              return (
+                <>
+                  <img
+                    src={ContactsListHeaderItem.src}
+                    alt={ContactsListHeaderItem.alt}
+                    className="header__first__wrapper__img"
+                  />
+                  <a
+                    href={ContactsListHeaderItem.link}
+                    target={ContactsListHeaderItem.target}
+                    rel={ContactsListHeaderItem.rel}
+                    className="header__first__wrapper__link"
+                  >
+                    {ContactsListHeaderItem.description}
+                  </a>
+                </>
+              );
+            })}
           </div>
           <Socials />
         </div>

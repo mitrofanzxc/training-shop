@@ -9,7 +9,6 @@ import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg"
 import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
-import { Rating } from "../Rating/Rating";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -224,9 +223,7 @@ const ProductCard = () => {
                   <div className="reviews__list__item__sublist">
                     <div className="reviews__list__item__sublist__item">
                       <div className="reviews__list__item__sublist__item__sublist">
-                        <div className="reviews__list__item__sublist__item__sublist__item">
-                          <Rating />
-                        </div>
+                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
                           2 Reviews
                         </div>
@@ -252,9 +249,7 @@ const ProductCard = () => {
                         <div className="reviews__list__item__sublist__item__sublist__item">
                           3 month ago
                         </div>
-                        <div className="reviews__list__item__sublist__item__sublist__item">
-                          <Rating />
-                        </div>
+                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
                       </div>
                     </div>
                   </div>
@@ -274,9 +269,7 @@ const ProductCard = () => {
                         <div className="reviews__list__item__sublist__item__sublist__item">
                           3 month ago
                         </div>
-                        <div className="reviews__list__item__sublist__item__sublist__item">
-                          <Rating />
-                        </div>
+                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
                       </div>
                     </div>
                   </div>

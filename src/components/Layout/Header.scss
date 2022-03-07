@@ -29,10 +29,6 @@
 
   .header__first__wrapper {
     @include flexSpaceBetween;
-    gap: $base;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 
     @media (max-width: $breakpoint-xs-min) {
       align-items: flex-start;
@@ -40,27 +36,13 @@
       flex-direction: column;
     }
 
-    .header__first__wrapper__div {
-      display: flex;
-
-      &:nth-child(2) {
-        margin-left: $base * 4;
-
-        @media (max-width: $breakpoint-md-min) {
-          margin-left: 0;
-        }
-      }
-
-      &:nth-child(3) {
-        margin-left: $base * 4;
-
-        @media (max-width: $breakpoint-md-min) {
-          margin-left: 0;
-        }
-      }
+    .header__first__wrapper__img {
+      display: inline-block;
+      width: $base * 2;
+      height: $base * 2;
     }
 
-    .header__first__wrapper__item {
+    .header__first__wrapper__link {
       display: flex;
       align-items: center;
       height: $base * 3;
@@ -82,40 +64,6 @@
     .clock {
       background-image: url("./assets/img/clock__header.svg");
     }
-  }
-}
-
-.header__socials__wrapper {
-  @include flexCenter;
-  gap: $base;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  .header__socials__wrapper__item {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-
-    &:nth-child(1) {
-      background-image: url("./assets/img/facebook.svg");
-    }
-
-    &:nth-child(2) {
-      background-image: url("./assets/img/twitter.svg");
-    }
-
-    &:nth-child(3) {
-      background-image: url("./assets/img/instagram.svg");
-    }
-
-    &:nth-child(4) {
-      background-image: url("./assets/img/pinterest.svg");
-    }
-  }
-
-  .icon {
-    height: $base * 3;
   }
 }
 
@@ -235,36 +183,6 @@
 
       @media (max-width: $breakpoint-xs-min) {
         top: $base * 15;
-      }
-    }
-
-    .socials__wrapper {
-      gap: $base * 6;
-
-      @media (max-width: $breakpoint-xs-min) {
-        gap: $base * 3;
-      }
-
-      @media (max-width: $breakpoint-xs-min) {
-        gap: $base * 2;
-      }
-
-      .socials__wrapper__item {
-        &:nth-child(1) {
-          background-image: url("./assets/img/search.svg");
-        }
-
-        &:nth-child(2) {
-          background-image: url("./assets/img/globe.svg");
-        }
-
-        &:nth-child(3) {
-          background-image: url("./assets/img/user.svg");
-        }
-
-        &:nth-child(4) {
-          background-image: url("./assets/img/cart.svg");
-        }
       }
     }
   }

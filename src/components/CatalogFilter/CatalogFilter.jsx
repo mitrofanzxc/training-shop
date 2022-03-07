@@ -1,6 +1,6 @@
-import "./MenCatalogFilter.scss";
+import "./CatalogFilter.scss";
 
-const MenCatalogFilter = () => {
+const CatalogFilter = () => {
   return (
     <>
       <section className="filter">
@@ -41,4 +41,4 @@ const MenCatalogFilter = () => {
   );
 };
 
-export { MenCatalogFilter };
+export { CatalogFilter };

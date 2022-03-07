@@ -1,6 +1,6 @@
-import "./Subscribe.scss";
+import "./SubscribePrimary.scss";
 
-const Subscribe = () => {
+const SubscribePrimary = () => {
   return (
     <>
       <section className="subscribe">
@@ -27,4 +27,4 @@ const Subscribe = () => {
   );
 };
 
-export { Subscribe };
+export { SubscribePrimary };
