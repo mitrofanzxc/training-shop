@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
-import { HeaderNav } from "../../shared/HeaderNav";
+
 import { ContactsListHeader } from "../../shared/ContactsList";
 import { Socials } from "../Socials/Socials";
+import { HeaderNav } from "../../shared/HeaderNav";
 
 import "./Header.scss";
 
@@ -14,92 +15,85 @@ const Header = () => {
   };
   return (
     <>
-      <header className="header__first outer__container">
-        <div className="inner__container">
-          <div className="header__first__wrapper">
-            {ContactsListHeader.map((ContactsListHeaderItem) => {
-              return (
-                <>
-                  <img
-                    src={ContactsListHeaderItem.src}
-                    alt={ContactsListHeaderItem.alt}
-                    className="header__first__wrapper__img"
-                  />
-                  <a
-                    href={ContactsListHeaderItem.link}
-                    target={ContactsListHeaderItem.target}
-                    rel={ContactsListHeaderItem.rel}
-                    className="header__first__wrapper__link"
-                  >
-                    {ContactsListHeaderItem.description}
-                  </a>
-                </>
-              );
-            })}
-          </div>
-          <Socials />
-        </div>
-      </header>
-      <div className="header__second outer__container">
-        <div className="inner__container">
-          <h1 className="h1">
-            <Link
-              to="/"
-              className="header-nav-logo"
-              data-test-id="header-logo-link"
-            />
-          </h1>
-          <nav
-            className={isVisible ? "nav visible" : "nav"}
-            data-test-id="menu"
-          >
-            <ul
-              className={
-                isVisible
-                  ? "header__second__wrapper visible"
-                  : "header__second__wrapper"
-              }
-            >
-              {HeaderNav.map((HeaderNavItem) => {
+      <header className="outer__container">
+        <div className="header__first">
+          <div className="inner__container">
+            <div className="header__first__wrapper">
+              {ContactsListHeader.map((ContactsListHeaderItem) => {
                 return (
-                  <li
-                    className={
-                      isVisible
-                        ? "header__second__wrapper__item visible"
-                        : "header__second__wrapper__item"
-                    }
-                  >
-                    <Link
-                      onClick={handleToggle}
-                      key={HeaderNavItem.id}
-                      to={`/${HeaderNavItem.path}`}
-                      className="nav__link"
-                      data-test-id={`menu-link-${HeaderNavItem.path}`}
+                  <>
+                    <img
+                      src={ContactsListHeaderItem.src}
+                      alt={ContactsListHeaderItem.alt}
+                      className="header__first__wrapper__img"
+                    />
+                    <a
+                      href={ContactsListHeaderItem.link}
+                      target={ContactsListHeaderItem.target}
+                      rel={ContactsListHeaderItem.rel}
+                      className="header__first__wrapper__link"
                     >
-                      {HeaderNavItem.header}
-                    </Link>
-                  </li>
+                      {ContactsListHeaderItem.description}
+                    </a>
+                  </>
                 );
               })}
-            </ul>
-          </nav>
-          <ul className="socials__wrapper">
-            <li className="socials__wrapper__item icon"></li>
-            <li className="socials__wrapper__item icon"></li>
-            <li className="socials__wrapper__item icon"></li>
-            <li className="socials__wrapper__item icon"></li>
-            <button
-              onClick={handleToggle}
-              className={isVisible ? "hamburger visible" : "hamburger"}
-              data-test-id="burger-menu-btn"
-            >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </button>
-          </ul>
+            </div>
+            <Socials />
+          </div>
         </div>
-      </div>
+        <div className="header__second">
+          <div className="inner__container">
+            <h1 className="h1">
+              <Link to="/" className="header__logo" />
+            </h1>
+            <nav className={isVisible ? "nav visible" : "nav"}>
+              <div
+                className={
+                  isVisible
+                    ? "header__second__wrapper visible"
+                    : "header__second__wrapper"
+                }
+              >
+                {HeaderNav.map((HeaderNavItem) => {
+                  return (
+                    <div
+                      className={
+                        isVisible
+                          ? "header__second__wrapper__item visible"
+                          : "header__second__wrapper__item"
+                      }
+                    >
+                      <Link
+                        onClick={handleToggle}
+                        key={HeaderNavItem.id}
+                        to={`/${HeaderNavItem.path}`}
+                        className="nav__link"
+                      >
+                        {HeaderNavItem.header}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </nav>
+            <div className="socials__wrapper">
+              <div className="socials__wrapper__item icon"></div>
+              <div className="socials__wrapper__item icon"></div>
+              <div className="socials__wrapper__item icon"></div>
+              <div className="socials__wrapper__item icon"></div>
+              <button
+                onClick={handleToggle}
+                className={isVisible ? "hamburger visible" : "hamburger"}
+              >
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
     </>
   );
 };

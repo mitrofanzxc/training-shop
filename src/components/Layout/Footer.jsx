@@ -27,7 +27,6 @@ const Footer = () => {
                         key={FooterNav1Link.id}
                         className={FooterNav1Link.className}
                         to={`/${FooterNav1Link.path}`}
-                        data-test-id={`footer-nav-link-${FooterNav1Link.path}`}
                       >
                         {FooterNav1Link.description}
                       </Link>
@@ -48,7 +47,6 @@ const Footer = () => {
                         key={FooterNav2Link.id}
                         className={FooterNav2Link.className}
                         to={`/${FooterNav2Link.path}`}
-                        data-test-id={`footer-nav-link-${FooterNav2Link.path}`}
                       >
                         {FooterNav2Link.description}
                       </Link>
@@ -69,7 +67,6 @@ const Footer = () => {
                         key={FooterNav3Link.id}
                         className={FooterNav3Link.className}
                         to={`/${FooterNav3Link.path}`}
-                        data-test-id={`footer-nav-link-${FooterNav3Link.path}`}
                       >
                         {FooterNav3Link.description}
                       </Link>

@@ -129,17 +129,17 @@ body {
   text-align: center;
   background-color: $color-gr-white;
   border: none;
+}
 
-  .button__all__link {
-    @include spartan;
-    width: 100%;
-    padding: $base * 3 0;
-    font-size: $fs-s;
-    font-weight: $fw-medium;
-    letter-spacing: 1px;
-    color: $color-dark-08;
-    text-transform: uppercase;
-  }
+.button__all__link {
+  @include spartan;
+  width: 100%;
+  padding: $base * 3 0;
+  font-size: $fs-s;
+  font-weight: $fw-medium;
+  letter-spacing: 1px;
+  color: $color-dark-08;
+  text-transform: uppercase;
 }
 
 .h1 {
@@ -149,19 +149,19 @@ body {
   @media (max-width: $breakpoint-xs-min) {
     width: 35%;
   }
+}
 
-  .header-nav-logo {
-    display: block;
-    width: $base * 30;
-    height: $base * 4;
-    background-image: url("./assets/img/clevershop.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.header__logo {
+  display: block;
+  width: $base * 30;
+  height: $base * 4;
+  background-image: url("./assets/img/clevershop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    @media (max-width: $breakpoint-xs-min) {
-      width: 100%;
-    }
+  @media (max-width: $breakpoint-xs-min) {
+    width: 100%;
   }
 }
 
@@ -190,45 +190,5 @@ a {
   text-decoration: none;
   color: $color-white;
 }
-
-.icon {
-  display: flex;
-  align-items: center;
-  width: $base * 4;
-  height: $base * 4;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-// .socials__wrapper {
-//   @include flexCenter;
-//   gap: $base*2;
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-
-//   .socials__wrapper__item {
-//     margin: 0;
-//     padding: 0;
-//     cursor: pointer;
-
-//     &:nth-child(1) {
-//       background-image: url('./assets/img/facebook.svg');
-//     }
-
-//     &:nth-child(2) {
-//       background-image: url('./assets/img/twitter.svg');
-//     }
-
-//     &:nth-child(3) {
-//       background-image: url('./assets/img/instagram.svg');
-//     }
-
-//     &:nth-child(4) {
-//       background-image: url('./assets/img/pinterest.svg');
-//     }
-//   }
-// }
 
 // === / COMMON ===
