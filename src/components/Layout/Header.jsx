@@ -27,12 +27,14 @@ const Header = () => {
                       src={ContactsListHeaderItem.src}
                       alt={ContactsListHeaderItem.alt}
                       className="header__first__wrapper__img"
+                      key={ContactsListHeaderItem.alt}
                     />
                     <a
                       href={ContactsListHeaderItem.link}
                       target={ContactsListHeaderItem.target}
                       rel={ContactsListHeaderItem.rel}
                       className="header__first__wrapper__link"
+                      key={ContactsListHeaderItem.alt}
                     >
                       {ContactsListHeaderItem.description}
                     </a>
@@ -58,22 +60,18 @@ const Header = () => {
               >
                 {HeaderNav.map((HeaderNavItem) => {
                   return (
-                    <div
+                    <Link
+                      onClick={handleToggle}
+                      to={`/${HeaderNavItem.path}`}
                       className={
                         isVisible
-                          ? "header__second__wrapper__item visible"
-                          : "header__second__wrapper__item"
+                          ? "header__second__wrapper__item nav__link visible"
+                          : "header__second__wrapper__item nav__link"
                       }
+                      key={HeaderNavItem.path}
                     >
-                      <Link
-                        onClick={handleToggle}
-                        key={HeaderNavItem.id}
-                        to={`/${HeaderNavItem.path}`}
-                        className="nav__link"
-                      >
-                        {HeaderNavItem.header}
-                      </Link>
-                    </div>
+                      {HeaderNavItem.header}
+                    </Link>
                   );
                 })}
               </div>
@@ -86,6 +84,7 @@ const Header = () => {
                       src={NavSecondaryListItem.src}
                       alt={NavSecondaryListItem.alt}
                       className={NavSecondaryListItem.className}
+                      key={NavSecondaryListItem.alt}
                     />
                   </>
                 );

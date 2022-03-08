@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
-import { FooterNav1 } from "../../shared/FooterNav";
-import { FooterNav2 } from "../../shared/FooterNav";
-import { FooterNav3 } from "../../shared/FooterNav";
+import { FooterNav } from "../../shared/FooterNav";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 import { ContactsListFooter } from "../Contacts/ContactsList";
 
@@ -17,66 +15,30 @@ const Footer = () => {
         <section className="footer__links">
           <div className="inner__container">
             <div className="footer__links__container">
-              <div className="footer__links__container__item">
-                <div className="footer__links__container__list">
-                  <div className="footer__links__container__list__header">
-                    Categories
-                  </div>
-                  {FooterNav1.map((FooterNav1Link) => {
-                    return (
-                      <div className="footer__links__container__list__item">
-                        <Link
-                          key={FooterNav1Link.id}
-                          className={FooterNav1Link.className}
-                          to={`/${FooterNav1Link.path}`}
-                        >
-                          {FooterNav1Link.description}
-                        </Link>
+              {FooterNav.map((FooterNavLinks) => {
+                return (
+                  <div className="footer__links__container__item">
+                    <div className="footer__links__container__list">
+                      <div className="footer__links__container__list__header">
+                        {FooterNavLinks.header}
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="footer__links__container__item">
-                <div className="footer__links__container__list">
-                  <div className="footer__links__container__list__header">
-                    Infomation
+                      {FooterNavLinks.links.map((FooterNavLink) => {
+                        return (
+                          <div className="footer__links__container__list__item">
+                            <Link
+                              key={FooterNavLink.id}
+                              className="footer__links__container__list__item__link"
+                              to={`/${FooterNavLink.path}`}
+                            >
+                              {FooterNavLink.description}
+                            </Link>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  {FooterNav2.map((FooterNav2Link) => {
-                    return (
-                      <div className="footer__links__container__list__item">
-                        <Link
-                          key={FooterNav2Link.id}
-                          className={FooterNav2Link.className}
-                          to={`/${FooterNav2Link.path}`}
-                        >
-                          {FooterNav2Link.description}
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="footer__links__container__item">
-                <div className="footer__links__container__list">
-                  <div className="footer__links__container__list__header">
-                    Useful links
-                  </div>
-                  {FooterNav3.map((FooterNav3Link) => {
-                    return (
-                      <div className="footer__links__container__list__item">
-                        <Link
-                          key={FooterNav3Link.id}
-                          className={FooterNav3Link.className}
-                          to={`/${FooterNav3Link.path}`}
-                        >
-                          {FooterNav3Link.description}
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+                );
+              })}
               <div className="footer__links__container__item">
                 <div className="footer__links__container__list">
                   <div className="footer__links__container__list__header">

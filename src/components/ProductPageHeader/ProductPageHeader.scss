@@ -11,47 +11,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
-    .catalog__header__wrapper__item {
-      .catalog__header__wrapper__item__subwrapper {
-        @include flexCenter;
-        gap: $base;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-
-        .catalog__header__wrapper__item__subwrapper__item {
-          font-size: $fs-xs;
-          color: $color-dark;
-
-          .catalog__header__wrapper__item__subwrapper__item__link {
-            color: $color-dark-06;
-          }
-
-          .arrow {
-            font-size: $fs-xxs;
-          }
-        }
-
-        .bold {
-          font-weight: $fw-bold;
-        }
-
-        .reviews {
-          padding-top: $base * 2;
-          font-weight: $fw-regular;
-        }
-
-        .share {
-          width: $base * 4;
-          height: $base * 4;
-          background-image: url("./assets/img/share.svg");
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-    }
   }
 
   .availability {
@@ -63,23 +22,61 @@
       flex-wrap: wrap;
     }
   }
+}
+.catalog__heading {
+  font-size: $fs-xxl;
+  margin: 0;
+  padding: $base * 2 0 $base * 5 0;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  .catalog__heading {
-    font-size: $fs-xxl;
-    margin: 0;
-    padding: $base * 2 0 $base * 5 0;
-    text-align: center;
-    text-transform: uppercase;
+.catalog__heading__item {
+  font-size: $fs-xxl;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: $base * 3 0 0 0;
+  text-align: center;
+  text-transform: none;
+}
+
+.catalog__header__wrapper__item__subwrapper {
+  @include flexCenter;
+  gap: $base;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .bold {
+    font-weight: $fw-bold;
   }
 
-  .catalog__heading__item {
-    font-size: $fs-xxl;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: $base * 3 0 0 0;
-    text-align: center;
-    text-transform: none;
+  .reviews {
+    padding-top: $base * 2;
+    font-weight: $fw-regular;
   }
+
+  .share {
+    width: $base * 4;
+    height: $base * 4;
+    background-image: url("./assets/img/share.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog__header__wrapper__item__subwrapper__item {
+  font-size: $fs-xs;
+  color: $color-dark;
+
+  .arrow {
+    font-size: $fs-xxs;
+  }
+}
+
+.catalog__header__wrapper__item__subwrapper__item__link {
+  color: $color-dark-06;
 }
 
 // === / CATALOG HEADER ===

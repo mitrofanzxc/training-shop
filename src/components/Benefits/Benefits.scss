@@ -4,67 +4,67 @@
 
 .benefits {
   border-bottom: 2px solid $color-gr-white;
+}
 
-  .benefits__wrapper {
-    @include flexSpaceBetween;
-    margin: $base * 5 0;
-    padding: 0;
-    list-style: none;
+.benefits__wrapper {
+  @include flexSpaceBetween;
+  margin: $base * 5 0;
+  padding: 0;
+  list-style: none;
 
-    @media (max-width: $breakpoint-sm-min) {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: $base * 2;
-    }
-
-    .benefits__wrapper__item {
-      display: flex;
-      align-items: center;
-      gap: $base * 3;
-    }
-
-    .benefits__item {
-      @include flexCenter;
-      min-width: $base * 6;
-      min-height: $base * 6;
-      margin: 0;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .delivery {
-      background-image: url("./assets/img/delivery.svg");
-    }
-
-    .refresh {
-      background-image: url("./assets/img/refresh.svg");
-    }
-
-    .support {
-      background-image: url("./assets/img/support.svg");
-    }
-
-    .benefits__text {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h3 {
-      font-size: $fs-xs;
-      font-weight: $fw-semi-bold;
-      letter-spacing: 1px;
-      color: $color-dark;
-      text-transform: uppercase;
-    }
-
-    .h4 {
-      font-size: $fs-xs;
-      font-weight: $fw-medium;
-      line-height: $base * 4;
-      color: $color-dark-09;
-    }
+  @media (max-width: $breakpoint-sm-min) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: $base * 2;
   }
+
+  .delivery {
+    background-image: url("./assets/img/delivery.svg");
+  }
+
+  .refresh {
+    background-image: url("./assets/img/refresh.svg");
+  }
+
+  .support {
+    background-image: url("./assets/img/support.svg");
+  }
+
+  .benefits__text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .h3 {
+    font-size: $fs-xs;
+    font-weight: $fw-semi-bold;
+    letter-spacing: 1px;
+    color: $color-dark;
+    text-transform: uppercase;
+  }
+
+  .h4 {
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    line-height: $base * 4;
+    color: $color-dark-09;
+  }
+}
+
+.benefits__wrapper__item {
+  display: flex;
+  align-items: center;
+  gap: $base * 3;
+}
+
+.benefits__item {
+  @include flexCenter;
+  min-width: $base * 6;
+  min-height: $base * 6;
+  margin: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 // === / BENEFITS ===

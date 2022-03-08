@@ -14,12 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
-          <Route path="men" element={<CategoryPage />}>
-            <Route path=":id" element={<ProductPage />} />
-          </Route>
-          <Route path="women" element={<CategoryPage />}>
-            <Route path=":id" element={<ProductPage />} />
-          </Route>
+          <Route path="men" element={<CategoryPage category="men" />} />
+          <Route path="men/:id" element={<ProductPage />} />
+          <Route path="women" element={<CategoryPage category="women" />} />
+          <Route path="women/:id" element={<ProductPage />} />
           <Route path="*" element={<MainPage />} />
         </Route>
       </Routes>

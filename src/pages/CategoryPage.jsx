@@ -5,9 +5,9 @@ import { Catalog } from "../components/Catalog/Catalog";
 const CategoryPage = (props) => {
   return (
     <>
-      <CatalogHeader />
+      <CatalogHeader category={`${props.category}`} />
       <CatalogFilter />
-      <Catalog category={`${props.path}`} />
+      <Catalog category={`${props.category}`} />
     </>
   );
 };
