@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ContactsListHeader } from "../Contacts/ContactsList";
 import { Socials } from "../Socials/Socials";
 import { HeaderNav } from "../../shared/HeaderNav";
+import { NavSecondaryList } from "../../shared/SocialsList";
 
 import "./Header.scss";
 
@@ -78,10 +79,17 @@ const Header = () => {
               </div>
             </nav>
             <div className="socials__wrapper">
-              <div className="socials__wrapper__item icon"></div>
-              <div className="socials__wrapper__item icon"></div>
-              <div className="socials__wrapper__item icon"></div>
-              <div className="socials__wrapper__item icon"></div>
+              {NavSecondaryList.map((NavSecondaryListItem) => {
+                return (
+                  <>
+                    <img
+                      src={NavSecondaryListItem.src}
+                      alt={NavSecondaryListItem.alt}
+                      className={NavSecondaryListItem.className}
+                    />
+                  </>
+                );
+              })}
               <button
                 onClick={handleToggle}
                 className={isVisible ? "hamburger visible" : "hamburger"}

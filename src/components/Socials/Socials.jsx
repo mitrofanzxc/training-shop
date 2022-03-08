@@ -1,4 +1,4 @@
-import { SocialsUl } from "../../shared/SocialsUl";
+import { SocialsList } from "../../shared/SocialsList";
 
 import "./Socials.scss";
 
@@ -6,15 +6,15 @@ const Socials = () => {
   return (
     <>
       <div className="socials__wrapper">
-        {SocialsUl.map((SocialsUlLi) => {
+        {SocialsList.map((SocialsListLi) => {
           return (
             <a
-              href={SocialsUlLi.link}
-              target={SocialsUlLi.target}
-              rel={SocialsUlLi.rel}
-              className={SocialsUlLi.className}
+              href={SocialsListLi.link}
+              target={SocialsListLi.target}
+              rel={SocialsListLi.rel}
+              className={SocialsListLi.className}
             >
-              <img src={SocialsUlLi.src} alt={SocialsUlLi.alt} />
+              <img src={SocialsListLi.src} alt={SocialsListLi.alt} />
             </a>
           );
         })}
