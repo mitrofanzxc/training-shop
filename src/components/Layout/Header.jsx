@@ -16,7 +16,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="outer__container">
+      <header>
         <div className="header__first">
           <div className="inner__container">
             <div className="header__first__wrapper">

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Header } from "./components/Layout/Header";
-import { Footer } from "./components/Layout/Footer";
+import { Layout } from "./components/Layout/Layout";
+
 import { MainPage } from "./pages/MainPage";
 import { CategoryPage } from "./pages/CategoryPage";
 import { ProductPage } from "./pages/ProductPage";
@@ -11,16 +11,18 @@ import "./App.scss";
 function App() {
   return (
     <>
-      <Header />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/men" element={<CategoryPage />} />
-        <Route path="/men/:id" element={<ProductPage />} />
-        <Route path="/women" element={<CategoryPage />} />
-        <Route path="/women/:id" element={<ProductPage />} />
-        <Route path="*" element={<MainPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainPage />} />
+          <Route path="men" element={<CategoryPage />}>
+            <Route path=":id" element={<ProductPage />} />
+          </Route>
+          <Route path="women" element={<CategoryPage />}>
+            <Route path=":id" element={<ProductPage />} />
+          </Route>
+          <Route path="*" element={<MainPage />} />
+        </Route>
       </Routes>
-      <Footer />
     </>
   );
 }

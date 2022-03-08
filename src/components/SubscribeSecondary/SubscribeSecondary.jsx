@@ -5,7 +5,7 @@ import "./SubscribeSecondary.scss";
 const SubscribeSecondary = () => {
   return (
     <>
-      <section className="subscribe__secondary outer__container">
+      <section className="subscribe__secondary">
         <div className="inner__container">
           <div className="subscribe__secondary__container">
             <div className="subscribe__secondary__container__item">
