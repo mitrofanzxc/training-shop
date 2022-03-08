@@ -39,6 +39,7 @@
       .footer__links__container__list__item {
         display: flex;
         align-items: center;
+        gap: $base * 2;
         font-size: $fs-xs;
         font-weight: $fw-regular;
         color: $color-dark-08;
@@ -119,29 +120,3 @@
 }
 
 // === FOOTER ===
-
-.contacts__wrapper {
-  flex-direction: column;
-  gap: $base * 4;
-
-  .contacts__wrapper__item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: $base * 2;
-    font-size: $fs-xs;
-    font-weight: $fw-regular;
-    color: $color-dark-08;
-
-    .contacts__wrapper__item__img {
-      width: 8%;
-      height: auto;
-    }
-
-    .contacts__wrapper__item__link {
-      font-size: $fs-xs;
-      font-weight: $fw-regular;
-      color: $color-dark-08;
-    }
-  }
-}

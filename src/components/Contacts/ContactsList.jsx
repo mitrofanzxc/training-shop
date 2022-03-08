@@ -1,11 +1,11 @@
-import PhoneHeader from "../components/Contacts/assets/img/phone__header.svg";
-import LocationHeader from "../components/Contacts/assets/img/location__header.svg";
-import ClockHeader from "../components/Contacts/assets/img/clock__header.svg";
+import PhoneHeader from "./assets/img/phone__header.svg";
+import LocationHeader from "./assets/img/location__header.svg";
+import ClockHeader from "./assets/img/clock__header.svg";
 
-import PhoneFooter from "../components/Contacts/assets/img/phone.svg";
-import LocationFooter from "../components/Contacts/assets/img/location.svg";
-import ClockFooter from "../components/Contacts/assets/img/clock.svg";
-import MailFooter from "../components/Contacts/assets/img/mail.svg";
+import PhoneFooter from "./assets/img/phone.svg";
+import LocationFooter from "./assets/img/location.svg";
+import ClockFooter from "./assets/img/clock.svg";
+import MailFooter from "./assets/img/mail.svg";
 
 const ContactsListHeader = [
   {

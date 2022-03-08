@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { ContactsListHeader } from "../../shared/ContactsList";
+import { ContactsListHeader } from "../Contacts/ContactsList";
 import { Socials } from "../Socials/Socials";
 import { HeaderNav } from "../../shared/HeaderNav";
 
