@@ -23,7 +23,9 @@ const ProductCard = (props) => {
   const ProductImages = props.images;
   const ProductSizes = props.sizes;
   const ProductPrice = props.price;
-  const ProductColors = [...new Set(ProductImages.map((x) => x.color))];
+  const ProductUniqueColors = [
+    ...new Set(ProductImages.map((ProductImage) => ProductImage.color)),
+  ];
   const ProductMaterial = props.material;
   const ProductReviews = props.reviews;
   const navigationPrevRef = useRef(null);
@@ -160,10 +162,8 @@ const ProductCard = (props) => {
                 <p className="paragraph">{ProductSizes[0]}</p>
               </div>
               <div className="size__img">
-                {ProductSizes.map((ProductSizesItem) => {
-                  return (
-                    <div className="size__img__item">{ProductSizesItem}</div>
-                  );
+                {ProductSizes.map((ProductSize) => {
+                  return <div className="size__img__item">{ProductSize}</div>;
                 })}
               </div>
               <div className="size__guide">
@@ -220,18 +220,16 @@ const ProductCard = (props) => {
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Color:</h4>
-                  {ProductColors.map((ProductColorsItem) => {
+                  {ProductUniqueColors.map((ProductUniqueColor) => {
                     return (
-                      <p className="paragraph">{`${ProductColorsItem},`}</p>
+                      <p className="paragraph">{`${ProductUniqueColor},`}</p>
                     );
                   })}
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Size:</h4>
-                  {ProductSizes.map((ProductSizesItem) => {
-                    return (
-                      <p className="paragraph">{`${ProductSizesItem},`}</p>
-                    );
+                  {ProductSizes.map((ProductSize) => {
+                    return <p className="paragraph">{`${ProductSize},`}</p>;
                   })}
                 </div>
                 <div className="additional__information__list__property additional__text">

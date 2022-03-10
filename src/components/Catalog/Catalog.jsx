@@ -35,7 +35,7 @@ const Catalog = (props) => {
                 .fill(RATING_STARS_FILL, 0, RATING);
               return (
                 <div className="product__card">
-                  <Link to={`${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
+                  <Link to={`/${PRODUCTSitem.category}/${PRODUCTSitem.id}`}>
                     <img
                       src={`https://training.cleverland.by/shop${PRODUCTSitem.images[0].url}`}
                       className="product__card__image"
