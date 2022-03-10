@@ -22,12 +22,13 @@ const ProductPage = (props) => {
   return (
     <>
       <ProductPageHeader
-        name={ProductName}
         category={ProductCategory}
+        name={ProductName}
         reviews={ProductReviews}
         rating={ProductRating}
       />
       <ProductCard
+        category={ProductCategory}
         images={ProductImages}
         sizes={ProductSizes}
         price={ProductPrice}

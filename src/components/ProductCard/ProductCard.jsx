@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
 import STAR_FILL from "./assets/img/star__filled.svg";
@@ -18,6 +18,8 @@ import "swiper/scss/thumbs";
 import "./ProductCard.scss";
 
 const ProductCard = (props) => {
+  const { id } = useParams();
+  const ProductCategory = props.category;
   const ProductImages = props.images;
   const ProductSizes = props.sizes;
   const ProductPrice = props.price;
@@ -74,13 +76,13 @@ const ProductCard = (props) => {
                     />
                   </div>
                   <div className="product__card__slider__vertical">
-                    {ProductImages.map((ProductImagesItem) => {
+                    {ProductImages.map((ProductImage) => {
                       return (
                         <SwiperSlide>
                           <img
-                            src={`https://training.cleverland.by/shop${ProductImagesItem.url}`}
+                            src={`https://training.cleverland.by/shop${ProductImage.url}`}
                             alt="product__card__slider__vertical__item__img"
-                            key={ProductImagesItem.id}
+                            key={ProductImage.id}
                             className="product__card__slider__vertical__item__img"
                           />
                         </SwiperSlide>
@@ -107,13 +109,13 @@ const ProductCard = (props) => {
                   }}
                 >
                   <div className="product__card__main">
-                    {ProductImages.map((ProductImagesItem) => {
+                    {ProductImages.map((ProductImage) => {
                       return (
                         <SwiperSlide>
                           <img
-                            src={`https://training.cleverland.by/shop${ProductImagesItem.url}`}
+                            src={`https://training.cleverland.by/shop${ProductImage.url}`}
                             alt="product__card__main__img"
-                            key={ProductImagesItem.id}
+                            key={ProductImage.id}
                             className="product__card__main__img"
                           />
                         </SwiperSlide>
@@ -139,19 +141,17 @@ const ProductCard = (props) => {
                 <p className="paragraph">Blue</p>
               </div>
               <div className="color__img">
-                {ProductCardColorImg.map((ProductCardColorImgItem) => {
+                {ProductImages.map((ProductImage) => {
                   return (
-                    <div className="color__img__item">
-                      <Link
-                        to={ProductCardColorImgItem.path}
-                        className={ProductCardColorImgItem.className}
-                      >
+                    <Link to={`/${ProductCategory}/${id}`}>
+                      <div className="color__img__item">
                         <img
-                          src={ProductCardColorImgItem.img}
-                          alt={ProductCardColorImgItem.alt}
+                          src={`https://training.cleverland.by/shop${ProductImage.url}`}
+                          alt={ProductImage.color}
+                          className="color__img__item__img"
                         />
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   );
                 })}
               </div>
@@ -285,8 +285,8 @@ const ProductCard = (props) => {
                   return (
                     <>
                       <div
-                        className="reviews__list__item"
                         key={ProductReview.id}
+                        className="reviews__list__item"
                       >
                         <div className="reviews__list__item__sublist">
                           <div className="reviews__list__item__sublist__item name">

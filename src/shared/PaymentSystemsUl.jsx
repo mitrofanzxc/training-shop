@@ -10,44 +10,37 @@ const PaymentSystemsUl = [
   {
     src: Stripe,
     alt: "Stripe",
-    className: "footer__wrapper__item",
-    key: "Stripe",
+    key: "Stripe Payment System",
   },
   {
     src: Aes256,
     alt: "Aes256",
-    className: "footer__wrapper__item",
-    key: "Aes256",
+    key: "Aes256 Payment System",
   },
   {
     src: PayPal,
     alt: "PayPal",
-    className: "footer__wrapper__item",
-    key: "PayPal",
+    key: "PayPal Payment System",
   },
   {
     src: Visa,
     alt: "Visa",
-    className: "footer__wrapper__item",
-    key: "Visa",
+    key: "Visa Payment System",
   },
   {
     src: MasterCard,
     alt: "MasterCard",
-    className: "footer__wrapper__item",
-    key: "MasterCard",
+    key: "MasterCard Payment System",
   },
   {
     src: Discover,
     alt: "Discover",
-    className: "footer__wrapper__item",
-    key: "Discover",
+    key: "Discover Payment System",
   },
   {
     src: AmericanExpress,
     alt: "AmericanExpress",
-    className: "footer__wrapper__item",
-    key: "AmericanExpress",
+    key: "AmericanExpress Payment System",
   },
 ];
 

@@ -11,8 +11,8 @@ const PaymentSystems = () => {
             <img
               src={PaymentSystemsUlLi.src}
               alt={PaymentSystemsUlLi.alt}
-              className={PaymentSystemsUlLi.className}
               key={PaymentSystemsUlLi.key}
+              className="footer__wrapper__item"
             />
           );
         })}

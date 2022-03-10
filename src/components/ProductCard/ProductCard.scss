@@ -93,10 +93,9 @@
   }
 
   .color__img {
-    @include flexSpaceBetween;
+    display: flex;
+    align-items: center;
     gap: $base * 2;
-    width: 60%;
-    height: auto;
     margin: $base * 4 0 0 0;
     padding: 0;
 
@@ -107,7 +106,7 @@
     .color__img__item {
       @include flexCenter;
       width: $base * 13;
-      height: $base * 13;
+      height: auto;
       box-sizing: border-box;
       outline: 0 solid $color-dark;
       cursor: pointer;
@@ -119,7 +118,8 @@
       }
 
       .color__img__item__img {
-        height: $base * 13;
+        width: 100%;
+        height: auto;
       }
     }
   }
