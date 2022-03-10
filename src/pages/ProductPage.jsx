@@ -36,7 +36,7 @@ const ProductPage = (props) => {
         reviews={ProductReviews}
         rating={ProductRating}
       />
-      <RelatedProducts />
+      <RelatedProducts category={ProductCategory} />
     </>
   );
 };
