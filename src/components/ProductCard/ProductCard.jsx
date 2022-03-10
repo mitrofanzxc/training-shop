@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { ProductCardSliderVerticalImg } from "../../shared/ProductCardSliderImg";
-import { ProductCardSliderMainImg } from "../../shared/ProductCardSliderImg";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
@@ -16,7 +14,13 @@ import "swiper/scss/thumbs";
 
 import "./ProductCard.scss";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+  const ProductImages = props.images;
+  const ProductSizes = props.sizes;
+  const ProductPrice = props.price;
+  const ProductColors = [...new Set(ProductImages.map((x) => x.color))];
+  const ProductMaterial = props.material;
+  const ProductReviews = props.reviews;
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -57,21 +61,18 @@ const ProductCard = () => {
                     />
                   </div>
                   <div className="product__card__slider__vertical">
-                    {ProductCardSliderVerticalImg.map(
-                      (ProductCardSliderVerticalImgItem) => {
-                        return (
-                          <SwiperSlide>
-                            <img
-                              className={
-                                ProductCardSliderVerticalImgItem.className
-                              }
-                              src={ProductCardSliderVerticalImgItem.img}
-                              alt={ProductCardSliderVerticalImgItem.alt}
-                            />
-                          </SwiperSlide>
-                        );
-                      }
-                    )}
+                    {ProductImages.map((ProductImagesItem) => {
+                      return (
+                        <SwiperSlide>
+                          <img
+                            src={`https://training.cleverland.by/shop${ProductImagesItem.url}`}
+                            alt="product__card__slider__vertical__item__img"
+                            key={ProductImagesItem.id}
+                            className="product__card__slider__vertical__item__img"
+                          />
+                        </SwiperSlide>
+                      );
+                    })}
                   </div>
                 </Swiper>
                 <Swiper
@@ -93,19 +94,18 @@ const ProductCard = () => {
                   }}
                 >
                   <div className="product__card__main">
-                    {ProductCardSliderMainImg.map(
-                      (ProductCardSliderMainImgItem) => {
-                        return (
-                          <SwiperSlide>
-                            <img
-                              className={ProductCardSliderMainImgItem.className}
-                              src={ProductCardSliderMainImgItem.img}
-                              alt={ProductCardSliderMainImgItem.alt}
-                            />
-                          </SwiperSlide>
-                        );
-                      }
-                    )}
+                    {ProductImages.map((ProductImagesItem) => {
+                      return (
+                        <SwiperSlide>
+                          <img
+                            src={`https://training.cleverland.by/shop${ProductImagesItem.url}`}
+                            alt="product__card__main__img"
+                            key={ProductImagesItem.id}
+                            className="product__card__main__img"
+                          />
+                        </SwiperSlide>
+                      );
+                    })}
                   </div>
                   <div className="product__card__main__slider">
                     <div
@@ -144,13 +144,14 @@ const ProductCard = () => {
               </div>
               <div className="size__text">
                 <h4 className="h4">Size:</h4>
-                <p className="paragraph">S</p>
+                <p className="paragraph">{ProductSizes[0]}</p>
               </div>
               <div className="size__img">
-                <div className="size__img__item">XS</div>
-                <div className="size__img__item">S</div>
-                <div className="size__img__item">M</div>
-                <div className="size__img__item">L</div>
+                {ProductSizes.map((ProductSizesItem) => {
+                  return (
+                    <div className="size__img__item">{ProductSizesItem}</div>
+                  );
+                })}
               </div>
               <div className="size__guide">
                 <div className="size__guide__item"></div>
@@ -158,7 +159,7 @@ const ProductCard = () => {
               </div>
               <div className="product__price__and__buttons">
                 <div className="product__price__and__buttons__item">
-                  <h2 className="h2 price">$ 379.99</h2>
+                  <h2 className="h2 price">{`$ ${ProductPrice.toFixed(2)}`}</h2>
                 </div>
                 <div className="product__price__and__buttons__item">
                   <button className="button__cart">Add To Cart</button>
@@ -206,15 +207,23 @@ const ProductCard = () => {
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Color:</h4>
-                  <p className="paragraph">Blue, White, Black, Grey</p>
+                  {ProductColors.map((ProductColorsItem) => {
+                    return (
+                      <p className="paragraph">{`${ProductColorsItem},`}</p>
+                    );
+                  })}
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Size:</h4>
-                  <p className="paragraph">XS, S, M, L</p>
+                  {ProductSizes.map((ProductSizesItem) => {
+                    return (
+                      <p className="paragraph">{`${ProductSizesItem},`}</p>
+                    );
+                  })}
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Material:</h4>
-                  <p className="paragraph">100% Polyester</p>
+                  <p className="paragraph">{ProductMaterial}</p>
                 </div>
               </div>
               <div className="reviews__list">
@@ -225,7 +234,7 @@ const ProductCard = () => {
                       <div className="reviews__list__item__sublist__item__sublist">
                         <div className="reviews__list__item__sublist__item__sublist__item"></div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
-                          2 Reviews
+                          {`${ProductReviews.length} reviews`}
                         </div>
                       </div>
                     </div>
@@ -239,45 +248,30 @@ const ProductCard = () => {
                     </div>
                   </div>
                 </div>
-                <div className="reviews__list__item">
-                  <div className="reviews__list__item__sublist">
-                    <div className="reviews__list__item__sublist__item name">
-                      Oleh Chabanov
-                    </div>
-                    <div className="reviews__list__item__sublist__item">
-                      <div className="reviews__list__item__sublist__item__sublist">
-                        <div className="reviews__list__item__sublist__item__sublist__item">
-                          3 month ago
+                {ProductReviews.map((ProductReview) => {
+                  return (
+                    <>
+                      <div className="reviews__list__item">
+                        <div className="reviews__list__item__sublist">
+                          <div className="reviews__list__item__sublist__item name">
+                            {ProductReview.name}
+                          </div>
+                          <div className="reviews__list__item__sublist__item">
+                            <div className="reviews__list__item__sublist__item__sublist">
+                              <div className="reviews__list__item__sublist__item__sublist__item">
+                                3 month ago
+                              </div>
+                              <div className="reviews__list__item__sublist__item__sublist__item"></div>
+                            </div>
+                          </div>
                         </div>
-                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="reviews__list__item review">
-                  On the other hand, we denounce with righteous indignation and
-                  like men who are so beguiled and demoralized by the charms of
-                  pleasure of the moment
-                </div>
-                <div className="reviews__list__item">
-                  <div className="reviews__list__item__sublist">
-                    <div className="reviews__list__item__sublist__item name">
-                      ShAmAn design
-                    </div>
-                    <div className="reviews__list__item__sublist__item">
-                      <div className="reviews__list__item__sublist__item__sublist">
-                        <div className="reviews__list__item__sublist__item__sublist__item">
-                          3 month ago
-                        </div>
-                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
+                      <div className="reviews__list__item review">
+                        {ProductReview.text}
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="reviews__list__item review">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti
-                </div>
+                    </>
+                  );
+                })}
               </div>
             </div>
           </div>

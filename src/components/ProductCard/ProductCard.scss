@@ -159,8 +159,8 @@
     .size__img__item {
       @include flexCenter;
       box-sizing: border-box;
-      width: $base * 8;
-      height: $base * 8;
+      min-width: $base * 8;
+      min-height: $base * 8;
       font-size: $fs-xs;
       font-weight: $fw-semi-bold;
       color: $color-dark-07;

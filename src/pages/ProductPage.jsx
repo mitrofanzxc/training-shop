@@ -14,15 +14,27 @@ const ProductPage = (props) => {
   const ProductName = ProductPageFiltered[0].name;
   const ProductCategory = ProductPageFiltered[0].category;
   const ProductReviews = ProductPageFiltered[0].reviews;
+  const ProductRating = ProductPageFiltered[0].rating;
+  const ProductImages = ProductPageFiltered[0].images;
+  const ProductSizes = ProductPageFiltered[0].sizes;
+  const ProductPrice = ProductPageFiltered[0].price;
+  const ProductMaterial = ProductPageFiltered[0].material;
   return (
     <>
       <ProductPageHeader
         name={ProductName}
         category={ProductCategory}
         reviews={ProductReviews}
+        rating={ProductRating}
       />
-      <ProductCard data={`${ProductPageFiltered}`} />
-      <RelatedProducts data={`${ProductPageFiltered}`} />
+      <ProductCard
+        images={ProductImages}
+        sizes={ProductSizes}
+        price={ProductPrice}
+        material={ProductMaterial}
+        reviews={ProductReviews}
+      />
+      <RelatedProducts />
     </>
   );
 };

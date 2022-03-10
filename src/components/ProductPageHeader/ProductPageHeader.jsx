@@ -1,28 +1,40 @@
 import { Link } from "react-router-dom";
 
+import STAR_FILL from "./assets/img/star__filled.svg";
+import STAR_EMPTY from "./assets/img/star.svg";
+
 import "./ProductPageHeader.scss";
 
 const ProductPageHeader = (props) => {
-  console.log(props);
+  const RATING = props.rating;
+  const RATING_STARS_FILL = (
+    <img src={STAR_FILL} alt="star" className="product__card__rating__item" />
+  );
+  const RATING_STARS_EMPTY = (
+    <img src={STAR_EMPTY} alt="star" className="product__card__rating__item" />
+  );
+  const ARR_FILL = Array(5)
+    .fill(RATING_STARS_EMPTY)
+    .fill(RATING_STARS_FILL, 0, RATING);
   return (
     <>
       <section className="catalog__header">
         <div className="inner__container">
-          <ul className="catalog__header__wrapper">
-            <li className="catalog__header__wrapper__item">
-              <ul className="catalog__header__wrapper__item__subwrapper">
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+          <div className="catalog__header__wrapper">
+            <div className="catalog__header__wrapper__item">
+              <div className="catalog__header__wrapper__item__subwrapper">
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   <Link
                     className="catalog__header__wrapper__item__subwrapper__item__link"
                     to="/"
                   >
                     Home
                   </Link>
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item arrow">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item arrow">
                   ►
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   <Link
                     className="catalog__header__wrapper__item__subwrapper__item__link"
                     to={`/${props.category}`}
@@ -30,59 +42,53 @@ const ProductPageHeader = (props) => {
                     {props.category.charAt(0).toUpperCase() +
                       props.category.slice(1)}
                   </Link>
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item arrow">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item arrow">
                   ►
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   {props.name}
-                </li>
-              </ul>
-            </li>
-            <li className="catalog__header__wrapper__item">
-              <ul className="catalog__header__wrapper__item__subwrapper">
-                <li className="catalog__header__wrapper__item__subwrapper__item share"></li>
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+                </div>
+              </div>
+            </div>
+            <div className="catalog__header__wrapper__item">
+              <div className="catalog__header__wrapper__item__subwrapper">
+                <div className="catalog__header__wrapper__item__subwrapper__item share"></div>
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   Share
-                </li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2 className="catalog__heading__item">{props.name}</h2>
-          <ul className="catalog__header__wrapper availability">
-            <li className="catalog__header__wrapper__item">
-              <ul className="catalog__header__wrapper__item__subwrapper">
-                <li className="catalog__header__wrapper__item__subwrapper__item">
-                  <ul className="product__card__rating">
-                    <li className="product__card__rating__item"></li>
-                    <li className="product__card__rating__item"></li>
-                    <li className="product__card__rating__item"></li>
-                    <li className="product__card__rating__item"></li>
-                    <li className="product__card__rating__item"></li>
-                  </ul>
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item reviews">
+          <div className="catalog__header__wrapper availability">
+            <div className="catalog__header__wrapper__item">
+              <div className="catalog__header__wrapper__item__subwrapper">
+                <div className="catalog__header__wrapper__item__subwrapper__item">
+                  <div className="product__card__rating">{ARR_FILL}</div>
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item reviews">
                   {`${props.reviews.length} reviews`}
-                </li>
-              </ul>
-            </li>
-            <li className="catalog__header__wrapper__item">
-              <ul className="catalog__header__wrapper__item__subwrapper">
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+                </div>
+              </div>
+            </div>
+            <div className="catalog__header__wrapper__item">
+              <div className="catalog__header__wrapper__item__subwrapper">
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   SKU:
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item bold">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item bold">
                   777
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item">
                   Availability:
-                </li>
-                <li className="catalog__header__wrapper__item__subwrapper__item bold">
+                </div>
+                <div className="catalog__header__wrapper__item__subwrapper__item bold">
                   In Stock
-                </li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
