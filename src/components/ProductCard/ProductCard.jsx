@@ -8,6 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCardColorImg } from "../../shared/ProductCardColorImg";
 import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
+import STAR_FILL from "./assets/img/star__filled.svg";
+import STAR_EMPTY from "./assets/img/star.svg";
+
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
@@ -24,6 +27,16 @@ const ProductCard = (props) => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const RATING = props.rating;
+  const RATING_STARS_FILL = (
+    <img src={STAR_FILL} alt="star" className="product__card__rating__item" />
+  );
+  const RATING_STARS_EMPTY = (
+    <img src={STAR_EMPTY} alt="star" className="product__card__rating__item" />
+  );
+  const ARR_FILL = Array(5)
+    .fill(RATING_STARS_EMPTY)
+    .fill(RATING_STARS_FILL, 0, RATING);
   return (
     <>
       <section className="product__card">
@@ -232,7 +245,9 @@ const ProductCard = (props) => {
                   <div className="reviews__list__item__sublist">
                     <div className="reviews__list__item__sublist__item">
                       <div className="reviews__list__item__sublist__item__sublist">
-                        <div className="reviews__list__item__sublist__item__sublist__item"></div>
+                        <div className="reviews__list__item__sublist__item__sublist__item">
+                          {ARR_FILL}
+                        </div>
                         <div className="reviews__list__item__sublist__item__sublist__item">
                           {`${ProductReviews.length} reviews`}
                         </div>
@@ -249,9 +264,30 @@ const ProductCard = (props) => {
                   </div>
                 </div>
                 {ProductReviews.map((ProductReview) => {
+                  const RATING = ProductReview.rating;
+                  const RATING_STARS_FILL = (
+                    <img
+                      src={STAR_FILL}
+                      alt="star"
+                      className="product__card__rating__item"
+                    />
+                  );
+                  const RATING_STARS_EMPTY = (
+                    <img
+                      src={STAR_EMPTY}
+                      alt="star"
+                      className="product__card__rating__item"
+                    />
+                  );
+                  const ARR_FILL = Array(5)
+                    .fill(RATING_STARS_EMPTY)
+                    .fill(RATING_STARS_FILL, 0, RATING);
                   return (
                     <>
-                      <div className="reviews__list__item">
+                      <div
+                        className="reviews__list__item"
+                        key={ProductReview.id}
+                      >
                         <div className="reviews__list__item__sublist">
                           <div className="reviews__list__item__sublist__item name">
                             {ProductReview.name}
@@ -259,9 +295,8 @@ const ProductCard = (props) => {
                           <div className="reviews__list__item__sublist__item">
                             <div className="reviews__list__item__sublist__item__sublist">
                               <div className="reviews__list__item__sublist__item__sublist__item">
-                                3 month ago
+                                {ARR_FILL}
                               </div>
-                              <div className="reviews__list__item__sublist__item__sublist__item"></div>
                             </div>
                           </div>
                         </div>

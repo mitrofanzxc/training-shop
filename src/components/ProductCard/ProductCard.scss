@@ -547,8 +547,9 @@
 // === REVIEWS LIST ===
 
 .reviews__list {
+  width: 100%;
   margin: $base * 7 0 0 0;
-  padding: 0;
+  padding: 0 0 $base * 3 0;
   border-bottom: 2px solid $color-grey;
 
   .review {
@@ -591,7 +592,7 @@
 
 .reviews__list__item__sublist__item__sublist {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: $base * 2;
   margin: 0;

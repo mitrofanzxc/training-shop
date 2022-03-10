@@ -33,6 +33,7 @@ const ProductPage = (props) => {
         price={ProductPrice}
         material={ProductMaterial}
         reviews={ProductReviews}
+        rating={ProductRating}
       />
       <RelatedProducts />
     </>
