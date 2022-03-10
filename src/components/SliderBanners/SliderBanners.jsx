@@ -29,7 +29,6 @@ const SliderBanners = () => {
               modules={[Navigation]}
               spaceBetween={30}
               slidesPerView={1}
-              sliderPerGroup={1}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,

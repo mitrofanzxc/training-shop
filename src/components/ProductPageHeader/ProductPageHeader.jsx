@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 import "./ProductPageHeader.scss";
 
-const ProductPageHeader = () => {
+const ProductPageHeader = (props) => {
+  console.log(props.id);
   return (
     <>
       <section className="catalog__header">

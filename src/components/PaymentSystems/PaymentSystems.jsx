@@ -12,6 +12,7 @@ const PaymentSystems = () => {
               src={PaymentSystemsUlLi.src}
               alt={PaymentSystemsUlLi.alt}
               className={PaymentSystemsUlLi.className}
+              key={PaymentSystemsUlLi.key}
             />
           );
         })}

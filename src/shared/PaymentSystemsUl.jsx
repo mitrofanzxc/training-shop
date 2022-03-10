@@ -1,46 +1,53 @@
-import Image1 from "../components/PaymentSystems/assets/img/stripe__color.svg";
-import Image2 from "../components/PaymentSystems/assets/img/aes256__color.svg";
-import Image3 from "../components/PaymentSystems/assets/img/paypal__color.svg";
-import Image4 from "../components/PaymentSystems/assets/img/visa__color.svg";
-import Image5 from "../components/PaymentSystems/assets/img/mastercard__color.svg";
-import Image6 from "../components/PaymentSystems/assets/img/discover__color.svg";
-import Image7 from "../components/PaymentSystems/assets/img/american__express__color.svg";
+import Stripe from "../components/PaymentSystems/assets/img/stripe__color.svg";
+import Aes256 from "../components/PaymentSystems/assets/img/aes256__color.svg";
+import PayPal from "../components/PaymentSystems/assets/img/paypal__color.svg";
+import Visa from "../components/PaymentSystems/assets/img/visa__color.svg";
+import MasterCard from "../components/PaymentSystems/assets/img/mastercard__color.svg";
+import Discover from "../components/PaymentSystems/assets/img/discover__color.svg";
+import AmericanExpress from "../components/PaymentSystems/assets/img/american__express__color.svg";
 
 const PaymentSystemsUl = [
   {
-    src: Image1,
+    src: Stripe,
     alt: "Stripe",
     className: "footer__wrapper__item",
+    key: "Stripe",
   },
   {
-    src: Image2,
+    src: Aes256,
     alt: "Aes256",
     className: "footer__wrapper__item",
+    key: "Aes256",
   },
   {
-    src: Image3,
+    src: PayPal,
     alt: "PayPal",
     className: "footer__wrapper__item",
+    key: "PayPal",
   },
   {
-    src: Image4,
+    src: Visa,
     alt: "Visa",
     className: "footer__wrapper__item",
+    key: "Visa",
   },
   {
-    src: Image5,
+    src: MasterCard,
     alt: "MasterCard",
     className: "footer__wrapper__item",
+    key: "MasterCard",
   },
   {
-    src: Image6,
+    src: Discover,
     alt: "Discover",
     className: "footer__wrapper__item",
+    key: "Discover",
   },
   {
-    src: Image7,
-    alt: "American Express",
+    src: AmericanExpress,
+    alt: "AmericanExpress",
     className: "footer__wrapper__item",
+    key: "AmericanExpress",
   },
 ];
 
