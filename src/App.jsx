@@ -15,9 +15,9 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="men" element={<CategoryPage category="men" />} />
-          <Route path="men/:id" element={<ProductPage />} />
+          <Route path="men/:id" element={<ProductPage category="men" />} />
           <Route path="women" element={<CategoryPage category="women" />} />
-          <Route path="women/:id" element={<ProductPage />} />
+          <Route path="women/:id" element={<ProductPage category="women" />} />
           <Route path="*" element={<MainPage />} />
         </Route>
       </Routes>

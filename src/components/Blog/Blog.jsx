@@ -24,6 +24,7 @@ const Blog = () => {
                     className="blog__img"
                     src={BlogInfoItem.img}
                     alt={BlogInfoItem.alt}
+                    key={BlogInfoItem.key}
                   />
                   <div className="blog__slider__item__title">
                     <h3 className="h3">{BlogInfoItem.header}</h3>

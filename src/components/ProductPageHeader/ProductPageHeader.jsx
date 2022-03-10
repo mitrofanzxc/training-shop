@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ProductPageHeader.scss";
 
 const ProductPageHeader = (props) => {
-  console.log(props.id);
+  console.log(props);
   return (
     <>
       <section className="catalog__header">
@@ -25,16 +25,17 @@ const ProductPageHeader = (props) => {
                 <li className="catalog__header__wrapper__item__subwrapper__item">
                   <Link
                     className="catalog__header__wrapper__item__subwrapper__item__link"
-                    to="/women"
+                    to={`/${props.category}`}
                   >
-                    Women
+                    {props.category.charAt(0).toUpperCase() +
+                      props.category.slice(1)}
                   </Link>
                 </li>
                 <li className="catalog__header__wrapper__item__subwrapper__item arrow">
                   ►
                 </li>
                 <li className="catalog__header__wrapper__item__subwrapper__item">
-                  Women's tracksuit Q109
+                  {props.name}
                 </li>
               </ul>
             </li>
@@ -47,7 +48,7 @@ const ProductPageHeader = (props) => {
               </ul>
             </li>
           </ul>
-          <h2 className="catalog__heading__item">Women's tracksuit Q109</h2>
+          <h2 className="catalog__heading__item">{props.name}</h2>
           <ul className="catalog__header__wrapper availability">
             <li className="catalog__header__wrapper__item">
               <ul className="catalog__header__wrapper__item__subwrapper">
@@ -61,7 +62,7 @@ const ProductPageHeader = (props) => {
                   </ul>
                 </li>
                 <li className="catalog__header__wrapper__item__subwrapper__item reviews">
-                  2 reviews
+                  {`${props.reviews.length} reviews`}
                 </li>
               </ul>
             </li>

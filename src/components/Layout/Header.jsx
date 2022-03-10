@@ -27,14 +27,14 @@ const Header = () => {
                       src={ContactsListHeaderItem.src}
                       alt={ContactsListHeaderItem.alt}
                       className="header__first__wrapper__img"
-                      key={ContactsListHeaderItem.alt}
+                      key={ContactsListHeaderItem.key}
                     />
                     <a
                       href={ContactsListHeaderItem.link}
                       target={ContactsListHeaderItem.target}
                       rel={ContactsListHeaderItem.rel}
                       className="header__first__wrapper__link"
-                      key={ContactsListHeaderItem.alt}
+                      key={ContactsListHeaderItem.key}
                     >
                       {ContactsListHeaderItem.description}
                     </a>
@@ -68,7 +68,7 @@ const Header = () => {
                           ? "header__second__wrapper__item nav__link visible"
                           : "header__second__wrapper__item nav__link"
                       }
-                      key={HeaderNavItem.path}
+                      key={HeaderNavItem.key}
                     >
                       {HeaderNavItem.header}
                     </Link>
@@ -84,7 +84,7 @@ const Header = () => {
                       src={NavSecondaryListItem.src}
                       alt={NavSecondaryListItem.alt}
                       className={NavSecondaryListItem.className}
-                      key={NavSecondaryListItem.alt}
+                      key={NavSecondaryListItem.key}
                     />
                   </>
                 );

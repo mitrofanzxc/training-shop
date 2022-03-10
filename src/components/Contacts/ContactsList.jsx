@@ -15,6 +15,7 @@ const ContactsListHeader = [
     target: "_self",
     rel: "noopener noreferrer",
     description: "+375 29 100 20 30",
+    key: "Phone Header Nav",
   },
   {
     src: LocationHeader,
@@ -23,6 +24,7 @@ const ContactsListHeader = [
     target: "_blank",
     rel: "noopener noreferrer",
     description: "Belarus, Gomel, Lange 17",
+    key: "Location Header Nav",
   },
   {
     src: ClockHeader,
@@ -31,6 +33,7 @@ const ContactsListHeader = [
     target: "_blank",
     rel: "noopener noreferrer",
     description: "All week 24/7",
+    key: "Clock Header Nav",
   },
 ];
 
@@ -44,6 +47,7 @@ const ContactsListFooter = [
     target: "_self",
     rel: "noopener noreferrer",
     description: "+375 29 100 20 30",
+    key: "Phone Footer Nav",
   },
   {
     src: LocationFooter,
@@ -52,6 +56,7 @@ const ContactsListFooter = [
     target: "_blank",
     rel: "noopener noreferrer",
     description: "Belarus, Gomel, Lange 17",
+    key: "Phone Footer Nav",
   },
   {
     src: ClockFooter,
@@ -60,6 +65,7 @@ const ContactsListFooter = [
     target: "_blank",
     rel: "noopener noreferrer",
     description: "All week 24/7",
+    key: "Phone Footer Nav",
   },
   {
     src: MailFooter,
@@ -68,6 +74,7 @@ const ContactsListFooter = [
     target: "_self",
     rel: "noopener noreferrer",
     description: "info@clevertec.ru",
+    key: "Phone Footer Nav",
   },
 ];
 

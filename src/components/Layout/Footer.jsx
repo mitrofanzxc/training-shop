@@ -26,9 +26,9 @@ const Footer = () => {
                         return (
                           <div className="footer__links__container__list__item">
                             <Link
-                              key={FooterNavLink.id}
                               className="footer__links__container__list__item__link"
                               to={`/${FooterNavLink.path}`}
+                              key={FooterNavLink.key}
                             >
                               {FooterNavLink.description}
                             </Link>
@@ -58,6 +58,7 @@ const Footer = () => {
                             target={ContactsListFooterItem.target}
                             rel={ContactsListFooterItem.rel}
                             className="footer__links__container__list__item__link"
+                            key={ContactsListFooterItem.key}
                           >
                             {ContactsListFooterItem.description}
                           </a>
