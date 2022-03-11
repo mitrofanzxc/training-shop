@@ -12,7 +12,6 @@ const SocialsList = [
   {
     src: Facebook,
     alt: "Facebook",
-    className: "socials__wrapper__item",
     link: "https://www.facebook.com/",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -21,7 +20,6 @@ const SocialsList = [
   {
     src: Twitter,
     alt: "Twitter",
-    className: "socials__wrapper__item",
     link: "https://twitter.com/",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -30,7 +28,6 @@ const SocialsList = [
   {
     src: Instagram,
     alt: "Instagram",
-    className: "socials__wrapper__item",
     link: "https://www.instagram.com/",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -39,7 +36,6 @@ const SocialsList = [
   {
     src: Pinterest,
     alt: "Pinterest",
-    className: "socials__wrapper__item",
     link: "https://www.pinterest.com/",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -53,25 +49,21 @@ const NavSecondaryList = [
   {
     src: Search,
     alt: "Search",
-    className: "socials__wrapper__item",
     key: "Search Button",
   },
   {
     src: Globe,
     alt: "Globe",
-    className: "socials__wrapper__item",
     key: "Globe Button",
   },
   {
     src: User,
     alt: "User",
-    className: "socials__wrapper__item",
     key: "User Button",
   },
   {
     src: Cart,
     alt: "Cart",
-    className: "socials__wrapper__item",
     key: "Cart Button",
   },
 ];

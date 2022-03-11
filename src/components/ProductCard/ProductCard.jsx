@@ -18,20 +18,29 @@ import "swiper/scss/thumbs";
 import "./ProductCard.scss";
 
 const ProductCard = (props) => {
+  // Take { id } from url
   const { id } = useParams();
+
+  // Take all necessary props
   const ProductCategory = props.category;
   const ProductBrand = props.brand;
   const ProductImages = props.images;
   const ProductSizes = props.sizes;
   const ProductPrice = props.price;
+  const ProductMaterial = props.material;
+  const ProductReviews = props.reviews;
+
+  // Create unique data
   const ProductUniqueColors = [
     ...new Set(ProductImages.map((ProductImage) => ProductImage.color)),
   ];
-  const ProductMaterial = props.material;
-  const ProductReviews = props.reviews;
+
+  // Consts for Swiper React
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  // Create rating stars
   const RATING = props.rating;
   const RATING_STARS_FILL = (
     <img
@@ -52,6 +61,10 @@ const ProductCard = (props) => {
   const ARR_FILL = Array(5)
     .fill(RATING_STARS_EMPTY)
     .fill(RATING_STARS_FILL, 0, RATING);
+
+  // Create dynamics for clicking elements
+  const [colorClick, setColorClick] = useState(ProductUniqueColors[0]);
+  const [sizeClick, setSizeClick] = useState(ProductSizes[0]);
   return (
     <>
       <section className="product__card">
@@ -151,7 +164,7 @@ const ProductCard = (props) => {
             <div className="side__right">
               <div className="color__text">
                 <h4 className="h4">Color:</h4>
-                <p className="paragraph">{ProductUniqueColors[0]}</p>
+                <p className="paragraph">{colorClick}</p>
               </div>
               <div className="color__img">
                 {ProductImages.map((ProductImage) => {
@@ -162,6 +175,7 @@ const ProductCard = (props) => {
                           src={`https://training.cleverland.by/shop${ProductImage.url}`}
                           alt={ProductImage.color}
                           className="color__img__item__img"
+                          onClick={() => setColorClick(ProductImage.color)}
                         />
                       </div>
                     </Link>
@@ -170,11 +184,18 @@ const ProductCard = (props) => {
               </div>
               <div className="size__text">
                 <h4 className="h4">Size:</h4>
-                <p className="paragraph">{ProductSizes[0]}</p>
+                <p className="paragraph">{sizeClick}</p>
               </div>
               <div className="size__img">
                 {ProductSizes.map((ProductSize) => {
-                  return <div className="size__img__item">{ProductSize}</div>;
+                  return (
+                    <div
+                      className="size__img__item"
+                      onClick={() => setSizeClick(ProductSize)}
+                    >
+                      {ProductSize}
+                    </div>
+                  );
                 })}
               </div>
               <div className="size__guide">

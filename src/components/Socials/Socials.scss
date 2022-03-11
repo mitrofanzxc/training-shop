@@ -1,14 +1,10 @@
 @import "../../scss/Variables.scss";
 
 .socials__wrapper {
-  @include flexSpaceBetween;
-  gap: $base * 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9%;
   width: 11%;
   height: auto;
-
-  .socials__wrapper__item {
-    @include flexCenter;
-    width: 100%;
-    height: auto;
-  }
 }

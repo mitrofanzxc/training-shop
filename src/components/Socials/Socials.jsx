@@ -6,15 +6,10 @@ const Socials = () => {
   return (
     <>
       <div className="socials__wrapper">
-        {SocialsList.map((SocialsListLi) => {
+        {SocialsList.map((Social) => {
           return (
-            <a
-              href={SocialsListLi.link}
-              target={SocialsListLi.target}
-              rel={SocialsListLi.rel}
-              className={SocialsListLi.className}
-            >
-              <img src={SocialsListLi.src} alt={SocialsListLi.alt} />
+            <a href={Social.link} target={Social.target} rel={Social.rel}>
+              <img src={Social.src} alt={Social.alt} key={Social.key} />
             </a>
           );
         })}
