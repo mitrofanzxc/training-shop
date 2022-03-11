@@ -11,6 +11,7 @@ import "./CatalogMain.scss";
 
 const CatalogMain = (props) => {
   const Category = props.category;
+  const [newArrivals, setNewArrivals] = useState(null);
   const NewArrivals = () => {
     PRODUCTS[Category].slice(0, 8).map((PRODUCTSitem) => {
       const RATING = PRODUCTSitem.rating;
@@ -31,7 +32,6 @@ const CatalogMain = (props) => {
       const ARR_FILL = Array(5)
         .fill(RATING_STARS_EMPTY)
         .fill(RATING_STARS_FILL, 0, RATING);
-      const [newArrivals, setNewArrivals] = useState(NewArrivals);
       return (
         <>
           <div className="product__card">
