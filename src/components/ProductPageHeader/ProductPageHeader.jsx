@@ -6,7 +6,15 @@ import STAR_EMPTY from "./assets/img/star.svg";
 import "./ProductPageHeader.scss";
 
 const ProductPageHeader = (props) => {
+  // Take all necessary props
   const RATING = props.rating;
+  const ProductBrand = props.brand;
+  const ProductSizes = props.sizes;
+
+  // Check availability
+  const STOCK = () => (ProductSizes.length > 0 ? "In Stock" : "Out of Stock");
+
+  // Create rating stars
   const RATING_STARS_FILL = (
     <img
       src={STAR_FILL}
@@ -26,9 +34,6 @@ const ProductPageHeader = (props) => {
   const ARR_FILL = Array(5)
     .fill(RATING_STARS_EMPTY)
     .fill(RATING_STARS_FILL, 0, RATING);
-  const ProductBrand = props.brand;
-  const ProductSizes = props.sizes;
-  const STOCK = () => (ProductSizes.length > 0 ? "In Stock" : "Out of Stock");
   return (
     <>
       <section className="catalog__header">

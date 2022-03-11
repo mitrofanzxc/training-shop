@@ -265,6 +265,9 @@ const ProductCard = (props) => {
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Size:</h4>
                   {ProductSizes.map((ProductSize) => {
+                    const sizeArray = [];
+                    sizeArray.push(ProductSize);
+                    console.log(sizeArray);
                     return <p className="paragraph">{`${ProductSize},`}</p>;
                   })}
                 </div>
