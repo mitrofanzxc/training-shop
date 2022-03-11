@@ -23,21 +23,23 @@ const Header = () => {
               {ContactsListHeader.map((ContactsListHeaderItem) => {
                 return (
                   <>
-                    <img
-                      src={ContactsListHeaderItem.src}
-                      alt={ContactsListHeaderItem.alt}
-                      className="header__first__wrapper__img"
-                      key={ContactsListHeaderItem.key}
-                    />
-                    <a
-                      href={ContactsListHeaderItem.link}
-                      target={ContactsListHeaderItem.target}
-                      rel={ContactsListHeaderItem.rel}
-                      className="header__first__wrapper__link"
-                      key={ContactsListHeaderItem.key}
-                    >
-                      {ContactsListHeaderItem.description}
-                    </a>
+                    <div className="header__first__wrapper__item">
+                      <img
+                        src={ContactsListHeaderItem.src}
+                        alt={ContactsListHeaderItem.alt}
+                        className="header__first__wrapper__img"
+                        key={ContactsListHeaderItem.key}
+                      />
+                      <a
+                        href={ContactsListHeaderItem.link}
+                        target={ContactsListHeaderItem.target}
+                        rel={ContactsListHeaderItem.rel}
+                        className="header__first__wrapper__link"
+                        key={ContactsListHeaderItem.key}
+                      >
+                        {ContactsListHeaderItem.description}
+                      </a>
+                    </div>
                   </>
                 );
               })}

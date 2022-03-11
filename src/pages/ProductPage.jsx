@@ -13,6 +13,7 @@ const ProductPage = (props) => {
   );
   const ProductName = ProductPageFiltered[0].name;
   const ProductCategory = ProductPageFiltered[0].category;
+  const ProductBrand = ProductPageFiltered[0].brand;
   const ProductReviews = ProductPageFiltered[0].reviews;
   const ProductRating = ProductPageFiltered[0].rating;
   const ProductImages = ProductPageFiltered[0].images;
@@ -22,14 +23,17 @@ const ProductPage = (props) => {
   return (
     <>
       <ProductPageHeader
-        category={ProductCategory}
         name={ProductName}
+        category={ProductCategory}
+        brand={ProductBrand}
+        sizes={ProductSizes}
         reviews={ProductReviews}
         rating={ProductRating}
       />
       <ProductCard
         category={ProductCategory}
         images={ProductImages}
+        brand={ProductBrand}
         sizes={ProductSizes}
         price={ProductPrice}
         material={ProductMaterial}

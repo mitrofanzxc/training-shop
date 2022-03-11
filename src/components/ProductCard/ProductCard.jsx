@@ -20,6 +20,7 @@ import "./ProductCard.scss";
 const ProductCard = (props) => {
   const { id } = useParams();
   const ProductCategory = props.category;
+  const ProductBrand = props.brand;
   const ProductImages = props.images;
   const ProductSizes = props.sizes;
   const ProductPrice = props.price;
@@ -227,6 +228,10 @@ const ProductCard = (props) => {
               <div className="additional__information__list">
                 <div className="additional__information__list__header">
                   Additional Information
+                </div>
+                <div className="additional__information__list__property additional__text">
+                  <h4 className="h4">Brand:</h4>
+                  <p className="paragraph">{`${ProductBrand}`}</p>
                 </div>
                 <div className="additional__information__list__property additional__text">
                   <h4 className="h4">Color:</h4>

@@ -22,7 +22,9 @@
 
 .side__left__columns {
   display: flex;
+  justify-content: space-between;
   gap: $base * 2;
+  width: 100%;
   max-height: $base * 105;
 }
 
@@ -95,6 +97,7 @@
   .color__img {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: $base * 2;
     margin: $base * 4 0 0 0;
     padding: 0;

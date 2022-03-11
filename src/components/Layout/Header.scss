@@ -30,13 +30,19 @@
 
 .header__first__wrapper {
   @include flexSpaceBetween;
-  gap: $base;
+  gap: $base * 4;
 
   @media (max-width: $breakpoint-xs-min) {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
   }
+}
+
+.header__first__wrapper__item {
+  display: flex;
+  align-items: center;
+  gap: $base;
 }
 
 .header__first__wrapper__img {
