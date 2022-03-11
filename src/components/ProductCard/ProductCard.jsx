@@ -33,10 +33,20 @@ const ProductCard = (props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const RATING = props.rating;
   const RATING_STARS_FILL = (
-    <img src={STAR_FILL} alt="star" className="product__card__rating__item" />
+    <img
+      src={STAR_FILL}
+      alt="star"
+      className="product__card__rating__item"
+      style={{ width: "1.25rem" }}
+    />
   );
   const RATING_STARS_EMPTY = (
-    <img src={STAR_EMPTY} alt="star" className="product__card__rating__item" />
+    <img
+      src={STAR_EMPTY}
+      alt="star"
+      className="product__card__rating__item"
+      style={{ width: "1.25rem" }}
+    />
   );
   const ARR_FILL = Array(5)
     .fill(RATING_STARS_EMPTY)
@@ -140,7 +150,7 @@ const ProductCard = (props) => {
             <div className="side__right">
               <div className="color__text">
                 <h4 className="h4">Color:</h4>
-                <p className="paragraph">Blue</p>
+                <p className="paragraph">{ProductUniqueColors[0]}</p>
               </div>
               <div className="color__img">
                 {ProductImages.map((ProductImage) => {

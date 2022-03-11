@@ -6,7 +6,7 @@ import MasterCard from "../components/PaymentSystems/assets/img/mastercard__colo
 import Discover from "../components/PaymentSystems/assets/img/discover__color.svg";
 import AmericanExpress from "../components/PaymentSystems/assets/img/american__express__color.svg";
 
-const PaymentSystemsUl = [
+const PaymentSystemsList = [
   {
     src: Stripe,
     alt: "Stripe",
@@ -44,4 +44,4 @@ const PaymentSystemsUl = [
   },
 ];
 
-export { PaymentSystemsUl };
+export { PaymentSystemsList };

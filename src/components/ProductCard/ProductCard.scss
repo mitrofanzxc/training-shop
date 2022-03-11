@@ -152,8 +152,7 @@
   .size__img {
     @include flexCenter;
     gap: $base * 3;
-    margin: 0;
-    margin-top: $base * 3;
+    margin: $base * 3 0 0 0;
     padding: 0;
 
     .size__img__item {
@@ -161,6 +160,7 @@
       box-sizing: border-box;
       min-width: $base * 8;
       min-height: $base * 8;
+      padding: 0 $base;
       font-size: $fs-xs;
       font-weight: $fw-semi-bold;
       color: $color-dark-07;
@@ -599,11 +599,11 @@
   padding: 0;
 
   .message {
-    width: $base * 3;
-    height: $base * 3;
+    width: $base * 4;
+    height: $base * 4;
     background-image: url("./assets/img/message.svg");
-    background-position: center;
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
   }
 }

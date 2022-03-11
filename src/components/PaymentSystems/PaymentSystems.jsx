@@ -1,4 +1,4 @@
-import { PaymentSystemsUl } from "../../shared/PaymentSystemsUl";
+import { PaymentSystemsList } from "../../shared/PaymentSystemsList";
 
 import "./PaymentSystems.scss";
 
@@ -6,13 +6,12 @@ const PaymentSystems = () => {
   return (
     <>
       <div className="footer__wrapper">
-        {PaymentSystemsUl.map((PaymentSystemsUlLi) => {
+        {PaymentSystemsList.map((PaymentSystem) => {
           return (
             <img
-              src={PaymentSystemsUlLi.src}
-              alt={PaymentSystemsUlLi.alt}
-              key={PaymentSystemsUlLi.key}
-              className="footer__wrapper__item"
+              src={PaymentSystem.src}
+              alt={PaymentSystem.alt}
+              key={PaymentSystem.key}
             />
           );
         })}
