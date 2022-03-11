@@ -34,6 +34,9 @@ const ProductCard = (props) => {
   const ProductUniqueColors = [
     ...new Set(ProductImages.map((ProductImage) => ProductImage.color)),
   ];
+  const ProductUniqueColorsImages = [
+    ...new Map(ProductImages.map((item) => [item["color"], item])).values(),
+  ];
 
   // Consts for Swiper React
   const navigationPrevRef = useRef(null);
@@ -167,15 +170,17 @@ const ProductCard = (props) => {
                 <p className="paragraph">{colorClick}</p>
               </div>
               <div className="color__img">
-                {ProductImages.map((ProductImage) => {
+                {ProductUniqueColorsImages.map((ProductUniqueColorsImage) => {
                   return (
                     <Link to={`/${ProductCategory}/${id}`}>
                       <div className="color__img__item">
                         <img
-                          src={`https://training.cleverland.by/shop${ProductImage.url}`}
-                          alt={ProductImage.color}
+                          src={`https://training.cleverland.by/shop${ProductUniqueColorsImage.url}`}
+                          alt={ProductUniqueColorsImage.color}
                           className="color__img__item__img"
-                          onClick={() => setColorClick(ProductImage.color)}
+                          onClick={() =>
+                            setColorClick(ProductUniqueColorsImage.color)
+                          }
                         />
                       </div>
                     </Link>

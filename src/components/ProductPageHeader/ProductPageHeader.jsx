@@ -7,9 +7,10 @@ import "./ProductPageHeader.scss";
 
 const ProductPageHeader = (props) => {
   // Take all necessary props
+  console.log(props);
   const RATING = props.rating;
-  const ProductBrand = props.brand;
   const ProductSizes = props.sizes;
+  const ProductId = props.id;
 
   // Check availability
   const STOCK = () => (ProductSizes.length > 0 ? "In Stock" : "Out of Stock");
@@ -93,10 +94,10 @@ const ProductPageHeader = (props) => {
             <div className="catalog__header__wrapper__item">
               <div className="catalog__header__wrapper__item__subwrapper">
                 <div className="catalog__header__wrapper__item__subwrapper__item">
-                  Brand:
+                  SKU:
                 </div>
                 <div className="catalog__header__wrapper__item__subwrapper__item bold">
-                  {ProductBrand}
+                  {ProductId.slice(0, 10)}
                 </div>
                 <div className="catalog__header__wrapper__item__subwrapper__item">
                   Availability:

@@ -20,6 +20,7 @@ const ProductPage = (props) => {
   const ProductSizes = ProductPageFiltered[0].sizes;
   const ProductPrice = ProductPageFiltered[0].price;
   const ProductMaterial = ProductPageFiltered[0].material;
+  const ProductId = ProductPageFiltered[0].id;
   return (
     <>
       <ProductPageHeader
@@ -29,6 +30,7 @@ const ProductPage = (props) => {
         sizes={ProductSizes}
         reviews={ProductReviews}
         rating={ProductRating}
+        id={ProductId}
       />
       <ProductCard
         category={ProductCategory}
