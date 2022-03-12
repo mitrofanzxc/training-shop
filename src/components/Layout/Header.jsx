@@ -73,7 +73,7 @@ const Header = () => {
                 })}
               </div>
             </nav>
-            <div className="socials__wrapper" style={{ gap: "20%" }}>
+            <div className="socials__wrapper">
               {NavSecondaryList.map((NavSecondaryListItem) => {
                 return (
                   <>

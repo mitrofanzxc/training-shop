@@ -49,7 +49,7 @@ const RelatedProducts = (props) => {
                 spaceBetween: 30,
                 slidesPerView: 4,
               },
-              992: {
+              576: {
                 spaceBetween: 15,
                 slidesPerView: 3,
               },

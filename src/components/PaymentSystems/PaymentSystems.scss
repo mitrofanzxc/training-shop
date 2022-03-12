@@ -5,4 +5,40 @@
   gap: 2%;
   width: 100%;
   height: auto;
+
+  .stripe {
+    background-image: url("./assets/img/stripe__color.svg");
+  }
+
+  .aes256 {
+    background-image: url("./assets/img/aes256__color.svg");
+  }
+
+  .paypal {
+    background-image: url("./assets/img/paypal__color.svg");
+  }
+
+  .visa {
+    background-image: url("./assets/img/visa__color.svg");
+  }
+
+  .mastercard {
+    background-image: url("./assets/img/mastercard__color.svg");
+  }
+
+  .discover {
+    background-image: url("./assets/img/discover__color.svg");
+  }
+
+  .americanexpress {
+    background-image: url("./assets/img/american__express__color.svg");
+  }
+}
+
+.footer__wrapper__item {
+  width: $base * 10;
+  height: $base * 5;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

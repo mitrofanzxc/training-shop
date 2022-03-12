@@ -1,8 +1,3 @@
-import PhoneFooter from "./assets/img/phone.svg";
-import LocationFooter from "./assets/img/location.svg";
-import ClockFooter from "./assets/img/clock.svg";
-import MailFooter from "./assets/img/mail.svg";
-
 const ContactsListHeader = [
   {
     className: "header__first__wrapper__img phone",
@@ -34,8 +29,7 @@ export { ContactsListHeader };
 
 const ContactsListFooter = [
   {
-    src: PhoneFooter,
-    alt: "Phone",
+    className: "footer__links__container__list__img phone",
     link: "tel:+375291002030",
     target: "_self",
     rel: "noopener noreferrer",
@@ -43,31 +37,28 @@ const ContactsListFooter = [
     key: "Phone Footer Nav",
   },
   {
-    src: LocationFooter,
-    alt: "Location",
+    className: "footer__links__container__list__img location",
     link: "https://goo.gl/maps/RykPu7YKkNk56NUCA",
     target: "_blank",
     rel: "noopener noreferrer",
     description: "Belarus, Gomel, Lange 17",
-    key: "Phone Footer Nav",
+    key: "Location Footer Nav",
   },
   {
-    src: ClockFooter,
-    alt: "Clock",
+    className: "footer__links__container__list__img clock",
     link: "https://www.instagram.com/",
     target: "_blank",
     rel: "noopener noreferrer",
     description: "All week 24/7",
-    key: "Phone Footer Nav",
+    key: "Instagram Footer Nav",
   },
   {
-    src: MailFooter,
-    alt: "Mail",
+    className: "footer__links__container__list__img mail",
     link: "mailto:info@clevertec.ru",
     target: "_self",
     rel: "noopener noreferrer",
     description: "info@clevertec.ru",
-    key: "Phone Footer Nav",
+    key: "Mail Footer Nav",
   },
 ];
 

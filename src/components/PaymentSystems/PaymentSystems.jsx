@@ -8,11 +8,7 @@ const PaymentSystems = () => {
       <div className="footer__wrapper">
         {PaymentSystemsList.map((PaymentSystem) => {
           return (
-            <img
-              src={PaymentSystem.src}
-              alt={PaymentSystem.alt}
-              key={PaymentSystem.key}
-            />
+            <div className={PaymentSystem.className} key={PaymentSystem.key} />
           );
         })}
       </div>

@@ -12,12 +12,6 @@
   align-items: flex-start;
   width: 50%;
   max-height: $base * 105;
-
-  @media (max-width: $breakpoint-lg-min) {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
 }
 
 .side__left__columns {
@@ -62,13 +56,6 @@
   align-items: flex-start;
   flex-direction: column;
   width: 47%;
-
-  @media (max-width: $breakpoint-lg-min) {
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-  }
 
   .color__text {
     display: flex;

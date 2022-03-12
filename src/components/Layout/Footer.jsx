@@ -44,23 +44,19 @@ const Footer = () => {
                   <div className="footer__links__container__list__header">
                     Contact Us
                   </div>
-                  {ContactsListFooter.map((ContactsListFooterItem) => {
+                  {ContactsListFooter.map((Contact) => {
                     return (
                       <>
                         <div className="footer__links__container__list__item">
-                          <img
-                            src={ContactsListFooterItem.src}
-                            alt={ContactsListFooterItem.alt}
-                            className="footer__links__container__list__item__link"
-                          />
+                          <div className={Contact.className} />
                           <a
-                            href={ContactsListFooterItem.link}
-                            target={ContactsListFooterItem.target}
-                            rel={ContactsListFooterItem.rel}
+                            href={Contact.link}
+                            target={Contact.target}
+                            rel={Contact.rel}
                             className="footer__links__container__list__item__link"
-                            key={ContactsListFooterItem.key}
+                            key={Contact.key}
                           >
-                            {ContactsListFooterItem.description}
+                            {Contact.description}
                           </a>
                         </div>
                       </>

@@ -211,7 +211,7 @@
   cursor: pointer;
   transition: $transition;
 
-  @media (max-width: $breakpoint-xs-min) {
+  @media (max-width: $breakpoint-md-min) {
     display: block;
     z-index: 2;
   }
