@@ -7,10 +7,15 @@ import { ProductCard } from "../components/ProductCard/ProductCard";
 import { RelatedProducts } from "../components/RelatedProducts/RelatedProducts";
 
 const ProductPage = (props) => {
+  // Take { id } from url
   const { id } = useParams();
+
+  // Take filtered data
   const ProductPageFiltered = PRODUCTS[props.category].filter(
     (Product) => Product.id === `${id}`
   );
+
+  // Take all necessary "props" from filtered data
   const ProductName = ProductPageFiltered[0].name;
   const ProductCategory = ProductPageFiltered[0].category;
   const ProductBrand = ProductPageFiltered[0].brand;

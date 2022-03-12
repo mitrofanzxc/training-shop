@@ -20,24 +20,19 @@ const Header = () => {
         <div className="header__first">
           <div className="inner__container">
             <div className="header__first__wrapper">
-              {ContactsListHeader.map((ContactsListHeaderItem) => {
+              {ContactsListHeader.map((Contact) => {
                 return (
                   <>
                     <div className="header__first__wrapper__item">
-                      <img
-                        src={ContactsListHeaderItem.src}
-                        alt={ContactsListHeaderItem.alt}
-                        className="header__first__wrapper__img"
-                        key={ContactsListHeaderItem.key}
-                      />
+                      <div className={Contact.className} />
                       <a
-                        href={ContactsListHeaderItem.link}
-                        target={ContactsListHeaderItem.target}
-                        rel={ContactsListHeaderItem.rel}
+                        href={Contact.link}
+                        target={Contact.target}
+                        rel={Contact.rel}
                         className="header__first__wrapper__link"
-                        key={ContactsListHeaderItem.key}
+                        key={Contact.key}
                       >
-                        {ContactsListHeaderItem.description}
+                        {Contact.description}
                       </a>
                     </div>
                   </>

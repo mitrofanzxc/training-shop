@@ -16,6 +16,7 @@ import "swiper/scss/navigation";
 import "./SliderBanners.scss";
 
 const SliderBanners = () => {
+  // Consts for Swiper React
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   return (

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 import { SubscribeSecondary } from "../SubscribeSecondary/SubscribeSecondary";
 import { FooterNav } from "../../shared/FooterNav";
-import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 import { ContactsListFooter } from "../Contacts/ContactsList";
+import { PaymentSystems } from "../PaymentSystems/PaymentSystems";
 
 import "./Footer.scss";
 

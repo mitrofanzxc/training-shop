@@ -1,7 +1,3 @@
-import PhoneHeader from "./assets/img/phone__header.svg";
-import LocationHeader from "./assets/img/location__header.svg";
-import ClockHeader from "./assets/img/clock__header.svg";
-
 import PhoneFooter from "./assets/img/phone.svg";
 import LocationFooter from "./assets/img/location.svg";
 import ClockFooter from "./assets/img/clock.svg";
@@ -9,8 +5,7 @@ import MailFooter from "./assets/img/mail.svg";
 
 const ContactsListHeader = [
   {
-    src: PhoneHeader,
-    alt: "Phone",
+    className: "header__first__wrapper__img phone",
     link: "tel:+375291002030",
     target: "_self",
     rel: "noopener noreferrer",
@@ -18,8 +13,7 @@ const ContactsListHeader = [
     key: "Phone Header Nav",
   },
   {
-    src: LocationHeader,
-    alt: "Location",
+    className: "header__first__wrapper__img location",
     link: "https://goo.gl/maps/RykPu7YKkNk56NUCA",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -27,8 +21,7 @@ const ContactsListHeader = [
     key: "Location Header Nav",
   },
   {
-    src: ClockHeader,
-    alt: "Clock",
+    className: "header__first__wrapper__img clock",
     link: "https://www.instagram.com/",
     target: "_blank",
     rel: "noopener noreferrer",

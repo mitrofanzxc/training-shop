@@ -9,7 +9,7 @@ const Socials = () => {
         {SocialsList.map((Social) => {
           return (
             <a href={Social.link} target={Social.target} rel={Social.rel}>
-              <img src={Social.src} alt={Social.alt} key={Social.key} />
+              <div className={Social.className}></div>
             </a>
           );
         })}
