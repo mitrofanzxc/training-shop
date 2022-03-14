@@ -4,17 +4,19 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { HashRouter, useLocation } from "react-router-dom";
 
-import App from "./App";
+import { App } from "./App";
 
 import reportWebVitals from "./reportWebVitals";
 
-export default function ScrollToTop() {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
-}
+};
+
+export { ScrollToTop };
 
 ReactDOM.render(
   <React.StrictMode>

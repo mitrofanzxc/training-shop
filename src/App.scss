@@ -19,10 +19,6 @@
 
 // === COMMON ===
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   @include spartan;
   background-color: $color-white;

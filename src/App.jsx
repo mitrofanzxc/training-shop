@@ -8,7 +8,7 @@ import { ProductPage } from "./pages/ProductPage";
 
 import "./App.scss";
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -23,6 +23,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
-export default App;
+export { App };

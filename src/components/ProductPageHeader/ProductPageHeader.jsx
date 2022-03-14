@@ -7,7 +7,6 @@ import "./ProductPageHeader.scss";
 
 const ProductPageHeader = (props) => {
   // Take all necessary props
-  console.log(props);
   const RATING = props.rating;
   const ProductSizes = props.sizes;
   const ProductId = props.id;
