@@ -1,7 +1,7 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 import ReactDOM from "react-dom";
+
 import { HashRouter, useLocation } from "react-router-dom";
 
 import { App } from "./App";
